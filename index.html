@@ -10,114 +10,166 @@
 
     header {
       background: linear-gradient(135deg, #2b6cb0, #4299e1);
-      color: white;
-      padding: 24px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      color: white; padding: 20px 32px;
+      display: flex; align-items: center; justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-    header h1 { font-size: 1.5rem; font-weight: 700; }
-    header p { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
-    .header-stats { text-align: right; font-size: 0.8rem; opacity: 0.9; }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p { font-size: 0.82rem; opacity: 0.85; margin-top: 3px; }
+    .header-stats { text-align: right; font-size: 0.78rem; opacity: 0.9; }
 
     .controls {
-      padding: 20px 32px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 32px; display: flex; gap: 10px;
+      flex-wrap: wrap; align-items: center;
+      background: white; border-bottom: 1px solid #e2e8f0;
     }
     .search-box {
-      flex: 1;
-      min-width: 200px;
-      padding: 8px 14px;
-      border: 1px solid #cbd5e0;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
+      flex: 1; min-width: 200px; padding: 7px 14px;
+      border: 1px solid #cbd5e0; border-radius: 8px;
+      font-size: 0.88rem; outline: none; transition: border-color 0.2s;
     }
     .search-box:focus { border-color: #4299e1; box-shadow: 0 0 0 3px rgba(66,153,225,0.15); }
     .filter-btn {
-      padding: 7px 14px;
-      border: 1px solid #cbd5e0;
-      border-radius: 20px;
-      background: white;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      color: #4a5568;
+      padding: 6px 13px; border: 1px solid #cbd5e0; border-radius: 20px;
+      background: white; font-size: 0.78rem; cursor: pointer;
+      transition: all 0.2s; color: #4a5568;
     }
     .filter-btn:hover, .filter-btn.active { background: #2b6cb0; color: white; border-color: #2b6cb0; }
+    .count-badge { background: #ebf8ff; color: #2b6cb0; padding: 2px 10px; border-radius: 12px; font-size: 0.76rem; font-weight: 600; }
 
     .papers-grid {
-      padding: 24px 32px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 20px;
+      padding: 20px 32px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 18px;
     }
 
     .paper-card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      border: 1px solid #e2e8f0;
-      transition: box-shadow 0.2s, transform 0.2s;
-      cursor: pointer;
+      background: white; border-radius: 12px; padding: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;
     }
     .paper-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); transform: translateY(-2px); }
 
     .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
-    .paper-title { font-size: 0.95rem; font-weight: 600; color: #2d3748; line-height: 1.4; }
-    .paper-title-zh { font-size: 0.85rem; color: #4a5568; margin-bottom: 10px; line-height: 1.4; }
-    .fav-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; flex-shrink: 0; line-height: 1; }
+    .paper-title { font-size: 0.92rem; font-weight: 600; color: #2d3748; line-height: 1.4; }
+    .paper-title-zh { font-size: 0.82rem; color: #4a5568; margin-bottom: 10px; line-height: 1.4; }
+    .fav-btn { background: none; border: none; font-size: 1.15rem; cursor: pointer; flex-shrink: 0; }
 
-    .paper-meta { font-size: 0.78rem; color: #718096; margin-bottom: 10px; }
+    .paper-meta { font-size: 0.76rem; color: #718096; margin-bottom: 10px; }
     .paper-meta strong { color: #4299e1; }
 
-    .abstract { font-size: 0.82rem; color: #4a5568; line-height: 1.6; max-height: 80px; overflow: hidden; transition: max-height 0.3s; }
+    .abstract { font-size: 0.8rem; color: #4a5568; line-height: 1.6; max-height: 72px; overflow: hidden; transition: max-height 0.3s; }
     .abstract.expanded { max-height: 500px; }
-    .expand-btn { font-size: 0.75rem; color: #4299e1; background: none; border: none; cursor: pointer; margin-top: 4px; padding: 0; }
+    .expand-btn { font-size: 0.73rem; color: #4299e1; background: none; border: none; cursor: pointer; margin-top: 4px; padding: 0; }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .tag { padding: 3px 10px; background: #ebf8ff; color: #2b6cb0; border-radius: 12px; font-size: 0.72rem; font-weight: 500; }
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+    .tag { padding: 2px 9px; background: #ebf8ff; color: #2b6cb0; border-radius: 12px; font-size: 0.7rem; font-weight: 500; }
 
-    .card-footer { margin-top: 14px; padding-top: 12px; border-top: 1px solid #f0f0f0; display: flex; gap: 10px; }
-    .doi-link, .view-btn {
-      font-size: 0.78rem;
-      color: #4299e1;
-      text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid #bee3f8;
-      border-radius: 6px;
+    .card-footer { margin-top: 12px; padding-top: 10px; border-top: 1px solid #f0f0f0; display: flex; gap: 8px; }
+    .doi-link {
+      font-size: 0.76rem; color: #4299e1; text-decoration: none;
+      padding: 4px 10px; border: 1px solid #bee3f8; border-radius: 6px;
       transition: all 0.2s;
     }
-    .doi-link:hover, .view-btn:hover { background: #ebf8ff; }
-    .view-btn { background: #2b6cb0; color: white; border-color: #2b6cb0; }
-    .view-btn:hover { background: #2c5282; }
+    .doi-link:hover { background: #ebf8ff; }
+    .detail-btn {
+      font-size: 0.76rem; padding: 4px 10px; border-radius: 6px;
+      background: #2b6cb0; color: white; border: 1px solid #2b6cb0;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .detail-btn:hover { background: #2c5282; }
 
-    .no-results { text-align: center; padding: 60px; color: #a0aec0; font-size: 1rem; }
-    .count-badge { background: #ebf8ff; color: #2b6cb0; padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+    .no-results { text-align: center; padding: 60px; color: #a0aec0; }
 
-    /* Modal */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: center; justify-content: center; }
+    /* ===== Detail Modal ===== */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55); z-index: 100;
+      align-items: center; justify-content: center;
+    }
     .modal-overlay.open { display: flex; }
-    .modal { background: white; border-radius: 16px; padding: 32px; max-width: 680px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; }
-    .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #718096; }
-    .modal h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
-    .modal h3 { font-size: 0.9rem; color: #718096; margin-bottom: 16px; }
-    .modal-section { margin-bottom: 20px; }
-    .modal-section label { font-size: 0.78rem; font-weight: 600; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 6px; }
-    .modal-section p { font-size: 0.88rem; color: #4a5568; line-height: 1.7; }
 
-    @media (max-width: 600px) {
-      .papers-grid { padding: 16px; grid-template-columns: 1fr; }
-      .controls { padding: 16px; }
-      header { padding: 16px; }
+    .modal {
+      background: white; border-radius: 16px;
+      width: 92%; max-width: 920px; max-height: 90vh;
+      overflow: hidden; display: flex; flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+
+    .modal-topbar {
+      padding: 13px 20px; border-bottom: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: space-between;
+      background: #f7fafc; flex-shrink: 0;
+    }
+    .modal-topbar-left { font-size: 0.76rem; color: #718096; font-weight: 600; letter-spacing: 0.05em; }
+    .modal-close { background: none; border: none; font-size: 1.3rem; cursor: pointer; color: #718096; }
+
+    .modal-body { display: flex; overflow: hidden; flex: 1; }
+
+    /* Left panel */
+    .modal-left {
+      width: 290px; flex-shrink: 0; padding: 22px 18px;
+      border-right: 1px solid #e2e8f0; overflow-y: auto;
+      background: #fafbfc;
+    }
+    .modal-title-zh { font-size: 1.02rem; font-weight: 700; color: #2d3748; line-height: 1.4; margin-bottom: 5px; }
+    .modal-title-en { font-size: 0.76rem; color: #718096; font-style: italic; line-height: 1.4; margin-bottom: 14px; }
+    .modal-read-btn {
+      display: inline-block; padding: 7px 14px;
+      background: #e53e3e; color: white; border-radius: 8px;
+      text-decoration: none; font-size: 0.8rem; font-weight: 600;
+      transition: background 0.2s; margin-bottom: 18px;
+    }
+    .modal-read-btn:hover { background: #c53030; }
+
+    .info-row { margin-bottom: 12px; }
+    .info-label { font-size: 0.66rem; font-weight: 700; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+    .info-value { font-size: 0.81rem; color: #4a5568; line-height: 1.5; }
+    .info-doi { font-size: 0.73rem; color: #4299e1; word-break: break-all; }
+
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+    .modal-tag { padding: 2px 8px; background: #ebf8ff; color: #2b6cb0; border-radius: 12px; font-size: 0.68rem; font-weight: 500; }
+
+    .modal-fav-btn {
+      margin-top: 14px; width: 100%; padding: 8px;
+      border: 1px solid #cbd5e0; border-radius: 8px;
+      background: white; cursor: pointer; font-size: 0.8rem;
+      color: #4a5568; transition: all 0.2s;
+    }
+    .modal-fav-btn:hover { background: #fffbea; border-color: #f6e05e; }
+    .modal-fav-btn.active { background: #fffbea; border-color: #f6e05e; color: #744210; }
+
+    /* Right panel */
+    .modal-right { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+    .detail-tabs {
+      display: flex; border-bottom: 2px solid #e2e8f0;
+      flex-shrink: 0; background: white; overflow-x: auto;
+    }
+    .detail-tab {
+      padding: 11px 16px; font-size: 0.81rem; font-weight: 500;
+      color: #718096; border: none; background: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      white-space: nowrap; transition: all 0.15s;
+    }
+    .detail-tab:hover { color: #2b6cb0; }
+    .detail-tab.active { color: #2b6cb0; border-bottom-color: #2b6cb0; font-weight: 600; }
+
+    .detail-content { flex: 1; overflow-y: auto; padding: 22px 24px; }
+    .detail-pane { display: none; }
+    .detail-pane.active { display: block; }
+    .detail-pane p { font-size: 0.87rem; color: #4a5568; line-height: 1.85; }
+
+    .q3-item { margin-bottom: 22px; }
+    .q3-q { font-size: 0.82rem; font-weight: 700; color: #2b6cb0; margin-bottom: 7px; }
+    .q3-a { font-size: 0.86rem; color: #4a5568; line-height: 1.75; padding-left: 14px; border-left: 3px solid #bee3f8; }
+
+    @media (max-width: 680px) {
+      .modal { width: 100%; max-height: 100vh; border-radius: 0; }
+      .modal-body { flex-direction: column; }
+      .modal-left { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; }
+      .papers-grid { padding: 14px; grid-template-columns: 1fr; }
+      .controls { padding: 12px; }
+      header { padding: 14px; }
     }
   </style>
 </head>
@@ -147,10 +199,32 @@
 
 <div class="papers-grid" id="papers-grid"></div>
 
+<!-- Detail Modal -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal" id="modal-content">
-    <button class="modal-close" onclick="closeModalDirect()">✕</button>
-    <div id="modal-body"></div>
+  <div class="modal" id="modal-box">
+    <div class="modal-topbar">
+      <span class="modal-topbar-left">📄 論文詳情</span>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-left" id="modal-left"></div>
+      <div class="modal-right">
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-pane="abstract" onclick="switchTab('abstract', this)">摘要</button>
+          <button class="detail-tab" data-pane="q3" onclick="switchTab('q3', this)">摘要三問</button>
+          <button class="detail-tab" data-pane="method" onclick="switchTab('method', this)">方法分析</button>
+          <button class="detail-tab" data-pane="contribution" onclick="switchTab('contribution', this)">貢獻</button>
+          <button class="detail-tab" data-pane="limitation" onclick="switchTab('limitation', this)">限制</button>
+        </div>
+        <div class="detail-content">
+          <div class="detail-pane active" id="pane-abstract"></div>
+          <div class="detail-pane" id="pane-q3"></div>
+          <div class="detail-pane" id="pane-method"></div>
+          <div class="detail-pane" id="pane-contribution"></div>
+          <div class="detail-pane" id="pane-limitation"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -173,7 +247,7 @@ function setFilter(tag, btn) {
 
 function filterPapers() {
   const q = document.getElementById('search').value.toLowerCase();
-  let filtered = papers.filter(p => {
+  const filtered = papers.filter(p => {
     const matchSearch = !q ||
       p.title.toLowerCase().includes(q) ||
       (p.title_zh && p.title_zh.includes(q)) ||
@@ -215,7 +289,7 @@ function renderPapers(list) {
       <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       <div class="card-footer">
         <a class="doi-link" href="https://doi.org/${p.doi}" target="_blank" onclick="event.stopPropagation()">DOI</a>
-        <a class="view-btn" href="${p.url}" target="_blank" onclick="event.stopPropagation()">閱讀全文 →</a>
+        <button class="detail-btn" onclick="event.stopPropagation(); openModal(${p.id})">詳細分析 →</button>
       </div>
     </div>
   `).join('');
@@ -238,30 +312,75 @@ function toggleFav(e, id) {
 function openModal(id) {
   const p = papers.find(x => x.id === id);
   if (!p) return;
-  document.getElementById('modal-body').innerHTML = `
-    <h2>${p.title}</h2>
-    <h3>${p.title_zh || ''}</h3>
-    <div class="modal-section">
-      <label>作者</label><p>${p.authors}</p>
+
+  document.getElementById('modal-left').innerHTML = `
+    <div class="modal-title-zh">${p.title_zh || p.title}</div>
+    <div class="modal-title-en">${p.title}</div>
+    <a class="modal-read-btn" href="${p.url}" target="_blank">努力閱讀 →</a>
+    <div class="info-row">
+      <div class="info-label">期刊</div>
+      <div class="info-value" style="color:#2b6cb0; font-weight:600">${p.journal}</div>
     </div>
-    <div class="modal-section">
-      <label>期刊 / 年份</label><p>${p.journal} · ${p.year}</p>
+    <div class="info-row">
+      <div class="info-label">年份</div>
+      <div class="info-value">${p.year}</div>
     </div>
-    <div class="modal-section">
-      <label>DOI</label><p><a href="https://doi.org/${p.doi}" target="_blank" style="color:#4299e1">${p.doi}</a></p>
+    <div class="info-row">
+      <div class="info-label">作者</div>
+      <div class="info-value">${p.authors}</div>
     </div>
-    <div class="modal-section">
-      <label>中文摘要</label><p>${p.abstract_zh || '摘要尚未翻譯'}</p>
+    <div class="info-row">
+      <div class="info-label">DOI</div>
+      <div class="info-value"><a class="info-doi" href="https://doi.org/${p.doi}" target="_blank">${p.doi}</a></div>
     </div>
-    <div class="modal-section">
-      <label>Tags</label>
-      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+    <div class="info-row">
+      <div class="info-label">標籤</div>
+      <div class="modal-tags">${p.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
     </div>
-    <div style="margin-top:20px">
-      <a class="view-btn" href="${p.url}" target="_blank">閱讀全文 →</a>
-    </div>
+    <button class="modal-fav-btn ${p.favorited ? 'active' : ''}" onclick="toggleFavModal(${p.id})">
+      ${p.favorited ? '⭐ 已收藏' : '☆ 加入收藏'}
+    </button>
   `;
+
+  document.getElementById('pane-abstract').innerHTML =
+    `<p>${p.abstract_zh || '摘要尚未提供。'}</p>`;
+
+  document.getElementById('pane-q3').innerHTML = p.q3
+    ? p.q3.map(item => `
+        <div class="q3-item">
+          <div class="q3-q">❓ ${item.q}</div>
+          <div class="q3-a">${item.a}</div>
+        </div>`).join('')
+    : '<p style="color:#a0aec0">尚未生成摘要三問。</p>';
+
+  document.getElementById('pane-method').innerHTML =
+    p.method ? `<p>${p.method}</p>` : '<p style="color:#a0aec0">尚未提供方法分析。</p>';
+
+  document.getElementById('pane-contribution').innerHTML =
+    p.contribution ? `<p>${p.contribution}</p>` : '<p style="color:#a0aec0">尚未提供貢獻摘要。</p>';
+
+  document.getElementById('pane-limitation').innerHTML =
+    p.limitation ? `<p>${p.limitation}</p>` : '<p style="color:#a0aec0">尚未提供限制說明。</p>';
+
+  // Reset to abstract tab
+  document.querySelectorAll('.detail-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.detail-pane').forEach(pane => pane.classList.remove('active'));
+  document.querySelector('.detail-tab[data-pane="abstract"]').classList.add('active');
+  document.getElementById('pane-abstract').classList.add('active');
+
   document.getElementById('modal-overlay').classList.add('open');
+}
+
+function switchTab(name, btn) {
+  document.querySelectorAll('.detail-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.detail-pane').forEach(pane => pane.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('pane-' + name).classList.add('active');
+}
+
+function toggleFavModal(id) {
+  const p = papers.find(x => x.id === id);
+  if (p) { p.favorited = !p.favorited; openModal(id); filterPapers(); }
 }
 
 function closeModal(e) {
