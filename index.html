@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reader — 內耳再生研究論文庫</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f7fa; color: #2d3748; }
+
+    header {
+      background: linear-gradient(135deg, #2b6cb0, #4299e1);
+      color: white;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header h1 { font-size: 1.5rem; font-weight: 700; }
+    header p { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
+    .header-stats { text-align: right; font-size: 0.8rem; opacity: 0.9; }
+
+    .controls {
+      padding: 20px 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      padding: 8px 14px;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus { border-color: #4299e1; box-shadow: 0 0 0 3px rgba(66,153,225,0.15); }
+    .filter-btn {
+      padding: 7px 14px;
+      border: 1px solid #cbd5e0;
+      border-radius: 20px;
+      background: white;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #4a5568;
+    }
+    .filter-btn:hover, .filter-btn.active { background: #2b6cb0; color: white; border-color: #2b6cb0; }
+
+    .papers-grid {
+      padding: 24px 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 20px;
+    }
+
+    .paper-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .paper-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); transform: translateY(-2px); }
+
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+    .paper-title { font-size: 0.95rem; font-weight: 600; color: #2d3748; line-height: 1.4; }
+    .paper-title-zh { font-size: 0.85rem; color: #4a5568; margin-bottom: 10px; line-height: 1.4; }
+    .fav-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; flex-shrink: 0; line-height: 1; }
+
+    .paper-meta { font-size: 0.78rem; color: #718096; margin-bottom: 10px; }
+    .paper-meta strong { color: #4299e1; }
+
+    .abstract { font-size: 0.82rem; color: #4a5568; line-height: 1.6; max-height: 80px; overflow: hidden; transition: max-height 0.3s; }
+    .abstract.expanded { max-height: 500px; }
+    .expand-btn { font-size: 0.75rem; color: #4299e1; background: none; border: none; cursor: pointer; margin-top: 4px; padding: 0; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .tag { padding: 3px 10px; background: #ebf8ff; color: #2b6cb0; border-radius: 12px; font-size: 0.72rem; font-weight: 500; }
+
+    .card-footer { margin-top: 14px; padding-top: 12px; border-top: 1px solid #f0f0f0; display: flex; gap: 10px; }
+    .doi-link, .view-btn {
+      font-size: 0.78rem;
+      color: #4299e1;
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid #bee3f8;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .doi-link:hover, .view-btn:hover { background: #ebf8ff; }
+    .view-btn { background: #2b6cb0; color: white; border-color: #2b6cb0; }
+    .view-btn:hover { background: #2c5282; }
+
+    .no-results { text-align: center; padding: 60px; color: #a0aec0; font-size: 1rem; }
+    .count-badge { background: #ebf8ff; color: #2b6cb0; padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: white; border-radius: 16px; padding: 32px; max-width: 680px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #718096; }
+    .modal h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
+    .modal h3 { font-size: 0.9rem; color: #718096; margin-bottom: 16px; }
+    .modal-section { margin-bottom: 20px; }
+    .modal-section label { font-size: 0.78rem; font-weight: 600; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 6px; }
+    .modal-section p { font-size: 0.88rem; color: #4a5568; line-height: 1.7; }
+
+    @media (max-width: 600px) {
+      .papers-grid { padding: 16px; grid-template-columns: 1fr; }
+      .controls { padding: 16px; }
+      header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📚 Paper Reader</h1>
+    <p>內耳再生研究論文庫</p>
+  </div>
+  <div class="header-stats">
+    <div id="paper-count-header"></div>
+    <div style="margin-top:4px; opacity:0.7;">最後更新：2026-07-19</div>
+  </div>
+</header>
+
+<div class="controls">
+  <input class="search-box" type="text" id="search" placeholder="搜尋論文標題、作者、關鍵字..." oninput="filterPapers()">
+  <span class="count-badge" id="count-badge"></span>
+  <button class="filter-btn active" onclick="setFilter('all', this)">全部</button>
+  <button class="filter-btn" onclick="setFilter('review', this)">Review</button>
+  <button class="filter-btn" onclick="setFilter('Nature', this)">Nature 系列</button>
+  <button class="filter-btn" onclick="setFilter('iPSC', this)">iPSC</button>
+  <button class="filter-btn" onclick="setFilter('2025', this)">2025</button>
+  <button class="filter-btn" onclick="setFilter('favorited', this)">⭐ 收藏</button>
+</div>
+
+<div class="papers-grid" id="papers-grid"></div>
+
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+let papers = [];
+let currentFilter = 'all';
+
+async function loadPapers() {
+  const res = await fetch('papers.json');
+  papers = await res.json();
+  renderPapers(papers);
+}
+
+function setFilter(tag, btn) {
+  currentFilter = tag;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterPapers();
+}
+
+function filterPapers() {
+  const q = document.getElementById('search').value.toLowerCase();
+  let filtered = papers.filter(p => {
+    const matchSearch = !q ||
+      p.title.toLowerCase().includes(q) ||
+      (p.title_zh && p.title_zh.includes(q)) ||
+      (p.authors && p.authors.toLowerCase().includes(q)) ||
+      (p.abstract_zh && p.abstract_zh.includes(q)) ||
+      p.tags.some(t => t.toLowerCase().includes(q));
+    const matchFilter = currentFilter === 'all' ? true :
+      currentFilter === 'favorited' ? p.favorited :
+      p.tags.some(t => t.toLowerCase().includes(currentFilter.toLowerCase())) ||
+      p.journal.toLowerCase().includes(currentFilter.toLowerCase()) ||
+      String(p.year) === currentFilter;
+    return matchSearch && matchFilter;
+  });
+  renderPapers(filtered);
+}
+
+function renderPapers(list) {
+  const grid = document.getElementById('papers-grid');
+  document.getElementById('count-badge').textContent = list.length + ' 篇';
+  document.getElementById('paper-count-header').textContent = papers.length + ' 篇論文';
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="no-results">沒有找到符合條件的論文</div>';
+    return;
+  }
+  grid.innerHTML = list.map(p => `
+    <div class="paper-card" onclick="openModal(${p.id})">
+      <div class="card-header">
+        <div>
+          <div class="paper-title">${p.title}</div>
+          <div class="paper-title-zh">${p.title_zh || ''}</div>
+        </div>
+        <button class="fav-btn" onclick="toggleFav(event, ${p.id})">${p.favorited ? '⭐' : '☆'}</button>
+      </div>
+      <div class="paper-meta">
+        <strong>${p.journal}</strong> · ${p.year} · ${p.authors}
+      </div>
+      <div class="abstract" id="abs-${p.id}">${p.abstract_zh || '摘要尚未翻譯'}</div>
+      <button class="expand-btn" onclick="toggleAbstract(event, ${p.id})" id="exp-${p.id}">展開摘要 ▾</button>
+      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="card-footer">
+        <a class="doi-link" href="https://doi.org/${p.doi}" target="_blank" onclick="event.stopPropagation()">DOI</a>
+        <a class="view-btn" href="${p.url}" target="_blank" onclick="event.stopPropagation()">閱讀全文 →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleAbstract(e, id) {
+  e.stopPropagation();
+  const abs = document.getElementById('abs-' + id);
+  const btn = document.getElementById('exp-' + id);
+  abs.classList.toggle('expanded');
+  btn.textContent = abs.classList.contains('expanded') ? '收合摘要 ▴' : '展開摘要 ▾';
+}
+
+function toggleFav(e, id) {
+  e.stopPropagation();
+  const p = papers.find(x => x.id === id);
+  if (p) { p.favorited = !p.favorited; filterPapers(); }
+}
+
+function openModal(id) {
+  const p = papers.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modal-body').innerHTML = `
+    <h2>${p.title}</h2>
+    <h3>${p.title_zh || ''}</h3>
+    <div class="modal-section">
+      <label>作者</label><p>${p.authors}</p>
+    </div>
+    <div class="modal-section">
+      <label>期刊 / 年份</label><p>${p.journal} · ${p.year}</p>
+    </div>
+    <div class="modal-section">
+      <label>DOI</label><p><a href="https://doi.org/${p.doi}" target="_blank" style="color:#4299e1">${p.doi}</a></p>
+    </div>
+    <div class="modal-section">
+      <label>中文摘要</label><p>${p.abstract_zh || '摘要尚未翻譯'}</p>
+    </div>
+    <div class="modal-section">
+      <label>Tags</label>
+      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+    </div>
+    <div style="margin-top:20px">
+      <a class="view-btn" href="${p.url}" target="_blank">閱讀全文 →</a>
+    </div>
+  `;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+loadPapers();
+</script>
+</body>
+</html>

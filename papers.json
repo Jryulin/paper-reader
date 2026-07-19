@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Stem Cell-Based Hair Cell Regeneration and Therapy in the Inner Ear",
+    "title_zh": "內耳幹細胞毛細胞再生與治療",
+    "authors": "Zhang Y, et al.",
+    "journal": "Neuroscience Bulletin",
+    "year": 2023,
+    "doi": "10.1007/s12264-023-01130-w",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10774470/",
+    "abstract_zh": "聽力損失日益普遍，造成相當大的身心障礙，嚴重加重全球經濟負擔。毛細胞的不可逆喪失是感音神經性聽力損失的主要原因，目前唯一相對有效的臨床治療僅限於人工耳蝸和助聽器等數位聽力設備，但對患者的益處有限。本文首先回顧毛細胞再生的主要機制，包括多種信號通路和轉錄因子如何觸發毛細胞祖細胞的活化，並確保新生毛細胞的成熟。此外，本文進一步介紹來自幹細胞（包括胚胎幹細胞、誘導多能幹細胞及內耳幹細胞）的各種毛細胞再生模型，並討論基因治療在毛細胞再生中的應用。最後，本文展望內耳毛細胞再生研究的未來方向。",
+    "tags": ["review", "hair cell", "stem cell", "iPSC", "inner ear", "regeneration"],
+    "pubmed_id": "PMC10774470",
+    "favorited": false
+  },
+  {
+    "id": 2,
+    "title": "Single-cell transcriptomic atlas reveals increased regeneration potential in human utricle",
+    "title_zh": "單細胞轉錄體圖譜揭示人類橢圓囊增強的再生潛力",
+    "authors": "Kalra G, et al.",
+    "journal": "Nature Communications",
+    "year": 2024,
+    "doi": "10.1038/s41467-024-48491-y",
+    "url": "https://www.nature.com/articles/s41467-024-48491-y",
+    "abstract_zh": "內耳毛細胞的喪失會導致永久性聽力損失和平衡功能障礙。人類前庭細胞是否能夠再生目前仍不清楚。本研究提供了人類橢圓囊的單細胞資源，分析不同年齡層受試者的細胞組成，並揭示人類橢圓囊細胞的再生潛力。",
+    "tags": ["single-cell", "utricle", "regeneration", "human", "Nature"],
+    "pubmed_id": "",
+    "favorited": false
+  },
+  {
+    "id": 3,
+    "title": "Generation and characterization of vestibular inner ear organoids from human pluripotent stem cells",
+    "title_zh": "從人類多能幹細胞生成並表徵前庭內耳類器官",
+    "authors": "Ealy M, et al.",
+    "journal": "Nature Protocols",
+    "year": 2025,
+    "doi": "10.1038/s41596-025-01191-3",
+    "url": "https://www.nature.com/articles/s41596-025-01191-3",
+    "abstract_zh": "本研究詳述了從人類多能幹細胞（含 iPSC）生成並表徵前庭內耳類器官的實驗方法。此為先前皮膚類器官實驗方案的延伸，提供完整的步驟指引，有助於推進內耳再生研究。",
+    "tags": ["protocol", "organoid", "iPSC", "vestibular", "Nature Protocols"],
+    "pubmed_id": "",
+    "favorited": false
+  },
+  {
+    "id": 4,
+    "title": "Stem Cell-Based Therapies for Auditory Hair Cell Regeneration in the Inner Ear",
+    "title_zh": "內耳聽覺毛細胞再生的幹細胞療法",
+    "authors": "Roccio M, et al.",
+    "journal": "Tissue Engineering Part B",
+    "year": 2023,
+    "doi": "10.1089/ten.teb.2023.0084",
+    "url": "https://journals.sagepub.com/doi/10.1089/ten.teb.2023.0084",
+    "abstract_zh": "由幹細胞組成的再生醫學方法，包括幹細胞為基礎的毛細胞搶救或再生、基因治療，以及細胞與組織工程，預計將大幅改善可用於治療聽力損失的治療手段。",
+    "tags": ["review", "stem cell", "therapy", "hair cell", "regenerative medicine"],
+    "pubmed_id": "",
+    "favorited": false
+  },
+  {
+    "id": 5,
+    "title": "Stem cell-based and gene editing strategies in the treatment of sensorineural hearing loss",
+    "title_zh": "幹細胞與基因編輯策略在感音神經性聽力損失治療中的應用",
+    "authors": "Various",
+    "journal": "European Archives of Oto-Rhino-Laryngology",
+    "year": 2025,
+    "doi": "10.1007/s00405-025-09957-x",
+    "url": "https://link.springer.com/article/10.1007/s00405-025-09957-x",
+    "abstract_zh": "感音神經性聽力損失（SNHL）是人類最常見的感覺障礙，隨年齡增長日益普遍。儘管病因多樣，耳蝸毛細胞和神經元的不可逆退化仍是聽力下降的最終共同路徑。本敘述性回顧綜合了基因和幹細胞治療感音神經性聽力損失的當前臨床前及早期臨床證據。",
+    "tags": ["review", "gene therapy", "stem cell", "SNHL", "2025"],
+    "pubmed_id": "",
+    "favorited": false
+  }
+]
