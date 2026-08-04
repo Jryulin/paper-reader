@@ -1012,5 +1012,124 @@
     ],
     "pubmed_id": "",
     "favorited": false
+  },
+  {
+    "id": 27,
+    "title": "AAV-Sparcl1 Promotes Hair Cell Regeneration by Increasing Supporting Cell Plasticity",
+    "title_zh": "AAV-Sparcl1 透過提升支持細胞可塑性促進毛細胞再生",
+    "authors": "Chai R, et al. (Southeast University / Harvard collaborating team)",
+    "journal": "Molecular Therapy",
+    "year": 2025,
+    "doi": "10.1016/j.ymthe.2025.04.030",
+    "url": "https://www.cell.com/molecular-therapy-family/molecular-therapy/fulltext/S1525-0016(25)00262-X",
+    "abstract_zh": "感音神經性聽力損失主要因毛細胞受損所致，哺乳動物的支持細胞隨年齡增長逐漸失去轉分化為毛細胞的能力。本研究發現分泌型細胞外基質蛋白 Sparcl1 可顯著增強支持細胞的重編程能力，並促進毛細胞再生。透過 AAV 介導的 Sparcl1 過表現系統，研究團隊在體外與體內模型中均成功實現了內耳類器官的擴增與毛細胞分化，為感音神經性聽力損失提供了新的基因治療路徑。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳動物支持細胞在成熟後喪失轉分化為毛細胞的能力，本研究尋找可重新活化此可塑性的分泌型因子。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Sparcl1（分泌型細胞外基質蛋白）是支持細胞重編程的關鍵調控因子；AAV-Sparcl1 在體外和體內均可促進支持細胞轉分化為毛細胞，並實現類器官擴增。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "Sparcl1 作為胞外分泌蛋白，可能透過旁分泌方式影響支持細胞可塑性；與 galectin-1（paper #13）的細胞外基質調控機制可能存在互補，值得在 NHRI-01-03 分化系統中驗證。"
+      }
+    ],
+    "method": "以 AAV 載體在小鼠內耳支持細胞中過表現 Sparcl1，結合體外耳蝸外植體、3D 類器官培養及體內損傷動物模型，以 Myo7a/Atoh1 免疫螢光定量毛細胞再生效率；轉錄組學分析支持細胞重編程路徑。",
+    "contribution": "（1）首次鑑定 Sparcl1 為支持細胞可塑性的胞外調控因子；（2）建立 AAV-Sparcl1 體內遞送的毛細胞再生策略；（3）揭示細胞外基質在內耳再生中的新角色；（4）為 AAV 基因治療聽力損失提供新靶點。",
+    "limitation": "（1）Sparcl1 作用的下游信號通路機制尚未完整解析；（2）體內再生的毛細胞數量與功能成熟度仍有限；（3）AAV 遞送效率在不同年齡小鼠中可能有差異。",
+    "tags": [
+      "AAV",
+      "Sparcl1",
+      "supporting-cell",
+      "transdifferentiation",
+      "gene-therapy",
+      "hair-cell",
+      "regeneration",
+      "2025"
+    ],
+    "pubmed_id": "40181541",
+    "favorited": false
+  },
+  {
+    "id": 28,
+    "title": "Inner ear transplantation of cochlear progenitor cells restores acute sensorineural hearing loss",
+    "title_zh": "內耳移植耳蝸祖細胞恢復急性感音神經性聽力損失",
+    "authors": "Liu X, Li Y, et al.",
+    "journal": "Neuroscience",
+    "year": 2026,
+    "doi": "10.1016/j.neuroscience.2026.01.001",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0306452226001557",
+    "abstract_zh": "本研究評估耳蝸祖細胞類器官體外擴增後移植至急性耳毒性損傷耳蝸的可行性與療效。研究以腹腔注射卡那黴素（kanamycin）聯合利尿劑建立急性外毛細胞損傷模型，於造模後第五天，將自新生小鼠耳蝸分離並體外擴增的耳蝸祖細胞，透過後半規管注入損傷耳蝸。結果顯示移植細胞可存活並定植於受損耳蝸，聽力閾值顯著改善。此外，後半規管注射途徑不造成額外聽力損失，顯示其安全性。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "耳蝸祖細胞移植面臨存活率低與遞送路徑創傷性的挑戰，本研究評估後半規管注射作為安全有效遞送路徑的可行性。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "新生小鼠耳蝸祖細胞類器官擴增後仍保有幹細胞特性；透過後半規管注射可安全遞送至損傷耳蝸，移植細胞存活定植，聽力閾值有統計顯著改善。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "後半規管注射途徑相對安全，可作為 iPSC 衍生耳蝸祖細胞移植的參考遞送路徑；類器官擴增後移植的策略印證了體外擴增保留幹細胞特性的重要性。"
+      }
+    ],
+    "method": "腹腔注射卡那黴素＋利尿劑建立急性外毛細胞損傷模型；自新生小鼠耳蝸分離祖細胞體外培養形成類器官並擴增，造模後第5天透過後半規管注射移植；以 ABR 評估聽力閾值，免疫螢光分析移植細胞在耳蝸中的分佈與存活。",
+    "contribution": "（1）驗證後半規管作為安全低創傷性耳蝸細胞遞送路徑；（2）確認體外擴增耳蝸祖細胞類器官在移植後仍可存活定植；（3）提供急性耳毒性損傷模型下細胞移植改善聽力的體內證據。",
+    "limitation": "（1）移植細胞的最終命運（是否真正分化為功能性毛細胞）需進一步確認；（2）聽力改善可能部分來自神經保護旁分泌效應而非真正細胞替代；（3）僅在急性損傷模型中驗證，慢性聽力損失適用性待評估。",
+    "tags": [
+      "transplantation",
+      "progenitor-cell",
+      "organoid",
+      "cochlea",
+      "hearing-restoration",
+      "delivery-route",
+      "2026"
+    ],
+    "pubmed_id": "",
+    "favorited": false
+  },
+  {
+    "id": 29,
+    "title": "Partial hearing recovery after cochlear nerve surface transplantation of hair follicle-derived neural crest stem cells in neural hearing loss rat",
+    "title_zh": "毛囊來源神經嵴幹細胞耳蝸神經表面移植部分恢復神經性聽力損失大鼠聽力",
+    "authors": "Chen X, Zhang Y, et al.",
+    "journal": "AME Medical Journal",
+    "year": 2026,
+    "doi": "10.1002/ame2.70216",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/ame2.70216",
+    "abstract_zh": "幹細胞治療為神經退行性疾病帶來希望，但有效遞送策略仍是主要挑戰。本研究建立 ouabain 誘導的螺旋神經節神經元（SGN）損傷聽力損失大鼠模型，並評估一種新型移植策略：經後枕部入路（posterior occipital approach）將毛囊來源神經嵴幹細胞（NC-SCs）直接移植至耳蝸神經表面，靶向 Rosenthal's canal（RC），以減少耳蝸結構損傷並促進細胞定向遞送。結果顯示耳蝸神經表面移植可提升幹細胞存活率，並實現部分聽覺功能恢復，是 SGN 相關聽力損失細胞療法的有效遞送途徑。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "現有幹細胞移植策略常造成耳蝸結構損傷且細胞存活率低，本研究評估耳蝸神經表面移植作為靶向 Rosenthal's canal 的低創傷遞送策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "耳蝸神經表面移植法可在不造成額外耳蝸損傷的前提下，將毛囊來源 NC-SCs 定向遞送至 Rosenthal's canal；移植後細胞存活率提升，SGN 密度改善，ABR 閾值部分恢復。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "毛囊 NC-SCs 是可取得的自體細胞來源，且能朝神經元方向分化；耳蝸神經表面遞送路徑與 biohybrid CI（paper #11）的理念呼應，可作為 iPSC-SGN 移植路徑設計的參考。"
+      }
+    ],
+    "method": "以 ouabain 耳蝸內注射建立 SGN 損傷模型；分離大鼠毛囊神經嵴幹細胞（NC-SCs）體外擴增，經後枕部入路移植至耳蝸神經表面；以 ABR 評估聽力，免疫螢光分析 RC 內膠質細胞密度變化與移植細胞分佈。",
+    "contribution": "（1）建立後枕部耳蝸神經表面移植的標準化操作方法；（2）驗證毛囊 NC-SCs 在 SGN 損傷模型中的存活與部分聽力恢復效果；（3）提供低創傷性靶向 Rosenthal's canal 遞送路徑的體內證據。",
+    "limitation": "（1）毛囊 NC-SCs 與真正 SGN 的電生理成熟度差異未充分評估；（2）聽力改善幅度有限（部分恢復），機制（替代 vs 旁分泌）尚不明確；（3）長期追蹤資料缺乏。",
+    "tags": [
+      "neural-crest",
+      "stem-cell",
+      "SGN",
+      "transplantation",
+      "cochlear-nerve",
+      "hearing-loss",
+      "delivery",
+      "2026"
+    ],
+    "pubmed_id": "42216517",
+    "favorited": false
   }
 ]
