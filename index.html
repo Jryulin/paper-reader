@@ -163,6 +163,18 @@
     .q3-q { font-size: 0.82rem; font-weight: 700; color: #2b6cb0; margin-bottom: 7px; }
     .q3-a { font-size: 0.86rem; color: #4a5568; line-height: 1.75; padding-left: 14px; border-left: 3px solid #bee3f8; }
 
+    .group-header {
+      grid-column: 1 / -1;
+      padding: 10px 16px; margin: 8px 0 4px;
+      background: linear-gradient(90deg, #ebf8ff, #f0fff4);
+      border-left: 4px solid #4299e1; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 700; color: #2b6cb0;
+    }
+    .group-header-b { background: linear-gradient(90deg, #f0fff4, #fefcbf); border-left-color: #48bb78; color: #276749; }
+    .group-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 0.65rem; font-weight: 700; margin-right: 4px; vertical-align: middle; }
+    .group-a { background: #ebf8ff; color: #2b6cb0; }
+    .group-b { background: #f0fff4; color: #276749; }
+
     @media (max-width: 680px) {
       .modal { width: 100%; max-height: 100vh; border-radius: 0; }
       .modal-body { flex-direction: column; }
@@ -178,11 +190,11 @@
 <header>
   <div>
     <h1>📚 Paper Reader</h1>
-    <p>內耳再生研究論文庫</p>
+    <p>內耳再生 · CNS 神經類器官 研究論文庫</p>
   </div>
   <div class="header-stats">
     <div id="paper-count-header"></div>
-    <div style="margin-top:4px; opacity:0.7;">最後更新：2026-07-20 ✦ 含2026最新文獻</div>
+    <div style="margin-top:4px; opacity:0.7;">最後更新：2026-08-04 ✦ 含2026最新文獻</div>
   </div>
 </header>
 
@@ -196,6 +208,8 @@
   <button class="filter-btn" onclick="setFilter('2025', this)">2025</button>
   <button class="filter-btn" onclick="setFilter('2026', this)">2026 新</button>
   <button class="filter-btn" onclick="setFilter('favorited', this)">⭐ 收藏</button>
+  <button class="filter-btn" onclick="setFilter('group-a', this)" style="border-color:#bee3f8; color:#2b6cb0;">🦻 A組</button>
+  <button class="filter-btn" onclick="setFilter('group-b', this)" style="border-color:#c6f6d5; color:#276749;">🧠 B組</button>
   <select id="sort-select" onchange="setSort(this.value)" style="margin-left:12px; padding:5px 10px; border:1px solid #cbd5e0; border-radius:6px; background:#fff; font-size:0.85rem; color:#2d3748; cursor:pointer;">
     <option value="id">加入順序</option>
     <option value="year-desc">年份（新→舊）</option>
@@ -236,6 +250,25 @@
 
 <script>
 let currentFilter = 'all';
+let currentSort = 'id';
+let papers = [];
+
+function getGroup(p) {
+  return p.group === 'cns' ? 'B' : 'A';
+}
+
+async function loadPapers() {
+  try {
+    const resp = await fetch('papers.json');
+    papers = await resp.json();
+  } catch(e) {
+    document.getElementById('papers-grid').innerHTML = '<div class="no-results">載入論文失敗，請確認 papers.json 可存取。</div>';
+    return;
+  }
+  filterPapers();
+}
+
+/* ---- LEGACY INLINE DATA (removed; now loaded from papers.json) ---- */
 const PAPERS_DATA = [
   {
     "id": 1,
@@ -1252,13 +1285,7 @@ const PAPERS_DATA = [
     "favorited": false
   }
 ];
-let papers = [];
-let currentSort = 'id';
-
-function loadPapers() {
-  papers = PAPERS_DATA;
-  renderPapers(papers);
-}
+/* ---- END LEGACY DATA ---- */
 
 function setFilter(tag, btn) {
   currentFilter = tag;
@@ -1283,6 +1310,8 @@ function filterPapers() {
       p.tags.some(t => t.toLowerCase().includes(q));
     const matchFilter = currentFilter === 'all' ? true :
       currentFilter === 'favorited' ? p.favorited :
+      currentFilter === 'group-a' ? getGroup(p) === 'A' :
+      currentFilter === 'group-b' ? getGroup(p) === 'B' :
       p.tags.some(t => t.toLowerCase().includes(currentFilter.toLowerCase())) ||
       p.journal.toLowerCase().includes(currentFilter.toLowerCase()) ||
       String(p.year) === currentFilter;
@@ -1296,15 +1325,12 @@ function filterPapers() {
   renderPapers(filtered);
 }
 
-function renderPapers(list) {
-  const grid = document.getElementById('papers-grid');
-  document.getElementById('count-badge').textContent = list.length + ' 篇';
-  document.getElementById('paper-count-header').textContent = papers.length + ' 篇論文';
-  if (list.length === 0) {
-    grid.innerHTML = '<div class="no-results">沒有找到符合條件的論文</div>';
-    return;
-  }
-  grid.innerHTML = list.map(p => `
+function renderCard(p) {
+  const grp = getGroup(p);
+  const badge = grp === 'B'
+    ? '<span class="group-badge group-b">🧠 B組</span>'
+    : '<span class="group-badge group-a">🦻 A組</span>';
+  return `
     <div class="paper-card" onclick="openModal(${p.id})">
       <div class="card-header">
         <div>
@@ -1318,13 +1344,40 @@ function renderPapers(list) {
       </div>
       <div class="abstract" id="abs-${p.id}">${p.abstract_zh || '摘要尚未翻譯'}</div>
       <button class="expand-btn" onclick="toggleAbstract(event, ${p.id})" id="exp-${p.id}">展開摘要 ▾</button>
-      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="tags">${badge}${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       <div class="card-footer">
         <a class="doi-link" href="https://doi.org/${p.doi}" target="_blank" onclick="event.stopPropagation()">DOI</a>
         <button class="detail-btn" onclick="event.stopPropagation(); openModal(${p.id})">詳細分析 →</button>
       </div>
-    </div>
-  `).join('');
+    </div>`;
+}
+
+function renderPapers(list) {
+  const grid = document.getElementById('papers-grid');
+  document.getElementById('count-badge').textContent = list.length + ' 篇';
+  document.getElementById('paper-count-header').textContent = papers.length + ' 篇論文';
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="no-results">沒有找到符合條件的論文</div>';
+    return;
+  }
+  const hasB = list.some(p => getGroup(p) === 'B');
+  const showSections = currentFilter === 'all' && hasB;
+  if (showSections) {
+    const grpA = list.filter(p => getGroup(p) === 'A');
+    const grpB = list.filter(p => getGroup(p) === 'B');
+    let html = '';
+    if (grpA.length) {
+      html += `<div class="group-header">🦻 A 組 — 內耳 / 毛細胞再生（${grpA.length} 篇）</div>`;
+      html += grpA.map(renderCard).join('');
+    }
+    if (grpB.length) {
+      html += `<div class="group-header group-header-b">🧠 B 組 — CNS / 神經類器官（${grpB.length} 篇）</div>`;
+      html += grpB.map(renderCard).join('');
+    }
+    grid.innerHTML = html;
+  } else {
+    grid.innerHTML = list.map(renderCard).join('');
+  }
 }
 
 function toggleAbstract(e, id) {
@@ -1422,7 +1475,7 @@ function closeModalDirect() {
   document.getElementById('modal-overlay').classList.remove('open');
 }
 
-loadPapers();
+loadPapers(); // fetch papers.json → filterPapers → renderPapers
 </script>
 </body>
 </html>
