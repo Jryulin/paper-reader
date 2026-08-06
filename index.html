@@ -1347,6 +1347,7 @@ function renderCard(p) {
         <button class="fav-btn" onclick="toggleFav(event, ${p.id})">${p.favorited ? '⭐' : '☆'}</button>
       </div>
       <div class="paper-meta">
+        <span style="color:#a0aec0; font-size:0.72rem; font-weight:700;">#${p.id}</span>
         <strong>${p.journal}</strong> · ${p.year} · ${p.authors}
       </div>
       <div class="abstract" id="abs-${p.id}">${p.abstract_zh || '摘要尚未翻譯'}</div>
