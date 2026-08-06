@@ -21,7 +21,7 @@
 | 08 | `08-Rainey2026.pdf` | SAPG 無病毒重編程生成毛細胞樣細胞（eLife） |
 | 09 | `09-Xiao2026.pdf` | Dkk3 敲除驅動 Lgr5+ 祖細胞重編程（Theranostics） |
 | 10 | `10-Niu2026.pdf` | Notch/FGF/BMP 腺病毒共調控毛細胞再生 |
-| 11 | `11-Carpino2026.pdf` | 生物混合人工耳蝸（Review） |
+| 11 | `11-Matsuoka2026.pdf` | 生物混合人工耳蝸（Review） |
 | 12 | `12-Fankhauser2026.pdf` | 梅尼爾氏病細胞與基因治療（Review） |
 | 13 | `13-Kubota2026.pdf` | Galectin 與 Myc 促進耳蝸祖細胞擴增 |
 | 14 | `14-Jeong2026.pdf` | hiPSC 工程化製備功能性 SGN |
