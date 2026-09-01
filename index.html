@@ -179,10 +179,12 @@
     }
     .group-header-b { background: linear-gradient(90deg, #f0fff4, #fefcbf); border-left-color: #48bb78; color: #276749; }
     .group-header-c { background: linear-gradient(90deg, #fef9f0, #fff0f6); border-left-color: #ed8936; color: #7b341e; }
+    .group-header-d { background: linear-gradient(90deg, #f5f0ff, #fdf0ff); border-left-color: #9f7aea; color: #553c9a; }
     .group-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 0.65rem; font-weight: 700; margin-right: 4px; vertical-align: middle; }
     .group-a { background: #ebf8ff; color: #2b6cb0; }
     .group-b { background: #f0fff4; color: #276749; }
     .group-c { background: #fff3e0; color: #7b341e; }
+    .group-d { background: #f5f0ff; color: #553c9a; }
 
     @media (max-width: 680px) {
       .modal { width: 100%; max-height: 100vh; border-radius: 0; }
@@ -220,6 +222,7 @@
   <button class="filter-btn" onclick="setFilter('group-a', this)" style="border-color:#bee3f8; color:#2b6cb0;">🦻 A組</button>
   <button class="filter-btn" onclick="setFilter('group-b', this)" style="border-color:#c6f6d5; color:#276749;">🧠 B組</button>
   <button class="filter-btn" onclick="setFilter('group-c', this)" style="border-color:#fbd38d; color:#7b341e;">🧫 C組</button>
+  <button class="filter-btn" onclick="setFilter('group-d', this)" style="border-color:#d6bcfa; color:#553c9a;">🧘 D組</button>
   <select id="sort-select" onchange="setSort(this.value)" style="margin-left:12px; padding:5px 10px; border:1px solid #cbd5e0; border-radius:6px; background:#fff; font-size:0.85rem; color:#2d3748; cursor:pointer;">
     <option value="id">加入順序</option>
     <option value="year-desc">年份（新→舊）</option>
@@ -266,6 +269,7 @@ let papers = [];
 function getGroup(p) {
   if (p.group === 'cns') return 'B';
   if (p.group === 'organoid') return 'C';
+  if (p.group === 'mindbody') return 'D';
   return 'A';
 }
 
@@ -1325,6 +1329,7 @@ function filterPapers() {
       currentFilter === 'group-a' ? getGroup(p) === 'A' :
       currentFilter === 'group-b' ? getGroup(p) === 'B' :
       currentFilter === 'group-c' ? getGroup(p) === 'C' :
+      currentFilter === 'group-d' ? getGroup(p) === 'D' :
       p.tags.some(t => t.toLowerCase().includes(currentFilter.toLowerCase())) ||
       p.journal.toLowerCase().includes(currentFilter.toLowerCase()) ||
       String(p.year) === currentFilter;
@@ -1344,6 +1349,8 @@ function renderCard(p) {
     ? '<span class="group-badge group-b">🧠 B組</span>'
     : grp === 'C'
     ? '<span class="group-badge group-c">🧫 C組</span>'
+    : grp === 'D'
+    ? '<span class="group-badge group-d">🧘 D組</span>'
     : '<span class="group-badge group-a">🦻 A組</span>';
   return `
     <div class="paper-card" onclick="openModal(${p.id})">
@@ -1382,6 +1389,7 @@ function renderPapers(list) {
     const grpA = list.filter(p => getGroup(p) === 'A');
     const grpB = list.filter(p => getGroup(p) === 'B');
     const grpC = list.filter(p => getGroup(p) === 'C');
+    const grpD = list.filter(p => getGroup(p) === 'D');
     let html = '';
     if (grpA.length) {
       html += `<div class="group-header">🦻 A 組 — 內耳 / 毛細胞再生（${grpA.length} 篇）</div>`;
@@ -1394,6 +1402,10 @@ function renderPapers(list) {
     if (grpC.length) {
       html += `<div class="group-header group-header-c">🧫 C 組 — 類器官（其他）（${grpC.length} 篇）</div>`;
       html += grpC.map(renderCard).join('');
+    }
+    if (grpD.length) {
+      html += `<div class="group-header group-header-d">🧘 D 組 — 身心神經科學（${grpD.length} 篇）</div>`;
+      html += grpD.map(renderCard).join('');
     }
     grid.innerHTML = html;
   } else {
