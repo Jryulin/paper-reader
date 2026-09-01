@@ -1224,5 +1224,447 @@
     "pubmed_id": "",
     "group": "cns",
     "favorited": false
+  },
+  {
+    "id": 32,
+    "title": "The Notch ligand Jagged1 plays a dual role in cochlear hair cell regeneration",
+    "title_zh": "Notch 配體 Jagged1 在耳蝸毛細胞再生中扮演雙重角色",
+    "authors": "（未列全名）et al.",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "doi": "",
+    "url": "https://www.nature.com/articles/s41467-025-63053-6",
+    "abstract_zh": "本研究揭示 Jagged1 在耳蝸中的雙重調控功能：在正常發育時期維持支持細胞身份，而在毛細胞損傷後則作為再生促進因子，啟動毛細胞再生程序，闡明 Notch 配體在耳蝸再生中的精細調控機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Notch 信號通路在耳蝸再生中的角色矛盾：過去研究顯示 Notch 抑制可促進毛細胞再生，但其配體 Jagged1 的具體功能不清楚。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Jagged1 具有雙重身份——平時維持支持細胞靜止態，損傷後轉而促進毛細胞再生，是一個情境依賴性調控因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "操控 Jagged1 的時間窗口與表現量，可能是優化耳蝸毛細胞再生策略的關鍵切入點。"
+      }
+    ],
+    "method": "使用條件性基因敲除小鼠模型，在不同時間點特異性操控 Jagged1 表現，結合螢光標記細胞追蹤與聽力功能評估。",
+    "contribution": "首次系統證明 Jagged1 在耳蝸發育與再生中的雙重角色，為 Notch 信號通路靶向治療提供新框架。",
+    "limitation": "目前限於動物模型，人類耳蝸中 Jagged1 的類似機制尚需驗證。",
+    "tags": [
+      "notch",
+      "jagged1",
+      "hair cell",
+      "regeneration",
+      "cochlea"
+    ],
+    "favorited": false
+  },
+  {
+    "id": 33,
+    "title": "MSC-derived small extracellular vesicles promote regeneration of cochlear spiral ganglion neurons and their myelin sheaths",
+    "title_zh": "MSC 衍生小胞外囊泡促進耳蝸螺旋神經節神經元及髓鞘再生",
+    "authors": "（中國研究團隊）et al.",
+    "journal": "Neuroscience Bulletin",
+    "year": 2026,
+    "doi": "10.1007/s12264-025-01554-6",
+    "url": "https://link.springer.com/article/10.1007/s12264-025-01554-6",
+    "abstract_zh": "本研究發現間充質幹細胞衍生的小胞外囊泡（sEV）可同時靶向螺旋神經節神經元（SGN）與施旺細胞髓鞘，建構神經膠質功能單元的再生微環境，有效修復受損的聽覺神經回路。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽覺神經病變中 SGN 退化與髓鞘損失是雙重問題，目前缺乏同時解決兩者的治療策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MSC-sEV 可同步促進 SGN 存活與施旺細胞髓鞘形成，恢復神經傳導完整性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "sEV 作為無細胞療法具有安全性優勢，適合與基因療法或幹細胞移植整合，強化 SGN 再生效果。"
+      }
+    ],
+    "method": "體外 SGN 培養與聽覺神經病變動物模型，注射 MSC-sEV 後評估 SGN 密度、髓鞘完整性與 ABR 閾值。",
+    "contribution": "首次展示 MSC-sEV 同時促進 SGN 與髓鞘再生的雙靶向效果，提供聽覺神經修復的新治療策略。",
+    "limitation": "動物模型結果，臨床轉化需克服 sEV 大規模製備與內耳遞送效率問題。",
+    "tags": [
+      "MSC",
+      "extracellular vesicles",
+      "SGN",
+      "myelin",
+      "cochlea",
+      "regeneration"
+    ],
+    "favorited": false
+  },
+  {
+    "id": 34,
+    "title": "Mesenchymal vs. induced pluripotent stem cells: potential for spiral ganglion neuron regeneration in auditory neuropathy",
+    "title_zh": "間充質幹細胞與誘導多能幹細胞在聽覺神經病變螺旋神經節再生中的潛力比較",
+    "authors": "Aasar B, Veret D, Zine A",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fncel.2026.1821605",
+    "url": "https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2026.1821605/full",
+    "abstract_zh": "本文系統比較間充質幹細胞（MSC）與誘導多能幹細胞（iPSC）在聽覺神經病變相關螺旋神經節神經元再生中的優缺點，評估兩種細胞來源的分化能力、安全性與臨床轉化潛力。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽覺神經病變的 SGN 再生策略中，MSC 與 iPSC 各有優勢，但缺乏系統性比較。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MSC 操作簡便、免疫排斥風險低；iPSC 可高效分化為 SGN 類型但致瘤風險需謹慎評估。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "根據臨床目標選擇細胞來源：短期安全性優先選 MSC，長期功能整合潛力選 iPSC。"
+      }
+    ],
+    "method": "系統性文獻回顧，彙整 MSC 與 iPSC 在 SGN 再生相關體外與動物研究的成效指標。",
+    "contribution": "提供 MSC vs iPSC 在聽覺神經病變治療的決策框架，協助研究者與臨床醫師選擇適合策略。",
+    "limitation": "為回顧性研究，欠缺直接頭對頭比較的臨床試驗數據。",
+    "tags": [
+      "MSC",
+      "iPSC",
+      "SGN",
+      "auditory neuropathy",
+      "stem cell",
+      "review"
+    ],
+    "favorited": false
+  },
+  {
+    "id": 35,
+    "title": "Advances in the Treatment of Sensorineural Hearing Loss: From Stem Cells to Gene Therapy",
+    "title_zh": "感音神經性聽力損失的治療進展：從幹細胞到基因治療",
+    "authors": "（未列全名）et al.",
+    "journal": "Advanced Science Reviews",
+    "year": 2025,
+    "doi": "10.1002/adsr.202500180",
+    "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adsr.202500180",
+    "abstract_zh": "本綜述系統回顧毛細胞與螺旋神經節神經元再生的分子機制，比較不同幹細胞來源的分化效率，並整合基因治療（包括病毒載體遞送 Atoh1、CRISPR 基因編輯）的最新臨床前與臨床進展。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "SNHL 目前缺乏根治性生物療法，幹細胞與基因治療是最具潛力的兩條路線，需要系統整合最新進展。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "幹細胞與基因治療各有優勢，結合策略（如 iPSC 移植搭配 ATOH1 轉導）是未來方向。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "明確最佳分化時間窗口與遞送方式，是提高治療效率的關鍵，可作為實驗設計參考。"
+      }
+    ],
+    "method": "敘述性系統文獻回顧，涵蓋 2015-2025 年間 PubMed 及 ClinicalTrials.gov 相關文獻。",
+    "contribution": "整合幹細胞與基因治療兩大平行領域的最新進展，提出協同治療策略的概念框架。",
+    "limitation": "多數研究仍停留於臨床前階段，人體應用的安全性與長期療效尚需大規模試驗驗證。",
+    "tags": [
+      "SNHL",
+      "stem cell",
+      "gene therapy",
+      "ATOH1",
+      "review",
+      "hair cell"
+    ],
+    "favorited": false
+  },
+  {
+    "id": 36,
+    "title": "Brain organoids as precision models for neurodegenerative diseases",
+    "title_zh": "腦類器官作為神經退化疾病的精準研究模型",
+    "authors": "（未列全名）et al.",
+    "journal": "Frontiers in Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fnins.2026.1764964",
+    "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1764964/full",
+    "abstract_zh": "本文整理腦類器官作為阿茲海默症、帕金森症等神經退化疾病精準研究與藥物篩選模型的最新應用進展，評估其相較傳統 2D 細胞模型與動物模型的優勢與限制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "傳統神經退化疾病模型無法重現人類大腦的複雜三維結構與細胞多樣性，腦類器官有望填補此缺口。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "腦類器官可重現 AD 的 Aβ 沉積、PD 的 α-synuclein 聚集等病理特徵，且適合個人化藥物篩選。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官平台的疾病建模策略可借鑒至聽覺類器官的損傷模型開發。"
+      }
+    ],
+    "method": "文獻回顧，整合近年腦類器官用於 AD、PD、ALS 等疾病建模的原著研究。",
+    "contribution": "系統評估腦類器官在神經退化疾病研究中的精準醫療應用潛力。",
+    "limitation": "腦類器官缺乏血管化、免疫細胞與完整神經迴路，限制其模擬完整疾病進程的能力。",
+    "tags": [
+      "brain organoid",
+      "neurodegeneration",
+      "Alzheimer",
+      "Parkinson",
+      "precision medicine"
+    ],
+    "group": "cns",
+    "favorited": false
+  },
+  {
+    "id": 37,
+    "title": "New developments and applications of human organoids",
+    "title_zh": "人類類器官的新發展與應用",
+    "authors": "（未列全名）et al.",
+    "journal": "Nature Reviews Molecular Cell Biology",
+    "year": 2026,
+    "doi": "10.1038/s41580-026-00974-0",
+    "url": "https://www.nature.com/articles/s41580-026-00974-0",
+    "abstract_zh": "Nature Reviews 大型綜述，回顧各器官（含 CNS）類器官技術的最新突破，涵蓋疾病建模、治療應用與臨床轉化前景，是 2026 年類器官領域的重要參考文獻。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "類器官技術快速發展，需要一篇全面性的綜述整合各器官系統的最新進展與應用現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "類器官在疾病建模、藥物篩選與再生醫學的應用已趨成熟，多器官晶片整合是下一代發展方向。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "了解各器官類器官的共通技術平台，有助於跨領域借鑒成熟的培養與分化策略。"
+      }
+    ],
+    "method": "Nature Reviews 邀稿綜述，整合全球類器官研究的重大進展。",
+    "contribution": "提供 2026 年類器官領域最全面的技術與應用現況概覽。",
+    "limitation": "綜述性質，缺乏原始實驗數據。",
+    "tags": [
+      "organoid",
+      "review",
+      "Nature Reviews",
+      "CNS",
+      "disease modeling"
+    ],
+    "group": "cns",
+    "favorited": false
+  },
+  {
+    "id": 38,
+    "title": "Advances and applications of brain organoids in central nervous system disease",
+    "title_zh": "腦類器官在中樞神經系統疾病中的進展與應用",
+    "authors": "（未列全名）et al.",
+    "journal": "Neural Regeneration Research",
+    "year": 2026,
+    "doi": "10.4103/nrr.nrr-d-24-01490",
+    "url": "https://www.ovid.com/jnls/nrronline/fulltext/10.4103/nrr.nrr-d-24-01490~advances-and-applications-of-brain-organoids-in-central",
+    "abstract_zh": "全面綜述腦類器官技術演進及其在藥物篩選、移植治療、疾病建模與臨床研究的最新應用，強調腦類器官在 CNS 疾病研究中的獨特優勢。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "CNS 疾病缺乏良好的人類細胞模型，腦類器官提供了接近生理的三維研究平台。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "腦類器官在癲癇、中風、TBI 及神經退化疾病的建模與藥物篩選中均展現顯著潛力。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "腦類器官的移植治療前景可與耳蝸類器官的移植策略相互借鑒。"
+      }
+    ],
+    "method": "系統性文獻回顧，涵蓋 2015-2026 年腦類器官在 CNS 疾病研究的主要原著。",
+    "contribution": "系統整合腦類器官在 CNS 疾病各面向（建模/治療/臨床）的應用成果。",
+    "limitation": "腦類器官的標準化培養協議仍缺乏統一，影響跨實驗室可重複性。",
+    "tags": [
+      "brain organoid",
+      "CNS",
+      "neural regeneration",
+      "disease modeling",
+      "transplantation"
+    ],
+    "group": "cns",
+    "favorited": false
+  },
+  {
+    "id": 39,
+    "title": "Organoids as translational models in neuroregeneration after central nervous system injury",
+    "title_zh": "類器官作為中樞神經系統損傷後神經再生的轉化研究模型",
+    "authors": "（未列全名）et al.",
+    "journal": "ACB Journal",
+    "year": 2026,
+    "doi": "10.2478/acb-2026-0001",
+    "url": "https://reference-global.com/download/article/10.2478/acb-2026-0001.pdf",
+    "abstract_zh": "評估神經類器官作為 TBI 與脊髓損傷後神經再生轉化研究模型的可行性，強調其相較傳統 2D 模型在結構複雜度、細胞互動與損傷模擬上的優勢。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "TBI 與脊髓損傷後神經再生的研究缺乏能重現體內複雜度的體外模型。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "神經類器官可模擬損傷後的細胞反應與再生過程，比 2D 模型更接近臨床情境。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "損傷模擬類器官的建立策略可借鑒至聽覺神經損傷模型的開發。"
+      }
+    ],
+    "method": "綜述性研究，整合神經類器官用於 CNS 損傷建模的臨床前研究文獻。",
+    "contribution": "系統論證神經類器官作為 CNS 損傷轉化研究模型的價值與方法學框架。",
+    "limitation": "類器官模型尚無法重現完整的體內免疫反應與血管環境。",
+    "tags": [
+      "neural organoid",
+      "CNS injury",
+      "TBI",
+      "spinal cord",
+      "neuroregeneration"
+    ],
+    "group": "cns",
+    "favorited": false
+  },
+  {
+    "id": 40,
+    "title": "Human retinal organoids functionally bridge a transected optic nerve in vivo",
+    "title_zh": "人類視網膜類器官在體內功能性橋接橫斷視神經",
+    "authors": "Gong et al.",
+    "journal": "Cell Stem Cell",
+    "year": 2026,
+    "doi": "10.1016/j.stem.2026.04.009",
+    "url": "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(26)00160-8",
+    "abstract_zh": "本研究將人類視網膜類器官異位移植至完全橫斷的視神經後，成功建立眼-腦中繼突觸連接，並部分恢復視覺信號傳導，為嚴重視神經損傷提供概念性的類器官移植治療框架。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "嚴重視神經損傷（如外傷、青光眼末期）導致不可逆視力喪失，目前無有效治療。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "人類視網膜類器官可在活體中與宿主視神經形成功能性突觸連接，部分恢復視覺電生理信號。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官移植形成功能性突觸連接的概念，對耳蝸 SGN 類器官移植的設計具有重要參考價值。"
+      }
+    ],
+    "method": "動物（大鼠）視神經橫斷模型，移植人類 iPSC 衍生視網膜類器官，以 VEP 電生理、神經示蹤與免疫螢光評估功能整合。",
+    "contribution": "首次在活體中展示人類視網膜類器官可功能性橋接橫斷視神經，為類器官移植治療視神經損傷提供概念驗證。",
+    "limitation": "仍為動物模型；類器官與宿主視神經的突觸形成效率尚低；長期穩定性與視覺功能恢復程度需進一步優化。",
+    "tags": [
+      "retinal organoid",
+      "optic nerve",
+      "transplantation",
+      "Cell Stem Cell",
+      "vision restoration"
+    ],
+    "group": "organoid",
+    "favorited": false
+  },
+  {
+    "id": 41,
+    "title": "Retinal organoids and stem cell therapy for vision restoration: current advances and future prospects",
+    "title_zh": "視網膜類器官與幹細胞治療用於視力修復：現況進展與未來展望",
+    "authors": "（未列全名）et al.",
+    "journal": "Biomedicine & Pharmacotherapy",
+    "year": 2026,
+    "doi": "10.1016/j.biopha.2026.116965",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1567576926009665",
+    "abstract_zh": "系統回顧視網膜類器官結合幹細胞治療在色素性視網膜炎與老年黃斑部退化等疾病的現況挑戰與未來方向，評估臨床轉化的主要障礙與突破策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "視網膜退化疾病（RP、AMD）缺乏有效治療，視網膜類器官移植是最具潛力的新興策略，需系統評估現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "視網膜類器官在分化成熟度與移植整合上已有重大進展，但免疫排斥與長期功能維持仍是主要挑戰。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "視網膜類器官移植的免疫策略與支架設計，可為耳蝸感覺上皮類器官移植提供參考。"
+      }
+    ],
+    "method": "系統性文獻回顧，涵蓋視網膜類器官分化、移植效率與功能整合的臨床前研究。",
+    "contribution": "全面評估視網膜類器官臨床轉化現況，提出突破免疫與整合障礙的策略建議。",
+    "limitation": "綜述性質；臨床試驗資料仍有限，多數停留於動物模型。",
+    "tags": [
+      "retinal organoid",
+      "stem cell",
+      "vision restoration",
+      "RP",
+      "AMD",
+      "review"
+    ],
+    "group": "organoid",
+    "favorited": false
+  },
+  {
+    "id": 42,
+    "title": "The promise and potential of liver organoids: Development, application, and future challenges",
+    "title_zh": "肝臟類器官的潛力與前景：發展、應用與未來挑戰",
+    "authors": "（未列全名）et al.",
+    "journal": "未知期刊",
+    "year": 2026,
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S3117397726000036",
+    "abstract_zh": "全面綜述肝臟類器官生成策略及其在末期肝病治療替代、器官移植輔助與個人化醫療中的轉化潛力，討論規模化生產與功能成熟化的主要技術障礙。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "全球肝臟器官短缺嚴重，肝臟類器官有望提供替代移植物與個人化疾病模型。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "肝臟類器官已可重現主要肝細胞功能，但膽汁分泌、血管化與規模化製備仍是瓶頸。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "非 CNS 類器官的規模化製備技術突破，對所有類器官領域均有借鑒意義。"
+      }
+    ],
+    "method": "敘述性文獻回顧，整合肝臟類器官領域的主要技術進展。",
+    "contribution": "系統性評估肝臟類器官從基礎研究到臨床轉化的完整路徑與挑戰。",
+    "limitation": "綜述性質；目前肝臟類器官的功能完整性與移植後存活率尚不理想。",
+    "tags": [
+      "liver organoid",
+      "transplantation",
+      "organoid",
+      "review"
+    ],
+    "group": "organoid",
+    "favorited": false
+  },
+  {
+    "id": 43,
+    "title": "Organoids for transplant research: cholangiocyte organoids and biliary repair",
+    "title_zh": "用於移植研究的類器官：膽道上皮類器官與膽管修復",
+    "authors": "（未列全名）et al.",
+    "journal": "Transplant International",
+    "year": 2026,
+    "doi": "10.3389/ti.2026.16963",
+    "url": "https://www.frontierspartnerships.org/journals/transplant-international/articles/10.3389/ti.2026.16963/full",
+    "abstract_zh": "本文以膽道上皮類器官修復移植後膽管病變為核心，探討類器官可塑性與臨床意義，提出個人化膽道再生策略用於解決移植後膽道相關併發症。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "肝臟移植後膽管病變（如膽道狹窄）是常見且難以處理的併發症，缺乏再生修復策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "膽道上皮類器官可擴增並分化為功能性膽道上皮，具備修復移植後膽管損傷的潛力。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官用於修復特定上皮損傷的策略，與耳蝸感覺上皮修復的概念高度相關。"
+      }
+    ],
+    "method": "動物移植模型與體外膽道上皮類器官培養，評估移植後膽管修復效果。",
+    "contribution": "首次系統展示膽道上皮類器官在移植後膽管修復的治療潛力。",
+    "limitation": "動物模型；膽道上皮類器官的長期存活與功能整合需進一步驗證。",
+    "tags": [
+      "cholangiocyte organoid",
+      "transplantation",
+      "biliary repair",
+      "liver"
+    ],
+    "group": "organoid",
+    "favorited": false
   }
 ]
