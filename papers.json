@@ -1666,5 +1666,44 @@
     ],
     "group": "organoid",
     "favorited": false
+  },
+  {
+    "id": 44,
+    "title": "Neural and molecular changes during a mind-body reconceptualization, meditation, and open label placebo healing intervention",
+    "title_zh": "身心重構、冥想與開放標籤安慰劑療癒介入期間的神經與分子變化",
+    "authors": "Jinich-Diamant A, Simpson S, Zuniga-Hertz JP, Chitteti R, Schilling JM, Bonds JA, Case L, Chernov AV, Dispenza J, et al.",
+    "journal": "Communications Biology",
+    "year": 2025,
+    "doi": "10.1038/s42003-025-09088-3",
+    "url": "https://doi.org/10.1038/s42003-025-09088-3",
+    "abstract_zh": "本觀察性研究針對 20 名健康受試者，評估為期 7 天結合冥想、認知重構與開放標籤安慰劑療癒的身心介入前後的神經與分子變化。以 BOLD fMRI 評估靜息及冥想功能連結，並進行血漿蛋白組學、代謝組學、外泌體 miRNA 轉錄組學及神經元功能分析。結果顯示冥想降低預設模式網路與顯著性網路的功能整合，並減少全腦模組性；介入後血漿可促進體外神經突生長、增強糖解代謝，並上調 BDNF、發炎、抗發炎與內源性類鴉片路徑，同時調節色胺酸代謝。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "冥想、認知重構與開放標籤安慰劑三種身心介入各自有研究基礎，但其聯合神經與分子效應從未被系統研究，本文首次探討三者結合的全面生物效應。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "7 天身心介入可降低預設模式與顯著性網路的功能連結、提升全腦訊息傳遞效率，並在血漿層面誘導神經可塑性（BDNF 上調、神經突生長增加）、代謝重編程（糖解增強）與內源性類鴉片及神經傳遞調控。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "血漿蛋白組學與代謝組學作為非藥物介入的生物標記，提供了追蹤神經可塑性與細胞信號通路變化的系統性方法，可借鑒於評估再生醫學介入的全身效應。"
+      }
+    ],
+    "method": "觀察性研究（n=20，7 天身心靜修營），採 BOLD fMRI 靜息態與冥想狀態功能連結分析、血漿蛋白組學、代謝組學、外泌體 miRNA 轉錄組學，以及體外神經突生長與即時代謝細胞分析，比較介入前後差異。",
+    "contribution": "首次在同一研究中整合冥想、認知重構與開放標籤安慰劑的神經影像與多組學分析，全面展示非藥物身心介入的短期神經與分子變化幅度與廣度。",
+    "limitation": "（1）樣本量小（n=20），缺乏年齡及性別匹配的對照組；（2）無法分離三種介入各自的貢獻；（3）觀察性設計，無法建立因果關係；（4）僅評估短期效應，缺乏長期追蹤。",
+    "tags": [
+      "meditation",
+      "mind-body",
+      "fMRI",
+      "neuroplasticity",
+      "BDNF",
+      "proteomics",
+      "metabolomics",
+      "default mode network"
+    ],
+    "favorited": false
   }
 ]
