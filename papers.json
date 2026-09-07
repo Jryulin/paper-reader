@@ -1706,5 +1706,175 @@
     ],
     "favorited": false,
     "group": "mindbody"
+  },
+  {
+    "id": 45,
+    "title": "Ototoxicity of Divalent Metals",
+    "title_zh": "二價重金屬的耳毒性",
+    "authors": "Roth JA, Salvi R",
+    "journal": "Neurotoxicity Research",
+    "year": 2016,
+    "doi": "10.1007/s12640-015-9587-5",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27142062/",
+    "abstract_zh": "本文回顧二價重金屬（Mn、Cd、Co、Pb、Hg）對哺乳動物聽覺系統的毒性效應，涵蓋對耳蝸毛細胞、螺旋神經節神經元（SGN）及血管紋的損傷機制。這些金屬可透過離子通道轉運進入內耳，並引發氧化壓力、粒線體功能障礙及細胞凋亡。文中整合動物模型與人類流行病學資料，提供重金屬耳毒性的系統性綜述。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "釐清不同二價重金屬如何進入內耳並破壞聽覺細胞功能，提供重金屬耳毒性的系統性知識框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Mn、Cd、Co、Pb、Hg 等重金屬可透過鈣離子通道或轉運蛋白進入耳蝸，導致外毛細胞損失、SGN 退化及 ABR 閾值升高；氧化壓力是共同損傷機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供重金屬耳毒性的細胞靶點（外毛細胞 > 內毛細胞，SGN 次之），可作為建立重金屬暴露體外模型的參考；抗氧化保護策略可能同時適用於多種重金屬。"
+      }
+    ],
+    "method": "文獻回顧，整合動物行為聽力測試（ABR）、耳蝸形態學（掃描電子顯微鏡）、螢光標記及電生理紀錄等研究結果，系統分析各重金屬的耳毒性機制。",
+    "contribution": "首次系統比較五種二價重金屬（Mn、Cd、Co、Pb、Hg）對耳蝸細胞的特異性影響，提出統一的「離子通道進入 → 氧化損傷 → 細胞凋亡」耳毒性模型。",
+    "limitation": "（1）多數資料來自動物模型，人類耳蝸直接暴露數據有限；（2）複合重金屬暴露的交互作用未充分探討；（3）各研究暴露劑量差異大，難以建立劑量效應關係。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "cochlear hair cell",
+      "SGN",
+      "lead",
+      "mercury",
+      "cadmium",
+      "manganese",
+      "oxidative stress",
+      "review"
+    ],
+    "pubmed_id": "27142062",
+    "favorited": false,
+    "group": "heavymetal"
+  },
+  {
+    "id": 46,
+    "title": "Environmental ototoxicants: an update on the effects of heavy metals on the auditory system",
+    "title_zh": "環境耳毒素更新：重金屬對聽覺系統影響的最新回顧",
+    "authors": "Tihányi L, et al.",
+    "journal": "Environmental Science and Pollution Research International",
+    "year": 2025,
+    "doi": "10.1007/s11356-025-35916-5",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40072761/",
+    "abstract_zh": "本文更新環境重金屬（Cd、Pb、Mn、Fe、Hg、Se、Ba、As）作為耳毒素的最新研究進展，回顧其對聽力損失的影響機制及流行病學證據。文章整合體外、動物及人類研究，聚焦於各重金屬對耳蝸結構（毛細胞、血管紋、SGN）和聽功能（ABR、純音聽力）的特異性損傷，並討論與噪音暴露的協同耳毒性效應。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "隨著工業化和環境污染加劇，重金屬相關聽力損失的研究快速增長，本文整合最新文獻以更新重金屬耳毒性的知識框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Cd、Pb、Hg 具有最強耳毒性證據，可直接損傷外毛細胞及 SGN；重金屬與噪音暴露具有協同耳毒性效應；血清重金屬濃度與高頻聽力損失風險顯著相關。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供最新（2025）的重金屬耳毒性研究基礎，強調職業和環境重金屬暴露對聽力的累積損傷，為建立預防性耳毒性監測指標提供依據。"
+      }
+    ],
+    "method": "系統性文獻回顧，檢索 PubMed 及 EMBASE 資料庫，納入探討 Cd、Pb、Mn、Fe、Hg、Se、Ba、As 對聽覺系統影響的體外、動物及人類研究。",
+    "contribution": "（1）最新（2025）的環境重金屬耳毒性綜述；（2）納入 Se 和 Ba 等較少關注的金屬；（3）量化重金屬-噪音協同耳毒性風險；（4）提出血清重金屬濃度作為聽力損失生物標記的臨床應用潛力。",
+    "limitation": "（1）各研究暴露途徑（職業、環境、飲食）差異大；（2）多金屬聯合暴露的交互作用研究不足；（3）部分金屬（Ba、Se）的純耳毒性資料仍稀少。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "environmental exposure",
+      "hearing loss",
+      "cadmium",
+      "lead",
+      "mercury",
+      "arsenic",
+      "review",
+      "2025"
+    ],
+    "pubmed_id": "40072761",
+    "favorited": false,
+    "group": "heavymetal"
+  },
+  {
+    "id": 47,
+    "title": "Environmental Exposures and Hearing Loss",
+    "title_zh": "環境暴露與聽力損失",
+    "authors": "Rosati R, Jamesdaniel S",
+    "journal": "International Journal of Environmental Research and Public Health",
+    "year": 2020,
+    "doi": "10.3390/ijerph17134879",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32645823/",
+    "abstract_zh": "本文回顧環境因素（包括重金屬、噪音、有機溶劑、殺蟲劑）對聽力損失的影響，重點介紹重金屬（Pb、Hg、Cd、As、Mn）作為耳毒素的流行病學與實驗證據，以及其對耳蝸毛細胞和螺旋神經節的損傷機制。並探討環境耳毒素的多重暴露交互作用，及其對職業性聽力保護政策的意涵。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽力損失的環境風險因子廣泛而複雜，本文整合重金屬、噪音、化學物質等多類環境耳毒素的研究，提供全面的環境聽力損失風險評估框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Pb、Hg、Cd 均有充分證據支持其耳毒性；環境重金屬暴露與感音神經性聽力損失顯著相關；重金屬與噪音聯合暴露呈現相加或協同的耳毒性效應。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "環境性聽力損失的多因子模型提示，重金屬耳毒性研究應同時考量複合暴露的交互作用；職業環境中的重金屬監測對聽力保護具有公衛意義。"
+      }
+    ],
+    "method": "敘述性文獻回顧，彙整流行病學調查（NHANES 等大型世代研究）、動物模型及體外實驗，評估重金屬及其他環境因素對聽覺功能的影響。",
+    "contribution": "（1）整合重金屬與其他環境耳毒素的交互作用；（2）納入大型人類世代資料（NHANES）強化流行病學證據；（3）提出職業聽力保護的政策建議。",
+    "limitation": "（1）敘述性回顧，無系統性文獻篩選標準；（2）各研究的暴露劑量和測量方法不一致；（3）多重暴露的定量模型仍不完善。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "hearing loss",
+      "environmental exposure",
+      "lead",
+      "mercury",
+      "cadmium",
+      "noise",
+      "public health",
+      "NHANES"
+    ],
+    "pubmed_id": "32645823",
+    "favorited": false,
+    "group": "heavymetal"
+  },
+  {
+    "id": 48,
+    "title": "Neural stem cells in lead toxicity",
+    "title_zh": "鉛毒性中的神經幹細胞",
+    "authors": "Chen WW, Zhang X, Huang WJ",
+    "journal": "European Review for Medical and Pharmacological Sciences",
+    "year": 2016,
+    "doi": "10.26355/eurrev_201612_13906",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28051273/",
+    "abstract_zh": "鉛（Pb）在神經發育早期的暴露會導致認知功能和行為的長期改變。神經幹細胞（NSCs）是鉛毒性的主要靶點——多能性 NSCs 對鉛高度敏感，鉛暴露可干擾其增殖、分化及存活。本文回顧鉛引發 NSC 毒性的分子生理機制，包括鈣信號紊亂、氧化壓力及表觀遺傳修飾，並討論針對神經毒性狀態（尤其是產前鉛暴露）的新型藥物與治療策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鉛的神經毒性機制複雜，且神經幹細胞作為主要靶點的機制尚不清楚。本文整理鉛對 NSC 的毒性機制，以利新型神經保護療法的開發。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛透過模擬鈣離子進入細胞，干擾 NSC 的增殖與分化信號；氧化壓力和表觀遺傳修飾（DNA 甲基化、組蛋白修飾）是鉛影響 NSC 命運決定的關鍵機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鉛毒性對 NSC 分化的干擾機制提示，在建立重金屬暴露體外模型時，應特別評估幹細胞的分化效率和氧化壓力指標；鈣信號通路是連結重金屬毒性與幹細胞生物學的重要橋梁。"
+      }
+    ],
+    "method": "敘述性文獻回顧，整合體外 NSC 培養、動物模型及分子生物學研究，分析鉛暴露對 NSC 增殖（BrdU 標記）、分化（免疫螢光）及凋亡（TUNEL）的影響機制。",
+    "contribution": "（1）系統整理鉛對神經幹細胞的毒性機制，明確 NSC 為鉛神經毒性的核心靶點；（2）連結鉛暴露、NSC 功能障礙與長期認知損傷的因果鏈；（3）提出針對 NSC 的鉛毒性保護策略方向。",
+    "limitation": "（1）部分研究的鉛暴露濃度高於實際環境暴露水平；（2）多數機制研究來自嚙齒動物，人類 NSC 反應可能有差異；（3）缺乏長期神經發育追蹤資料。",
+    "tags": [
+      "lead",
+      "neural stem cell",
+      "neurotoxicity",
+      "heavy metal",
+      "differentiation",
+      "oxidative stress",
+      "calcium signaling",
+      "review"
+    ],
+    "pubmed_id": "28051273",
+    "favorited": false,
+    "group": "heavymetal"
   }
 ]
