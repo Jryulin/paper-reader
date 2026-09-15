@@ -35,7 +35,9 @@
       "regeneration"
     ],
     "pubmed_id": "PMC10774470",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
   },
   {
     "id": 2,
@@ -72,7 +74,9 @@
       "Nature"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
   },
   {
     "id": 3,
@@ -110,7 +114,9 @@
       "2025"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 13.1,
+    "if_year": "2023"
   },
   {
     "id": 4,
@@ -147,7 +153,9 @@
       "regenerative medicine"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.6,
+    "if_year": "2023"
   },
   {
     "id": 6,
@@ -187,7 +195,9 @@
       "Science Advances"
     ],
     "pubmed_id": "42308318",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 11.7,
+    "if_year": "2023"
   },
   {
     "id": 7,
@@ -226,7 +236,9 @@
       "2026"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 58.7,
+    "if_year": "2023"
   },
   {
     "id": 8,
@@ -266,7 +278,9 @@
       "eLife"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 6.4,
+    "if_year": "2023"
   },
   {
     "id": 5,
@@ -304,7 +318,9 @@
       "2025"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 2.5,
+    "if_year": "2023"
   },
   {
     "id": 9,
@@ -344,7 +360,9 @@
       "Theranostics"
     ],
     "pubmed_id": "42244985",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 11.6,
+    "if_year": "2023"
   },
   {
     "id": 10,
@@ -384,7 +402,9 @@
       "2026"
     ],
     "pubmed_id": "42314533",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 2.7,
+    "if_year": "2023"
   },
   {
     "id": 11,
@@ -425,7 +445,9 @@
       "2026"
     ],
     "pubmed_id": "42380881",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 5.5,
+    "if_year": "2023"
   },
   {
     "id": 12,
@@ -464,7 +486,9 @@
       "2026"
     ],
     "pubmed_id": "42307737",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 1.8,
+    "if_year": "2023"
   },
   {
     "id": 13,
@@ -504,7 +528,9 @@
       "2026"
     ],
     "pubmed_id": "42282633",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 14,
@@ -543,7 +569,9 @@
       "2026"
     ],
     "pubmed_id": "42063462",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 7.4,
+    "if_year": "2023"
   },
   {
     "id": 15,
@@ -582,7 +610,9 @@
       "2026"
     ],
     "pubmed_id": "41933719",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
   },
   {
     "id": 16,
@@ -621,7 +651,9 @@
       "2026"
     ],
     "pubmed_id": "42245482",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.6,
+    "if_year": "2023"
   },
   {
     "id": 17,
@@ -660,7 +692,9 @@
       "2026"
     ],
     "pubmed_id": "41939745",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
   },
   {
     "id": 18,
@@ -699,7 +733,9 @@
       "2026"
     ],
     "pubmed_id": "41548441",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.9,
+    "if_year": "2023"
   },
   {
     "id": 19,
@@ -738,7 +774,9 @@
       "2026"
     ],
     "pubmed_id": "41571845",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.9,
+    "if_year": "2023"
   },
   {
     "id": 20,
@@ -778,7 +816,9 @@
       "2026"
     ],
     "pubmed_id": "42262169",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 8.9,
+    "if_year": "2023"
   },
   {
     "id": 21,
@@ -818,7 +858,9 @@
       "2025"
     ],
     "pubmed_id": "41438770",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.9,
+    "if_year": "2023"
   },
   {
     "id": 22,
@@ -858,7 +900,9 @@
     ],
     "pubmed_id": "42067961",
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 5.3,
+    "if_year": "2023"
   },
   {
     "id": 23,
@@ -899,7 +943,9 @@
     ],
     "pubmed_id": "42037370",
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 14.3,
+    "if_year": "2023"
   },
   {
     "id": 24,
@@ -939,7 +985,9 @@
     ],
     "pubmed_id": "42373511",
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 25,
@@ -978,7 +1026,9 @@
     ],
     "pubmed_id": "41856309",
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 10.7,
+    "if_year": "2023"
   },
   {
     "id": 26,
@@ -1018,7 +1068,9 @@
     ],
     "pubmed_id": "",
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
   },
   {
     "id": 27,
@@ -1058,7 +1110,9 @@
       "2025"
     ],
     "pubmed_id": "40181541",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 12.1,
+    "if_year": "2023"
   },
   {
     "id": 28,
@@ -1097,7 +1151,9 @@
       "2026"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
   },
   {
     "id": 29,
@@ -1137,7 +1193,9 @@
       "2026"
     ],
     "pubmed_id": "42216517",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 30,
@@ -1180,7 +1238,9 @@
     ],
     "pubmed_id": "",
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 19.8,
+    "if_year": "2023"
   },
   {
     "id": 31,
@@ -1223,7 +1283,9 @@
     ],
     "pubmed_id": "",
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
   },
   {
     "id": 32,
@@ -1259,7 +1321,9 @@
       "regeneration",
       "cochlea"
     ],
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
   },
   {
     "id": 33,
@@ -1296,7 +1360,9 @@
       "cochlea",
       "regeneration"
     ],
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
   },
   {
     "id": 34,
@@ -1333,7 +1399,9 @@
       "stem cell",
       "review"
     ],
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
   },
   {
     "id": 35,
@@ -1370,7 +1438,9 @@
       "review",
       "hair cell"
     ],
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 36,
@@ -1407,7 +1477,9 @@
       "precision medicine"
     ],
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
   },
   {
     "id": 37,
@@ -1444,7 +1516,9 @@
       "disease modeling"
     ],
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 94.4,
+    "if_year": "2023"
   },
   {
     "id": 38,
@@ -1481,7 +1555,9 @@
       "transplantation"
     ],
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 5.9,
+    "if_year": "2023"
   },
   {
     "id": 39,
@@ -1518,7 +1594,9 @@
       "neuroregeneration"
     ],
     "group": "cns",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 40,
@@ -1555,7 +1633,9 @@
       "vision restoration"
     ],
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 19.8,
+    "if_year": "2023"
   },
   {
     "id": 41,
@@ -1593,7 +1673,9 @@
       "review"
     ],
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 7.0,
+    "if_year": "2023"
   },
   {
     "id": 42,
@@ -1629,7 +1711,9 @@
       "review"
     ],
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 43,
@@ -1665,7 +1749,9 @@
       "liver"
     ],
     "group": "organoid",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
   },
   {
     "id": 44,
@@ -1705,7 +1791,9 @@
       "default mode network"
     ],
     "favorited": false,
-    "group": "mindbody"
+    "group": "mindbody",
+    "impact_factor": 5.4,
+    "if_year": "2023"
   },
   {
     "id": 45,
@@ -1748,7 +1836,9 @@
     ],
     "pubmed_id": "27142062",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 3.6,
+    "if_year": "2023"
   },
   {
     "id": 46,
@@ -1791,7 +1881,9 @@
     ],
     "pubmed_id": "40072761",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 5.8,
+    "if_year": "2023"
   },
   {
     "id": 47,
@@ -1834,7 +1926,9 @@
     ],
     "pubmed_id": "32645823",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 3.4,
+    "if_year": "2023"
   },
   {
     "id": 48,
@@ -1875,7 +1969,9 @@
     ],
     "pubmed_id": "28051273",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 3.5,
+    "if_year": "2023"
   },
   {
     "id": 49,
@@ -1918,6 +2014,8 @@
     ],
     "pubmed_id": "41718270",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 2.1,
+    "if_year": "2023"
   }
 ]

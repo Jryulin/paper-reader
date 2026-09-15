@@ -1370,7 +1370,7 @@ function renderCard(p) {
       </div>
       <div class="paper-meta">
         <span style="color:#a0aec0; font-size:0.72rem; font-weight:700;">#${p.id}</span>
-        <strong>${p.journal}</strong> · ${p.year} · ${p.authors}
+        <strong>${p.journal}</strong> · ${p.year}${p.impact_factor != null ? ` · <span style="color:#e53e3e; font-weight:700;">IF ${p.impact_factor}</span>` : ''} · ${p.authors}
       </div>
       <div class="abstract" id="abs-${p.id}">${p.abstract_zh || '摘要尚未翻譯'}</div>
       <button class="expand-btn" onclick="toggleAbstract(event, ${p.id})" id="exp-${p.id}">展開摘要 ▾</button>
@@ -1451,6 +1451,10 @@ function openModal(id) {
       <div class="info-label">期刊</div>
       <div class="info-value" style="color:#2b6cb0; font-weight:600">${p.journal}</div>
     </div>
+    ${p.impact_factor != null ? `<div class="info-row">
+      <div class="info-label">Impact Factor</div>
+      <div class="info-value"><span style="color:#e53e3e; font-weight:700; font-size:1rem;">IF ${p.impact_factor}</span> <span style="color:#a0aec0; font-size:0.7rem;">(JCR ${p.if_year || '2023'})</span></div>
+    </div>` : ''}
     <div class="info-row">
       <div class="info-label">年份</div>
       <div class="info-value">${p.year}</div>
