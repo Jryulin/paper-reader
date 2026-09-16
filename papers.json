@@ -2017,5 +2017,49 @@
     "group": "heavymetal",
     "impact_factor": 2.1,
     "if_year": "2023"
+  },
+  {
+    "id": 50,
+    "title": "Photobiomodulation (PBM) irradiation enhances the therapeutic potential of hMSC spheroids for neural repair",
+    "title_zh": "光生物調控（PBM）照射增強人類間質幹細胞球狀體的神經修復治療潛力",
+    "authors": "Chang SY, Hong N, Choi JE, Ahn JC, Lee MY",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fncel.2026.1728579",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41696652/",
+    "abstract_zh": "神經再生是再生醫學的核心目標，尤其針對中風、脊髓損傷和神經退化疾病。間質幹細胞（MSC）具有分化與旁分泌信號傳導的治療潛力，但臨床應用受限於低存活率與低植入率。本研究探討光生物調控（PBM）是否能提升人類 MSC（hMSC）球狀體的治療效果。hMSC 被聚集成三維球狀體，分為四組：未處理對照、660nm PBM、850nm PBM，以及與 H₂O₂ 氧化壓力損傷大鼠皮質神經元共培養組。結果顯示 PBM 處理的 hMSC 球狀體顯著提升神經元存活率與軸突再生，以 850nm 近紅外線組效果最佳。機制為 PBM 增強粒線體活性並促進神經營養因子分泌。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "MSC 幹細胞療法受限於植入後低存活率，本研究探討光生物調控（PBM）能否透過增強粒線體活性，提升 hMSC 3D 球狀體在神經損傷環境中的治療效果。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "850nm 近紅外線 PBM 處理的 hMSC 球狀體，在氧化壓力神經損傷模型中展現最強的神經保護效果，顯著提升皮質神經元存活與軸突再生；機制涉及粒線體活性增強與神經營養因子（BDNF、NGF 等）分泌上調。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "PBM 作為非藥物物理預處理方式，可提升幹細胞球狀體的旁分泌活性；850nm 近紅外線波長在細胞保護方面優於 660nm，值得在 iPSC 衍生球狀體模型中評估 PBM 預處理對毛細胞前驅細胞分化效率的影響。"
+      }
+    ],
+    "method": "hMSC 培養為 3D 球狀體後，以 660nm 或 850nm 光照射 10 分鐘（PBM），再與 H₂O₂ 誘導氧化壓力損傷的原代大鼠皮質神經元共培養。評估指標包括神經元存活率（細胞活性染色）、軸突長度（免疫螢光 β-III tubulin）及神經營養因子分泌量（ELISA）。",
+    "contribution": "（1）首次結合 3D hMSC 球狀體與 PBM 雙重策略用於神經保護；（2）確認 850nm NIR 優於 660nm 的神經保護效果；（3）提出 PBM 增強幹細胞旁分泌的機制路徑；（4）為 PBM + 幹細胞療法的神經修復臨床應用提供概念驗證。",
+    "limitation": "（1）體外共培養模型，無體內驗證；（2）使用大鼠皮質神經元而非人類細胞；（3）PBM 的最佳劑量（波長、能量密度、照射時間）尚未系統優化；（4）長期神經保護效果未追蹤。",
+    "tags": [
+      "photobiomodulation",
+      "PBM",
+      "MSC",
+      "spheroid",
+      "neural repair",
+      "neuroprotection",
+      "mitochondria",
+      "axonal regeneration",
+      "2026"
+    ],
+    "pubmed_id": "41696652",
+    "favorited": false,
+    "group": "organoid",
+    "impact_factor": 3.2,
+    "if_year": "2023"
   }
 ]
