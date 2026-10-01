@@ -2061,5 +2061,282 @@
     "group": "organoid",
     "impact_factor": 3.2,
     "if_year": "2023"
+  },
+  {
+    "id": 51,
+    "title": "Timing and Dosage of Notch Inhibition and Wnt Activation Enhanced Hair Cell-Like Cell Generation and Stereocilia Elongation in Otic Organoids.",
+    "title_zh": "Notch 抑制與 Wnt 活化的時序與劑量優化促進耳蝸類器官中毛細胞樣細胞生成與靜纖毛延伸",
+    "authors": "Kim H, Kim YJ, Kim YS, So S, Sung S, Park S, Kim J, Kim K, Choung YH, Ha J",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261490309",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42788198/",
+    "abstract_zh": "本研究以耳蝸類器官模型系統性探索 Notch 信號抑制與 Wnt 信號活化的最佳時序與劑量，以提升毛細胞樣細胞（HCLCs）的生成效率並促進靜纖毛延伸。研究發現，在特定分化窗口中精確調控兩條通路的劑量與施用時間，可顯著增加 Atoh1+ 及 Myo7a+ 毛細胞樣細胞數量，並改善靜纖毛形態成熟度，為優化 iPSC 分化方案提供重要參數依據。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Notch 抑制與 Wnt 活化雖已知可促進毛細胞分化，但最佳時序與劑量組合尚未確定，本研究系統性優化此參數以提升類器官中毛細胞生成效率。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "在特定分化窗口中給予適當劑量的 Notch 抑制劑（DAPT）與 Wnt 活化劑（CHIR99021），可最大化 Myo7a+ 毛細胞樣細胞產量並促進靜纖毛延伸，顯示時序與劑量均為關鍵參數。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "本研究提供可直接套用於 iPSC 耳蝸分化方案的 Notch/Wnt 劑量與時序參數；NHRI-01-03 分化實驗中應將 DAPT 與 CHIR 的施用窗口列為重要優化變數。"
+      }
+    ],
+    "method": "以 hPSC 衍生耳蝸類器官為模型，系統性測試不同濃度的 DAPT（Notch 抑制劑）與 CHIR99021（Wnt 活化劑）在不同分化時間點的施用效果，以 Myo7a/Atoh1 免疫螢光定量毛細胞樣細胞數量，SEM 評估靜纖毛形態。",
+    "contribution": "（1）建立 Notch/Wnt 雙通路調控的最佳時序-劑量矩陣；（2）驗證靜纖毛延伸與施藥時序的直接關聯；（3）提供可重現的耳蝸類器官分化優化參數；（4）確立分化窗口概念在毛細胞工程中的重要性。",
+    "limitation": "（1）研究以類器官模型為主，體內環境中的劑量反應可能不同；（2）靜纖毛的功能性（機械感受能力）未完整評估；（3）不同 iPSC 細胞株間的反應一致性尚待驗證。",
+    "tags": [
+      "Notch",
+      "Wnt",
+      "organoid",
+      "hair cell",
+      "iPSC",
+      "DAPT",
+      "CHIR99021",
+      "2026"
+    ],
+    "pubmed_id": "42788198",
+    "favorited": false
+  },
+  {
+    "id": 52,
+    "title": "Advances towards biological hearing restoration by genetic reprogramming.",
+    "title_zh": "基因重編程實現生物性聽力恢復的最新進展（綜述）",
+    "authors": "McGovern MM, Groves AK",
+    "journal": "Current Opinion in Otolaryngology & Head and Neck Surgery",
+    "year": 2026,
+    "doi": "10.1097/MOO.0000000000001148",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42614031/",
+    "abstract_zh": "本綜述回顧利用基因重編程策略恢復生物性聽力的最新進展。文章涵蓋以 Atoh1、POU4F3、GFI1 等關鍵轉錄因子直接驅動支持細胞轉分化或促進祖細胞再生的方法，並討論 AAV 遞送系統的進展、體內再生效率提升策略，以及從動物模型到臨床轉化面臨的挑戰。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳類耳蝸缺乏內源性再生能力，本綜述整理以基因重編程強制驅動毛細胞再生的最新策略與技術進展。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 結合 POU4F3/GFI1 的多因子策略可提升體內轉分化效率；新一代 AAV 血清型對耳蝸支持細胞的轉導效率大幅改善；直接體內重編程比細胞移植更具臨床可行性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "多因子組合（SAPG）重編程策略是目前最前沿的方向；本綜述中的 AAV 血清型選擇建議可直接指導未來體內驗證實驗設計。"
+      }
+    ],
+    "method": "敘述性文獻綜述，整合近年發表的基因重編程促進毛細胞再生研究，聚焦轉錄因子組合、基因遞送載體選擇及體內轉分化效率評估。",
+    "contribution": "（1）系統整理基因重編程驅動聽力恢復的最新技術進展；（2）比較不同轉錄因子組合的再生效率；（3）評估 AAV 遞送系統的耳蝸特異性；（4）指出臨床轉化的主要障礙。",
+    "limitation": "（1）綜述性質，無原始實驗資料；（2）多數引用研究仍在動物模型階段；（3）人類成體耳蝸再生的可行性仍有爭議。",
+    "tags": [
+      "review",
+      "reprogramming",
+      "Atoh1",
+      "gene therapy",
+      "AAV",
+      "hearing restoration",
+      "2026"
+    ],
+    "pubmed_id": "42614031",
+    "favorited": false
+  },
+  {
+    "id": 53,
+    "title": "Boosting auditory nerve function with cell therapy - status, surgical approach and potential candidates.",
+    "title_zh": "細胞療法增強聽神經功能：現況、手術途徑與候選細胞（綜述）",
+    "authors": "West N, Navntoft CA, Haywood N, Vickers D, Undurraga JA, Cayé-Thomasen P",
+    "journal": "Hearing Research",
+    "year": 2026,
+    "doi": "10.1016/j.heares.2026.109806",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42762631/",
+    "abstract_zh": "本綜述評估以細胞療法恢復聽神經功能的現況，探討螺旋神經節神經元（SGN）退化在聽力損失中的核心角色，並討論 iPSC 衍生 SGN、間質幹細胞等候選細胞來源的特性。文章特別分析不同手術遞送途徑（耳蝸軸注射、圓窗膜路徑）的可行性，以及細胞存活率、突觸整合等關鍵挑戰，為聽神經再生的臨床轉化提供路線圖。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "SGN 退化導致人工耳蝸效能受限，本文評估以細胞療法替換或再生 SGN 的可行性及手術途徑。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "iPSC 衍生 SGN 是最具潛力的候選細胞；耳蝸軸注射為目前最直接的遞送路徑；提升移植細胞存活率與宿主突觸整合是主要瓶頸。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "iPSC 衍生 SGN 的手術遞送考量應納入實驗設計；文中提出的細胞品質標準（電生理活性、突觸形成能力）可作為 NHRI-01-03 SGN 分化評估指標。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合 SGN 細胞療法的臨床前研究，涵蓋細胞來源比較、手術途徑分析及功能評估方法學。",
+    "contribution": "（1）系統整理聽神經細胞療法的現況與候選細胞；（2）評估各手術遞送途徑的優劣；（3）建立細胞療法臨床轉化的評估框架；（4）指出 iPSC-SGN 的優先研究方向。",
+    "limitation": "（1）綜述性質；（2）移植細胞長期存活的臨床資料極少；（3）人工耳蝸環境（電刺激場）對移植細胞的影響未充分討論。",
+    "tags": [
+      "review",
+      "SGN",
+      "cell therapy",
+      "spiral ganglion",
+      "cochlear implant",
+      "iPSC",
+      "auditory nerve",
+      "2026"
+    ],
+    "pubmed_id": "42762631",
+    "favorited": false
+  },
+  {
+    "id": 54,
+    "title": "Distinct cerebellar and inner-ear phenotypes in Atoh1 promoter-proximal deletion mice.",
+    "title_zh": "Atoh1 啟動子近端缺失小鼠呈現小腦與內耳的獨特表型",
+    "authors": "Sakamoto S, Kita T, Yamada M, Imayoshi I, Tateya T",
+    "journal": "Auris Nasus Larynx",
+    "year": 2026,
+    "doi": "10.1016/j.anl.2026.09.005",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42754477/",
+    "abstract_zh": "Atoh1 是毛細胞發育的關鍵轉錄因子，其表現受啟動子區域的精細調控。本研究分析 Atoh1 啟動子近端區段特異性缺失小鼠的表型，發現小腦顆粒細胞與內耳毛細胞的發育受到不同程度的影響，揭示 Atoh1 在不同組織中的轉錄調控機制存在差異。此發現對於設計以 Atoh1 為基礎的毛細胞再生基因治療具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Atoh1 啟動子的順式調控元件如何分別調控內耳毛細胞與小腦顆粒細胞的發育尚不明確，本研究透過精確的啟動子缺失分析揭示此機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 近端啟動子缺失導致內耳與小腦的表型不同，顯示 Atoh1 在兩個組織中依賴不同的調控元件；此差異提供了設計組織特異性基因治療的分子依據。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "設計以 Atoh1 驅動毛細胞再生的 AAV 構建體時，需考慮啟動子區域的選擇；近端啟動子可能提供更高的耳蝸特異性，降低小腦副作用風險。"
+      }
+    ],
+    "method": "以 CRISPR/Cas9 在小鼠基因組中精確缺失 Atoh1 啟動子近端特定區段，分析出生後不同時間點的小腦與耳蝸發育，以免疫螢光、ABR 及組織學評估表型。",
+    "contribution": "（1）鑑定 Atoh1 近端啟動子在內耳毛細胞發育的特異性調控元件；（2）揭示 Atoh1 組織特異性轉錄調控機制；（3）為 Atoh1 基因治療的啟動子設計提供分子基礎；（4）建立新型 Atoh1 條件性缺失小鼠模型。",
+    "limitation": "（1）僅分析近端啟動子缺失，遠端增強子的貢獻未評估；（2）出生後的補償性機制可能掩蓋部分表型；（3）成體耳蝸中 Atoh1 再活化的調控機制尚需進一步研究。",
+    "tags": [
+      "Atoh1",
+      "promoter",
+      "inner ear",
+      "hair cell",
+      "mouse model",
+      "gene regulation",
+      "2026"
+    ],
+    "pubmed_id": "42754477",
+    "favorited": false
+  },
+  {
+    "id": 55,
+    "title": "PLC-IP3 signaling promotes sensory hair cell formation in zebrafish neuromast.",
+    "title_zh": "PLC-IP3 信號通路促進斑馬魚側線神經丘感覺毛細胞形成",
+    "authors": "Yang C, Qian F, Gong J, Wang X, Liu D",
+    "journal": "Development (Cambridge, England)",
+    "year": 2026,
+    "doi": "10.1242/dev.205705",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42714214/",
+    "abstract_zh": "本研究利用斑馬魚側線神經丘模型，發現磷脂酶 C（PLC）介導的 IP3 信號通路在感覺毛細胞形成中扮演關鍵角色。抑制 PLC-IP3 信號顯著減少神經丘中的毛細胞數量，而增強此通路則促進毛細胞再生。機制分析顯示 PLC-IP3 通路與 Notch 信號相互作用，調控支持細胞向毛細胞的命運轉換。此發現揭示毛細胞再生的新型分子機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "毛細胞形成的信號調控網絡仍不完整，本研究探索 PLC-IP3 信號通路在斑馬魚模型中調控毛細胞命運決定的分子機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PLC-IP3 信號是毛細胞形成的必要通路，其與 Notch 信號的相互作用共同調控支持細胞-毛細胞命運轉換，提供了新的再生觸發機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "PLC-IP3 通路可作為 Notch 抑制的輔助調控靶點；IP3 受體激動劑可能與 DAPT 組合使用以提升毛細胞再生效率，值得在 iPSC 分化體系中驗證。"
+      }
+    ],
+    "method": "以斑馬魚側線神經丘為模型，透過藥理學抑制（PLC 抑制劑 U73122）與基因操控（morpholino 敲低）研究 PLC-IP3 信號功能，以 MYO7A/Atoh1 免疫螢光及活體成像評估毛細胞數量與再生。",
+    "contribution": "（1）首次鑑定 PLC-IP3 通路為毛細胞形成的正調控因子；（2）揭示 PLC-IP3 與 Notch 信號的相互作用機制；（3）提供新型毛細胞再生調控靶點；（4）在活體模型中驗證 PLC-IP3 通路的再生促進效果。",
+    "limitation": "（1）斑馬魚神經丘與哺乳類耳蝸的再生能力本質不同，結果外推需謹慎；（2）哺乳類耳蝸中 PLC-IP3 通路的作用未直接驗證；（3）PLC-IP3 信號的上游調控機制尚不明確。",
+    "tags": [
+      "PLC",
+      "IP3",
+      "zebrafish",
+      "neuromast",
+      "hair cell",
+      "Notch",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42714214",
+    "favorited": false
+  },
+  {
+    "id": 56,
+    "title": "The inner ear immune microenvironment in sensorineural hearing loss: mechanisms and therapeutic perspectives.",
+    "title_zh": "感音神經性聽力損失中的內耳免疫微環境：機制與治療展望（綜述）",
+    "authors": "Guo Y, Lv J, Zhang D",
+    "journal": "Frontiers in Immunology",
+    "year": 2026,
+    "doi": "10.3389/fimmu.2026.1911450",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42780555/",
+    "abstract_zh": "內耳曾被認為是免疫豁免器官，但近年研究顯示免疫微環境在感音神經性聽力損失（SNHL）的病理進程中扮演關鍵角色。本綜述系統整理內耳常駐免疫細胞（巨噬細胞、微膠細胞）的功能、炎症信號在毛細胞損傷中的作用，以及免疫調節作為 SNHL 治療策略的潛力。文章特別討論免疫微環境如何影響毛細胞再生的效率，為再生醫療的策略設計提供新視角。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "內耳免疫微環境在 SNHL 中的作用機制不清，且炎症如何影響毛細胞再生效率的研究不足，本文旨在系統整理此領域的現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "內耳常駐巨噬細胞在損傷後可轉為促炎或抗炎表型，影響毛細胞存活與再生；控制炎症反應可能是提升再生效率的關鍵輔助策略。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "移植 iPSC 衍生毛細胞前需考慮內耳免疫環境調控；在分化方案中加入抗炎預處理或使用免疫調節支持細胞共培養，可能提升移植成功率。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合內耳免疫細胞生物學、炎症信號（IL-1β、TNF-α、NF-κB 通路）在毛細胞損傷中的作用，以及免疫調節策略（類固醇、細胞因子拮抗劑）的研究資料。",
+    "contribution": "（1）系統整理內耳免疫微環境的細胞組成與功能；（2）揭示炎症在 SNHL 病理中的雙重角色（保護 vs 損傷）；（3）提出免疫調節作為再生治療輔助策略的依據；（4）建立內耳免疫-再生軸的概念框架。",
+    "limitation": "（1）綜述性質；（2）內耳免疫研究多基於動物模型，人類資料有限；（3）免疫微環境的時空動態變化尚未完全解析。",
+    "tags": [
+      "review",
+      "immune microenvironment",
+      "SNHL",
+      "macrophage",
+      "inflammation",
+      "inner ear",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42780555",
+    "favorited": false
+  },
+  {
+    "id": 57,
+    "title": "Regulation of Cochlear Nucleus Synaptogenesis by Progranulin in a Stem Cell-Based Coculture Model.",
+    "title_zh": "幹細胞共培養模型中顆粒蛋白前體調控耳蝸核突觸形成",
+    "authors": "Tabassum A, Reddy PP, Agboola O, Deng M, Hu Z",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261472696",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42535285/",
+    "abstract_zh": "本研究利用幹細胞基礎的耳蝸核共培養模型，探索顆粒蛋白前體（Progranulin, PGRN）在聽覺突觸形成中的調控作用。研究發現 PGRN 可促進聽覺神經元與耳蝸核神經元之間的突觸形成，並影響突觸密度與形態成熟。此發現對利用幹細胞策略修復聽覺傳導通路的突觸連接具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "螺旋神經節神經元（SGN）與耳蝸核之間的突觸重建是聽覺再生的重要環節，但其分子調控機制尚不清楚，本研究探索 PGRN 在此過程的作用。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PGRN 透過調控突觸形成相關基因表現，促進幹細胞衍生聽覺神經元與耳蝸核神經元的突觸連接，提示 PGRN 可作為聽覺突觸再生的促進因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "在 iPSC 衍生 SGN 的移植策略中，加入 PGRN 處理可能促進移植神經元與中樞聽覺系統的突觸整合；PGRN 補充是提升 SGN 移植功能成效的潛在輔助方案。"
+      }
+    ],
+    "method": "建立幹細胞衍生聽覺神經元（類 SGN）與小鼠耳蝸核切片的共培養模型，透過重組 PGRN 蛋白處理或 PGRN 基因敲低，以免疫螢光（Synapsin、PSD-95）定量突觸密度，電生理記錄評估功能性突觸。",
+    "contribution": "（1）建立可研究中樞聽覺突觸形成的幹細胞共培養平台；（2）首次鑑定 PGRN 為耳蝸核突觸形成的調控因子；（3）提供促進 SGN-耳蝸核突觸整合的分子靶點；（4）為中樞聽覺通路重建研究提供新模型。",
+    "limitation": "（1）體外共培養模型，不能完全模擬體內耳蝸核的複雜環境；（2）PGRN 促突觸形成的具體信號機制尚未完全闡明；（3）在動物模型中的體內驗證仍缺乏。",
+    "tags": [
+      "progranulin",
+      "cochlear nucleus",
+      "synaptogenesis",
+      "stem cell",
+      "SGN",
+      "coculture",
+      "2026"
+    ],
+    "pubmed_id": "42535285",
+    "favorited": false
   }
 ]
