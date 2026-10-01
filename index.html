@@ -282,8 +282,8 @@ async function loadPapers() {
     const resp = await fetch('papers.json');
     papers = await resp.json();
   } catch(e) {
-    document.getElementById('papers-grid').innerHTML = '<div class="no-results">載入論文失敗，請確認 papers.json 可存取。</div>';
-    return;
+    // fallback to inline data (for file:// protocol or offline use)
+    papers = PAPERS_DATA;
   }
   filterPapers();
 }
@@ -326,7 +326,9 @@ const PAPERS_DATA = [
       "regeneration"
     ],
     "pubmed_id": "PMC10774470",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
   },
   {
     "id": 2,
@@ -363,7 +365,9 @@ const PAPERS_DATA = [
       "Nature"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
   },
   {
     "id": 3,
@@ -401,7 +405,9 @@ const PAPERS_DATA = [
       "2025"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 13.1,
+    "if_year": "2023"
   },
   {
     "id": 4,
@@ -438,7 +444,9 @@ const PAPERS_DATA = [
       "regenerative medicine"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.6,
+    "if_year": "2023"
   },
   {
     "id": 6,
@@ -478,7 +486,9 @@ const PAPERS_DATA = [
       "Science Advances"
     ],
     "pubmed_id": "42308318",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 11.7,
+    "if_year": "2023"
   },
   {
     "id": 7,
@@ -517,7 +527,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 58.7,
+    "if_year": "2023"
   },
   {
     "id": 8,
@@ -557,7 +569,9 @@ const PAPERS_DATA = [
       "eLife"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 6.4,
+    "if_year": "2023"
   },
   {
     "id": 5,
@@ -595,7 +609,9 @@ const PAPERS_DATA = [
       "2025"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 2.5,
+    "if_year": "2023"
   },
   {
     "id": 9,
@@ -635,7 +651,9 @@ const PAPERS_DATA = [
       "Theranostics"
     ],
     "pubmed_id": "42244985",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 11.6,
+    "if_year": "2023"
   },
   {
     "id": 10,
@@ -675,17 +693,20 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42314533",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 2.7,
+    "if_year": "2023"
   },
   {
     "id": 11,
     "title": "Biohybrid cochlear implants: neural interfaces, regenerative pathways, and translational benchmarks",
     "title_zh": "生物混合人工耳蝸：神經介面、再生路徑與轉化標準（Review）",
-    "authors": "Carpino AN, Meador A, Nicolau BO, Matsuoka AJ, et al.",
+    "authors": "Matsuoka AJ, Carpino AN, Meador A, et al.",
     "journal": "Journal of NeuroEngineering and Rehabilitation",
     "year": 2026,
     "doi": "10.1186/s12984-026-02069-5",
     "url": "https://pubmed.ncbi.nlm.nih.gov/42380881/",
+    "pdf": "pdfs/11-Matsuoka2026.pdf",
     "abstract_zh": "人工耳蝸（CI）透過電刺激聽神經恢復聽力，但毫米級的電極-神經元距離限制了空間選擇性與時序精度。本綜述提出「生物混合」策略：保留傳統鼓階插入方式，但在電極陣列與耳蝸軸之間置入活體神經構建物，利用 Schuknecht 管孔（Canaliculi Perforantes）遞送神經營養因子和細胞，以生物方式縮短電極-神經元距離。文章系統回顧神經介面設計、幹細胞來源的螺旋神經節神經元（SGN）再生路徑、體內整合評估指標，以及當前臨床轉化的障礙與基準。",
     "q3": [
       {
@@ -715,7 +736,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42380881",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 5.5,
+    "if_year": "2023"
   },
   {
     "id": 12,
@@ -754,7 +777,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42307737",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 1.8,
+    "if_year": "2023"
   },
   {
     "id": 13,
@@ -794,7 +819,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42282633",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
   },
   {
     "id": 14,
@@ -833,7 +860,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42063462",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 7.4,
+    "if_year": "2023"
   },
   {
     "id": 15,
@@ -872,7 +901,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "41933719",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
   },
   {
     "id": 16,
@@ -911,7 +942,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42245482",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.6,
+    "if_year": "2023"
   },
   {
     "id": 17,
@@ -950,7 +983,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "41939745",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
   },
   {
     "id": 18,
@@ -989,7 +1024,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "41548441",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.9,
+    "if_year": "2023"
   },
   {
     "id": 19,
@@ -1028,7 +1065,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "41571845",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 4.9,
+    "if_year": "2023"
   },
   {
     "id": 20,
@@ -1068,7 +1107,9 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42262169",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 8.9,
+    "if_year": "2023"
   },
   {
     "id": 21,
@@ -1108,7 +1149,9 @@ const PAPERS_DATA = [
       "2025"
     ],
     "pubmed_id": "41438770",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 3.9,
+    "if_year": "2023"
   },
   {
     "id": 22,
@@ -1147,13 +1190,17 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42067961",
-    "favorited": false
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 5.3,
+    "if_year": "2023"
   },
   {
     "id": 23,
     "title": "Organoid Brain-Machine-Interface Devices for Central Nervous System Repair",
     "title_zh": "用於中樞神經系統修復的類器官腦機介面設備",
     "authors": "Xing Y et al.",
+    "pdf": "pdfs/23-Xing2026.pdf",
     "journal": "Advanced Science",
     "year": 2026,
     "doi": "10.1002/advs.75444",
@@ -1186,7 +1233,10 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42037370",
-    "favorited": false
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 14.3,
+    "if_year": "2023"
   },
   {
     "id": 24,
@@ -1225,7 +1275,10 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "42373511",
-    "favorited": false
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": 1.1,
+    "if_year": "2023"
   },
   {
     "id": 25,
@@ -1263,7 +1316,10 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "41856309",
-    "favorited": false
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 10.7,
+    "if_year": "2023"
   },
   {
     "id": 26,
@@ -1302,7 +1358,1586 @@ const PAPERS_DATA = [
       "2026"
     ],
     "pubmed_id": "",
-    "favorited": false
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
+  },
+  {
+    "id": 27,
+    "title": "AAV-Sparcl1 Promotes Hair Cell Regeneration by Increasing Supporting Cell Plasticity",
+    "title_zh": "AAV-Sparcl1 透過提升支持細胞可塑性促進毛細胞再生",
+    "authors": "Chai R, et al. (Southeast University / Harvard collaborating team)",
+    "journal": "Molecular Therapy",
+    "year": 2025,
+    "doi": "10.1016/j.ymthe.2025.04.030",
+    "url": "https://www.cell.com/molecular-therapy-family/molecular-therapy/fulltext/S1525-0016(25)00262-X",
+    "abstract_zh": "感音神經性聽力損失主要因毛細胞受損所致，哺乳動物的支持細胞隨年齡增長逐漸失去轉分化為毛細胞的能力。本研究發現分泌型細胞外基質蛋白 Sparcl1 可顯著增強支持細胞的重編程能力，並促進毛細胞再生。透過 AAV 介導的 Sparcl1 過表現系統，研究團隊在體外與體內模型中均成功實現了內耳類器官的擴增與毛細胞分化，為感音神經性聽力損失提供了新的基因治療路徑。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳動物支持細胞在成熟後喪失轉分化為毛細胞的能力，本研究尋找可重新活化此可塑性的分泌型因子。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Sparcl1（分泌型細胞外基質蛋白）是支持細胞重編程的關鍵調控因子；AAV-Sparcl1 在體外和體內均可促進支持細胞轉分化為毛細胞，並實現類器官擴增。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "Sparcl1 作為胞外分泌蛋白，可能透過旁分泌方式影響支持細胞可塑性；與 galectin-1（paper #13）的細胞外基質調控機制可能存在互補，值得在 NHRI-01-03 分化系統中驗證。"
+      }
+    ],
+    "method": "以 AAV 載體在小鼠內耳支持細胞中過表現 Sparcl1，結合體外耳蝸外植體、3D 類器官培養及體內損傷動物模型，以 Myo7a/Atoh1 免疫螢光定量毛細胞再生效率；轉錄組學分析支持細胞重編程路徑。",
+    "contribution": "（1）首次鑑定 Sparcl1 為支持細胞可塑性的胞外調控因子；（2）建立 AAV-Sparcl1 體內遞送的毛細胞再生策略；（3）揭示細胞外基質在內耳再生中的新角色；（4）為 AAV 基因治療聽力損失提供新靶點。",
+    "limitation": "（1）Sparcl1 作用的下游信號通路機制尚未完整解析；（2）體內再生的毛細胞數量與功能成熟度仍有限；（3）AAV 遞送效率在不同年齡小鼠中可能有差異。",
+    "tags": [
+      "AAV",
+      "Sparcl1",
+      "supporting-cell",
+      "transdifferentiation",
+      "gene-therapy",
+      "hair-cell",
+      "regeneration",
+      "2025"
+    ],
+    "pubmed_id": "40181541",
+    "favorited": false,
+    "impact_factor": 12.1,
+    "if_year": "2023"
+  },
+  {
+    "id": 28,
+    "title": "Inner ear transplantation of cochlear progenitor cells restores acute sensorineural hearing loss",
+    "title_zh": "內耳移植耳蝸祖細胞恢復急性感音神經性聽力損失",
+    "authors": "Liu X, Li Y, et al.",
+    "journal": "Neuroscience",
+    "year": 2026,
+    "doi": "10.1016/j.neuroscience.2026.01.001",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0306452226001557",
+    "abstract_zh": "本研究評估耳蝸祖細胞類器官體外擴增後移植至急性耳毒性損傷耳蝸的可行性與療效。研究以腹腔注射卡那黴素（kanamycin）聯合利尿劑建立急性外毛細胞損傷模型，於造模後第五天，將自新生小鼠耳蝸分離並體外擴增的耳蝸祖細胞，透過後半規管注入損傷耳蝸。結果顯示移植細胞可存活並定植於受損耳蝸，聽力閾值顯著改善。此外，後半規管注射途徑不造成額外聽力損失，顯示其安全性。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "耳蝸祖細胞移植面臨存活率低與遞送路徑創傷性的挑戰，本研究評估後半規管注射作為安全有效遞送路徑的可行性。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "新生小鼠耳蝸祖細胞類器官擴增後仍保有幹細胞特性；透過後半規管注射可安全遞送至損傷耳蝸，移植細胞存活定植，聽力閾值有統計顯著改善。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "後半規管注射途徑相對安全，可作為 iPSC 衍生耳蝸祖細胞移植的參考遞送路徑；類器官擴增後移植的策略印證了體外擴增保留幹細胞特性的重要性。"
+      }
+    ],
+    "method": "腹腔注射卡那黴素＋利尿劑建立急性外毛細胞損傷模型；自新生小鼠耳蝸分離祖細胞體外培養形成類器官並擴增，造模後第5天透過後半規管注射移植；以 ABR 評估聽力閾值，免疫螢光分析移植細胞在耳蝸中的分佈與存活。",
+    "contribution": "（1）驗證後半規管作為安全低創傷性耳蝸細胞遞送路徑；（2）確認體外擴增耳蝸祖細胞類器官在移植後仍可存活定植；（3）提供急性耳毒性損傷模型下細胞移植改善聽力的體內證據。",
+    "limitation": "（1）移植細胞的最終命運（是否真正分化為功能性毛細胞）需進一步確認；（2）聽力改善可能部分來自神經保護旁分泌效應而非真正細胞替代；（3）僅在急性損傷模型中驗證，慢性聽力損失適用性待評估。",
+    "tags": [
+      "transplantation",
+      "progenitor-cell",
+      "organoid",
+      "cochlea",
+      "hearing-restoration",
+      "delivery-route",
+      "2026"
+    ],
+    "pubmed_id": "",
+    "favorited": false,
+    "impact_factor": 3.1,
+    "if_year": "2023"
+  },
+  {
+    "id": 29,
+    "title": "Partial hearing recovery after cochlear nerve surface transplantation of hair follicle-derived neural crest stem cells in neural hearing loss rat",
+    "title_zh": "毛囊來源神經嵴幹細胞耳蝸神經表面移植部分恢復神經性聽力損失大鼠聽力",
+    "authors": "Chen X, Zhang Y, et al.",
+    "journal": "AME Medical Journal",
+    "year": 2026,
+    "doi": "10.1002/ame2.70216",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/ame2.70216",
+    "abstract_zh": "幹細胞治療為神經退行性疾病帶來希望，但有效遞送策略仍是主要挑戰。本研究建立 ouabain 誘導的螺旋神經節神經元（SGN）損傷聽力損失大鼠模型，並評估一種新型移植策略：經後枕部入路（posterior occipital approach）將毛囊來源神經嵴幹細胞（NC-SCs）直接移植至耳蝸神經表面，靶向 Rosenthal's canal（RC），以減少耳蝸結構損傷並促進細胞定向遞送。結果顯示耳蝸神經表面移植可提升幹細胞存活率，並實現部分聽覺功能恢復，是 SGN 相關聽力損失細胞療法的有效遞送途徑。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "現有幹細胞移植策略常造成耳蝸結構損傷且細胞存活率低，本研究評估耳蝸神經表面移植作為靶向 Rosenthal's canal 的低創傷遞送策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "耳蝸神經表面移植法可在不造成額外耳蝸損傷的前提下，將毛囊來源 NC-SCs 定向遞送至 Rosenthal's canal；移植後細胞存活率提升，SGN 密度改善，ABR 閾值部分恢復。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "毛囊 NC-SCs 是可取得的自體細胞來源，且能朝神經元方向分化；耳蝸神經表面遞送路徑與 biohybrid CI（paper #11）的理念呼應，可作為 iPSC-SGN 移植路徑設計的參考。"
+      }
+    ],
+    "method": "以 ouabain 耳蝸內注射建立 SGN 損傷模型；分離大鼠毛囊神經嵴幹細胞（NC-SCs）體外擴增，經後枕部入路移植至耳蝸神經表面；以 ABR 評估聽力，免疫螢光分析 RC 內膠質細胞密度變化與移植細胞分佈。",
+    "contribution": "（1）建立後枕部耳蝸神經表面移植的標準化操作方法；（2）驗證毛囊 NC-SCs 在 SGN 損傷模型中的存活與部分聽力恢復效果；（3）提供低創傷性靶向 Rosenthal's canal 遞送路徑的體內證據。",
+    "limitation": "（1）毛囊 NC-SCs 與真正 SGN 的電生理成熟度差異未充分評估；（2）聽力改善幅度有限（部分恢復），機制（替代 vs 旁分泌）尚不明確；（3）長期追蹤資料缺乏。",
+    "tags": [
+      "neural-crest",
+      "stem-cell",
+      "SGN",
+      "transplantation",
+      "cochlear-nerve",
+      "hearing-loss",
+      "delivery",
+      "2026"
+    ],
+    "pubmed_id": "42216517",
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
+  },
+  {
+    "id": 30,
+    "title": "Bioengineering innovations for neural organoids with enhanced fidelity and function",
+    "title_zh": "提升保真度與功能的神經類器官生物工程創新（Review）",
+    "authors": "Sun Y, Ikeuchi Y, Guo F, Hyun I, Ming GL, Fu J",
+    "journal": "Cell Stem Cell",
+    "year": 2025,
+    "doi": "10.1016/j.stem.2025.03.014",
+    "url": "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(25)00134-1",
+    "pdf": "pdfs/30-Sun2025.pdf",
+    "abstract_zh": "神經類器官已被廣泛用於模擬發育中神經系統的各種面向，但現有類器官仍無法完整重現腦、脊髓或周邊神經系統的解剖結構或微電路層級功能。本綜述討論新興生物工程方法，包括控制形態素訊號與生物物理微環境，以提升神經類器官的生成效率、保真度與應用性。此外，生物工程工具的進步也促進了更精密的神經類器官功能分析與應用，包括改良的神經-生物電子介面及基於類器官的資訊處理。文章並討論高級神經類器官相關的生物倫理議題，及未來在可擴展方式下提升類器官保真度、成熟度與複雜性的發展機會。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "現有神經類器官在解剖保真度、功能成熟度及可重現性方面仍有重大缺口，本文系統整理生物工程方法如何突破這些限制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "外源性形態素梯度控制、生物物理微環境調控（機械力、流體剪切）及進階生物電子介面（3D MEA、閉環系統）是提升神經類器官保真度的三大核心工程策略。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "神經類器官與內耳類器官面臨相似的成熟度瓶頸（缺乏血管化、電生理活動不成熟）；CNS 類器官的生物工程解法（如形態素梯度控制、可擴展製造）可直接借鑑至耳蝸類器官開發。"
+      }
+    ],
+    "method": "敘述性系統綜述（Review），整合近年生物工程方法用於提升神經類器官的研究，涵蓋形態素梯度技術（微流控、光遺傳學）、生物物理刺激（機械力、流體剪切）、類器官電生理監測平台（3D MEA、patch-clamp）及可擴展製造策略。",
+    "contribution": "（1）系統整理提升神經類器官保真度的生物工程技術路線圖；（2）討論區域化神經類器官與 assembloid 的最新進展；（3）評估類器官移植至宿主腦的整合策略；（4）提出神經-生物電子介面的技術挑戰與未來方向；（5）討論高擬人化神經類器官的生物倫理議題。",
+    "limitation": "（1）現有神經類器官仍缺乏功能性血管網絡與微膠質細胞；（2）多腦區組織化發育（assembloid）仍難以重現體內時序協調；（3）批次間重現性尚未在細胞組織架構層級達到要求。",
+    "tags": [
+      "review",
+      "neural-organoid",
+      "bioengineering",
+      "brain-organoid",
+      "BCI",
+      "fidelity",
+      "CNS",
+      "Cell Stem Cell",
+      "2025"
+    ],
+    "pubmed_id": "",
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 19.8,
+    "if_year": "2023"
+  },
+  {
+    "id": 31,
+    "title": "Constructing organoid-brain-computer interfaces for neurofunctional repair after brain injury",
+    "title_zh": "構建類器官腦機介面用於腦損傷後神經功能修復",
+    "authors": "Hu N, et al.",
+    "journal": "Nature Communications",
+    "year": 2024,
+    "doi": "10.1038/s41467-024-53858-2",
+    "url": "https://www.nature.com/articles/s41467-024-53858-2",
+    "pdf": "pdfs/31-Hu2024.pdf",
+    "abstract_zh": "腦損傷後神經迴路的重建是神經功能修復的關鍵挑戰。傳統腦機介面（BCI）可實現腦與外部控制器的直接通訊，但無法替代受損神經細胞。本研究構建了「類器官腦機介面（OBCI）」——將腦類器官與柔性電極整合後植入受損腦區。研究首先在體外探索電刺激最佳參數，再將GFP+腦類器官移植至初級感覺皮層（S1）損傷區，並在移植後植入雙鞘柔性電極進行訊號記錄與刺激。結果顯示，早期電刺激促進類器官神經元分化成熟，晚期刺激則增強類器官與宿主腦的突觸連接，最終促進受損神經功能的部分恢復。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "腦損傷形成大面積空腔，傳統 BCI 電極無法在缺乏健康細胞的情況下有效運作；本研究探索將類器官移植與 BCI 電刺激整合以修復受損神經迴路。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "OBCI 系統可長期穩定運作（>180天）；早期電刺激促進類器官神經元分化（CTIP2↑、TBR1↓）與突觸形成；晚期刺激增強類器官與宿主腦的結構性功能連接，改善運動功能恢復。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "OBCI 概念可延伸至人工耳蝸：將耳蝸類器官（iPSC 衍生）結合柔性電極植入損傷耳蝸，以電刺激引導類器官整合至螺旋神經節，與 biohybrid CI（paper #11）策略高度互補。"
+      }
+    ],
+    "method": "在體外建立類器官-電極複合體確定最佳刺激參數（50 Hz、50 μA 雙相方波）；將 GFP+ 腦類器官（培養40天）移植至免疫正常小鼠 S1 皮層損傷區，植入雙鞘柔性電極後分兩階段（早期 30 dpt、晚期 60 dpt）進行電刺激；以 ABR、MEA、免疫螢光及行為學測試評估療效，追蹤期達180天。",
+    "contribution": "（1）首次建立 OBCI 系統並驗證長期（>180天）安全性與穩定性；（2）揭示電刺激分階段調控類器官發育的策略（早期促分化、晚期促整合）；（3）提供類器官移植 + BCI 的協同修復腦損傷的體內概念驗證；（4）柔性電極設計實現與類器官匹配的機械柔順性。",
+    "limitation": "（1）目前僅在鼠類模型中驗證，人腦損傷環境更複雜；（2）類器官-宿主之間的功能性突觸迴路重建效率有限；（3）移植類器官的長期腫瘤風險（VZ 細胞過增殖）尚需評估；（4）OBCI 系統微型化與無線化挑戰尚未解決。",
+    "tags": [
+      "organoid",
+      "BCI",
+      "brain-injury",
+      "flexible-electrode",
+      "neural-repair",
+      "transplantation",
+      "CNS",
+      "Nature Communications",
+      "2024"
+    ],
+    "pubmed_id": "",
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
+  },
+  {
+    "id": 32,
+    "title": "The Notch ligand Jagged1 plays a dual role in cochlear hair cell regeneration",
+    "title_zh": "Notch 配體 Jagged1 在耳蝸毛細胞再生中扮演雙重角色",
+    "authors": "（未列全名）et al.",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "doi": "",
+    "url": "https://www.nature.com/articles/s41467-025-63053-6",
+    "abstract_zh": "本研究揭示 Jagged1 在耳蝸中的雙重調控功能：在正常發育時期維持支持細胞身份，而在毛細胞損傷後則作為再生促進因子，啟動毛細胞再生程序，闡明 Notch 配體在耳蝸再生中的精細調控機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Notch 信號通路在耳蝸再生中的角色矛盾：過去研究顯示 Notch 抑制可促進毛細胞再生，但其配體 Jagged1 的具體功能不清楚。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Jagged1 具有雙重身份——平時維持支持細胞靜止態，損傷後轉而促進毛細胞再生，是一個情境依賴性調控因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "操控 Jagged1 的時間窗口與表現量，可能是優化耳蝸毛細胞再生策略的關鍵切入點。"
+      }
+    ],
+    "method": "使用條件性基因敲除小鼠模型，在不同時間點特異性操控 Jagged1 表現，結合螢光標記細胞追蹤與聽力功能評估。",
+    "contribution": "首次系統證明 Jagged1 在耳蝸發育與再生中的雙重角色，為 Notch 信號通路靶向治療提供新框架。",
+    "limitation": "目前限於動物模型，人類耳蝸中 Jagged1 的類似機制尚需驗證。",
+    "tags": [
+      "notch",
+      "jagged1",
+      "hair cell",
+      "regeneration",
+      "cochlea"
+    ],
+    "favorited": false,
+    "impact_factor": 14.7,
+    "if_year": "2023"
+  },
+  {
+    "id": 33,
+    "title": "MSC-derived small extracellular vesicles promote regeneration of cochlear spiral ganglion neurons and their myelin sheaths",
+    "title_zh": "MSC 衍生小胞外囊泡促進耳蝸螺旋神經節神經元及髓鞘再生",
+    "authors": "（中國研究團隊）et al.",
+    "journal": "Neuroscience Bulletin",
+    "year": 2026,
+    "doi": "10.1007/s12264-025-01554-6",
+    "url": "https://link.springer.com/article/10.1007/s12264-025-01554-6",
+    "abstract_zh": "本研究發現間充質幹細胞衍生的小胞外囊泡（sEV）可同時靶向螺旋神經節神經元（SGN）與施旺細胞髓鞘，建構神經膠質功能單元的再生微環境，有效修復受損的聽覺神經回路。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽覺神經病變中 SGN 退化與髓鞘損失是雙重問題，目前缺乏同時解決兩者的治療策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MSC-sEV 可同步促進 SGN 存活與施旺細胞髓鞘形成，恢復神經傳導完整性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "sEV 作為無細胞療法具有安全性優勢，適合與基因療法或幹細胞移植整合，強化 SGN 再生效果。"
+      }
+    ],
+    "method": "體外 SGN 培養與聽覺神經病變動物模型，注射 MSC-sEV 後評估 SGN 密度、髓鞘完整性與 ABR 閾值。",
+    "contribution": "首次展示 MSC-sEV 同時促進 SGN 與髓鞘再生的雙靶向效果，提供聽覺神經修復的新治療策略。",
+    "limitation": "動物模型結果，臨床轉化需克服 sEV 大規模製備與內耳遞送效率問題。",
+    "tags": [
+      "MSC",
+      "extracellular vesicles",
+      "SGN",
+      "myelin",
+      "cochlea",
+      "regeneration"
+    ],
+    "favorited": false,
+    "impact_factor": 4.5,
+    "if_year": "2023"
+  },
+  {
+    "id": 34,
+    "title": "Mesenchymal vs. induced pluripotent stem cells: potential for spiral ganglion neuron regeneration in auditory neuropathy",
+    "title_zh": "間充質幹細胞與誘導多能幹細胞在聽覺神經病變螺旋神經節再生中的潛力比較",
+    "authors": "Aasar B, Veret D, Zine A",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fncel.2026.1821605",
+    "url": "https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2026.1821605/full",
+    "abstract_zh": "本文系統比較間充質幹細胞（MSC）與誘導多能幹細胞（iPSC）在聽覺神經病變相關螺旋神經節神經元再生中的優缺點，評估兩種細胞來源的分化能力、安全性與臨床轉化潛力。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽覺神經病變的 SGN 再生策略中，MSC 與 iPSC 各有優勢，但缺乏系統性比較。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MSC 操作簡便、免疫排斥風險低；iPSC 可高效分化為 SGN 類型但致瘤風險需謹慎評估。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "根據臨床目標選擇細胞來源：短期安全性優先選 MSC，長期功能整合潛力選 iPSC。"
+      }
+    ],
+    "method": "系統性文獻回顧，彙整 MSC 與 iPSC 在 SGN 再生相關體外與動物研究的成效指標。",
+    "contribution": "提供 MSC vs iPSC 在聽覺神經病變治療的決策框架，協助研究者與臨床醫師選擇適合策略。",
+    "limitation": "為回顧性研究，欠缺直接頭對頭比較的臨床試驗數據。",
+    "tags": [
+      "MSC",
+      "iPSC",
+      "SGN",
+      "auditory neuropathy",
+      "stem cell",
+      "review"
+    ],
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
+  },
+  {
+    "id": 35,
+    "title": "Advances in the Treatment of Sensorineural Hearing Loss: From Stem Cells to Gene Therapy",
+    "title_zh": "感音神經性聽力損失的治療進展：從幹細胞到基因治療",
+    "authors": "（未列全名）et al.",
+    "journal": "Advanced Science Reviews",
+    "year": 2025,
+    "doi": "10.1002/adsr.202500180",
+    "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adsr.202500180",
+    "abstract_zh": "本綜述系統回顧毛細胞與螺旋神經節神經元再生的分子機制，比較不同幹細胞來源的分化效率，並整合基因治療（包括病毒載體遞送 Atoh1、CRISPR 基因編輯）的最新臨床前與臨床進展。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "SNHL 目前缺乏根治性生物療法，幹細胞與基因治療是最具潛力的兩條路線，需要系統整合最新進展。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "幹細胞與基因治療各有優勢，結合策略（如 iPSC 移植搭配 ATOH1 轉導）是未來方向。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "明確最佳分化時間窗口與遞送方式，是提高治療效率的關鍵，可作為實驗設計參考。"
+      }
+    ],
+    "method": "敘述性系統文獻回顧，涵蓋 2015-2025 年間 PubMed 及 ClinicalTrials.gov 相關文獻。",
+    "contribution": "整合幹細胞與基因治療兩大平行領域的最新進展，提出協同治療策略的概念框架。",
+    "limitation": "多數研究仍停留於臨床前階段，人體應用的安全性與長期療效尚需大規模試驗驗證。",
+    "tags": [
+      "SNHL",
+      "stem cell",
+      "gene therapy",
+      "ATOH1",
+      "review",
+      "hair cell"
+    ],
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
+  },
+  {
+    "id": 36,
+    "title": "Brain organoids as precision models for neurodegenerative diseases",
+    "title_zh": "腦類器官作為神經退化疾病的精準研究模型",
+    "authors": "（未列全名）et al.",
+    "journal": "Frontiers in Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fnins.2026.1764964",
+    "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1764964/full",
+    "abstract_zh": "本文整理腦類器官作為阿茲海默症、帕金森症等神經退化疾病精準研究與藥物篩選模型的最新應用進展，評估其相較傳統 2D 細胞模型與動物模型的優勢與限制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "傳統神經退化疾病模型無法重現人類大腦的複雜三維結構與細胞多樣性，腦類器官有望填補此缺口。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "腦類器官可重現 AD 的 Aβ 沉積、PD 的 α-synuclein 聚集等病理特徵，且適合個人化藥物篩選。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官平台的疾病建模策略可借鑒至聽覺類器官的損傷模型開發。"
+      }
+    ],
+    "method": "文獻回顧，整合近年腦類器官用於 AD、PD、ALS 等疾病建模的原著研究。",
+    "contribution": "系統評估腦類器官在神經退化疾病研究中的精準醫療應用潛力。",
+    "limitation": "腦類器官缺乏血管化、免疫細胞與完整神經迴路，限制其模擬完整疾病進程的能力。",
+    "tags": [
+      "brain organoid",
+      "neurodegeneration",
+      "Alzheimer",
+      "Parkinson",
+      "precision medicine"
+    ],
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
+  },
+  {
+    "id": 37,
+    "title": "New developments and applications of human organoids",
+    "title_zh": "人類類器官的新發展與應用",
+    "authors": "（未列全名）et al.",
+    "journal": "Nature Reviews Molecular Cell Biology",
+    "year": 2026,
+    "doi": "10.1038/s41580-026-00974-0",
+    "url": "https://www.nature.com/articles/s41580-026-00974-0",
+    "abstract_zh": "Nature Reviews 大型綜述，回顧各器官（含 CNS）類器官技術的最新突破，涵蓋疾病建模、治療應用與臨床轉化前景，是 2026 年類器官領域的重要參考文獻。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "類器官技術快速發展，需要一篇全面性的綜述整合各器官系統的最新進展與應用現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "類器官在疾病建模、藥物篩選與再生醫學的應用已趨成熟，多器官晶片整合是下一代發展方向。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "了解各器官類器官的共通技術平台，有助於跨領域借鑒成熟的培養與分化策略。"
+      }
+    ],
+    "method": "Nature Reviews 邀稿綜述，整合全球類器官研究的重大進展。",
+    "contribution": "提供 2026 年類器官領域最全面的技術與應用現況概覽。",
+    "limitation": "綜述性質，缺乏原始實驗數據。",
+    "tags": [
+      "organoid",
+      "review",
+      "Nature Reviews",
+      "CNS",
+      "disease modeling"
+    ],
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 94.4,
+    "if_year": "2023"
+  },
+  {
+    "id": 38,
+    "title": "Advances and applications of brain organoids in central nervous system disease",
+    "title_zh": "腦類器官在中樞神經系統疾病中的進展與應用",
+    "authors": "（未列全名）et al.",
+    "journal": "Neural Regeneration Research",
+    "year": 2026,
+    "doi": "10.4103/nrr.nrr-d-24-01490",
+    "url": "https://www.ovid.com/jnls/nrronline/fulltext/10.4103/nrr.nrr-d-24-01490~advances-and-applications-of-brain-organoids-in-central",
+    "abstract_zh": "全面綜述腦類器官技術演進及其在藥物篩選、移植治療、疾病建模與臨床研究的最新應用，強調腦類器官在 CNS 疾病研究中的獨特優勢。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "CNS 疾病缺乏良好的人類細胞模型，腦類器官提供了接近生理的三維研究平台。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "腦類器官在癲癇、中風、TBI 及神經退化疾病的建模與藥物篩選中均展現顯著潛力。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "腦類器官的移植治療前景可與耳蝸類器官的移植策略相互借鑒。"
+      }
+    ],
+    "method": "系統性文獻回顧，涵蓋 2015-2026 年腦類器官在 CNS 疾病研究的主要原著。",
+    "contribution": "系統整合腦類器官在 CNS 疾病各面向（建模/治療/臨床）的應用成果。",
+    "limitation": "腦類器官的標準化培養協議仍缺乏統一，影響跨實驗室可重複性。",
+    "tags": [
+      "brain organoid",
+      "CNS",
+      "neural regeneration",
+      "disease modeling",
+      "transplantation"
+    ],
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": 5.9,
+    "if_year": "2023"
+  },
+  {
+    "id": 39,
+    "title": "Organoids as translational models in neuroregeneration after central nervous system injury",
+    "title_zh": "類器官作為中樞神經系統損傷後神經再生的轉化研究模型",
+    "authors": "（未列全名）et al.",
+    "journal": "ACB Journal",
+    "year": 2026,
+    "doi": "10.2478/acb-2026-0001",
+    "url": "https://reference-global.com/download/article/10.2478/acb-2026-0001.pdf",
+    "abstract_zh": "評估神經類器官作為 TBI 與脊髓損傷後神經再生轉化研究模型的可行性，強調其相較傳統 2D 模型在結構複雜度、細胞互動與損傷模擬上的優勢。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "TBI 與脊髓損傷後神經再生的研究缺乏能重現體內複雜度的體外模型。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "神經類器官可模擬損傷後的細胞反應與再生過程，比 2D 模型更接近臨床情境。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "損傷模擬類器官的建立策略可借鑒至聽覺神經損傷模型的開發。"
+      }
+    ],
+    "method": "綜述性研究，整合神經類器官用於 CNS 損傷建模的臨床前研究文獻。",
+    "contribution": "系統論證神經類器官作為 CNS 損傷轉化研究模型的價值與方法學框架。",
+    "limitation": "類器官模型尚無法重現完整的體內免疫反應與血管環境。",
+    "tags": [
+      "neural organoid",
+      "CNS injury",
+      "TBI",
+      "spinal cord",
+      "neuroregeneration"
+    ],
+    "group": "cns",
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
+  },
+  {
+    "id": 40,
+    "title": "Human retinal organoids functionally bridge a transected optic nerve in vivo",
+    "title_zh": "人類視網膜類器官在體內功能性橋接橫斷視神經",
+    "authors": "Gong et al.",
+    "journal": "Cell Stem Cell",
+    "year": 2026,
+    "doi": "10.1016/j.stem.2026.04.009",
+    "url": "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(26)00160-8",
+    "abstract_zh": "本研究將人類視網膜類器官異位移植至完全橫斷的視神經後，成功建立眼-腦中繼突觸連接，並部分恢復視覺信號傳導，為嚴重視神經損傷提供概念性的類器官移植治療框架。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "嚴重視神經損傷（如外傷、青光眼末期）導致不可逆視力喪失，目前無有效治療。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "人類視網膜類器官可在活體中與宿主視神經形成功能性突觸連接，部分恢復視覺電生理信號。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官移植形成功能性突觸連接的概念，對耳蝸 SGN 類器官移植的設計具有重要參考價值。"
+      }
+    ],
+    "method": "動物（大鼠）視神經橫斷模型，移植人類 iPSC 衍生視網膜類器官，以 VEP 電生理、神經示蹤與免疫螢光評估功能整合。",
+    "contribution": "首次在活體中展示人類視網膜類器官可功能性橋接橫斷視神經，為類器官移植治療視神經損傷提供概念驗證。",
+    "limitation": "仍為動物模型；類器官與宿主視神經的突觸形成效率尚低；長期穩定性與視覺功能恢復程度需進一步優化。",
+    "tags": [
+      "retinal organoid",
+      "optic nerve",
+      "transplantation",
+      "Cell Stem Cell",
+      "vision restoration"
+    ],
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": 19.8,
+    "if_year": "2023"
+  },
+  {
+    "id": 41,
+    "title": "Retinal organoids and stem cell therapy for vision restoration: current advances and future prospects",
+    "title_zh": "視網膜類器官與幹細胞治療用於視力修復：現況進展與未來展望",
+    "authors": "（未列全名）et al.",
+    "journal": "Biomedicine & Pharmacotherapy",
+    "year": 2026,
+    "doi": "10.1016/j.biopha.2026.116965",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1567576926009665",
+    "abstract_zh": "系統回顧視網膜類器官結合幹細胞治療在色素性視網膜炎與老年黃斑部退化等疾病的現況挑戰與未來方向，評估臨床轉化的主要障礙與突破策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "視網膜退化疾病（RP、AMD）缺乏有效治療，視網膜類器官移植是最具潛力的新興策略，需系統評估現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "視網膜類器官在分化成熟度與移植整合上已有重大進展，但免疫排斥與長期功能維持仍是主要挑戰。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "視網膜類器官移植的免疫策略與支架設計，可為耳蝸感覺上皮類器官移植提供參考。"
+      }
+    ],
+    "method": "系統性文獻回顧，涵蓋視網膜類器官分化、移植效率與功能整合的臨床前研究。",
+    "contribution": "全面評估視網膜類器官臨床轉化現況，提出突破免疫與整合障礙的策略建議。",
+    "limitation": "綜述性質；臨床試驗資料仍有限，多數停留於動物模型。",
+    "tags": [
+      "retinal organoid",
+      "stem cell",
+      "vision restoration",
+      "RP",
+      "AMD",
+      "review"
+    ],
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": 7.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 42,
+    "title": "The promise and potential of liver organoids: Development, application, and future challenges",
+    "title_zh": "肝臟類器官的潛力與前景：發展、應用與未來挑戰",
+    "authors": "（未列全名）et al.",
+    "journal": "未知期刊",
+    "year": 2026,
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S3117397726000036",
+    "abstract_zh": "全面綜述肝臟類器官生成策略及其在末期肝病治療替代、器官移植輔助與個人化醫療中的轉化潛力，討論規模化生產與功能成熟化的主要技術障礙。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "全球肝臟器官短缺嚴重，肝臟類器官有望提供替代移植物與個人化疾病模型。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "肝臟類器官已可重現主要肝細胞功能，但膽汁分泌、血管化與規模化製備仍是瓶頸。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "非 CNS 類器官的規模化製備技術突破，對所有類器官領域均有借鑒意義。"
+      }
+    ],
+    "method": "敘述性文獻回顧，整合肝臟類器官領域的主要技術進展。",
+    "contribution": "系統性評估肝臟類器官從基礎研究到臨床轉化的完整路徑與挑戰。",
+    "limitation": "綜述性質；目前肝臟類器官的功能完整性與移植後存活率尚不理想。",
+    "tags": [
+      "liver organoid",
+      "transplantation",
+      "organoid",
+      "review"
+    ],
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": null,
+    "if_year": "2023"
+  },
+  {
+    "id": 43,
+    "title": "Organoids for transplant research: cholangiocyte organoids and biliary repair",
+    "title_zh": "用於移植研究的類器官：膽道上皮類器官與膽管修復",
+    "authors": "（未列全名）et al.",
+    "journal": "Transplant International",
+    "year": 2026,
+    "doi": "10.3389/ti.2026.16963",
+    "url": "https://www.frontierspartnerships.org/journals/transplant-international/articles/10.3389/ti.2026.16963/full",
+    "abstract_zh": "本文以膽道上皮類器官修復移植後膽管病變為核心，探討類器官可塑性與臨床意義，提出個人化膽道再生策略用於解決移植後膽道相關併發症。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "肝臟移植後膽管病變（如膽道狹窄）是常見且難以處理的併發症，缺乏再生修復策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "膽道上皮類器官可擴增並分化為功能性膽道上皮，具備修復移植後膽管損傷的潛力。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "類器官用於修復特定上皮損傷的策略，與耳蝸感覺上皮修復的概念高度相關。"
+      }
+    ],
+    "method": "動物移植模型與體外膽道上皮類器官培養，評估移植後膽管修復效果。",
+    "contribution": "首次系統展示膽道上皮類器官在移植後膽管修復的治療潛力。",
+    "limitation": "動物模型；膽道上皮類器官的長期存活與功能整合需進一步驗證。",
+    "tags": [
+      "cholangiocyte organoid",
+      "transplantation",
+      "biliary repair",
+      "liver"
+    ],
+    "group": "organoid",
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 44,
+    "title": "Neural and molecular changes during a mind-body reconceptualization, meditation, and open label placebo healing intervention",
+    "title_zh": "身心重構、冥想與開放標籤安慰劑療癒介入期間的神經與分子變化",
+    "authors": "Jinich-Diamant A, Simpson S, Zuniga-Hertz JP, Chitteti R, Schilling JM, Bonds JA, Case L, Chernov AV, Dispenza J, et al.",
+    "journal": "Communications Biology",
+    "year": 2025,
+    "doi": "10.1038/s42003-025-09088-3",
+    "url": "https://doi.org/10.1038/s42003-025-09088-3",
+    "abstract_zh": "本觀察性研究針對 20 名健康受試者，評估為期 7 天結合冥想、認知重構與開放標籤安慰劑療癒的身心介入前後的神經與分子變化。以 BOLD fMRI 評估靜息及冥想功能連結，並進行血漿蛋白組學、代謝組學、外泌體 miRNA 轉錄組學及神經元功能分析。結果顯示冥想降低預設模式網路與顯著性網路的功能整合，並減少全腦模組性；介入後血漿可促進體外神經突生長、增強糖解代謝，並上調 BDNF、發炎、抗發炎與內源性類鴉片路徑，同時調節色胺酸代謝。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "冥想、認知重構與開放標籤安慰劑三種身心介入各自有研究基礎，但其聯合神經與分子效應從未被系統研究，本文首次探討三者結合的全面生物效應。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "7 天身心介入可降低預設模式與顯著性網路的功能連結、提升全腦訊息傳遞效率，並在血漿層面誘導神經可塑性（BDNF 上調、神經突生長增加）、代謝重編程（糖解增強）與內源性類鴉片及神經傳遞調控。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "血漿蛋白組學與代謝組學作為非藥物介入的生物標記，提供了追蹤神經可塑性與細胞信號通路變化的系統性方法，可借鑒於評估再生醫學介入的全身效應。"
+      }
+    ],
+    "method": "觀察性研究（n=20，7 天身心靜修營），採 BOLD fMRI 靜息態與冥想狀態功能連結分析、血漿蛋白組學、代謝組學、外泌體 miRNA 轉錄組學，以及體外神經突生長與即時代謝細胞分析，比較介入前後差異。",
+    "contribution": "首次在同一研究中整合冥想、認知重構與開放標籤安慰劑的神經影像與多組學分析，全面展示非藥物身心介入的短期神經與分子變化幅度與廣度。",
+    "limitation": "（1）樣本量小（n=20），缺乏年齡及性別匹配的對照組；（2）無法分離三種介入各自的貢獻；（3）觀察性設計，無法建立因果關係；（4）僅評估短期效應，缺乏長期追蹤。",
+    "tags": [
+      "meditation",
+      "mind-body",
+      "fMRI",
+      "neuroplasticity",
+      "BDNF",
+      "proteomics",
+      "metabolomics",
+      "default mode network"
+    ],
+    "favorited": false,
+    "group": "mindbody",
+    "impact_factor": 5.4,
+    "if_year": "2023"
+  },
+  {
+    "id": 45,
+    "title": "Ototoxicity of Divalent Metals",
+    "title_zh": "二價重金屬的耳毒性",
+    "authors": "Roth JA, Salvi R",
+    "journal": "Neurotoxicity Research",
+    "year": 2016,
+    "doi": "10.1007/s12640-015-9587-5",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27142062/",
+    "abstract_zh": "本文回顧二價重金屬（Mn、Cd、Co、Pb、Hg）對哺乳動物聽覺系統的毒性效應，涵蓋對耳蝸毛細胞、螺旋神經節神經元（SGN）及血管紋的損傷機制。這些金屬可透過離子通道轉運進入內耳，並引發氧化壓力、粒線體功能障礙及細胞凋亡。文中整合動物模型與人類流行病學資料，提供重金屬耳毒性的系統性綜述。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "釐清不同二價重金屬如何進入內耳並破壞聽覺細胞功能，提供重金屬耳毒性的系統性知識框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Mn、Cd、Co、Pb、Hg 等重金屬可透過鈣離子通道或轉運蛋白進入耳蝸，導致外毛細胞損失、SGN 退化及 ABR 閾值升高；氧化壓力是共同損傷機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供重金屬耳毒性的細胞靶點（外毛細胞 > 內毛細胞，SGN 次之），可作為建立重金屬暴露體外模型的參考；抗氧化保護策略可能同時適用於多種重金屬。"
+      }
+    ],
+    "method": "文獻回顧，整合動物行為聽力測試（ABR）、耳蝸形態學（掃描電子顯微鏡）、螢光標記及電生理紀錄等研究結果，系統分析各重金屬的耳毒性機制。",
+    "contribution": "首次系統比較五種二價重金屬（Mn、Cd、Co、Pb、Hg）對耳蝸細胞的特異性影響，提出統一的「離子通道進入 → 氧化損傷 → 細胞凋亡」耳毒性模型。",
+    "limitation": "（1）多數資料來自動物模型，人類耳蝸直接暴露數據有限；（2）複合重金屬暴露的交互作用未充分探討；（3）各研究暴露劑量差異大，難以建立劑量效應關係。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "cochlear hair cell",
+      "SGN",
+      "lead",
+      "mercury",
+      "cadmium",
+      "manganese",
+      "oxidative stress",
+      "review"
+    ],
+    "pubmed_id": "27142062",
+    "favorited": false,
+    "group": "heavymetal",
+    "impact_factor": 3.6,
+    "if_year": "2023"
+  },
+  {
+    "id": 46,
+    "title": "Environmental ototoxicants: an update on the effects of heavy metals on the auditory system",
+    "title_zh": "環境耳毒素更新：重金屬對聽覺系統影響的最新回顧",
+    "authors": "Tihányi L, et al.",
+    "journal": "Environmental Science and Pollution Research International",
+    "year": 2025,
+    "doi": "10.1007/s11356-025-35916-5",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40072761/",
+    "abstract_zh": "本文更新環境重金屬（Cd、Pb、Mn、Fe、Hg、Se、Ba、As）作為耳毒素的最新研究進展，回顧其對聽力損失的影響機制及流行病學證據。文章整合體外、動物及人類研究，聚焦於各重金屬對耳蝸結構（毛細胞、血管紋、SGN）和聽功能（ABR、純音聽力）的特異性損傷，並討論與噪音暴露的協同耳毒性效應。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "隨著工業化和環境污染加劇，重金屬相關聽力損失的研究快速增長，本文整合最新文獻以更新重金屬耳毒性的知識框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Cd、Pb、Hg 具有最強耳毒性證據，可直接損傷外毛細胞及 SGN；重金屬與噪音暴露具有協同耳毒性效應；血清重金屬濃度與高頻聽力損失風險顯著相關。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供最新（2025）的重金屬耳毒性研究基礎，強調職業和環境重金屬暴露對聽力的累積損傷，為建立預防性耳毒性監測指標提供依據。"
+      }
+    ],
+    "method": "系統性文獻回顧，檢索 PubMed 及 EMBASE 資料庫，納入探討 Cd、Pb、Mn、Fe、Hg、Se、Ba、As 對聽覺系統影響的體外、動物及人類研究。",
+    "contribution": "（1）最新（2025）的環境重金屬耳毒性綜述；（2）納入 Se 和 Ba 等較少關注的金屬；（3）量化重金屬-噪音協同耳毒性風險；（4）提出血清重金屬濃度作為聽力損失生物標記的臨床應用潛力。",
+    "limitation": "（1）各研究暴露途徑（職業、環境、飲食）差異大；（2）多金屬聯合暴露的交互作用研究不足；（3）部分金屬（Ba、Se）的純耳毒性資料仍稀少。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "environmental exposure",
+      "hearing loss",
+      "cadmium",
+      "lead",
+      "mercury",
+      "arsenic",
+      "review",
+      "2025"
+    ],
+    "pubmed_id": "40072761",
+    "favorited": false,
+    "group": "heavymetal",
+    "impact_factor": 5.8,
+    "if_year": "2023"
+  },
+  {
+    "id": 47,
+    "title": "Environmental Exposures and Hearing Loss",
+    "title_zh": "環境暴露與聽力損失",
+    "authors": "Rosati R, Jamesdaniel S",
+    "journal": "International Journal of Environmental Research and Public Health",
+    "year": 2020,
+    "doi": "10.3390/ijerph17134879",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32645823/",
+    "abstract_zh": "本文回顧環境因素（包括重金屬、噪音、有機溶劑、殺蟲劑）對聽力損失的影響，重點介紹重金屬（Pb、Hg、Cd、As、Mn）作為耳毒素的流行病學與實驗證據，以及其對耳蝸毛細胞和螺旋神經節的損傷機制。並探討環境耳毒素的多重暴露交互作用，及其對職業性聽力保護政策的意涵。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽力損失的環境風險因子廣泛而複雜，本文整合重金屬、噪音、化學物質等多類環境耳毒素的研究，提供全面的環境聽力損失風險評估框架。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Pb、Hg、Cd 均有充分證據支持其耳毒性；環境重金屬暴露與感音神經性聽力損失顯著相關；重金屬與噪音聯合暴露呈現相加或協同的耳毒性效應。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "環境性聽力損失的多因子模型提示，重金屬耳毒性研究應同時考量複合暴露的交互作用；職業環境中的重金屬監測對聽力保護具有公衛意義。"
+      }
+    ],
+    "method": "敘述性文獻回顧，彙整流行病學調查（NHANES 等大型世代研究）、動物模型及體外實驗，評估重金屬及其他環境因素對聽覺功能的影響。",
+    "contribution": "（1）整合重金屬與其他環境耳毒素的交互作用；（2）納入大型人類世代資料（NHANES）強化流行病學證據；（3）提出職業聽力保護的政策建議。",
+    "limitation": "（1）敘述性回顧，無系統性文獻篩選標準；（2）各研究的暴露劑量和測量方法不一致；（3）多重暴露的定量模型仍不完善。",
+    "tags": [
+      "heavy metal",
+      "ototoxicity",
+      "hearing loss",
+      "environmental exposure",
+      "lead",
+      "mercury",
+      "cadmium",
+      "noise",
+      "public health",
+      "NHANES"
+    ],
+    "pubmed_id": "32645823",
+    "favorited": false,
+    "group": "heavymetal",
+    "impact_factor": 3.4,
+    "if_year": "2023"
+  },
+  {
+    "id": 48,
+    "title": "Neural stem cells in lead toxicity",
+    "title_zh": "鉛毒性中的神經幹細胞",
+    "authors": "Chen WW, Zhang X, Huang WJ",
+    "journal": "European Review for Medical and Pharmacological Sciences",
+    "year": 2016,
+    "doi": "10.26355/eurrev_201612_13906",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28051273/",
+    "abstract_zh": "鉛（Pb）在神經發育早期的暴露會導致認知功能和行為的長期改變。神經幹細胞（NSCs）是鉛毒性的主要靶點——多能性 NSCs 對鉛高度敏感，鉛暴露可干擾其增殖、分化及存活。本文回顧鉛引發 NSC 毒性的分子生理機制，包括鈣信號紊亂、氧化壓力及表觀遺傳修飾，並討論針對神經毒性狀態（尤其是產前鉛暴露）的新型藥物與治療策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鉛的神經毒性機制複雜，且神經幹細胞作為主要靶點的機制尚不清楚。本文整理鉛對 NSC 的毒性機制，以利新型神經保護療法的開發。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛透過模擬鈣離子進入細胞，干擾 NSC 的增殖與分化信號；氧化壓力和表觀遺傳修飾（DNA 甲基化、組蛋白修飾）是鉛影響 NSC 命運決定的關鍵機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鉛毒性對 NSC 分化的干擾機制提示，在建立重金屬暴露體外模型時，應特別評估幹細胞的分化效率和氧化壓力指標；鈣信號通路是連結重金屬毒性與幹細胞生物學的重要橋梁。"
+      }
+    ],
+    "method": "敘述性文獻回顧，整合體外 NSC 培養、動物模型及分子生物學研究，分析鉛暴露對 NSC 增殖（BrdU 標記）、分化（免疫螢光）及凋亡（TUNEL）的影響機制。",
+    "contribution": "（1）系統整理鉛對神經幹細胞的毒性機制，明確 NSC 為鉛神經毒性的核心靶點；（2）連結鉛暴露、NSC 功能障礙與長期認知損傷的因果鏈；（3）提出針對 NSC 的鉛毒性保護策略方向。",
+    "limitation": "（1）部分研究的鉛暴露濃度高於實際環境暴露水平；（2）多數機制研究來自嚙齒動物，人類 NSC 反應可能有差異；（3）缺乏長期神經發育追蹤資料。",
+    "tags": [
+      "lead",
+      "neural stem cell",
+      "neurotoxicity",
+      "heavy metal",
+      "differentiation",
+      "oxidative stress",
+      "calcium signaling",
+      "review"
+    ],
+    "pubmed_id": "28051273",
+    "favorited": false,
+    "group": "heavymetal",
+    "impact_factor": 3.5,
+    "if_year": "2023"
+  },
+  {
+    "id": 49,
+    "title": "Genetic and Environmental Factors Shaping Hearing Loss: Xenobiotics, Mechanisms and Translational Perspectives",
+    "title_zh": "塑造聽力損失的遺傳與環境因素：外源毒素、機制與轉譯展望",
+    "authors": "Esteves F, Caria H",
+    "journal": "Journal of Xenobiotics",
+    "year": 2026,
+    "doi": "10.3390/jox16010027",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12921957/",
+    "abstract_zh": "本綜述提出「遺傳易感性 × 環境暴露」的核心假說：兩者協同透過氧化壓力、粒線體功能障礙及促發炎機制破壞耳蝸恆定，導致多因子聽力損失。文章分六大區塊：（1）聽力損失流行病學與多因子本質；（2）聽力損失的複雜遺傳架構；（3）環境決定因素與外源毒素——包括有機溶劑、揮發性芳香烴、重金屬、殺蟲劑（尤其有機磷與持久性有機氯化合物）；（4）氧化壓力、粒線體損傷與耳蝸發炎路徑；（5）轉譯醫學展望：流行病學預防與精準介入；（6）基因-環境交互作用的挑戰與未來方向。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "聽力損失的成因橫跨遺傳與環境，但兩者如何交互作用尚缺整合性框架。本文旨在系統梳理主要遺傳變異與外源毒素的分子交叉機制，為精準耳保護策略奠基。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "重金屬、有機溶劑、有機磷農藥等外源毒素透過共同的氧化壓力-粒線體-發炎軸損傷耳蝸；遺傳變異（如 GJB2、SLC26A4、抗氧化酶基因）決定個體對這些毒素的易感性，形成基因×環境的乘數效應。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供「遺傳背景影響重金屬耳毒性」的整合框架，在設計重金屬暴露模型時應同時考量細胞的遺傳背景（如抗氧化能力基因型）；氧化壓力是最具轉譯價值的保護靶點。"
+      }
+    ],
+    "method": "系統性文獻回顧，檢索 PubMed、Scopus 等資料庫，涵蓋流行病學研究、動物實驗、體外細胞模型及基因組學研究，依遺傳架構、外源毒素類別、分子機制及轉譯策略四大主軸進行分析整合。",
+    "contribution": "（1）首次將聽力損失的遺傳架構與多類外源毒素（重金屬、有機溶劑、農藥）置於同一整合框架；（2）明確氧化壓力-粒線體-發炎軸為基因×環境交互作用的共同機制路徑；（3）提出以基因型分層的個人化耳毒性風險評估模型；（4）討論耳保護策略的精準醫療轉譯路徑。",
+    "limitation": "（1）不同研究的暴露評估方式差異大，難以定量比較；（2）多數機制研究來自動物或體外模型，人類耳蝸的直接驗證有限；（3）基因×環境交互作用的前瞻性世代研究仍不足。",
+    "tags": [
+      "heavy metal",
+      "hearing loss",
+      "gene-environment interaction",
+      "xenobiotics",
+      "oxidative stress",
+      "mitochondria",
+      "ototoxicity",
+      "organophosphate",
+      "review",
+      "2026"
+    ],
+    "pubmed_id": "41718270",
+    "favorited": false,
+    "group": "heavymetal",
+    "impact_factor": 2.1,
+    "if_year": "2023"
+  },
+  {
+    "id": 50,
+    "title": "Photobiomodulation (PBM) irradiation enhances the therapeutic potential of hMSC spheroids for neural repair",
+    "title_zh": "光生物調控（PBM）照射增強人類間質幹細胞球狀體的神經修復治療潛力",
+    "authors": "Chang SY, Hong N, Choi JE, Ahn JC, Lee MY",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fncel.2026.1728579",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41696652/",
+    "abstract_zh": "神經再生是再生醫學的核心目標，尤其針對中風、脊髓損傷和神經退化疾病。間質幹細胞（MSC）具有分化與旁分泌信號傳導的治療潛力，但臨床應用受限於低存活率與低植入率。本研究探討光生物調控（PBM）是否能提升人類 MSC（hMSC）球狀體的治療效果。hMSC 被聚集成三維球狀體，分為四組：未處理對照、660nm PBM、850nm PBM，以及與 H₂O₂ 氧化壓力損傷大鼠皮質神經元共培養組。結果顯示 PBM 處理的 hMSC 球狀體顯著提升神經元存活率與軸突再生，以 850nm 近紅外線組效果最佳。機制為 PBM 增強粒線體活性並促進神經營養因子分泌。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "MSC 幹細胞療法受限於植入後低存活率，本研究探討光生物調控（PBM）能否透過增強粒線體活性，提升 hMSC 3D 球狀體在神經損傷環境中的治療效果。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "850nm 近紅外線 PBM 處理的 hMSC 球狀體，在氧化壓力神經損傷模型中展現最強的神經保護效果，顯著提升皮質神經元存活與軸突再生；機制涉及粒線體活性增強與神經營養因子（BDNF、NGF 等）分泌上調。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "PBM 作為非藥物物理預處理方式，可提升幹細胞球狀體的旁分泌活性；850nm 近紅外線波長在細胞保護方面優於 660nm，值得在 iPSC 衍生球狀體模型中評估 PBM 預處理對毛細胞前驅細胞分化效率的影響。"
+      }
+    ],
+    "method": "hMSC 培養為 3D 球狀體後，以 660nm 或 850nm 光照射 10 分鐘（PBM），再與 H₂O₂ 誘導氧化壓力損傷的原代大鼠皮質神經元共培養。評估指標包括神經元存活率（細胞活性染色）、軸突長度（免疫螢光 β-III tubulin）及神經營養因子分泌量（ELISA）。",
+    "contribution": "（1）首次結合 3D hMSC 球狀體與 PBM 雙重策略用於神經保護；（2）確認 850nm NIR 優於 660nm 的神經保護效果；（3）提出 PBM 增強幹細胞旁分泌的機制路徑；（4）為 PBM + 幹細胞療法的神經修復臨床應用提供概念驗證。",
+    "limitation": "（1）體外共培養模型，無體內驗證；（2）使用大鼠皮質神經元而非人類細胞；（3）PBM 的最佳劑量（波長、能量密度、照射時間）尚未系統優化；（4）長期神經保護效果未追蹤。",
+    "tags": [
+      "photobiomodulation",
+      "PBM",
+      "MSC",
+      "spheroid",
+      "neural repair",
+      "neuroprotection",
+      "mitochondria",
+      "axonal regeneration",
+      "2026"
+    ],
+    "pubmed_id": "41696652",
+    "favorited": false,
+    "group": "organoid",
+    "impact_factor": 3.2,
+    "if_year": "2023"
+  },
+  {
+    "id": 51,
+    "title": "Timing and Dosage of Notch Inhibition and Wnt Activation Enhanced Hair Cell-Like Cell Generation and Stereocilia Elongation in Otic Organoids.",
+    "title_zh": "Notch 抑制與 Wnt 活化的時序與劑量優化促進耳蝸類器官中毛細胞樣細胞生成與靜纖毛延伸",
+    "authors": "Kim H, Kim YJ, Kim YS, So S, Sung S, Park S, Kim J, Kim K, Choung YH, Ha J",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261490309",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42788198/",
+    "abstract_zh": "本研究以耳蝸類器官模型系統性探索 Notch 信號抑制與 Wnt 信號活化的最佳時序與劑量，以提升毛細胞樣細胞（HCLCs）的生成效率並促進靜纖毛延伸。研究發現，在特定分化窗口中精確調控兩條通路的劑量與施用時間，可顯著增加 Atoh1+ 及 Myo7a+ 毛細胞樣細胞數量，並改善靜纖毛形態成熟度，為優化 iPSC 分化方案提供重要參數依據。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Notch 抑制與 Wnt 活化雖已知可促進毛細胞分化，但最佳時序與劑量組合尚未確定，本研究系統性優化此參數以提升類器官中毛細胞生成效率。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "在特定分化窗口中給予適當劑量的 Notch 抑制劑（DAPT）與 Wnt 活化劑（CHIR99021），可最大化 Myo7a+ 毛細胞樣細胞產量並促進靜纖毛延伸，顯示時序與劑量均為關鍵參數。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "本研究提供可直接套用於 iPSC 耳蝸分化方案的 Notch/Wnt 劑量與時序參數；NHRI-01-03 分化實驗中應將 DAPT 與 CHIR 的施用窗口列為重要優化變數。"
+      }
+    ],
+    "method": "以 hPSC 衍生耳蝸類器官為模型，系統性測試不同濃度的 DAPT（Notch 抑制劑）與 CHIR99021（Wnt 活化劑）在不同分化時間點的施用效果，以 Myo7a/Atoh1 免疫螢光定量毛細胞樣細胞數量，SEM 評估靜纖毛形態。",
+    "contribution": "（1）建立 Notch/Wnt 雙通路調控的最佳時序-劑量矩陣；（2）驗證靜纖毛延伸與施藥時序的直接關聯；（3）提供可重現的耳蝸類器官分化優化參數；（4）確立分化窗口概念在毛細胞工程中的重要性。",
+    "limitation": "（1）研究以類器官模型為主，體內環境中的劑量反應可能不同；（2）靜纖毛的功能性（機械感受能力）未完整評估；（3）不同 iPSC 細胞株間的反應一致性尚待驗證。",
+    "tags": [
+      "Notch",
+      "Wnt",
+      "organoid",
+      "hair cell",
+      "iPSC",
+      "DAPT",
+      "CHIR99021",
+      "2026"
+    ],
+    "pubmed_id": "42788198",
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 52,
+    "title": "Advances towards biological hearing restoration by genetic reprogramming.",
+    "title_zh": "基因重編程實現生物性聽力恢復的最新進展（綜述）",
+    "authors": "McGovern MM, Groves AK",
+    "journal": "Current Opinion in Otolaryngology & Head and Neck Surgery",
+    "year": 2026,
+    "doi": "10.1097/MOO.0000000000001148",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42614031/",
+    "abstract_zh": "本綜述回顧利用基因重編程策略恢復生物性聽力的最新進展。文章涵蓋以 Atoh1、POU4F3、GFI1 等關鍵轉錄因子直接驅動支持細胞轉分化或促進祖細胞再生的方法，並討論 AAV 遞送系統的進展、體內再生效率提升策略，以及從動物模型到臨床轉化面臨的挑戰。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳類耳蝸缺乏內源性再生能力，本綜述整理以基因重編程強制驅動毛細胞再生的最新策略與技術進展。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 結合 POU4F3/GFI1 的多因子策略可提升體內轉分化效率；新一代 AAV 血清型對耳蝸支持細胞的轉導效率大幅改善；直接體內重編程比細胞移植更具臨床可行性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "多因子組合（SAPG）重編程策略是目前最前沿的方向；本綜述中的 AAV 血清型選擇建議可直接指導未來體內驗證實驗設計。"
+      }
+    ],
+    "method": "敘述性文獻綜述，整合近年發表的基因重編程促進毛細胞再生研究，聚焦轉錄因子組合、基因遞送載體選擇及體內轉分化效率評估。",
+    "contribution": "（1）系統整理基因重編程驅動聽力恢復的最新技術進展；（2）比較不同轉錄因子組合的再生效率；（3）評估 AAV 遞送系統的耳蝸特異性；（4）指出臨床轉化的主要障礙。",
+    "limitation": "（1）綜述性質，無原始實驗資料；（2）多數引用研究仍在動物模型階段；（3）人類成體耳蝸再生的可行性仍有爭議。",
+    "tags": [
+      "review",
+      "reprogramming",
+      "Atoh1",
+      "gene therapy",
+      "AAV",
+      "hearing restoration",
+      "2026"
+    ],
+    "pubmed_id": "42614031",
+    "favorited": false,
+    "impact_factor": 2.1,
+    "if_year": "2023"
+  },
+  {
+    "id": 53,
+    "title": "Boosting auditory nerve function with cell therapy - status, surgical approach and potential candidates.",
+    "title_zh": "細胞療法增強聽神經功能：現況、手術途徑與候選細胞（綜述）",
+    "authors": "West N, Navntoft CA, Haywood N, Vickers D, Undurraga JA, Cayé-Thomasen P",
+    "journal": "Hearing Research",
+    "year": 2026,
+    "doi": "10.1016/j.heares.2026.109806",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42762631/",
+    "abstract_zh": "本綜述評估以細胞療法恢復聽神經功能的現況，探討螺旋神經節神經元（SGN）退化在聽力損失中的核心角色，並討論 iPSC 衍生 SGN、間質幹細胞等候選細胞來源的特性。文章特別分析不同手術遞送途徑（耳蝸軸注射、圓窗膜路徑）的可行性，以及細胞存活率、突觸整合等關鍵挑戰，為聽神經再生的臨床轉化提供路線圖。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "SGN 退化導致人工耳蝸效能受限，本文評估以細胞療法替換或再生 SGN 的可行性及手術途徑。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "iPSC 衍生 SGN 是最具潛力的候選細胞；耳蝸軸注射為目前最直接的遞送路徑；提升移植細胞存活率與宿主突觸整合是主要瓶頸。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "iPSC 衍生 SGN 的手術遞送考量應納入實驗設計；文中提出的細胞品質標準（電生理活性、突觸形成能力）可作為 NHRI-01-03 SGN 分化評估指標。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合 SGN 細胞療法的臨床前研究，涵蓋細胞來源比較、手術途徑分析及功能評估方法學。",
+    "contribution": "（1）系統整理聽神經細胞療法的現況與候選細胞；（2）評估各手術遞送途徑的優劣；（3）建立細胞療法臨床轉化的評估框架；（4）指出 iPSC-SGN 的優先研究方向。",
+    "limitation": "（1）綜述性質；（2）移植細胞長期存活的臨床資料極少；（3）人工耳蝸環境（電刺激場）對移植細胞的影響未充分討論。",
+    "tags": [
+      "review",
+      "SGN",
+      "cell therapy",
+      "spiral ganglion",
+      "cochlear implant",
+      "iPSC",
+      "auditory nerve",
+      "2026"
+    ],
+    "pubmed_id": "42762631",
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
+  },
+  {
+    "id": 54,
+    "title": "Distinct cerebellar and inner-ear phenotypes in Atoh1 promoter-proximal deletion mice.",
+    "title_zh": "Atoh1 啟動子近端缺失小鼠呈現小腦與內耳的獨特表型",
+    "authors": "Sakamoto S, Kita T, Yamada M, Imayoshi I, Tateya T",
+    "journal": "Auris Nasus Larynx",
+    "year": 2026,
+    "doi": "10.1016/j.anl.2026.09.005",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42754477/",
+    "abstract_zh": "Atoh1 是毛細胞發育的關鍵轉錄因子，其表現受啟動子區域的精細調控。本研究分析 Atoh1 啟動子近端區段特異性缺失小鼠的表型，發現小腦顆粒細胞與內耳毛細胞的發育受到不同程度的影響，揭示 Atoh1 在不同組織中的轉錄調控機制存在差異。此發現對於設計以 Atoh1 為基礎的毛細胞再生基因治療具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Atoh1 啟動子的順式調控元件如何分別調控內耳毛細胞與小腦顆粒細胞的發育尚不明確，本研究透過精確的啟動子缺失分析揭示此機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 近端啟動子缺失導致內耳與小腦的表型不同，顯示 Atoh1 在兩個組織中依賴不同的調控元件；此差異提供了設計組織特異性基因治療的分子依據。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "設計以 Atoh1 驅動毛細胞再生的 AAV 構建體時，需考慮啟動子區域的選擇；近端啟動子可能提供更高的耳蝸特異性，降低小腦副作用風險。"
+      }
+    ],
+    "method": "以 CRISPR/Cas9 在小鼠基因組中精確缺失 Atoh1 啟動子近端特定區段，分析出生後不同時間點的小腦與耳蝸發育，以免疫螢光、ABR 及組織學評估表型。",
+    "contribution": "（1）鑑定 Atoh1 近端啟動子在內耳毛細胞發育的特異性調控元件；（2）揭示 Atoh1 組織特異性轉錄調控機制；（3）為 Atoh1 基因治療的啟動子設計提供分子基礎；（4）建立新型 Atoh1 條件性缺失小鼠模型。",
+    "limitation": "（1）僅分析近端啟動子缺失，遠端增強子的貢獻未評估；（2）出生後的補償性機制可能掩蓋部分表型；（3）成體耳蝸中 Atoh1 再活化的調控機制尚需進一步研究。",
+    "tags": [
+      "Atoh1",
+      "promoter",
+      "inner ear",
+      "hair cell",
+      "mouse model",
+      "gene regulation",
+      "2026"
+    ],
+    "pubmed_id": "42754477",
+    "favorited": false,
+    "impact_factor": 2.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 55,
+    "title": "PLC-IP3 signaling promotes sensory hair cell formation in zebrafish neuromast.",
+    "title_zh": "PLC-IP3 信號通路促進斑馬魚側線神經丘感覺毛細胞形成",
+    "authors": "Yang C, Qian F, Gong J, Wang X, Liu D",
+    "journal": "Development (Cambridge, England)",
+    "year": 2026,
+    "doi": "10.1242/dev.205705",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42714214/",
+    "abstract_zh": "本研究利用斑馬魚側線神經丘模型，發現磷脂酶 C（PLC）介導的 IP3 信號通路在感覺毛細胞形成中扮演關鍵角色。抑制 PLC-IP3 信號顯著減少神經丘中的毛細胞數量，而增強此通路則促進毛細胞再生。機制分析顯示 PLC-IP3 通路與 Notch 信號相互作用，調控支持細胞向毛細胞的命運轉換。此發現揭示毛細胞再生的新型分子機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "毛細胞形成的信號調控網絡仍不完整，本研究探索 PLC-IP3 信號通路在斑馬魚模型中調控毛細胞命運決定的分子機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PLC-IP3 信號是毛細胞形成的必要通路，其與 Notch 信號的相互作用共同調控支持細胞-毛細胞命運轉換，提供了新的再生觸發機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "PLC-IP3 通路可作為 Notch 抑制的輔助調控靶點；IP3 受體激動劑可能與 DAPT 組合使用以提升毛細胞再生效率，值得在 iPSC 分化體系中驗證。"
+      }
+    ],
+    "method": "以斑馬魚側線神經丘為模型，透過藥理學抑制（PLC 抑制劑 U73122）與基因操控（morpholino 敲低）研究 PLC-IP3 信號功能，以 MYO7A/Atoh1 免疫螢光及活體成像評估毛細胞數量與再生。",
+    "contribution": "（1）首次鑑定 PLC-IP3 通路為毛細胞形成的正調控因子；（2）揭示 PLC-IP3 與 Notch 信號的相互作用機制；（3）提供新型毛細胞再生調控靶點；（4）在活體模型中驗證 PLC-IP3 通路的再生促進效果。",
+    "limitation": "（1）斑馬魚神經丘與哺乳類耳蝸的再生能力本質不同，結果外推需謹慎；（2）哺乳類耳蝸中 PLC-IP3 通路的作用未直接驗證；（3）PLC-IP3 信號的上游調控機制尚不明確。",
+    "tags": [
+      "PLC",
+      "IP3",
+      "zebrafish",
+      "neuromast",
+      "hair cell",
+      "Notch",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42714214",
+    "favorited": false,
+    "impact_factor": 4.7,
+    "if_year": "2023"
+  },
+  {
+    "id": 56,
+    "title": "The inner ear immune microenvironment in sensorineural hearing loss: mechanisms and therapeutic perspectives.",
+    "title_zh": "感音神經性聽力損失中的內耳免疫微環境：機制與治療展望（綜述）",
+    "authors": "Guo Y, Lv J, Zhang D",
+    "journal": "Frontiers in Immunology",
+    "year": 2026,
+    "doi": "10.3389/fimmu.2026.1911450",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42780555/",
+    "abstract_zh": "內耳曾被認為是免疫豁免器官，但近年研究顯示免疫微環境在感音神經性聽力損失（SNHL）的病理進程中扮演關鍵角色。本綜述系統整理內耳常駐免疫細胞（巨噬細胞、微膠細胞）的功能、炎症信號在毛細胞損傷中的作用，以及免疫調節作為 SNHL 治療策略的潛力。文章特別討論免疫微環境如何影響毛細胞再生的效率，為再生醫療的策略設計提供新視角。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "內耳免疫微環境在 SNHL 中的作用機制不清，且炎症如何影響毛細胞再生效率的研究不足，本文旨在系統整理此領域的現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "內耳常駐巨噬細胞在損傷後可轉為促炎或抗炎表型，影響毛細胞存活與再生；控制炎症反應可能是提升再生效率的關鍵輔助策略。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "移植 iPSC 衍生毛細胞前需考慮內耳免疫環境調控；在分化方案中加入抗炎預處理或使用免疫調節支持細胞共培養，可能提升移植成功率。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合內耳免疫細胞生物學、炎症信號（IL-1β、TNF-α、NF-κB 通路）在毛細胞損傷中的作用，以及免疫調節策略（類固醇、細胞因子拮抗劑）的研究資料。",
+    "contribution": "（1）系統整理內耳免疫微環境的細胞組成與功能；（2）揭示炎症在 SNHL 病理中的雙重角色（保護 vs 損傷）；（3）提出免疫調節作為再生治療輔助策略的依據；（4）建立內耳免疫-再生軸的概念框架。",
+    "limitation": "（1）綜述性質；（2）內耳免疫研究多基於動物模型，人類資料有限；（3）免疫微環境的時空動態變化尚未完全解析。",
+    "tags": [
+      "review",
+      "immune microenvironment",
+      "SNHL",
+      "macrophage",
+      "inflammation",
+      "inner ear",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42780555",
+    "favorited": false,
+    "impact_factor": 7.3,
+    "if_year": "2023"
+  },
+  {
+    "id": 57,
+    "title": "Regulation of Cochlear Nucleus Synaptogenesis by Progranulin in a Stem Cell-Based Coculture Model.",
+    "title_zh": "幹細胞共培養模型中顆粒蛋白前體調控耳蝸核突觸形成",
+    "authors": "Tabassum A, Reddy PP, Agboola O, Deng M, Hu Z",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261472696",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42535285/",
+    "abstract_zh": "本研究利用幹細胞基礎的耳蝸核共培養模型，探索顆粒蛋白前體（Progranulin, PGRN）在聽覺突觸形成中的調控作用。研究發現 PGRN 可促進聽覺神經元與耳蝸核神經元之間的突觸形成，並影響突觸密度與形態成熟。此發現對利用幹細胞策略修復聽覺傳導通路的突觸連接具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "螺旋神經節神經元（SGN）與耳蝸核之間的突觸重建是聽覺再生的重要環節，但其分子調控機制尚不清楚，本研究探索 PGRN 在此過程的作用。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PGRN 透過調控突觸形成相關基因表現，促進幹細胞衍生聽覺神經元與耳蝸核神經元的突觸連接，提示 PGRN 可作為聽覺突觸再生的促進因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "在 iPSC 衍生 SGN 的移植策略中，加入 PGRN 處理可能促進移植神經元與中樞聽覺系統的突觸整合；PGRN 補充是提升 SGN 移植功能成效的潛在輔助方案。"
+      }
+    ],
+    "method": "建立幹細胞衍生聽覺神經元（類 SGN）與小鼠耳蝸核切片的共培養模型，透過重組 PGRN 蛋白處理或 PGRN 基因敲低，以免疫螢光（Synapsin、PSD-95）定量突觸密度，電生理記錄評估功能性突觸。",
+    "contribution": "（1）建立可研究中樞聽覺突觸形成的幹細胞共培養平台；（2）首次鑑定 PGRN 為耳蝸核突觸形成的調控因子；（3）提供促進 SGN-耳蝸核突觸整合的分子靶點；（4）為中樞聽覺通路重建研究提供新模型。",
+    "limitation": "（1）體外共培養模型，不能完全模擬體內耳蝸核的複雜環境；（2）PGRN 促突觸形成的具體信號機制尚未完全闡明；（3）在動物模型中的體內驗證仍缺乏。",
+    "tags": [
+      "progranulin",
+      "cochlear nucleus",
+      "synaptogenesis",
+      "stem cell",
+      "SGN",
+      "coculture",
+      "2026"
+    ],
+    "pubmed_id": "42535285",
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 58,
+    "title": "The protective mechanism of antioxidants in cadmium-induced ototoxicity in vitro and in vivo.",
+    "title_zh": "抗氧化劑對鎘誘導耳毒性的保護機制：體外與體內研究",
+    "author_short": "Kim et al.",
+    "authors": "Kim SJ, Jeong HJ, Myung NY, Kim MC, Lee JH, So HS, Park RK, Kim HM, Um JY, Hong SH",
+    "journal": "Environmental Health Perspectives",
+    "year": 2008,
+    "pmid": "18629305",
+    "doi": "10.1289/ehp.10467",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18629305/",
+    "impact_factor": 10.4,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "cadmium",
+      "ototoxicity",
+      "antioxidant",
+      "ROS",
+      "apoptosis",
+      "hair cell"
+    ],
+    "favorited": false,
+    "abstract_zh": "鎘（Cd²⁺）是一種常見環境污染物，已知對周邊與中樞聽覺系統具有毒性。本研究探討 Cd²⁺ 誘導耳毒性的詳細機制，並評估抗氧化劑的保護效果。研究使用 HEI-OC1 耳蝸細胞株、大鼠耳蝸外植體及小鼠體內模型，發現 Cd²⁺ 暴露引發活性氧（ROS）生成、粒線體膜電位喪失、細胞色素 c 釋放、caspase 活化（特別是 caspase-9 和 caspase-3）及 ERK 磷酸化，最終導致細胞凋亡及聽覺閾值移位。ERK 抑制劑、JNK 抑制劑及 caspase 抑制劑可減輕毒性。抗氧化劑 N-乙醯半胱氨酸（NAC）與 ebselen 對 Cd²⁺ 毒性具有顯著保護作用，說明 ROS 是鎘耳毒性的核心機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鎘是日益增加的環境污染物，其耳毒性機制尚不完全清楚。本研究旨在釐清 Cd²⁺ 損害耳蝸毛細胞的信號通路，並找出有效的抗氧化保護策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Cd²⁺ 透過 ROS 生成、粒線體途徑（caspase-9/-3）及 ERK/JNK 活化誘導毛細胞凋亡；NAC 與 ebselen 可有效阻止此過程，確認 ROS 為主要致毒因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鎘耳毒性提示環境重金屬暴露的聽力風險不可忽視；抗氧化劑作為保護策略具有臨床轉化潛力，可結合基因×環境交互作用研究，探討個體對鎘暴露的易感性差異。"
+      }
+    ],
+    "method": "多層次實驗設計：（1）HEI-OC1 耳蝸細胞株體外模型；（2）大鼠耳蝸外植體；（3）小鼠體內暴露模型。使用流式細胞術測定細胞活性與 ROS，免疫組織化學染色、Western blot 分析信號蛋白，以聽性腦幹反應（ABR）評估聽力閾值。以各種信號通路抑制劑及 caspase 抑制劑進行機制驗證。",
+    "contribution": "（1）首次系統闡明鎘誘導耳蝸毛細胞死亡的多層次信號機制；（2）確認 ROS→粒線體→caspase 凋亡路徑在鎘耳毒性中的核心地位；（3）驗證 NAC 和 ebselen 兩種抗氧化劑的保護效果；（4）建立可靠的體外與體內鎘耳毒性評估模型。",
+    "limitation": "（1）動物模型結果未必能直接外推至人類慢性低劑量環境暴露；（2）研究以急性高劑量暴露為主，與真實環境的慢性低劑量暴露情境不同；（3）NAC 和 ebselen 的臨床有效劑量與安全性需進一步驗證；（4）未探討長期暴露後的累積效應。"
+  },
+  {
+    "id": 59,
+    "title": "Population-based study of environmental heavy metal exposure and hearing loss: A systematic review and meta-analysis.",
+    "title_zh": "環境重金屬暴露與聽力損失：系統回顧與統合分析",
+    "authors": "Wang F, Böhnke F, Böck K, Wirth M",
+    "journal": "Laryngoscope Investigative Otolaryngology",
+    "year": 2024,
+    "pmid": "38562156",
+    "doi": "10.1002/lio2.1230",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38562156/",
+    "impact_factor": 2.5,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "mercury",
+      "hearing loss",
+      "meta-analysis",
+      "epidemiology"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究進行系統回顧與統合分析，探討鉛（Pb）、鎘（Cd）、汞（Hg）暴露與聽力損失的關聯，並回顧錳（Mn）、鋇（Ba）、砷（As）的相關文獻。從 649 篇文獻中篩選出 15 篇進行統合分析。結果顯示：（1）Pb 和 Cd 暴露與聽力損失具有顯著相關性；（2）血液重金屬濃度與聽力損失呈正比關係；（3）高頻 4 kHz 的相關性最強（OR 1.44, 95% CI 1.22–1.71）；（4）鋇（Ba）在指甲/頭髮中的指標比尿液更能反映暴露程度。研究建議以 4 kHz 高頻純音聽力測試評估重金屬相關聽損。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "過去各研究對重金屬暴露與聽力損失的關聯結果不一致，本文旨在彙整現有人群研究，以統合分析量化 Pb、Cd、Hg 與聽損的整體效應量。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Pb 和 Cd 與聽力損失具有統計顯著關聯；高頻 4 kHz 是最敏感的聽損指標；長期暴露指標（如頭髮、指甲中的重金屬）比血液更能反映累積暴露與聽損的關係。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "支持以高頻聽力測試（4 kHz）作為重金屬暴露族群的早期篩檢工具；累積暴露量比單一血液濃度更能預測聽力損失，提示研究設計時應納入長期暴露指標。"
+      }
+    ],
+    "method": "系統回顧與統合分析（meta-analysis）。搜尋 PubMed、Web of Science、Embase、Cochrane Library、Scopus 及中文資料庫（CNKI、萬方、維普）。從 649 篇初始文獻中篩選 15 篇進行效應量統合，計算整體效應量（OR）。",
+    "contribution": "（1）首次以統合分析量化 Pb、Cd、Hg 對聽力損失的整體效應；（2）確認 4 kHz 高頻為最敏感的重金屬相關聽損指標；（3）指出長期暴露指標（頭髮/指甲）比短期血液指標更具診斷價值。",
+    "limitation": "（1）納入研究異質性高；（2）中文文獻佔相當比例，可能存在發表偏差；（3）無法釐清因果關係；（4）未充分考量不同金屬的交互效應。"
+  },
+  {
+    "id": 60,
+    "title": "Heavy metals exposure and hearing loss in US adolescents.",
+    "title_zh": "美國青少年重金屬暴露與聽力損失",
+    "authors": "Shargorodsky J, Curhan SG, Henderson E, Eavey R, Curhan GC",
+    "journal": "Archives of Otolaryngology – Head & Neck Surgery",
+    "year": 2011,
+    "pmid": "22183895",
+    "doi": "10.1001/archoto.2011.202",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22183895/",
+    "impact_factor": 2.8,
+    "if_year": "2011",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "mercury",
+      "arsenic",
+      "adolescent",
+      "NHANES",
+      "epidemiology",
+      "hearing loss"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究評估血鉛、血汞、尿鎘及尿砷濃度與聽力損失之間的橫斷面關聯，對象為 2005–2008 年 NHANES 中 12–19 歲的青少年（n=2535）。以多變量羅吉斯迴歸分析調整後的勝算比。結果：血鉛 ≥2 μg/dL（vs. <1 μg/dL）與高頻聽損顯著相關（OR 2.22, 95% CI 1.39–3.56）；尿鎘最高四分位數與低頻聽損相關（OR 3.08, 95% CI 1.02–9.25）；血汞和尿砷與聽損無顯著整體關聯。結論：遠低於目前行動濃度的血鉛濃度已與高頻聽損顯著相關。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "重金屬暴露被認為是兒童和青少年聽力損失的重要風險因素，但相關人群研究不足。本研究利用 NHANES 大型代表性樣本，評估低劑量重金屬暴露對青少年聽力的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "血鉛濃度遠低於美國 CDC 行動建議值（10 μg/dL）時，已顯著增加高頻聽損風險（OR 2.22）；鎘則與低頻聽損相關（OR 3.08）；兩種金屬呈現不同頻率的損傷模式。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "低劑量鉛暴露已有顯著聽損風險，強調「安全閾值」概念應重新檢視；鉛與鎘損傷頻率不同（鉛→高頻，鎘→低頻）提示兩者可能透過不同機制損傷耳蝸不同部位。"
+      }
+    ],
+    "method": "橫斷面設計，使用 2005–2008 NHANES 資料（n=2535）。暴露測量：血鉛、血汞（ICP-MS）、尿鎘、尿砷。聽力結果：純音聽力測試（audiometry），定義 25 dB HL 以上為聽損。以多變量羅吉斯迴歸調整年齡、性別、種族、噪音暴露等混淆因子。",
+    "contribution": "（1）首篇以美國全國代表性樣本評估多種重金屬與青少年聽損的研究；（2）確認極低劑量血鉛（<2 μg/dL）已與高頻聽損相關；（3）鉛和鎘呈現不同聽損頻率模式，提示不同損傷機制。",
+    "limitation": "（1）橫斷面設計無法確立因果關係；（2）尿鎘樣本數較小（878 人）；（3）重金屬暴露為單一時間點，無法反映長期累積；（4）無法完全排除所有混淆因子。"
+  },
+  {
+    "id": 61,
+    "title": "Combined effects of multiple metals on hearing loss: A Bayesian kernel machine regression approach.",
+    "title_zh": "多種重金屬聯合暴露對聽力損失的影響：貝氏核機器迴歸分析",
+    "authors": "Liang M, Guo X, Ding X, Song Q, Wang H, Li N, Su W, Liang Q, Sun Y",
+    "journal": "Ecotoxicology and Environmental Safety",
+    "year": 2022,
+    "pmid": "36368114",
+    "doi": "10.1016/j.ecoenv.2022.114279",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36368114/",
+    "impact_factor": 7.1,
+    "if_year": "2022",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "manganese",
+      "cobalt",
+      "barium",
+      "NHANES",
+      "BKMR",
+      "mixed exposure",
+      "hearing loss"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究探討多種金屬（Ba、Cd、Co、Cs、Mo、Pb、Mn、Sn、Sb、Tl、W，共 11 種）聯合暴露對聽力損失的影響，使用 NHANES 2013–2018 資料（n=2205 成人）。採用廣義線性迴歸（GLM）、加權分位數總和（WQS）和貝氏核機器迴歸（BKMR）評估混合暴露效應。結果：Cd、Pb、Sb、Sn 對聽力損失有顯著個別效應；WQS 模型顯示混合暴露與總體聽損呈顯著正相關（OR 1.136）；BKMR 確認多金屬聯合效應，且 Cd 和 Pb 與其他金屬之間存在潛在交互作用。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "現實環境中人體同時暴露於多種重金屬，但過去研究多評估單一金屬效應，無法反映混合暴露的複雜聯合影響。本研究利用 BKMR 等統計方法評估多金屬的混合效應。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "多種重金屬的混合暴露對聽力損失有顯著聯合正向效應（OR 1.136）；Cd 和 Pb 是最主要的貢獻者；金屬間存在交互作用，單一金屬分析可能低估整體風險。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "環境重金屬對聽損的影響應以多重暴露視角評估；Cd 和 Pb 的交互作用提示在遺傳易感性研究中，應考慮多重金屬暴露的基因×環境交互效應，而非單一金屬。"
+      }
+    ],
+    "method": "橫斷面研究，NHANES 2013–2018（n=2205）。尿液 11 種金屬（ICP-MS）。聽力測試（pure tone audiometry）：言語頻率聽損（SFHL）和高頻聽損（HFHL）。統計方法：GLM（個別金屬）、WQS（混合指數）、BKMR（非線性與交互作用）。調整年齡、性別、種族、教育程度、噪音暴露、BMI 等協變數。",
+    "contribution": "（1）首次以 BKMR 評估 11 種重金屬混合暴露對聽力損失的聯合效應；（2）確認混合暴露效應顯著大於個別效應；（3）識別 Cd 和 Pb 之間的潛在交互作用；（4）分別分析言語頻率和高頻聽損，提供臨床相關分析。",
+    "limitation": "（1）橫斷面設計，無因果推論；（2）尿液重金屬反映短期暴露，無法完整代表長期累積；（3）NHANES 資料的可及性限制了特定混淆因子的調整；（4）成人樣本結果不一定適用於兒童或青少年。"
+  },
+  {
+    "id": 62,
+    "title": "Unraveling the molecular landscape of lead-induced cochlear synaptopathy: a quantitative proteomics analysis.",
+    "title_zh": "鉛誘導耳蝸突觸病變的分子機制：定量蛋白質體學分析",
+    "authors": "Bhatia P, Mehmood S, Doyon-Reale N, Rosati R, Stemmer PM, Jamesdaniel S",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2024,
+    "pmid": "39104440",
+    "doi": "10.3389/fncel.2024.1408208",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39104440/",
+    "impact_factor": 4.2,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cochlear synaptopathy",
+      "proteomics",
+      "synaptic vesicle",
+      "inner hair cell",
+      "ABR",
+      "ribbon synapse"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究探討鉛暴露誘導耳蝸突觸病變的分子機制，使用年輕成年 CBA/J 小鼠飲水暴露醋酸鉛 28 天。結果顯示鉛暴露顯著提高高頻聽閾，但不影響外毛細胞活性或毛細胞數量。ABR 第一波振幅降低，共定位分析顯示耳蝸基旋配對突觸數目減少，確認為突觸病變。蛋白質體學分析發現 746 個突觸蛋白豐度改變（352 個上升、394 個下降），生物資訊分析指出突觸小泡循環通路（synaptic vesicle cycle pathway）高度富集。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "過去研究顯示鉛暴露導致耳蝸氧化壓力和內毛細胞帶狀突觸破壞，但其詳細分子機制不清楚。本研究利用定量蛋白質體學，系統性解析鉛誘導耳蝸突觸病變的蛋白質層面變化。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛的主要耳毒性靶點不是外毛細胞，而是耳蝸突觸（synaptopathy）；損傷主要集中在基旋（高頻區）；突觸小泡循環通路蛋白質大規模改變，提示鉛干擾突觸傳遞而非毛細胞本身。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鉛耳毒性呈現「隱性聽損」模式（hidden hearing loss）——毛細胞完整但突觸受損、ABR 振幅下降，這與年齡相關聽損的突觸病變機制有重疊性；提示重金屬暴露可能加速或模擬年齡相關的耳蝸突觸退化過程。"
+      }
+    ],
+    "method": "動物實驗：CBA/J 小鼠，醋酸鉛飲水暴露 28 天。ABR 聽閾與波振幅評估；DPOAE 外毛細胞功能；免疫螢光共定位（CtBP2/PSD-95）計數突觸對數；LC-MS/MS 定量蛋白質體學（synaptosome 分離）；生物資訊分析（KEGG 通路富集）。",
+    "contribution": "（1）首次以蛋白質體學系統解析鉛誘導耳蝸突觸病變的分子特徵；（2）確認突觸小泡循環通路為鉛耳毒性的核心機制；（3）明確指出外毛細胞非鉛的主要靶點，突觸病變才是主軸；（4）揭示鉛造成耳蝸基旋突觸選擇性損傷。",
+    "limitation": "（1）動物模型（急性 28 天暴露）不完全模擬人類慢性低劑量環境暴露；（2）蛋白質體學為相關性分析，因果關係需功能驗證；（3）未評估雌雄性別差異的蛋白質體變化；（4）未直接檢測人類耳蝸樣本。"
+  },
+  {
+    "id": 63,
+    "title": "Environmental exposure of heavy metal (lead and cadmium) and hearing loss: data from the Korea National Health and Nutrition Examination Survey (KNHANES 2010-2013).",
+    "title_zh": "鉛與鎘環境暴露與聽力損失：韓國國民健康營養調查資料分析",
+    "authors": "Kang GH, Uhm JY, Choi YG, Kang EK, Kim SY, Choo WO, Chang SS",
+    "journal": "Annals of Occupational and Environmental Medicine",
+    "year": 2018,
+    "pmid": "29692915",
+    "doi": "10.1186/s40557-018-0237-9",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29692915/",
+    "impact_factor": 2.5,
+    "if_year": "2018",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "KNHANES",
+      "epidemiology",
+      "hearing loss",
+      "Korea",
+      "high-frequency"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究利用韓國國民健康營養調查（KNHANES 2010–2013）資料，評估血鉛與血鎘暴露與聽力損失的關係。研究結果顯示即使是低劑量的鉛暴露，也是高頻聽損的顯著風險因子。研究建議應進行前瞻性流行病學研究以確認因果關係，並推動降低重金屬暴露的公共衛生措施。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "動物研究已確認鉛和鎘是聽力損失風險因子，但大型人群研究（特別是亞洲族群）仍不足。本研究利用韓國國家健康調查資料，評估一般人群中低劑量重金屬暴露對聽力的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "低劑量鉛暴露仍是高頻聽力損失的顯著風險因子，支持鉛的神經耳毒性可能沒有真正的「安全閾值」。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "亞洲族群（韓國）的研究結果與美國 NHANES 資料相互印證，增強鉛暴露與高頻聽損關聯的普遍性；對台灣本土研究具有族群相關性的參考價值。"
+      }
+    ],
+    "method": "橫斷面研究，KNHANES 2010–2013。血鉛和血鎘以 ICP-MS 測量。純音聽力測試評估聽力閾值，定義聽力損失標準。多變量迴歸調整年齡、性別、噪音暴露、BMI 等混淆因子。",
+    "contribution": "（1）以韓國大型代表性樣本驗證鉛暴露與高頻聽損的關聯；（2）支持亞洲族群中低劑量重金屬暴露的聽損風險；（3）呼籲重視環境重金屬的公共衛生防治措施。",
+    "limitation": "（1）橫斷面設計，無法確立因果關係；（2）血液重金屬代表短期暴露；（3）無法完全排除職業噪音等混淆因子；（4）缺乏長期追蹤資料。"
+  },
+  {
+    "id": 64,
+    "title": "Mercury (Hg2+) suppression of potassium currents of outer hair cells.",
+    "title_zh": "汞離子抑制外毛細胞鉀電流",
+    "authors": "Liang GH, Järlebark L, Ulfendahl M, Moore EJ",
+    "journal": "Neurotoxicology and Teratology",
+    "year": 2003,
+    "pmid": "12757831",
+    "doi": "10.1016/s0892-0362(03)00008-4",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12757831/",
+    "impact_factor": 3.2,
+    "if_year": "2003",
+    "group": "heavymetal",
+    "tags": [
+      "mercury",
+      "outer hair cell",
+      "potassium channel",
+      "patch-clamp",
+      "ototoxicity",
+      "K+ current"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究使用全細胞膜片箝位（whole-cell patch clamp）技術，在新鮮分離的天竺鼠耳蝸外毛細胞（OHC）上，研究氯化汞（HgCl₂）對外向和內向鉀電流的影響。HgCl₂ 以電壓和劑量依賴的方式影響 K⁺ 電流；1–100 μM 濃度下對峰值電流（onset peak current）的影響大於穩態電流（steady-state）；HgCl₂ 也使靜息膜電位去極化。1 μM 的效應在沖洗後可部分恢復，但 10 和 100 μM 的效應不可逆。由於 K⁺ 通道是 OHC 電動性（electromotility）的關鍵，HgCl₂ 阻斷 K⁺ 通道可能導致聽覺轉導障礙，造成聽覺敏感性下降。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "汞是已知的環境神經毒素，其對感覺系統的毒性機制不完全清楚。本研究聚焦於汞對耳蝸外毛細胞 K⁺ 通道的直接電生理效應，探索汞誘導耳毒性的離子通道機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "HgCl₂ 以劑量依賴的方式阻斷 OHC 的 K⁺ 電流，高濃度（≥10 μM）效應不可逆；Hg²⁺ 可能透過直接結合 K⁺ 通道的巰基（-SH）基團造成不可逆抑制，進而破壞 OHC 的電動功能。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "汞損傷外毛細胞 K⁺ 通道的機制（巰基結合）與其他耳毒性藥物（如順鉑、胺基糖苷類）的氧化壓力機制不同，提示不同重金屬有不同的耳毒性靶點；了解離子通道機制有助於設計針對性保護策略。"
+      }
+    ],
+    "method": "豚鼠耳蝸外毛細胞急性分離；全細胞膜片箝位（whole-cell patch clamp）技術；以 HgCl₂ 1–100 μM 灌流；記錄外向 K⁺ 電流（IK）和內向 K⁺ 電流；評估電壓依賴性、劑量依賴性及沖洗可逆性。",
+    "contribution": "（1）首次以電生理方法直接記錄 Hg²⁺ 對耳蝸 OHC K⁺ 電流的影響；（2）確認 Hg²⁺ 以不可逆方式抑制 OHC K⁺ 通道；（3）提出汞耳毒性的離子通道機制；（4）建立汞耳毒性研究的體外電生理模型。",
+    "limitation": "（1）急性體外實驗，不能完全代表體內慢性暴露情境；（2）使用氯化汞（Hg²⁺），未評估甲基汞（methylmercury）等有機汞形式；（3）僅評估 K⁺ 電流，未全面探討其他離子通道（Ca²⁺、Na⁺）；（4）動物模型（豚鼠）結果的人類適用性需驗證。"
   }
 ];
 /* ---- END LEGACY DATA ---- */

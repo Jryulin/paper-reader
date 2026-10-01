@@ -986,7 +986,7 @@
     "pubmed_id": "42373511",
     "group": "organoid",
     "favorited": false,
-    "impact_factor": null,
+    "impact_factor": 1.1,
     "if_year": "2023"
   },
   {
@@ -2061,5 +2061,591 @@
     "group": "organoid",
     "impact_factor": 3.2,
     "if_year": "2023"
+  },
+  {
+    "id": 51,
+    "title": "Timing and Dosage of Notch Inhibition and Wnt Activation Enhanced Hair Cell-Like Cell Generation and Stereocilia Elongation in Otic Organoids.",
+    "title_zh": "Notch 抑制與 Wnt 活化的時序與劑量優化促進耳蝸類器官中毛細胞樣細胞生成與靜纖毛延伸",
+    "authors": "Kim H, Kim YJ, Kim YS, So S, Sung S, Park S, Kim J, Kim K, Choung YH, Ha J",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261490309",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42788198/",
+    "abstract_zh": "本研究以耳蝸類器官模型系統性探索 Notch 信號抑制與 Wnt 信號活化的最佳時序與劑量，以提升毛細胞樣細胞（HCLCs）的生成效率並促進靜纖毛延伸。研究發現，在特定分化窗口中精確調控兩條通路的劑量與施用時間，可顯著增加 Atoh1+ 及 Myo7a+ 毛細胞樣細胞數量，並改善靜纖毛形態成熟度，為優化 iPSC 分化方案提供重要參數依據。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Notch 抑制與 Wnt 活化雖已知可促進毛細胞分化，但最佳時序與劑量組合尚未確定，本研究系統性優化此參數以提升類器官中毛細胞生成效率。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "在特定分化窗口中給予適當劑量的 Notch 抑制劑（DAPT）與 Wnt 活化劑（CHIR99021），可最大化 Myo7a+ 毛細胞樣細胞產量並促進靜纖毛延伸，顯示時序與劑量均為關鍵參數。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "本研究提供可直接套用於 iPSC 耳蝸分化方案的 Notch/Wnt 劑量與時序參數；NHRI-01-03 分化實驗中應將 DAPT 與 CHIR 的施用窗口列為重要優化變數。"
+      }
+    ],
+    "method": "以 hPSC 衍生耳蝸類器官為模型，系統性測試不同濃度的 DAPT（Notch 抑制劑）與 CHIR99021（Wnt 活化劑）在不同分化時間點的施用效果，以 Myo7a/Atoh1 免疫螢光定量毛細胞樣細胞數量，SEM 評估靜纖毛形態。",
+    "contribution": "（1）建立 Notch/Wnt 雙通路調控的最佳時序-劑量矩陣；（2）驗證靜纖毛延伸與施藥時序的直接關聯；（3）提供可重現的耳蝸類器官分化優化參數；（4）確立分化窗口概念在毛細胞工程中的重要性。",
+    "limitation": "（1）研究以類器官模型為主，體內環境中的劑量反應可能不同；（2）靜纖毛的功能性（機械感受能力）未完整評估；（3）不同 iPSC 細胞株間的反應一致性尚待驗證。",
+    "tags": [
+      "Notch",
+      "Wnt",
+      "organoid",
+      "hair cell",
+      "iPSC",
+      "DAPT",
+      "CHIR99021",
+      "2026"
+    ],
+    "pubmed_id": "42788198",
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 52,
+    "title": "Advances towards biological hearing restoration by genetic reprogramming.",
+    "title_zh": "基因重編程實現生物性聽力恢復的最新進展（綜述）",
+    "authors": "McGovern MM, Groves AK",
+    "journal": "Current Opinion in Otolaryngology & Head and Neck Surgery",
+    "year": 2026,
+    "doi": "10.1097/MOO.0000000000001148",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42614031/",
+    "abstract_zh": "本綜述回顧利用基因重編程策略恢復生物性聽力的最新進展。文章涵蓋以 Atoh1、POU4F3、GFI1 等關鍵轉錄因子直接驅動支持細胞轉分化或促進祖細胞再生的方法，並討論 AAV 遞送系統的進展、體內再生效率提升策略，以及從動物模型到臨床轉化面臨的挑戰。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳類耳蝸缺乏內源性再生能力，本綜述整理以基因重編程強制驅動毛細胞再生的最新策略與技術進展。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 結合 POU4F3/GFI1 的多因子策略可提升體內轉分化效率；新一代 AAV 血清型對耳蝸支持細胞的轉導效率大幅改善；直接體內重編程比細胞移植更具臨床可行性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "多因子組合（SAPG）重編程策略是目前最前沿的方向；本綜述中的 AAV 血清型選擇建議可直接指導未來體內驗證實驗設計。"
+      }
+    ],
+    "method": "敘述性文獻綜述，整合近年發表的基因重編程促進毛細胞再生研究，聚焦轉錄因子組合、基因遞送載體選擇及體內轉分化效率評估。",
+    "contribution": "（1）系統整理基因重編程驅動聽力恢復的最新技術進展；（2）比較不同轉錄因子組合的再生效率；（3）評估 AAV 遞送系統的耳蝸特異性；（4）指出臨床轉化的主要障礙。",
+    "limitation": "（1）綜述性質，無原始實驗資料；（2）多數引用研究仍在動物模型階段；（3）人類成體耳蝸再生的可行性仍有爭議。",
+    "tags": [
+      "review",
+      "reprogramming",
+      "Atoh1",
+      "gene therapy",
+      "AAV",
+      "hearing restoration",
+      "2026"
+    ],
+    "pubmed_id": "42614031",
+    "favorited": false,
+    "impact_factor": 2.1,
+    "if_year": "2023"
+  },
+  {
+    "id": 53,
+    "title": "Boosting auditory nerve function with cell therapy - status, surgical approach and potential candidates.",
+    "title_zh": "細胞療法增強聽神經功能：現況、手術途徑與候選細胞（綜述）",
+    "authors": "West N, Navntoft CA, Haywood N, Vickers D, Undurraga JA, Cayé-Thomasen P",
+    "journal": "Hearing Research",
+    "year": 2026,
+    "doi": "10.1016/j.heares.2026.109806",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42762631/",
+    "abstract_zh": "本綜述評估以細胞療法恢復聽神經功能的現況，探討螺旋神經節神經元（SGN）退化在聽力損失中的核心角色，並討論 iPSC 衍生 SGN、間質幹細胞等候選細胞來源的特性。文章特別分析不同手術遞送途徑（耳蝸軸注射、圓窗膜路徑）的可行性，以及細胞存活率、突觸整合等關鍵挑戰，為聽神經再生的臨床轉化提供路線圖。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "SGN 退化導致人工耳蝸效能受限，本文評估以細胞療法替換或再生 SGN 的可行性及手術途徑。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "iPSC 衍生 SGN 是最具潛力的候選細胞；耳蝸軸注射為目前最直接的遞送路徑；提升移植細胞存活率與宿主突觸整合是主要瓶頸。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "iPSC 衍生 SGN 的手術遞送考量應納入實驗設計；文中提出的細胞品質標準（電生理活性、突觸形成能力）可作為 NHRI-01-03 SGN 分化評估指標。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合 SGN 細胞療法的臨床前研究，涵蓋細胞來源比較、手術途徑分析及功能評估方法學。",
+    "contribution": "（1）系統整理聽神經細胞療法的現況與候選細胞；（2）評估各手術遞送途徑的優劣；（3）建立細胞療法臨床轉化的評估框架；（4）指出 iPSC-SGN 的優先研究方向。",
+    "limitation": "（1）綜述性質；（2）移植細胞長期存活的臨床資料極少；（3）人工耳蝸環境（電刺激場）對移植細胞的影響未充分討論。",
+    "tags": [
+      "review",
+      "SGN",
+      "cell therapy",
+      "spiral ganglion",
+      "cochlear implant",
+      "iPSC",
+      "auditory nerve",
+      "2026"
+    ],
+    "pubmed_id": "42762631",
+    "favorited": false,
+    "impact_factor": 3.2,
+    "if_year": "2023"
+  },
+  {
+    "id": 54,
+    "title": "Distinct cerebellar and inner-ear phenotypes in Atoh1 promoter-proximal deletion mice.",
+    "title_zh": "Atoh1 啟動子近端缺失小鼠呈現小腦與內耳的獨特表型",
+    "authors": "Sakamoto S, Kita T, Yamada M, Imayoshi I, Tateya T",
+    "journal": "Auris Nasus Larynx",
+    "year": 2026,
+    "doi": "10.1016/j.anl.2026.09.005",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42754477/",
+    "abstract_zh": "Atoh1 是毛細胞發育的關鍵轉錄因子，其表現受啟動子區域的精細調控。本研究分析 Atoh1 啟動子近端區段特異性缺失小鼠的表型，發現小腦顆粒細胞與內耳毛細胞的發育受到不同程度的影響，揭示 Atoh1 在不同組織中的轉錄調控機制存在差異。此發現對於設計以 Atoh1 為基礎的毛細胞再生基因治療具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Atoh1 啟動子的順式調控元件如何分別調控內耳毛細胞與小腦顆粒細胞的發育尚不明確，本研究透過精確的啟動子缺失分析揭示此機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Atoh1 近端啟動子缺失導致內耳與小腦的表型不同，顯示 Atoh1 在兩個組織中依賴不同的調控元件；此差異提供了設計組織特異性基因治療的分子依據。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "設計以 Atoh1 驅動毛細胞再生的 AAV 構建體時，需考慮啟動子區域的選擇；近端啟動子可能提供更高的耳蝸特異性，降低小腦副作用風險。"
+      }
+    ],
+    "method": "以 CRISPR/Cas9 在小鼠基因組中精確缺失 Atoh1 啟動子近端特定區段，分析出生後不同時間點的小腦與耳蝸發育，以免疫螢光、ABR 及組織學評估表型。",
+    "contribution": "（1）鑑定 Atoh1 近端啟動子在內耳毛細胞發育的特異性調控元件；（2）揭示 Atoh1 組織特異性轉錄調控機制；（3）為 Atoh1 基因治療的啟動子設計提供分子基礎；（4）建立新型 Atoh1 條件性缺失小鼠模型。",
+    "limitation": "（1）僅分析近端啟動子缺失，遠端增強子的貢獻未評估；（2）出生後的補償性機制可能掩蓋部分表型；（3）成體耳蝸中 Atoh1 再活化的調控機制尚需進一步研究。",
+    "tags": [
+      "Atoh1",
+      "promoter",
+      "inner ear",
+      "hair cell",
+      "mouse model",
+      "gene regulation",
+      "2026"
+    ],
+    "pubmed_id": "42754477",
+    "favorited": false,
+    "impact_factor": 2.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 55,
+    "title": "PLC-IP3 signaling promotes sensory hair cell formation in zebrafish neuromast.",
+    "title_zh": "PLC-IP3 信號通路促進斑馬魚側線神經丘感覺毛細胞形成",
+    "authors": "Yang C, Qian F, Gong J, Wang X, Liu D",
+    "journal": "Development (Cambridge, England)",
+    "year": 2026,
+    "doi": "10.1242/dev.205705",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42714214/",
+    "abstract_zh": "本研究利用斑馬魚側線神經丘模型，發現磷脂酶 C（PLC）介導的 IP3 信號通路在感覺毛細胞形成中扮演關鍵角色。抑制 PLC-IP3 信號顯著減少神經丘中的毛細胞數量，而增強此通路則促進毛細胞再生。機制分析顯示 PLC-IP3 通路與 Notch 信號相互作用，調控支持細胞向毛細胞的命運轉換。此發現揭示毛細胞再生的新型分子機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "毛細胞形成的信號調控網絡仍不完整，本研究探索 PLC-IP3 信號通路在斑馬魚模型中調控毛細胞命運決定的分子機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PLC-IP3 信號是毛細胞形成的必要通路，其與 Notch 信號的相互作用共同調控支持細胞-毛細胞命運轉換，提供了新的再生觸發機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "PLC-IP3 通路可作為 Notch 抑制的輔助調控靶點；IP3 受體激動劑可能與 DAPT 組合使用以提升毛細胞再生效率，值得在 iPSC 分化體系中驗證。"
+      }
+    ],
+    "method": "以斑馬魚側線神經丘為模型，透過藥理學抑制（PLC 抑制劑 U73122）與基因操控（morpholino 敲低）研究 PLC-IP3 信號功能，以 MYO7A/Atoh1 免疫螢光及活體成像評估毛細胞數量與再生。",
+    "contribution": "（1）首次鑑定 PLC-IP3 通路為毛細胞形成的正調控因子；（2）揭示 PLC-IP3 與 Notch 信號的相互作用機制；（3）提供新型毛細胞再生調控靶點；（4）在活體模型中驗證 PLC-IP3 通路的再生促進效果。",
+    "limitation": "（1）斑馬魚神經丘與哺乳類耳蝸的再生能力本質不同，結果外推需謹慎；（2）哺乳類耳蝸中 PLC-IP3 通路的作用未直接驗證；（3）PLC-IP3 信號的上游調控機制尚不明確。",
+    "tags": [
+      "PLC",
+      "IP3",
+      "zebrafish",
+      "neuromast",
+      "hair cell",
+      "Notch",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42714214",
+    "favorited": false,
+    "impact_factor": 4.7,
+    "if_year": "2023"
+  },
+  {
+    "id": 56,
+    "title": "The inner ear immune microenvironment in sensorineural hearing loss: mechanisms and therapeutic perspectives.",
+    "title_zh": "感音神經性聽力損失中的內耳免疫微環境：機制與治療展望（綜述）",
+    "authors": "Guo Y, Lv J, Zhang D",
+    "journal": "Frontiers in Immunology",
+    "year": 2026,
+    "doi": "10.3389/fimmu.2026.1911450",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42780555/",
+    "abstract_zh": "內耳曾被認為是免疫豁免器官，但近年研究顯示免疫微環境在感音神經性聽力損失（SNHL）的病理進程中扮演關鍵角色。本綜述系統整理內耳常駐免疫細胞（巨噬細胞、微膠細胞）的功能、炎症信號在毛細胞損傷中的作用，以及免疫調節作為 SNHL 治療策略的潛力。文章特別討論免疫微環境如何影響毛細胞再生的效率，為再生醫療的策略設計提供新視角。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "內耳免疫微環境在 SNHL 中的作用機制不清，且炎症如何影響毛細胞再生效率的研究不足，本文旨在系統整理此領域的現況。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "內耳常駐巨噬細胞在損傷後可轉為促炎或抗炎表型，影響毛細胞存活與再生；控制炎症反應可能是提升再生效率的關鍵輔助策略。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "移植 iPSC 衍生毛細胞前需考慮內耳免疫環境調控；在分化方案中加入抗炎預處理或使用免疫調節支持細胞共培養，可能提升移植成功率。"
+      }
+    ],
+    "method": "系統性文獻綜述，整合內耳免疫細胞生物學、炎症信號（IL-1β、TNF-α、NF-κB 通路）在毛細胞損傷中的作用，以及免疫調節策略（類固醇、細胞因子拮抗劑）的研究資料。",
+    "contribution": "（1）系統整理內耳免疫微環境的細胞組成與功能；（2）揭示炎症在 SNHL 病理中的雙重角色（保護 vs 損傷）；（3）提出免疫調節作為再生治療輔助策略的依據；（4）建立內耳免疫-再生軸的概念框架。",
+    "limitation": "（1）綜述性質；（2）內耳免疫研究多基於動物模型，人類資料有限；（3）免疫微環境的時空動態變化尚未完全解析。",
+    "tags": [
+      "review",
+      "immune microenvironment",
+      "SNHL",
+      "macrophage",
+      "inflammation",
+      "inner ear",
+      "regeneration",
+      "2026"
+    ],
+    "pubmed_id": "42780555",
+    "favorited": false,
+    "impact_factor": 7.3,
+    "if_year": "2023"
+  },
+  {
+    "id": 57,
+    "title": "Regulation of Cochlear Nucleus Synaptogenesis by Progranulin in a Stem Cell-Based Coculture Model.",
+    "title_zh": "幹細胞共培養模型中顆粒蛋白前體調控耳蝸核突觸形成",
+    "authors": "Tabassum A, Reddy PP, Agboola O, Deng M, Hu Z",
+    "journal": "Stem Cells and Development",
+    "year": 2026,
+    "doi": "10.1177/15473287261472696",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42535285/",
+    "abstract_zh": "本研究利用幹細胞基礎的耳蝸核共培養模型，探索顆粒蛋白前體（Progranulin, PGRN）在聽覺突觸形成中的調控作用。研究發現 PGRN 可促進聽覺神經元與耳蝸核神經元之間的突觸形成，並影響突觸密度與形態成熟。此發現對利用幹細胞策略修復聽覺傳導通路的突觸連接具有重要意義。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "螺旋神經節神經元（SGN）與耳蝸核之間的突觸重建是聽覺再生的重要環節，但其分子調控機制尚不清楚，本研究探索 PGRN 在此過程的作用。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PGRN 透過調控突觸形成相關基因表現，促進幹細胞衍生聽覺神經元與耳蝸核神經元的突觸連接，提示 PGRN 可作為聽覺突觸再生的促進因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "在 iPSC 衍生 SGN 的移植策略中，加入 PGRN 處理可能促進移植神經元與中樞聽覺系統的突觸整合；PGRN 補充是提升 SGN 移植功能成效的潛在輔助方案。"
+      }
+    ],
+    "method": "建立幹細胞衍生聽覺神經元（類 SGN）與小鼠耳蝸核切片的共培養模型，透過重組 PGRN 蛋白處理或 PGRN 基因敲低，以免疫螢光（Synapsin、PSD-95）定量突觸密度，電生理記錄評估功能性突觸。",
+    "contribution": "（1）建立可研究中樞聽覺突觸形成的幹細胞共培養平台；（2）首次鑑定 PGRN 為耳蝸核突觸形成的調控因子；（3）提供促進 SGN-耳蝸核突觸整合的分子靶點；（4）為中樞聽覺通路重建研究提供新模型。",
+    "limitation": "（1）體外共培養模型，不能完全模擬體內耳蝸核的複雜環境；（2）PGRN 促突觸形成的具體信號機制尚未完全闡明；（3）在動物模型中的體內驗證仍缺乏。",
+    "tags": [
+      "progranulin",
+      "cochlear nucleus",
+      "synaptogenesis",
+      "stem cell",
+      "SGN",
+      "coculture",
+      "2026"
+    ],
+    "pubmed_id": "42535285",
+    "favorited": false,
+    "impact_factor": 3.0,
+    "if_year": "2023"
+  },
+  {
+    "id": 58,
+    "title": "The protective mechanism of antioxidants in cadmium-induced ototoxicity in vitro and in vivo.",
+    "title_zh": "抗氧化劑對鎘誘導耳毒性的保護機制：體外與體內研究",
+    "author_short": "Kim et al.",
+    "authors": "Kim SJ, Jeong HJ, Myung NY, Kim MC, Lee JH, So HS, Park RK, Kim HM, Um JY, Hong SH",
+    "journal": "Environmental Health Perspectives",
+    "year": 2008,
+    "pmid": "18629305",
+    "doi": "10.1289/ehp.10467",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18629305/",
+    "impact_factor": 10.4,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "cadmium",
+      "ototoxicity",
+      "antioxidant",
+      "ROS",
+      "apoptosis",
+      "hair cell"
+    ],
+    "favorited": false,
+    "abstract_zh": "鎘（Cd²⁺）是一種常見環境污染物，已知對周邊與中樞聽覺系統具有毒性。本研究探討 Cd²⁺ 誘導耳毒性的詳細機制，並評估抗氧化劑的保護效果。研究使用 HEI-OC1 耳蝸細胞株、大鼠耳蝸外植體及小鼠體內模型，發現 Cd²⁺ 暴露引發活性氧（ROS）生成、粒線體膜電位喪失、細胞色素 c 釋放、caspase 活化（特別是 caspase-9 和 caspase-3）及 ERK 磷酸化，最終導致細胞凋亡及聽覺閾值移位。ERK 抑制劑、JNK 抑制劑及 caspase 抑制劑可減輕毒性。抗氧化劑 N-乙醯半胱氨酸（NAC）與 ebselen 對 Cd²⁺ 毒性具有顯著保護作用，說明 ROS 是鎘耳毒性的核心機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鎘是日益增加的環境污染物，其耳毒性機制尚不完全清楚。本研究旨在釐清 Cd²⁺ 損害耳蝸毛細胞的信號通路，並找出有效的抗氧化保護策略。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Cd²⁺ 透過 ROS 生成、粒線體途徑（caspase-9/-3）及 ERK/JNK 活化誘導毛細胞凋亡；NAC 與 ebselen 可有效阻止此過程，確認 ROS 為主要致毒因子。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鎘耳毒性提示環境重金屬暴露的聽力風險不可忽視；抗氧化劑作為保護策略具有臨床轉化潛力，可結合基因×環境交互作用研究，探討個體對鎘暴露的易感性差異。"
+      }
+    ],
+    "method": "多層次實驗設計：（1）HEI-OC1 耳蝸細胞株體外模型；（2）大鼠耳蝸外植體；（3）小鼠體內暴露模型。使用流式細胞術測定細胞活性與 ROS，免疫組織化學染色、Western blot 分析信號蛋白，以聽性腦幹反應（ABR）評估聽力閾值。以各種信號通路抑制劑及 caspase 抑制劑進行機制驗證。",
+    "contribution": "（1）首次系統闡明鎘誘導耳蝸毛細胞死亡的多層次信號機制；（2）確認 ROS→粒線體→caspase 凋亡路徑在鎘耳毒性中的核心地位；（3）驗證 NAC 和 ebselen 兩種抗氧化劑的保護效果；（4）建立可靠的體外與體內鎘耳毒性評估模型。",
+    "limitation": "（1）動物模型結果未必能直接外推至人類慢性低劑量環境暴露；（2）研究以急性高劑量暴露為主，與真實環境的慢性低劑量暴露情境不同；（3）NAC 和 ebselen 的臨床有效劑量與安全性需進一步驗證；（4）未探討長期暴露後的累積效應。"
+  },
+  {
+    "id": 59,
+    "title": "Population-based study of environmental heavy metal exposure and hearing loss: A systematic review and meta-analysis.",
+    "title_zh": "環境重金屬暴露與聽力損失：系統回顧與統合分析",
+    "authors": "Wang F, Böhnke F, Böck K, Wirth M",
+    "journal": "Laryngoscope Investigative Otolaryngology",
+    "year": 2024,
+    "pmid": "38562156",
+    "doi": "10.1002/lio2.1230",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38562156/",
+    "impact_factor": 2.5,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "mercury",
+      "hearing loss",
+      "meta-analysis",
+      "epidemiology"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究進行系統回顧與統合分析，探討鉛（Pb）、鎘（Cd）、汞（Hg）暴露與聽力損失的關聯，並回顧錳（Mn）、鋇（Ba）、砷（As）的相關文獻。從 649 篇文獻中篩選出 15 篇進行統合分析。結果顯示：（1）Pb 和 Cd 暴露與聽力損失具有顯著相關性；（2）血液重金屬濃度與聽力損失呈正比關係；（3）高頻 4 kHz 的相關性最強（OR 1.44, 95% CI 1.22–1.71）；（4）鋇（Ba）在指甲/頭髮中的指標比尿液更能反映暴露程度。研究建議以 4 kHz 高頻純音聽力測試評估重金屬相關聽損。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "過去各研究對重金屬暴露與聽力損失的關聯結果不一致，本文旨在彙整現有人群研究，以統合分析量化 Pb、Cd、Hg 與聽損的整體效應量。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Pb 和 Cd 與聽力損失具有統計顯著關聯；高頻 4 kHz 是最敏感的聽損指標；長期暴露指標（如頭髮、指甲中的重金屬）比血液更能反映累積暴露與聽損的關係。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "支持以高頻聽力測試（4 kHz）作為重金屬暴露族群的早期篩檢工具；累積暴露量比單一血液濃度更能預測聽力損失，提示研究設計時應納入長期暴露指標。"
+      }
+    ],
+    "method": "系統回顧與統合分析（meta-analysis）。搜尋 PubMed、Web of Science、Embase、Cochrane Library、Scopus 及中文資料庫（CNKI、萬方、維普）。從 649 篇初始文獻中篩選 15 篇進行效應量統合，計算整體效應量（OR）。",
+    "contribution": "（1）首次以統合分析量化 Pb、Cd、Hg 對聽力損失的整體效應；（2）確認 4 kHz 高頻為最敏感的重金屬相關聽損指標；（3）指出長期暴露指標（頭髮/指甲）比短期血液指標更具診斷價值。",
+    "limitation": "（1）納入研究異質性高；（2）中文文獻佔相當比例，可能存在發表偏差；（3）無法釐清因果關係；（4）未充分考量不同金屬的交互效應。"
+  },
+  {
+    "id": 60,
+    "title": "Heavy metals exposure and hearing loss in US adolescents.",
+    "title_zh": "美國青少年重金屬暴露與聽力損失",
+    "authors": "Shargorodsky J, Curhan SG, Henderson E, Eavey R, Curhan GC",
+    "journal": "Archives of Otolaryngology – Head & Neck Surgery",
+    "year": 2011,
+    "pmid": "22183895",
+    "doi": "10.1001/archoto.2011.202",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22183895/",
+    "impact_factor": 2.8,
+    "if_year": "2011",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "mercury",
+      "arsenic",
+      "adolescent",
+      "NHANES",
+      "epidemiology",
+      "hearing loss"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究評估血鉛、血汞、尿鎘及尿砷濃度與聽力損失之間的橫斷面關聯，對象為 2005–2008 年 NHANES 中 12–19 歲的青少年（n=2535）。以多變量羅吉斯迴歸分析調整後的勝算比。結果：血鉛 ≥2 μg/dL（vs. <1 μg/dL）與高頻聽損顯著相關（OR 2.22, 95% CI 1.39–3.56）；尿鎘最高四分位數與低頻聽損相關（OR 3.08, 95% CI 1.02–9.25）；血汞和尿砷與聽損無顯著整體關聯。結論：遠低於目前行動濃度的血鉛濃度已與高頻聽損顯著相關。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "重金屬暴露被認為是兒童和青少年聽力損失的重要風險因素，但相關人群研究不足。本研究利用 NHANES 大型代表性樣本，評估低劑量重金屬暴露對青少年聽力的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "血鉛濃度遠低於美國 CDC 行動建議值（10 μg/dL）時，已顯著增加高頻聽損風險（OR 2.22）；鎘則與低頻聽損相關（OR 3.08）；兩種金屬呈現不同頻率的損傷模式。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "低劑量鉛暴露已有顯著聽損風險，強調「安全閾值」概念應重新檢視；鉛與鎘損傷頻率不同（鉛→高頻，鎘→低頻）提示兩者可能透過不同機制損傷耳蝸不同部位。"
+      }
+    ],
+    "method": "橫斷面設計，使用 2005–2008 NHANES 資料（n=2535）。暴露測量：血鉛、血汞（ICP-MS）、尿鎘、尿砷。聽力結果：純音聽力測試（audiometry），定義 25 dB HL 以上為聽損。以多變量羅吉斯迴歸調整年齡、性別、種族、噪音暴露等混淆因子。",
+    "contribution": "（1）首篇以美國全國代表性樣本評估多種重金屬與青少年聽損的研究；（2）確認極低劑量血鉛（<2 μg/dL）已與高頻聽損相關；（3）鉛和鎘呈現不同聽損頻率模式，提示不同損傷機制。",
+    "limitation": "（1）橫斷面設計無法確立因果關係；（2）尿鎘樣本數較小（878 人）；（3）重金屬暴露為單一時間點，無法反映長期累積；（4）無法完全排除所有混淆因子。"
+  },
+  {
+    "id": 61,
+    "title": "Combined effects of multiple metals on hearing loss: A Bayesian kernel machine regression approach.",
+    "title_zh": "多種重金屬聯合暴露對聽力損失的影響：貝氏核機器迴歸分析",
+    "authors": "Liang M, Guo X, Ding X, Song Q, Wang H, Li N, Su W, Liang Q, Sun Y",
+    "journal": "Ecotoxicology and Environmental Safety",
+    "year": 2022,
+    "pmid": "36368114",
+    "doi": "10.1016/j.ecoenv.2022.114279",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36368114/",
+    "impact_factor": 7.1,
+    "if_year": "2022",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "manganese",
+      "cobalt",
+      "barium",
+      "NHANES",
+      "BKMR",
+      "mixed exposure",
+      "hearing loss"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究探討多種金屬（Ba、Cd、Co、Cs、Mo、Pb、Mn、Sn、Sb、Tl、W，共 11 種）聯合暴露對聽力損失的影響，使用 NHANES 2013–2018 資料（n=2205 成人）。採用廣義線性迴歸（GLM）、加權分位數總和（WQS）和貝氏核機器迴歸（BKMR）評估混合暴露效應。結果：Cd、Pb、Sb、Sn 對聽力損失有顯著個別效應；WQS 模型顯示混合暴露與總體聽損呈顯著正相關（OR 1.136）；BKMR 確認多金屬聯合效應，且 Cd 和 Pb 與其他金屬之間存在潛在交互作用。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "現實環境中人體同時暴露於多種重金屬，但過去研究多評估單一金屬效應，無法反映混合暴露的複雜聯合影響。本研究利用 BKMR 等統計方法評估多金屬的混合效應。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "多種重金屬的混合暴露對聽力損失有顯著聯合正向效應（OR 1.136）；Cd 和 Pb 是最主要的貢獻者；金屬間存在交互作用，單一金屬分析可能低估整體風險。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "環境重金屬對聽損的影響應以多重暴露視角評估；Cd 和 Pb 的交互作用提示在遺傳易感性研究中，應考慮多重金屬暴露的基因×環境交互效應，而非單一金屬。"
+      }
+    ],
+    "method": "橫斷面研究，NHANES 2013–2018（n=2205）。尿液 11 種金屬（ICP-MS）。聽力測試（pure tone audiometry）：言語頻率聽損（SFHL）和高頻聽損（HFHL）。統計方法：GLM（個別金屬）、WQS（混合指數）、BKMR（非線性與交互作用）。調整年齡、性別、種族、教育程度、噪音暴露、BMI 等協變數。",
+    "contribution": "（1）首次以 BKMR 評估 11 種重金屬混合暴露對聽力損失的聯合效應；（2）確認混合暴露效應顯著大於個別效應；（3）識別 Cd 和 Pb 之間的潛在交互作用；（4）分別分析言語頻率和高頻聽損，提供臨床相關分析。",
+    "limitation": "（1）橫斷面設計，無因果推論；（2）尿液重金屬反映短期暴露，無法完整代表長期累積；（3）NHANES 資料的可及性限制了特定混淆因子的調整；（4）成人樣本結果不一定適用於兒童或青少年。"
+  },
+  {
+    "id": 62,
+    "title": "Unraveling the molecular landscape of lead-induced cochlear synaptopathy: a quantitative proteomics analysis.",
+    "title_zh": "鉛誘導耳蝸突觸病變的分子機制：定量蛋白質體學分析",
+    "authors": "Bhatia P, Mehmood S, Doyon-Reale N, Rosati R, Stemmer PM, Jamesdaniel S",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2024,
+    "pmid": "39104440",
+    "doi": "10.3389/fncel.2024.1408208",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39104440/",
+    "impact_factor": 4.2,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cochlear synaptopathy",
+      "proteomics",
+      "synaptic vesicle",
+      "inner hair cell",
+      "ABR",
+      "ribbon synapse"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究探討鉛暴露誘導耳蝸突觸病變的分子機制，使用年輕成年 CBA/J 小鼠飲水暴露醋酸鉛 28 天。結果顯示鉛暴露顯著提高高頻聽閾，但不影響外毛細胞活性或毛細胞數量。ABR 第一波振幅降低，共定位分析顯示耳蝸基旋配對突觸數目減少，確認為突觸病變。蛋白質體學分析發現 746 個突觸蛋白豐度改變（352 個上升、394 個下降），生物資訊分析指出突觸小泡循環通路（synaptic vesicle cycle pathway）高度富集。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "過去研究顯示鉛暴露導致耳蝸氧化壓力和內毛細胞帶狀突觸破壞，但其詳細分子機制不清楚。本研究利用定量蛋白質體學，系統性解析鉛誘導耳蝸突觸病變的蛋白質層面變化。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛的主要耳毒性靶點不是外毛細胞，而是耳蝸突觸（synaptopathy）；損傷主要集中在基旋（高頻區）；突觸小泡循環通路蛋白質大規模改變，提示鉛干擾突觸傳遞而非毛細胞本身。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鉛耳毒性呈現「隱性聽損」模式（hidden hearing loss）——毛細胞完整但突觸受損、ABR 振幅下降，這與年齡相關聽損的突觸病變機制有重疊性；提示重金屬暴露可能加速或模擬年齡相關的耳蝸突觸退化過程。"
+      }
+    ],
+    "method": "動物實驗：CBA/J 小鼠，醋酸鉛飲水暴露 28 天。ABR 聽閾與波振幅評估；DPOAE 外毛細胞功能；免疫螢光共定位（CtBP2/PSD-95）計數突觸對數；LC-MS/MS 定量蛋白質體學（synaptosome 分離）；生物資訊分析（KEGG 通路富集）。",
+    "contribution": "（1）首次以蛋白質體學系統解析鉛誘導耳蝸突觸病變的分子特徵；（2）確認突觸小泡循環通路為鉛耳毒性的核心機制；（3）明確指出外毛細胞非鉛的主要靶點，突觸病變才是主軸；（4）揭示鉛造成耳蝸基旋突觸選擇性損傷。",
+    "limitation": "（1）動物模型（急性 28 天暴露）不完全模擬人類慢性低劑量環境暴露；（2）蛋白質體學為相關性分析，因果關係需功能驗證；（3）未評估雌雄性別差異的蛋白質體變化；（4）未直接檢測人類耳蝸樣本。"
+  },
+  {
+    "id": 63,
+    "title": "Environmental exposure of heavy metal (lead and cadmium) and hearing loss: data from the Korea National Health and Nutrition Examination Survey (KNHANES 2010-2013).",
+    "title_zh": "鉛與鎘環境暴露與聽力損失：韓國國民健康營養調查資料分析",
+    "authors": "Kang GH, Uhm JY, Choi YG, Kang EK, Kim SY, Choo WO, Chang SS",
+    "journal": "Annals of Occupational and Environmental Medicine",
+    "year": 2018,
+    "pmid": "29692915",
+    "doi": "10.1186/s40557-018-0237-9",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29692915/",
+    "impact_factor": 2.5,
+    "if_year": "2018",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "cadmium",
+      "KNHANES",
+      "epidemiology",
+      "hearing loss",
+      "Korea",
+      "high-frequency"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究利用韓國國民健康營養調查（KNHANES 2010–2013）資料，評估血鉛與血鎘暴露與聽力損失的關係。研究結果顯示即使是低劑量的鉛暴露，也是高頻聽損的顯著風險因子。研究建議應進行前瞻性流行病學研究以確認因果關係，並推動降低重金屬暴露的公共衛生措施。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "動物研究已確認鉛和鎘是聽力損失風險因子，但大型人群研究（特別是亞洲族群）仍不足。本研究利用韓國國家健康調查資料，評估一般人群中低劑量重金屬暴露對聽力的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "低劑量鉛暴露仍是高頻聽力損失的顯著風險因子，支持鉛的神經耳毒性可能沒有真正的「安全閾值」。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "亞洲族群（韓國）的研究結果與美國 NHANES 資料相互印證，增強鉛暴露與高頻聽損關聯的普遍性；對台灣本土研究具有族群相關性的參考價值。"
+      }
+    ],
+    "method": "橫斷面研究，KNHANES 2010–2013。血鉛和血鎘以 ICP-MS 測量。純音聽力測試評估聽力閾值，定義聽力損失標準。多變量迴歸調整年齡、性別、噪音暴露、BMI 等混淆因子。",
+    "contribution": "（1）以韓國大型代表性樣本驗證鉛暴露與高頻聽損的關聯；（2）支持亞洲族群中低劑量重金屬暴露的聽損風險；（3）呼籲重視環境重金屬的公共衛生防治措施。",
+    "limitation": "（1）橫斷面設計，無法確立因果關係；（2）血液重金屬代表短期暴露；（3）無法完全排除職業噪音等混淆因子；（4）缺乏長期追蹤資料。"
+  },
+  {
+    "id": 64,
+    "title": "Mercury (Hg2+) suppression of potassium currents of outer hair cells.",
+    "title_zh": "汞離子抑制外毛細胞鉀電流",
+    "authors": "Liang GH, Järlebark L, Ulfendahl M, Moore EJ",
+    "journal": "Neurotoxicology and Teratology",
+    "year": 2003,
+    "pmid": "12757831",
+    "doi": "10.1016/s0892-0362(03)00008-4",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12757831/",
+    "impact_factor": 3.2,
+    "if_year": "2003",
+    "group": "heavymetal",
+    "tags": [
+      "mercury",
+      "outer hair cell",
+      "potassium channel",
+      "patch-clamp",
+      "ototoxicity",
+      "K+ current"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究使用全細胞膜片箝位（whole-cell patch clamp）技術，在新鮮分離的天竺鼠耳蝸外毛細胞（OHC）上，研究氯化汞（HgCl₂）對外向和內向鉀電流的影響。HgCl₂ 以電壓和劑量依賴的方式影響 K⁺ 電流；1–100 μM 濃度下對峰值電流（onset peak current）的影響大於穩態電流（steady-state）；HgCl₂ 也使靜息膜電位去極化。1 μM 的效應在沖洗後可部分恢復，但 10 和 100 μM 的效應不可逆。由於 K⁺ 通道是 OHC 電動性（electromotility）的關鍵，HgCl₂ 阻斷 K⁺ 通道可能導致聽覺轉導障礙，造成聽覺敏感性下降。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "汞是已知的環境神經毒素，其對感覺系統的毒性機制不完全清楚。本研究聚焦於汞對耳蝸外毛細胞 K⁺ 通道的直接電生理效應，探索汞誘導耳毒性的離子通道機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "HgCl₂ 以劑量依賴的方式阻斷 OHC 的 K⁺ 電流，高濃度（≥10 μM）效應不可逆；Hg²⁺ 可能透過直接結合 K⁺ 通道的巰基（-SH）基團造成不可逆抑制，進而破壞 OHC 的電動功能。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "汞損傷外毛細胞 K⁺ 通道的機制（巰基結合）與其他耳毒性藥物（如順鉑、胺基糖苷類）的氧化壓力機制不同，提示不同重金屬有不同的耳毒性靶點；了解離子通道機制有助於設計針對性保護策略。"
+      }
+    ],
+    "method": "豚鼠耳蝸外毛細胞急性分離；全細胞膜片箝位（whole-cell patch clamp）技術；以 HgCl₂ 1–100 μM 灌流；記錄外向 K⁺ 電流（IK）和內向 K⁺ 電流；評估電壓依賴性、劑量依賴性及沖洗可逆性。",
+    "contribution": "（1）首次以電生理方法直接記錄 Hg²⁺ 對耳蝸 OHC K⁺ 電流的影響；（2）確認 Hg²⁺ 以不可逆方式抑制 OHC K⁺ 通道；（3）提出汞耳毒性的離子通道機制；（4）建立汞耳毒性研究的體外電生理模型。",
+    "limitation": "（1）急性體外實驗，不能完全代表體內慢性暴露情境；（2）使用氯化汞（Hg²⁺），未評估甲基汞（methylmercury）等有機汞形式；（3）僅評估 K⁺ 電流，未全面探討其他離子通道（Ca²⁺、Na⁺）；（4）動物模型（豚鼠）結果的人類適用性需驗證。"
   }
 ]
