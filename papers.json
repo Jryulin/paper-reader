@@ -3024,5 +3024,222 @@
     "method": "轉基因斑馬魚胚胎（Tg(brn3c:mGFP) 標記毛細胞）暴露於 MeHg（30–360 μg/L），不同發育階段。反義 morpholino 敲低 pu.1（白血球去除）。NADPH 氧化酶抑制劑 DPI 和 VAS2870 藥理阻斷。原位雜交（in situ hybridization）分析 SQSTM1、Keap1、Nrf2 等基因表達。螢光顯微鏡計數毛細胞數量。",
     "contribution": "（1）首篇以斑馬魚側線模型直接研究甲基汞誘導毛細胞死亡的機制論文；（2）確認 H₂O₂（NADPH 氧化酶途徑）和白血球是 MeHg 耳毒性的雙重必要條件；（3）揭示 Nrf2-Keap1-SQSTM1 系統作為毛細胞的代償性保護機制；（4）連結 MeHg 耳毒性與斑馬魚毛細胞再生能力。",
     "limitation": "（1）使用胚胎模型，暴露劑量（30–360 μg/L）高於典型環境暴露濃度；（2）Morpholino 技術有非特異性效應的可能；（3）未直接評估 ABR 或行為聽力功能；（4）機制以相關性為主，白血球具體作用方式（直接殺傷或分泌介質）未完全釐清。"
+  },
+  {
+    "id": 74,
+    "title": "Neuromast hair cells retain the capacity of regeneration during heavy metal exposure.",
+    "title_zh": "神經丘毛細胞在重金屬暴露期間仍保有再生能力",
+    "authors": "Montalbano G, Capillo G, Laurà R, Abbate F, Levanti M, Guerrera MC, Ciriaco E, Germanà A",
+    "journal": "Annals of Anatomy",
+    "year": 2018,
+    "pmid": "29719206",
+    "doi": "10.1016/j.aanat.2018.03.007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29719206/",
+    "impact_factor": 2.5,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "arsenic",
+      "cadmium",
+      "zinc",
+      "zebrafish",
+      "lateral line",
+      "neuromast",
+      "hair cell regeneration",
+      "sox2",
+      "S100"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究以成體斑馬魚暴露於三種重金屬（砷、鎘、鋅）72 小時，探討神經丘毛細胞的損傷與再生能力。急性暴露（24h）後，S100 免疫組化（毛細胞標記）顯示毛細胞損失；Sox2（幹細胞標記）在砷和鎘暴露後出現在支持細胞和外套細胞，鋅暴露後僅在支持細胞中出現。慢性暴露（72h）後毛細胞再生，S100 免疫反應恢復，Sox2 仍在支持細胞和外套細胞中可見。研究首次證明毛細胞不只在損傷後，在持續重金屬暴露期間也能再生，不同幹細胞類型可分化為毛細胞。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "已知斑馬魚毛細胞可在毒素暴露後再生，但持續重金屬暴露期間毛細胞是否仍有再生能力，以及哪種前驅細胞類型參與再生，尚不清楚。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "砷、鎘、鋅三種重金屬均可誘導毛細胞損失；但即使在持續暴露期間，sox2+ 前驅細胞仍持續存在並分化為新毛細胞；不同金屬激活不同的幹細胞亞型（砷/鎘→支持+外套細胞，鋅→僅支持細胞）。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "在重金屬持續暴露的環境條件下，毛細胞的損傷-再生動態平衡是理解慢性暴露聽損的關鍵；不同重金屬啟動的再生前驅細胞亞型不同，可能反映不同的損傷機制和再生路徑。"
+      }
+    ],
+    "method": "成體斑馬魚。砷（亞砷酸鈉）、鎘（氯化鎘）、鋅（硫酸鋅）急性（24h）和慢性（72h）暴露。神經丘免疫組化染色：S100（毛細胞標記）和 Sox2（幹細胞/前驅細胞標記）。光學顯微鏡觀察與定量。",
+    "contribution": "（1）首次證明重金屬持續暴露期間神經丘毛細胞仍保有再生能力；（2）比較砷、鎘、鋅三種重金屬的毛細胞損傷與再生前驅細胞模式；（3）揭示不同重金屬激活不同的 sox2+ 幹細胞亞型。",
+    "limitation": "（1）使用成體魚，不同於多數幼魚研究，比較時需注意發育階段差異；（2）免疫組化為靜態指標，無法完整追蹤細胞動態；（3）未評估再生毛細胞的功能是否完整；（4）重金屬濃度設定可能高於環境相關濃度。"
+  },
+  {
+    "id": 75,
+    "title": "Acute copper exposure induces oxidative stress and cell death in lateral line hair cells of zebrafish larvae.",
+    "title_zh": "急性銅暴露誘導斑馬魚幼魚側線毛細胞氧化壓力與細胞死亡",
+    "authors": "Olivari FA, Hernández PP, Allende ML",
+    "journal": "Brain Research",
+    "year": 2008,
+    "pmid": "18848822",
+    "doi": "10.1016/j.brainres.2008.09.050",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18848822/",
+    "impact_factor": 3.4,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "copper",
+      "zebrafish",
+      "lateral line",
+      "hair cell",
+      "oxidative stress",
+      "ROS",
+      "apoptosis",
+      "necrosis",
+      "antioxidant"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究以斑馬魚幼魚為模型，詳細描述側線毛細胞在低劑量銅暴露下的死亡機制。低濃度銅可在數小時內殺死毛細胞，去除銅後毛細胞可穩健再生。研究結合膜/核活細胞染色、超微結構分析（電子顯微鏡）和 ROS 測量，揭示毛細胞死亡結合了壞死（necrosis）和凋亡（apoptosis，快速 DNA 碎裂）兩種形式。毛細胞暴露銅後出現氧化壓力；抗氧化劑可保護毛細胞免受銅毒性。此系統可作為分子篩選的高效平台。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "銅等重金屬如何在體內殺死毛細胞？哺乳類毛細胞死亡機制難以直接觀察，本研究利用斑馬魚側線的透明性和可及性，在活體水準詳細描述銅誘導毛細胞死亡的細胞事件。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "銅誘導毛細胞死亡是壞死與凋亡的混合形式；ROS 氧化壓力是核心機制；抗氧化劑（NAC 等）可有效保護毛細胞；銅去除後毛細胞可完全再生，顯示再生能力強健。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "氧化壓力是多種重金屬（銅、鎘、汞）耳毒性的共同核心機制；抗氧化劑保護策略（NAC、ebselen）在多個模型（哺乳類 + 斑馬魚）都有效，具高度轉化潛力；斑馬魚側線的混合性細胞死亡（壞死+凋亡）提示重金屬毒性機制的複雜性。"
+      }
+    ],
+    "method": "斑馬魚幼魚。低劑量硫酸銅水浴暴露。活細胞染色：YO-PRO-1（壞死標記）和 Hoechst/DAPI（DNA 碎裂）。透射電子顯微鏡（TEM）超微結構分析。ROS 測量（H₂DCFDA）。抗氧化劑（NAC）保護實驗。螢光顯微鏡計數毛細胞存活率。",
+    "contribution": "（1）首次詳細描述銅誘導斑馬魚側線毛細胞死亡的超微結構特徵；（2）確認壞死+凋亡混合死亡模式；（3）以活體直接測量毛細胞 ROS；（4）驗證抗氧化劑保護的可行性；（5）建立可用於藥物篩選的斑馬魚側線銅耳毒性平台。",
+    "limitation": "（1）銅耳毒性在自然環境中主要影響魚類嗅覺系統，聽覺系統的相關性需謹慎評估；（2）超急性暴露劑量可能超過自然環境暴露水平；（3）斑馬魚幼魚側線毛細胞對銅的高靈敏度，不一定代表哺乳類耳蝸毛細胞的反應。"
+  },
+  {
+    "id": 76,
+    "title": "Sublethal effects of methylmercury on lateral line sensory and ion-regulatory functions in zebrafish embryos.",
+    "title_zh": "亞致死劑量甲基汞對斑馬魚胚胎側線感覺功能與離子調節的影響",
+    "authors": "Hung GY, Pan YC, Horng JL, Lin LY",
+    "journal": "Comparative Biochemistry and Physiology Part C: Toxicology & Pharmacology",
+    "year": 2023,
+    "pmid": "37442313",
+    "doi": "10.1016/j.cbpc.2023.109700",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37442313/",
+    "impact_factor": 3.9,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "methylmercury",
+      "zebrafish",
+      "lateral line",
+      "hair cell",
+      "ion regulation",
+      "Ca2+ transduction",
+      "ionocyte"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究利用斑馬魚胚胎，探討亞致死劑量甲基汞（MeHg，5–100 ppb）暴露 96 小時對側線感覺功能和離子調節的影響。MeHg 在 ≥10 ppb 時減少毛細胞數量、損傷纖毛束結構，並損害 Ca²⁺ 介導的機械換能。在離子調節方面，≥10 ppb MeHg 降低皮膚幹細胞和離子細胞密度，導致 Na⁺、K⁺、Ca²⁺ 含量下降及 H⁺/NH₄⁺ 排泄降低。基因表達分析顯示多種離子調節基因（ncc2b、trpv6v1a、trpv5/6、ncx1b、rhcg1）mRNA 下調。研究證明側線感覺和離子調節功能對 MeHg 極為敏感。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "甲基汞對魚類神經系統的毒性已知，但對側線感覺功能和離子調節的亞致死效應尚不清楚。本研究探討低於致死濃度的 MeHg 是否已對側線毛細胞功能和全身離子調節產生顯著影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "10 ppb MeHg（遠低於 LC₅₀）即可造成：毛細胞數量減少、Ca²⁺ 機械換能損傷、皮膚幹細胞和離子細胞減少、多種離子調節基因下調。側線是 MeHg 毒性的早期敏感靶點。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "這是來自台灣（台師大/台北榮總/台北醫學大學）的研究，具本土研究脈絡；亞致死劑量 MeHg 已損傷毛細胞 Ca²⁺ 換能，支持環境相關濃度的重金屬暴露即有聽力危害；離子調節受損（鈣、鈉、鉀）可能進一步影響毛細胞的電機械功能。"
+      }
+    ],
+    "method": "斑馬魚胚胎（4–100 hpf）。MeHg 水浴暴露（5、10、50、100 ppb）96h。毛細胞計數（YO-PRO-1/FM4-64 螢光染色）。纖毛束形態觀察。Ca²⁺ 機械換能：Ca²⁺ 成像（Fluo-4）。皮膚幹細胞和離子細胞密度。離子含量（ICP-MS）：Na⁺、K⁺、Ca²⁺。RT-qPCR：ion channel 基因表達。",
+    "contribution": "（1）首次系統評估亞致死 MeHg 對斑馬魚側線感覺功能的多層次影響；（2）確認 Ca²⁺ 機械換能是 MeHg 的早期靶點；（3）同時評估毛細胞損傷和離子調節異常；（4）台灣本土團隊（Lin LY, Horng JL）的重要貢獻。",
+    "limitation": "（1）胚胎模型，暴露時間和濃度與人類環境暴露不完全類比；（2）未評估暴露後的聽覺行為功能；（3）機制研究不夠深入，僅確認功能性影響而非詳細分子通路。"
+  },
+  {
+    "id": 77,
+    "title": "Acidified water promotes silver-induced toxicity in zebrafish embryos.",
+    "title_zh": "酸化水促進銀離子對斑馬魚胚胎的毒性",
+    "authors": "Horng JL, Kung GX, Lin LY",
+    "journal": "Aquatic Toxicology",
+    "year": 2024,
+    "pmid": "38377931",
+    "doi": "10.1016/j.aquatox.2024.106865",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38377931/",
+    "impact_factor": 4.5,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "silver",
+      "acidification",
+      "zebrafish",
+      "lateral line",
+      "hair cell",
+      "inner ear",
+      "otolith",
+      "ionocyte"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究探討淡水酸化條件下銀離子（Ag⁺，以 AgNO₃ 形式）對斑馬魚胚胎（pH 5 vs 7，0.1/0.25 mg/L，7 天）的毒性影響。Ag⁺ 單獨暴露在 pH 7 下造成體長縮短、內耳面積減小、側線毛細胞數減少、離子細胞數減少。酸化水（pH 5）加劇 Ag⁺ 毒性，在 0.1 mg/L Ag⁺ 下死亡率從 20%（pH 7）升至 85%（pH 5）。Ag⁺ + 酸化的聯合效應更顯著壓制耳石面積、毛細胞數量以及 Na⁺/Ca²⁺ 含量。研究顯示環境酸化可大幅增強重金屬對感覺系統的毒性。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "淡水酸化是全球環境挑戰，魚類在酸化水中對重金屬的敏感性是否增加？本研究以斑馬魚探討 pH 對 Ag⁺ 毒性的調節作用，特別關注側線毛細胞和內耳的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "酸化水（pH 5）顯著增強 Ag⁺ 毒性（死亡率 4 倍增加）；Ag⁺ 本身已減少側線毛細胞和內耳面積；兩者聯合效應對耳石和 Na⁺/Ca²⁺ 恆定造成更大破壞；提示全球酸雨+重金屬污染的交互作用對水生動物聽覺系統的複合風險。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "環境重金屬毒性不應孤立評估，pH、溫度等環境因子可大幅調節其耳毒性強度；在全球氣候變化（海洋/淡水酸化）和重金屬污染共存的情境下，聽覺系統受損風險可能被低估；此模型可推廣至其他重金屬（如鉛、鎘）的環境交互作用研究。"
+      }
+    ],
+    "method": "斑馬魚胚胎（受精後 0–7 天）。AgNO₃（0.1、0.25 mg/L）在 pH 5 或 pH 7 下暴露。評估：存活率、孵化率、心率、體長、內耳（耳囊和耳石面積）、側線毛細胞數量（DASPEI 染色）、離子細胞計數（V-H⁺-ATPase、Na⁺/K⁺-ATPase 免疫染色）、ICP-MS 離子含量（Ag⁺、Na⁺、Ca²⁺）。",
+    "contribution": "（1）首次在淡水酸化情境下評估 Ag⁺ 對斑馬魚側線毛細胞和內耳的毒性；（2）確認酸化水顯著增強 Ag⁺ 的耳毒性（協同效應）；（3）台灣本土研究（Horng JL、Lin LY 台師大/台北醫大）；（4）內耳（耳石、耳囊面積）作為終點指標的應用。",
+    "limitation": "（1）急性胚胎暴露，不代表慢性低劑量環境暴露；（2）使用 Ag⁺ 離子形式，與奈米銀或銀化合物的環境形態可能不同；（3）未直接評估毛細胞電生理功能；（4）pH 5 屬極端酸化，超出多數自然水體的 pH 範圍。"
+  },
+  {
+    "id": 78,
+    "title": "Effects of metal exposure on motor neuron development, neuromasts and the escape response of zebrafish embryos.",
+    "title_zh": "重金屬暴露對斑馬魚胚胎運動神經元發育、神經丘及逃脫反應的影響",
+    "authors": "Sonnack L, Kampe S, Muth-Köhne E, Erdinger L, Henny N, Hollert H, Schäfers C, Fenske M",
+    "journal": "Neurotoxicology and Teratology",
+    "year": 2015,
+    "pmid": "26006317",
+    "doi": "10.1016/j.ntt.2015.05.006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26006317/",
+    "impact_factor": 3.5,
+    "if_year": "2023",
+    "group": "heavymetal",
+    "tags": [
+      "copper",
+      "cadmium",
+      "cobalt",
+      "zebrafish",
+      "neuromast",
+      "lateral line",
+      "escape response",
+      "motor neuron",
+      "DASPEI"
+    ],
+    "favorited": false,
+    "abstract_zh": "本研究以多終點測試系統評估低濃度重金屬（銅 CuSO₄、鎘 CdCl₂、鈷 CoSO₄）對斑馬魚胚胎的神經毒性效應，包括：運動神經元發育（初級和次級運動神經元免疫螢光）、神經丘損傷（DASPEI 活體染色定量）以及逃脫反應（C-bend 行為）。三種金屬均對神經丘造成劑量依賴性損傷，與逃脫反應的功能性影響相關，建立了重金屬暴露的神經毒性和側線毒性的直接連結。研究展示多終點斑馬魚胚胎系統用於重金屬環境毒性評估的價值。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "低濃度重金屬污染的神經毒性效應難以以單一終點評估。本研究建立多終點斑馬魚胚胎測試系統，同時評估神經元、感覺和行為層面的影響，以更全面反映重金屬的亞致死神經毒性。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "銅、鎘、鈷三種重金屬均對神經丘造成劑量依賴性損傷（DASPEI 染色顯示毛細胞數量減少）；神經丘損傷與逃脫反應受損平行出現；多終點方法比單一指標更能捕捉低劑量重金屬的複雜神經毒性效應。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "功能性終點（逃脫行為）比純形態學終點更能反映環境相關劑量的重金屬耳毒性；多重金屬的比較研究（銅 vs 鎘 vs 鈷）有助於識別不同重金屬的特定毒性特徵和機制差異；作為環境監測工具的應用價值。"
+      }
+    ],
+    "method": "斑馬魚胚胎（野生型）暴露 CuSO₄、CdCl₂、CoSO₄ 72 小時。形態學觀察（致死和亞致死效應）。運動神經元：初級（PMN）和次級（SMN）運動神經元免疫螢光染色。神經丘：DASPEI 活體染色 + 螢光計量化分析。逃脫反應（C-bend）：觸覺刺激誘發的逃脫行為錄影分析。",
+    "contribution": "（1）建立同時評估神經元、側線和行為三個層面的多終點重金屬毒性測試系統；（2）確認三種不同重金屬對神經丘具有共同的劑量依賴性損傷；（3）功能性行為終點（逃脫反應）與神經丘損傷的關聯性驗證；（4）Fraunhofer 研究所的環境毒理學應用貢獻。",
+    "limitation": "（1）72 小時急性暴露，未評估慢性效應；（2）DASPEI 染色為間接指標，不直接反映毛細胞電生理功能；（3）未探討每種金屬的具體分子機制；（4）未評估暴露後的再生能力。"
   }
 ]
