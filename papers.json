@@ -2980,5 +2980,49 @@
     "method": "豚鼠（雄性）隨機分組。噪音組：120 dB 白噪音，10 天，3 h/天。ABR 聽閾評估（暴露前後）。耳蝸冷凍切片和分離 SGN 細胞。免疫螢光染色（P2X2、P2X3、P2X4、P2X7、P2Y2、P2Y4）。Western blot 和 RT-qPCR 定量蛋白和 mRNA。",
     "contribution": "（1）系統描述多種 P2 受體在噪音損傷後 SGN 的表達動態；（2）識別 P2X3↑ 和 P2X4↓ 作為噪音損傷的信號特徵；（3）為嘌呤受體靶向治療 SNHL 提供初步實驗依據。",
     "limitation": "（1）使用急性高強度噪音（120 dB），不代表真實環境噪音暴露；（2）僅評估蛋白表達量，未直接驗證受體功能；（3）豚鼠結果外推至人類需謹慎；（4）研究有勘誤（erratum, 2025）需注意數據準確性。"
+  },
+  {
+    "id": 73,
+    "title": "Methylmercury-induced hair cell loss requires hydrogen peroxide production and leukocytes in zebrafish embryos.",
+    "title_zh": "甲基汞誘導斑馬魚胚胎毛細胞死亡需要 H₂O₂ 生成與白血球參與",
+    "authors": "Luo Z, Guo S, Ho NY, Takamiya M, Strähle U, Yang L",
+    "journal": "Toxicology Letters",
+    "year": 2022,
+    "pmid": "34954246",
+    "doi": "10.1016/j.toxlet.2021.12.012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34954246/",
+    "impact_factor": 4.3,
+    "if_year": "2022",
+    "group": "heavymetal",
+    "tags": [
+      "methylmercury",
+      "zebrafish",
+      "lateral line",
+      "hair cell",
+      "H2O2",
+      "NADPH oxidase",
+      "leukocyte",
+      "Nrf2",
+      "Minamata disease"
+    ],
+    "favorited": false,
+    "abstract_zh": "水俁病（Minamata disease）患者常出現聽力損傷，甲基汞（MeHg）被認為是導致毛細胞死亡的原因，但確切機制不明。本研究以斑馬魚胚胎側線系統為模型，探討 MeHg 造成聽力損傷的機制。轉基因斑馬魚胚胎暴露於 30–360 μg/L MeHg 後，毛細胞數量呈劑量依賴性減少。以反義 morpholino 敲低 pu.1（白血球標記）確認白血球參與毛細胞死亡過程。以 NADPH 氧化酶抑制劑（DPI、VAS2870）共處理可顯著減輕毛細胞死亡，指向 H₂O₂ 為主要毒性媒介。原位基因表達分析顯示，SQSTM1-Keap1-Nrf2 系統（抗氧化與免疫）在 MeHg 暴露的側線器官中高度表達。與毛細胞再生相關的基因也受 MeHg 誘導，顯示斑馬魚具備損傷後再生能力。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "水俁病相關聽力損傷的細胞機制不清楚——MeHg 到底如何殺死毛細胞？本研究利用斑馬魚側線模型，在活體水準釐清 MeHg 耳毒性的氧化壓力和免疫細胞機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MeHg 誘導毛細胞死亡有兩個必要條件：（1）NADPH 氧化酶產生 H₂O₂（阻斷即保護）；（2）白血球（leukocyte）的參與（pu.1 敲低即保護）；Nrf2-Keap1 抗氧化通路高度活化為代償反應。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "這是第一篇以斑馬魚側線直接研究甲基汞耳毒性機制的論文，確立了此模型的可行性；H₂O₂/NADPH 氧化酶通路與免疫細胞的雙重機制，與其他重金屬（Cd 的 ROS 通路）有部分重疊，提示不同重金屬的耳毒性可能共享氧化壓力核心機制，但各有差異。"
+      }
+    ],
+    "method": "轉基因斑馬魚胚胎（Tg(brn3c:mGFP) 標記毛細胞）暴露於 MeHg（30–360 μg/L），不同發育階段。反義 morpholino 敲低 pu.1（白血球去除）。NADPH 氧化酶抑制劑 DPI 和 VAS2870 藥理阻斷。原位雜交（in situ hybridization）分析 SQSTM1、Keap1、Nrf2 等基因表達。螢光顯微鏡計數毛細胞數量。",
+    "contribution": "（1）首篇以斑馬魚側線模型直接研究甲基汞誘導毛細胞死亡的機制論文；（2）確認 H₂O₂（NADPH 氧化酶途徑）和白血球是 MeHg 耳毒性的雙重必要條件；（3）揭示 Nrf2-Keap1-SQSTM1 系統作為毛細胞的代償性保護機制；（4）連結 MeHg 耳毒性與斑馬魚毛細胞再生能力。",
+    "limitation": "（1）使用胚胎模型，暴露劑量（30–360 μg/L）高於典型環境暴露濃度；（2）Morpholino 技術有非特異性效應的可能；（3）未直接評估 ABR 或行為聽力功能；（4）機制以相關性為主，白血球具體作用方式（直接殺傷或分泌介質）未完全釐清。"
   }
 ]
