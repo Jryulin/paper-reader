@@ -3241,5 +3241,39 @@
     "method": "斑馬魚胚胎（野生型）暴露 CuSO₄、CdCl₂、CoSO₄ 72 小時。形態學觀察（致死和亞致死效應）。運動神經元：初級（PMN）和次級（SMN）運動神經元免疫螢光染色。神經丘：DASPEI 活體染色 + 螢光計量化分析。逃脫反應（C-bend）：觸覺刺激誘發的逃脫行為錄影分析。",
     "contribution": "（1）建立同時評估神經元、側線和行為三個層面的多終點重金屬毒性測試系統；（2）確認三種不同重金屬對神經丘具有共同的劑量依賴性損傷；（3）功能性行為終點（逃脫反應）與神經丘損傷的關聯性驗證；（4）Fraunhofer 研究所的環境毒理學應用貢獻。",
     "limitation": "（1）72 小時急性暴露，未評估慢性效應；（2）DASPEI 染色為間接指標，不直接反映毛細胞電生理功能；（3）未探討每種金屬的具體分子機制；（4）未評估暴露後的再生能力。"
+  },
+  {
+    "id": 79,
+    "title": "ABCC1 Deficiency Mediates Susceptibility to Cd-Induced Hearing Loss via the NOX2/ROS Axis",
+    "title_zh": "ABCC1 缺失透過 NOX2/ROS 軸介導鎘誘發聽力損失的易感性",
+    "authors": "Shuai Zhang, Yongjia Chen, Yijiang Bai, Bo Pang, Mengzhu Jiang, Zequn Nie, Huping Huang, Lu Wang, Jie Ling, Tianhan Kai, Lingyun Mei",
+    "journal": "Environment & Health",
+    "year": 2026,
+    "doi": "10.1021/envhealth.6c00120",
+    "pubmed_id": "",
+    "url": "https://doi.org/10.1021/envhealth.6c00120",
+    "tags": [
+      "ABCC1",
+      "cadmium",
+      "ototoxicity",
+      "hearing loss",
+      "NOX2",
+      "ROS",
+      "blood-labyrinth barrier",
+      "oxidative stress",
+      "heavy metal",
+      "inner ear"
+    ],
+    "abstract_zh": "鎘（Cd）是普遍的環境污染物，與聽覺功能障礙有關。耳蝸血迷路屏障（BLB）保護內耳免受毒素侵害，而 ABCC1 蛋白在細胞毒素排出中扮演關鍵角色。本研究利用 Abcc1⁻/⁻ 基因敲除小鼠與 ABCC1 缺失的人臍靜脈內皮細胞（HUVECs）探討 ABCC1 在鎘誘發耳毒性中的角色。結果顯示，ABCC1 缺失加重了鎘誘發的 BLB 滲漏、螺旋神經節神經元損失及 ABR 閾值升高。在動物與細胞模型中，ABCC1 缺失均促進 NOX2 表現增加、ROS 累積及 AKT 去磷酸化。NOX2 抑制劑 GSK2795039 能減輕氧化壓力、保護內皮屏障功能並部分恢復 PI3K-AKT 訊號。研究確立 ABCC1 為耳蝸血管完整性的重要保護蛋白，透過 NOX2-ROS/PI3K-AKT 軸發揮作用，並提示其作為預防鎘誘發聽力損失治療靶點的潛力。",
+    "q3": [
+      "ABCC1 缺失如何透過 NOX2-ROS 軸加重鎘誘發的聽力損傷？",
+      "抑制 NOX2 是否能有效保護 ABCC1 缺失條件下的血迷路屏障功能？",
+      "ABCC1 在鎘的細胞排出中扮演何種角色，其缺失如何影響耳蝸鎘累積量？"
+    ],
+    "method": "動物模型：Abcc1⁻/⁻ 與野生型小鼠暴露於 800 ppm CdCl₂ 飲水 2 個月，以 ABR 評估聽力閾值；細胞模型：CRISPR 建立 ABCC1 缺失 HUVECs，暴露於 CdCl₂ 後評估 TEER、ROS、Western blot、RNA-seq；統計：One-way ANOVA + Tukey 事後檢定，GraphPad Prism 8。",
+    "contribution": "首次證實 ABCC1 透過調節 NOX2-ROS/PI3K-AKT 路徑保護耳蝸血管內皮屏障；確立 NOX2 為鎘誘發聽力損失的潛在治療靶點；揭示 ABCC1 遺傳變異可能增加環境鎘暴露對聽力的危害風險。",
+    "limitation": "動物實驗採用的鎘濃度（800 ppm）遠高於人類實際環境暴露量，外推至人體需謹慎；研究聚焦於血管內皮細胞，耳蝸其他細胞類型（如毛細胞）的機制尚未完整探討；缺乏人類臨床樣本驗證。",
+    "favorited": false,
+    "local_pdf": "/Users/jryulin/.openclaw/media/inbound/envhealth.6c00120---a836db0f-3092-40e6-a562-d2c204bfd3b3.pdf"
   }
 ]
