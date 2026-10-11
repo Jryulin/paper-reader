@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>流式細胞儀知識庫 — 小羅整理版</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #2b6cb0;
+      --blue-light: #4299e1;
+      --blue-pale: #ebf8ff;
+      --green: #276749;
+      --green-light: #48bb78;
+      --green-pale: #f0fff4;
+      --orange: #c05621;
+      --orange-pale: #fffaf0;
+      --purple: #553c9a;
+      --purple-pale: #faf5ff;
+      --red: #c53030;
+      --red-pale: #fff5f5;
+      --gray-dark: #2d3748;
+      --gray: #4a5568;
+      --gray-light: #718096;
+      --border: #e2e8f0;
+      --bg: #f5f7fa;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background: var(--bg); color: var(--gray-dark); line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #2b6cb0, #4299e1);
+      color: white; padding: 20px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100;
+    }
+    header h1 { font-size: 1.3rem; font-weight: 700; }
+    header p { font-size: 0.8rem; opacity: 0.85; margin-top: 3px; }
+    .back-btn {
+      background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);
+      color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.35); }
+
+    /* ── Layout ── */
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 220px; flex-shrink: 0;
+      padding: 28px 16px; position: sticky; top: 64px;
+      height: calc(100vh - 64px); overflow-y: auto;
+    }
+    .sidebar h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--gray-light); margin-bottom: 10px; padding: 0 8px; }
+    .nav-item {
+      display: block; padding: 7px 12px; border-radius: 8px;
+      font-size: 0.83rem; color: var(--gray); text-decoration: none;
+      transition: all 0.15s; margin-bottom: 2px;
+    }
+    .nav-item:hover { background: white; color: var(--blue); }
+    .nav-item.active { background: var(--blue-pale); color: var(--blue); font-weight: 600; }
+    .nav-num { font-size: 0.7rem; opacity: 0.6; margin-right: 5px; }
+
+    /* ── Main Content ── */
+    main { flex: 1; padding: 32px 28px; min-width: 0; }
+
+    .section {
+      background: white; border-radius: 14px; padding: 32px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07); border: 1px solid var(--border);
+      margin-bottom: 28px; scroll-margin-top: 80px;
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 24px;
+      padding-bottom: 16px; border-bottom: 2px solid var(--border);
+    }
+    .section-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .section-title h2 { font-size: 1.15rem; font-weight: 700; color: var(--gray-dark); }
+    .section-title p { font-size: 0.8rem; color: var(--gray-light); margin-top: 2px; }
+
+    h3 { font-size: 0.98rem; font-weight: 700; color: var(--gray-dark); margin: 20px 0 10px; }
+    h4 { font-size: 0.88rem; font-weight: 600; color: var(--gray); margin: 14px 0 6px; }
+    p { font-size: 0.88rem; color: var(--gray); margin-bottom: 10px; }
+    ul, ol { padding-left: 20px; margin-bottom: 10px; }
+    li { font-size: 0.87rem; color: var(--gray); margin-bottom: 5px; }
+    strong { color: var(--gray-dark); }
+
+    /* ── Callout boxes ── */
+    .callout {
+      border-radius: 10px; padding: 14px 18px; margin: 14px 0;
+      font-size: 0.85rem; border-left: 4px solid;
+    }
+    .callout-blue { background: var(--blue-pale); border-color: var(--blue); color: #2c5282; }
+    .callout-green { background: var(--green-pale); border-color: var(--green); color: #22543d; }
+    .callout-orange { background: var(--orange-pale); border-color: var(--orange); color: #7b341e; }
+    .callout-purple { background: var(--purple-pale); border-color: var(--purple); color: #44337a; }
+    .callout-red { background: var(--red-pale); border-color: var(--red); color: #822727; }
+    .callout-title { font-weight: 700; margin-bottom: 4px; }
+
+    /* ── Tables ── */
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84rem; }
+    th {
+      background: var(--blue); color: white; padding: 8px 12px;
+      text-align: left; font-weight: 600;
+    }
+    td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--gray); }
+    tr:nth-child(even) td { background: #fafbfc; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Tag chips ── */
+    .tag {
+      display: inline-block; padding: 2px 10px; border-radius: 20px;
+      font-size: 0.73rem; font-weight: 600; margin: 2px;
+    }
+    .tag-blue { background: var(--blue-pale); color: var(--blue); }
+    .tag-green { background: var(--green-pale); color: var(--green); }
+    .tag-orange { background: var(--orange-pale); color: var(--orange); }
+    .tag-purple { background: var(--purple-pale); color: var(--purple); }
+
+    /* ── Step flow ── */
+    .steps { counter-reset: step; }
+    .step {
+      display: flex; gap: 14px; margin-bottom: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%; background: var(--blue);
+      color: white; font-size: 0.78rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-body { flex: 1; }
+    .step-body strong { font-size: 0.88rem; display: block; color: var(--gray-dark); }
+    .step-body span { font-size: 0.83rem; color: var(--gray); }
+
+    /* ── Grid cards ── */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 14px 0; }
+    .mini-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px; font-size: 0.83rem;
+    }
+    .mini-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .mini-card strong { display: block; font-size: 0.85rem; color: var(--gray-dark); margin-bottom: 4px; }
+    .mini-card span { color: var(--gray-light); font-size: 0.8rem; }
+
+    /* ── Diagram ── */
+    .diagram {
+      background: var(--bg); border: 1px dashed #cbd5e0; border-radius: 10px;
+      padding: 20px; margin: 14px 0; text-align: center; font-size: 0.85rem;
+    }
+    .diagram .flow {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 6px; margin-top: 10px;
+    }
+    .flow-box {
+      background: white; border: 1.5px solid var(--blue-light);
+      border-radius: 8px; padding: 8px 14px; font-size: 0.82rem; font-weight: 600;
+      color: var(--blue); white-space: nowrap;
+    }
+    .flow-arrow { color: var(--gray-light); font-size: 1.1rem; }
+
+    /* ── Comparison columns ── */
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+    .compare-col {
+      background: var(--bg); border-radius: 10px; padding: 14px;
+      border: 1px solid var(--border);
+    }
+    .compare-col .col-title {
+      font-size: 0.8rem; font-weight: 700; margin-bottom: 8px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    /* ── TOC intro card ── */
+    .intro-card {
+      background: linear-gradient(135deg, #ebf8ff, #f0fff4);
+      border: 1px solid #bee3f8; border-radius: 14px; padding: 24px 28px;
+      margin-bottom: 28px;
+    }
+    .intro-card h2 { font-size: 1.05rem; color: var(--blue); margin-bottom: 8px; }
+    .intro-card p { font-size: 0.86rem; color: var(--gray); margin-bottom: 12px; }
+    .toc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc-chip {
+      background: white; border: 1px solid var(--border);
+      border-radius: 20px; padding: 5px 14px; font-size: 0.8rem;
+      color: var(--gray-dark); text-decoration: none; transition: all 0.15s;
+    }
+    .toc-chip:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-pale); }
+
+    /* ── Colors for section icons ── */
+    .ic-blue { background: var(--blue-pale); }
+    .ic-green { background: var(--green-pale); }
+    .ic-orange { background: var(--orange-pale); }
+    .ic-purple { background: var(--purple-pale); }
+    .ic-red { background: var(--red-pale); }
+    .ic-teal { background: #e6fffa; }
+    .ic-pink { background: #fff5f7; }
+    .ic-yellow { background: #fffff0; }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .compare { grid-template-columns: 1fr; }
+      main { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🔬 流式細胞儀知識庫</h1>
+    <p>Flow Cytometry — 從原理到實作的系統整理筆記</p>
+  </div>
+  <a href="index.html" class="back-btn">← 回論文庫</a>
+</header>
+
+<div class="layout">
+  <!-- Sidebar Nav -->
+  <nav class="sidebar">
+    <h3>章節導覽</h3>
+    <a href="#s1" class="nav-item"><span class="nav-num">01</span>基礎原理與應用</a>
+    <a href="#s2" class="nav-item"><span class="nav-num">02</span>光學概念</a>
+    <a href="#s3" class="nav-item"><span class="nav-num">03</span>圖形判讀</a>
+    <a href="#s4" class="nav-item"><span class="nav-num">04</span>Gating Strategy</a>
+    <a href="#s5" class="nav-item"><span class="nav-num">05</span>細胞週期分析</a>
+    <a href="#s6" class="nav-item"><span class="nav-num">06</span>細胞凋亡分析</a>
+    <a href="#s7" class="nav-item"><span class="nav-num">07</span>Exosome 偵測</a>
+    <a href="#s8" class="nav-item"><span class="nav-num">08</span>抗體與螢光選擇</a>
+    <a href="#s9" class="nav-item"><span class="nav-num">09</span>DP T Cell 特例</a>
+  </nav>
+
+  <main>
+
+    <!-- Intro -->
+    <div class="intro-card">
+      <h2>📘 什麼是流式細胞儀？</h2>
+      <p>流式細胞儀（Flow Cytometer）整合流體力學、光學、電子學與細胞生物學，能在短時間內高通量分析單細胞的物理特性與分子表現。每顆細胞通過雷射光束時，偵測器同步記錄散射光與螢光訊號，從而得出細胞大小、顆粒度、蛋白質表現量等多維度數據。本頁彙整流式細胞儀從原理到各種實驗應用的核心知識。</p>
+      <div class="toc-chips">
+        <a href="#s1" class="toc-chip">🔬 原理</a>
+        <a href="#s2" class="toc-chip">💡 光學</a>
+        <a href="#s3" class="toc-chip">📊 圖形</a>
+        <a href="#s4" class="toc-chip">🎯 Gating</a>
+        <a href="#s5" class="toc-chip">🔄 細胞週期</a>
+        <a href="#s6" class="toc-chip">💀 凋亡</a>
+        <a href="#s7" class="toc-chip">🫧 Exosome</a>
+        <a href="#s8" class="toc-chip">🧪 抗體選擇</a>
+        <a href="#s9" class="toc-chip">🦠 DP T Cell</a>
+      </div>
+    </div>
+
+    <!-- ── Section 1: 基礎原理 ── -->
+    <section class="section" id="s1">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🔬</div>
+        <div class="section-title">
+          <h2>01 基礎原理與主要應用</h2>
+          <p>Flow cytometry fundamentals & applications</p>
+        </div>
+      </div>
+
+      <h3>核心運作原理</h3>
+      <p>細胞被懸浮於流體中，以單列方式通過一個細窄通道，在特定位置接受雷射照射。每顆細胞與雷射的交互作用產生兩類光訊號：</p>
+
+      <div class="compare">
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--blue);">散射光（Scatter）</div>
+          <p><strong>FSC（前向散射）</strong>：光沿原方向散射，強度與細胞體積正相關。細胞越大，FSC 越高。</p>
+          <p><strong>SSC（側向散射）</strong>：光以 90° 角散射，反映細胞內部顆粒度與複雜度。粒線體、顆粒越多，SSC 越高。</p>
+        </div>
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--green);">螢光訊號（Fluorescence）</div>
+          <p>細胞表面或胞內的螢光標記物（抗體結合螢光染劑）受雷射激發後，發出特定波長的光。偵測器濾光片篩選對應波段，電訊號轉換為數位數據。</p>
+        </div>
+      </div>
+
+      <div class="diagram">
+        <div style="font-weight: 600; color: var(--gray); margin-bottom: 6px;">訊號偵測流程</div>
+        <div class="flow">
+          <div class="flow-box">細胞懸浮液</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">流體鞘液聚焦</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">雷射照射</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">散射光 / 螢光</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">光電倍增管</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">數位化數據</div>
+        </div>
+      </div>
+
+      <h3>8 大實驗應用</h3>
+      <div class="card-grid">
+        <div class="mini-card">
+          <div class="icon">🩸</div>
+          <strong>白血球分類</strong>
+          <span>FSC/SSC 散射圖區分淋巴球、單核球、顆粒球</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">🛡️</div>
+          <strong>免疫細胞鑑定</strong>
+          <span>CD 標記配合螢光抗體，區分 T/B/NK 細胞亞群</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">💀</div>
+          <strong>細胞凋亡偵測</strong>
+          <span>Annexin V-FITC / PI 雙染，區分早期凋亡、晚期凋亡、壞死</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">🔄</div>
+          <strong>細胞週期分析</strong>
+          <span>PI 染 DNA 含量，判別 G1 / S / G2/M 各期比例</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">⚡</div>
+          <strong>ROS 偵測</strong>
+          <span>DCFDA 染劑測量胞內活性氧濃度</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">🔋</div>
+          <strong>粒線體膜電位</strong>
+          <span>DiOC6 或 JC-1 偵測粒線體功能狀態</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">🍬</div>
+          <strong>葡萄糖攝取</strong>
+          <span>2-NBDG 螢光葡萄糖類似物，量化細胞糖攝取量</span>
+        </div>
+        <div class="mini-card">
+          <div class="icon">🌊</div>
+          <strong>鈣離子動態</strong>
+          <span>Fura-2 / Fluo 系列染劑追蹤胞內 Ca²⁺ 濃度變化</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section 2: 光學概念 ── -->
+    <section class="section" id="s2">
+      <div class="section-header">
+        <div class="section-icon ic-yellow">💡</div>
+        <div class="section-title">
+          <h2>02 光學概念</h2>
+          <p>Optics: lasers, fluorescence & compensation</p>
+        </div>
+      </div>
+
+      <h3>光的基本性質</h3>
+      <p>光是電磁波的一種形式，具有波長（λ）、頻率（ν）與波速三個核心參數。可見光波段約為 380–700 nm，由紅（長波長、低頻率）到紫外（短波長、高頻率）排列。流式細胞儀使用特定波長的雷射作為光源，不同波長激發不同螢光物質。</p>
+
+      <h3>螢光發生機制（Jablonski 圖）</h3>
+      <p>螢光物質的發光過程分三個階段：</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>激發（Excitation）</strong>
+            <span>螢光分子吸收雷射光子能量，電子躍遷至高能激發態（S₁ 或 S₂）。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>內轉換（Internal conversion）</strong>
+            <span>電子從高能態鬆弛至最低振動能級，部分能量以熱能散失。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>發射（Emission）</strong>
+            <span>電子回到基態，以螢光光子形式釋放剩餘能量。此過程在 10⁻⁸–10⁻¹⁰ 秒內完成。發射光波長必定長於激發光（Stokes shift），能量較低。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-blue">
+        <div class="callout-title">💡 Stokes Shift 原則</div>
+        激發光（雷射）能量 > 發射螢光能量。因此，測量螢光時所使用的濾片波段一律在激發波長之後（更長波長）。
+      </div>
+
+      <h3>常用雷射與對應螢光染劑</h3>
+      <table>
+        <tr><th>雷射波長</th><th>顏色</th><th>常用螢光染劑</th></tr>
+        <tr><td>355 nm</td><td>紫外（UV）</td><td>DAPI、Hoechst、BV421</td></tr>
+        <tr><td>405 nm</td><td>紫色（Violet）</td><td>BV421、BV510、Pacific Blue</td></tr>
+        <tr><td>488 nm</td><td>藍色（Blue）</td><td>FITC、PE、PI、PerCP、PE-Cy5</td></tr>
+        <tr><td>561 nm</td><td>黃綠色（YG）</td><td>PE、PE-Cy7、PI</td></tr>
+        <tr><td>638 nm</td><td>紅色（Red）</td><td>APC、APC-Cy7、AF647</td></tr>
+      </table>
+
+      <h3>光譜補償（Spectral Compensation）</h3>
+      <p>多種螢光染劑的發射光譜往往有重疊（如 FITC 的橘色尾巴進入 PE 通道）。當同時使用兩種以上螢光染劑時，必須進行數學補償，扣除每個通道中來自其他螢光染劑的干擾訊號。</p>
+      <div class="callout callout-orange">
+        <div class="callout-title">⚠️ 補償重點</div>
+        補償矩陣需以<strong>單染控制（single stain control）</strong>為基礎計算，每次實驗都要做。補償做錯會導致族群解讀完全偏差。
+      </div>
+    </section>
+
+    <!-- ── Section 3: 圖形判讀 ── -->
+    <section class="section" id="s3">
+      <div class="section-header">
+        <div class="section-icon ic-purple">📊</div>
+        <div class="section-title">
+          <h2>03 圖形判讀</h2>
+          <p>Reading flow cytometry plots</p>
+        </div>
+      </div>
+
+      <p>流式細胞儀數據可用多種圖形呈現，各有其用途：</p>
+
+      <table>
+        <tr><th>圖形類型</th><th>X 軸</th><th>Y 軸</th><th>最適場合</th></tr>
+        <tr>
+          <td><strong>直方圖（Histogram）</strong></td>
+          <td>螢光強度</td>
+          <td>細胞數量</td>
+          <td>單一參數分析，判斷陽性/陰性比例</td>
+        </tr>
+        <tr>
+          <td><strong>點圖（Dot plot）</strong></td>
+          <td>螢光 1</td>
+          <td>螢光 2</td>
+          <td>雙參數同時呈現，看細胞分群</td>
+        </tr>
+        <tr>
+          <td><strong>密度圖（Density plot）</strong></td>
+          <td>螢光 1</td>
+          <td>螢光 2</td>
+          <td>細胞數量多時取代點圖，顏色表示密度</td>
+        </tr>
+        <tr>
+          <td><strong>等高線圖（Contour plot）</strong></td>
+          <td>螢光 1</td>
+          <td>螢光 2</td>
+          <td>分析少數稀有族群，線條清楚</td>
+        </tr>
+        <tr>
+          <td><strong>FSC/SSC 散射圖</strong></td>
+          <td>FSC（大小）</td>
+          <td>SSC（顆粒度）</td>
+          <td>初步選取目標細胞族群，排除碎片</td>
+        </tr>
+        <tr>
+          <td><strong>Area vs. Height 圖</strong></td>
+          <td>FSC-A</td>
+          <td>FSC-H</td>
+          <td>排除雙連體（doublet），確保分析的是單細胞</td>
+        </tr>
+      </table>
+
+      <div class="callout callout-green">
+        <div class="callout-title">✅ 判讀要點</div>
+        <ul>
+          <li>密度圖中紅色代表高密度（多細胞），藍色代表低密度（少細胞）。</li>
+          <li>Area/Height 圖（FSC-A vs FSC-H）中，單細胞落在對角線上；doublet 因面積偏大而偏離對角線，需排除。</li>
+          <li>各樣本的閾值（gate 邊界線）位置必須一致，跨樣本比較才有效。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Section 4: Gating Strategy ── -->
+    <section class="section" id="s4">
+      <div class="section-header">
+        <div class="section-icon ic-blue">🎯</div>
+        <div class="section-title">
+          <h2>04 Gating Strategy</h2>
+          <p>Sequential cell population selection</p>
+        </div>
+      </div>
+
+      <p><strong>Gating</strong> 就是在散射圖或螢光圖上劃定邊界，圈選目標細胞族群，過濾掉碎片、死細胞或非目標細胞。實際分析時，目標細胞可能只佔總事件數的一小部分（有時僅 30%）。</p>
+
+      <h3>標準 Gating 流程</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>FSC/SSC — 排除碎片與死細胞</strong>
+            <span>體積極小或 SSC 極高的事件多為細胞碎片；體積極大的可能是 doublet，初步圈出活細胞群。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Doublet 排除（FSC-A vs FSC-H）</strong>
+            <span>確保每個事件都是單顆細胞，避免兩顆黏在一起被誤判。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>活/死細胞分離（Live/Dead staining）</strong>
+            <span>以生死染劑（如 PI 或 7-AAD）進一步排除死細胞，提高分析準確性。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>依標記物層層分群</strong>
+            <span>依實驗目的逐步圈選目標族群，例如先圈 CD3⁺，再從中區分 CD4⁺ 和 CD8⁺。</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>實際案例一：NK 細胞分析</h3>
+      <p>使用 CD3、CD56、CD16、NKG2D 等標記物，可區分：</p>
+      <ul>
+        <li><strong>調節型 NK 細胞</strong>：CD56<sup>bright</sup>CD16<sup>−</sup></li>
+        <li><strong>細胞毒型 NK 細胞</strong>：CD56<sup>dim</sup>CD16<sup>+</sup>（主要殺傷力）</li>
+        <li><strong>功能不全 NK 細胞</strong>：NKG2D 表現下降</li>
+      </ul>
+
+      <h3>實際案例二：T 細胞亞群分析</h3>
+      <p>搭配 CD4、CD8、CD45RO 等，可進一步區分初始型（naïve）與記憶型（memory）T 細胞，評估細胞免疫狀態。</p>
+
+      <div class="callout callout-purple">
+        <div class="callout-title">🎓 初學建議</div>
+        設計新實驗的 gating strategy 前，建議先查閱已發表的相似研究，了解業界採用的標準 gating 邏輯，避免因 gate 設錯而誤判細胞群比例。
+      </div>
+    </section>
+
+    <!-- ── Section 5: 細胞週期 ── -->
+    <section class="section" id="s5">
+      <div class="section-header">
+        <div class="section-icon ic-green">🔄</div>
+        <div class="section-title">
+          <h2>05 細胞週期分析</h2>
+          <p>Cell cycle analysis with PI staining</p>
+        </div>
+      </div>
+
+      <p>細胞在不同週期階段的 DNA 含量不同，流式細胞儀可利用 DNA 螢光染劑（最常用 <strong>Propidium Iodide，PI</strong>）量化各期細胞比例。</p>
+
+      <h3>各期 DNA 含量對應</h3>
+      <table>
+        <tr><th>週期階段</th><th>DNA 含量</th><th>直方圖位置</th><th>生物意義</th></tr>
+        <tr><td><strong>G0/G1</strong></td><td>2N（雙倍體）</td><td>左峰</td><td>靜止期或 DNA 合成前</td></tr>
+        <tr><td><strong>S</strong></td><td>2N → 4N（複製中）</td><td>兩峰之間平台</td><td>DNA 主動複製</td></tr>
+        <tr><td><strong>G2/M</strong></td><td>4N（四倍體）</td><td>右峰（約 2× G1 強度）</td><td>分裂準備或分裂中</td></tr>
+        <tr><td><strong>Sub-G1</strong></td><td>&lt;2N（片段化 DNA）</td><td>G1 峰左側</td><td>凋亡細胞（DNA 斷裂）</td></tr>
+      </table>
+
+      <h3>PI 染色注意事項</h3>
+      <ul>
+        <li>PI 可同時與 DNA 和 RNA 結合 → 需加入 <strong>RNase A</strong> 消除 RNA 干擾，否則背景升高。</li>
+        <li>染色前細胞需固定（通常以 70% 乙醇 4°C 過夜），破壞細胞膜使 PI 進入。</li>
+        <li>固定後細胞需充分洗去乙醇再染色，否則訊號不穩定。</li>
+      </ul>
+
+      <h3>化合物對細胞週期的影響範例</h3>
+      <div class="compare">
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--blue);">G1/G0 阻滯</div>
+          <p>例：白藜蘆醇（Resveratrol）</p>
+          <p>G1 峰比例顯著上升，S 期減少，代表細胞被阻滯於 DNA 合成前。</p>
+        </div>
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--orange);">G2/M 阻滯</div>
+          <p>例：葫蘆素 B（Cucurbitacin B）</p>
+          <p>G2/M 峰比例上升，細胞無法完成分裂，常見於抗腫瘤研究。</p>
+        </div>
+      </div>
+
+      <div class="callout callout-green">
+        <div class="callout-title">🔑 成功關鍵</div>
+        對照組（Control）的 G1 峰要清晰、尖銳，G2/M 峰約在 G1 的兩倍螢光強度位置。對照組能跑出漂亮的圖形，代表實驗方法已通過 80% 的關卡。
+      </div>
+
+      <h3>常見問題排查</h3>
+      <ul>
+        <li><strong>訊號太弱或看不到峰</strong>：調高偵測器 gain，或確認細胞固定是否完整。</li>
+        <li><strong>背景雜訊高</strong>：未加 RNase A 導致 RNA 干擾。</li>
+        <li><strong>各組細胞濃度不一致</strong>：體積補不齊導致峰位置偏移，須確保各管細胞數相近。</li>
+        <li><strong>Gate 難以設定</strong>：藥物處理後細胞形態改變，散射圖族群位移，需重新評估 gating。</li>
+      </ul>
+    </section>
+
+    <!-- ── Section 6: 細胞凋亡 ── -->
+    <section class="section" id="s6">
+      <div class="section-header">
+        <div class="section-icon ic-red">💀</div>
+        <div class="section-title">
+          <h2>06 細胞凋亡分析</h2>
+          <p>Apoptosis detection methods</p>
+        </div>
+      </div>
+
+      <h3>凋亡路徑</h3>
+      <div class="compare">
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--blue);">內源性路徑（Intrinsic）</div>
+          <p>由細胞內部壓力（DNA 損傷、氧化壓力、生長因子缺乏）觸發，導致粒線體膜通透化、細胞色素 c 釋放，活化 caspase-9 → caspase-3 cascade。</p>
+        </div>
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--orange);">外源性路徑（Extrinsic）</div>
+          <p>由外部配體（TNF-α、FasL、TRAIL）與死亡受體結合，直接活化 caspase-8 → caspase-3 cascade。</p>
+        </div>
+      </div>
+
+      <h3>四大偵測方法</h3>
+
+      <h4>① Annexin V / PI 雙染（最常用）</h4>
+      <p>凋亡早期，磷脂絲胺酸（PS）從細胞膜內側翻轉至外側，Annexin V 可特異性與之結合。PI 在細胞膜破損時才能進入（壞死或晚期凋亡）。</p>
+      <table>
+        <tr><th>Annexin V</th><th>PI</th><th>細胞狀態</th></tr>
+        <tr><td>−</td><td>−</td><td>正常活細胞</td></tr>
+        <tr><td>＋</td><td>−</td><td><strong>早期凋亡</strong>（PS 翻轉，膜尚完整）</td></tr>
+        <tr><td>＋</td><td>＋</td><td><strong>晚期凋亡</strong>（膜已破損）</td></tr>
+        <tr><td>−</td><td>＋</td><td>壞死（Necrosis）</td></tr>
+      </table>
+
+      <h4>② 粒線體膜電位（MMP）</h4>
+      <p>使用 JC-1 或 DiOC6 染劑。JC-1 在膜電位正常時形成聚合物（紅色螢光），電位下降後以單體形式存在（綠色螢光）。紅/綠螢光比值可定量 MMP 下降程度。</p>
+
+      <h4>③ Caspase 活化偵測</h4>
+      <p>Caspase-3 為執行性 caspase，是凋亡的重要執行分子。Caspase-8 對應外源性路徑，Caspase-9 對應內源性路徑。可用螢光底物或 FLICA 試劑偵測活化態。</p>
+
+      <h4>④ Sub-G1 DNA 分析</h4>
+      <p>DNA 碎裂是凋亡晚期的特徵。PI 染色後，Sub-G1 峰（低於 G1 峰左側）的細胞比例代表 DNA 斷裂的細胞數。</p>
+
+      <div class="callout callout-red">
+        <div class="callout-title">⚠️ 常見問題</div>
+        <ul>
+          <li>對照組出現過多凋亡細胞：細胞傳代次數過多、培養條件不佳，或操作過程溫度控制不當。</li>
+          <li>Annexin V gate 偏移：凋亡細胞形態改變（縮小）導致 FSC 下降，gate 需跟著調整。</li>
+          <li>Gate 太窄：早期凋亡族群可能被誤包進正常細胞區，導致低估凋亡比例。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Section 7: Exosome ── -->
+    <section class="section" id="s7">
+      <div class="section-header">
+        <div class="section-icon ic-teal">🫧</div>
+        <div class="section-title">
+          <h2>07 Exosome 偵測</h2>
+          <p>Extracellular vesicle analysis by flow cytometry</p>
+        </div>
+      </div>
+
+      <h3>Exosome 基本認識</h3>
+      <p>Exosome 是細胞分泌的奈米級細胞外囊泡（30–150 nm），由多泡體（multivesicular body, MVB）與細胞膜融合後釋出，不同於直接從細胞膜出芽的 microvesicle（100–1000 nm）。Exosome 攜帶蛋白質、miRNA、DNA 等分子，參與細胞間訊號傳遞，在腫瘤轉移、免疫調節等領域備受關注。</p>
+
+      <h3>常見偵測方法比較</h3>
+      <table>
+        <tr><th>方法</th><th>偵測能力</th><th>優點</th><th>限制</th></tr>
+        <tr><td><strong>NTA</strong>（奈米粒子追蹤分析）</td><td>粒徑分布 + 濃度</td><td>直接量化、可觀察布朗運動</td><td>無法區分不同來源的囊泡</td></tr>
+        <tr><td><strong>電子顯微鏡（TEM）</strong></td><td>形態與大小</td><td>可直接觀察杯型（cup-shape）</td><td>費時、需固定、不適合高通量</td></tr>
+        <tr><td><strong>ELISA / Western blot</strong></td><td>表面蛋白（CD9/CD63/CD81）</td><td>標準化程度高</td><td>無法區分單顆粒</td></tr>
+        <tr><td><strong>流式細胞儀</strong></td><td>單顆囊泡蛋白表現</td><td>高通量、多參數</td><td>偵測下限受儀器限制</td></tr>
+      </table>
+
+      <h3>流式細胞儀偵測 Exosome 的挑戰與新進展</h3>
+      <p>傳統流式細胞儀偵測下限約 300 nm，早期版本無法直接分析大多數 exosome（30–150 nm）。近年新型儀器（如 NovoCyte、CytoFLEX S）使用 405 nm 紫色雷射搭配 VSSC（Violet Side Scatter）通道，偵測能力可下探至 80 nm 左右。</p>
+
+      <h3>Exosome 流式分析標準操作</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>樣品製備</strong>
+            <span>超速離心或 ExoQuick 試劑富集 exosome，以 PBS 重懸。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>磁珠捕獲</strong>
+            <span>使用表面 coating CD63 capture antibody 的磁珠，捕獲 exosome。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>標記與偵測</strong>
+            <span>螢光抗體（Anti-CD9、Anti-CD81）染色後上機，偵測磁珠-exosome 複合物。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>定量</strong>
+            <span>以已知濃度參考珠（reference beads）建立定量標準曲線。</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>常用表面標記</h3>
+      <div style="margin-top: 8px;">
+        <span class="tag tag-blue">CD9</span>
+        <span class="tag tag-blue">CD63</span>
+        <span class="tag tag-blue">CD81</span>
+        <span class="tag tag-green">TSG101</span>
+        <span class="tag tag-green">Alix</span>
+        <span class="tag tag-orange">HSP70</span>
+      </div>
+    </section>
+
+    <!-- ── Section 8: 抗體選擇 ── -->
+    <section class="section" id="s8">
+      <div class="section-header">
+        <div class="section-icon ic-orange">🧪</div>
+        <div class="section-title">
+          <h2>08 抗體與螢光染劑選擇</h2>
+          <p>Antibody and fluorophore panel design</p>
+        </div>
+      </div>
+
+      <p>設計 flow panel（螢光抗體組合）是流式細胞儀實驗成敗的關鍵。需從「研究目標」與「儀器配備」兩個面向出發。</p>
+
+      <h3>設計流程</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>確認研究目標</strong>
+            <span>決定要分析哪些細胞族群、標記哪些蛋白質。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>確認儀器雷射與濾片配置</strong>
+            <span>儀器有哪些雷射，就只能選擇被該雷射激發的螢光染劑。例如 488 nm 雷射不能激發 APC（需 638 nm）。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>策略性配對染劑與標記物</strong>
+            <span>弱螢光配高表現量的抗原（訊號夠強）；強螢光配低表現量的抗原（即使微弱也偵測得到）。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>減少光譜重疊</strong>
+            <span>避免將發射光譜高度重疊的染劑組合使用，否則補償難度高，訊號失真風險大。</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>通道不夠用時的解決方案</h3>
+      <div class="callout callout-purple">
+        <div class="callout-title">💡 分管策略</div>
+        若想分析的標記物超過儀器通道數，可將樣本分成多管，每管染不同的抗體組合，分次上機分析，再整合數據。
+      </div>
+
+      <h3>實際案例：Treg 細胞分析 Panel</h3>
+      <table>
+        <tr><th>標記物</th><th>表現量</th><th>建議螢光</th><th>原因</th></tr>
+        <tr><td>CD3</td><td>高</td><td>PerCP 或 FITC</td><td>高表現量配中等螢光即可</td></tr>
+        <tr><td>CD4</td><td>高</td><td>PE-Cy5</td><td>與 CD8 區隔</td></tr>
+        <tr><td>CD25</td><td>中</td><td>PE</td><td>中等強度染劑</td></tr>
+        <tr><td>FoxP3（胞內）</td><td>低</td><td>APC 或 AF647</td><td>強螢光偵測低表現量胞內蛋白</td></tr>
+      </table>
+
+      <h3>常見螢光染劑特性比較</h3>
+      <table>
+        <tr><th>染劑</th><th>激發雷射</th><th>最大發射</th><th>相對強度</th><th>備註</th></tr>
+        <tr><td>FITC</td><td>488 nm</td><td>519 nm（綠）</td><td>中</td><td>光穩定性較差，對 pH 敏感</td></tr>
+        <tr><td>PE</td><td>488 / 561 nm</td><td>578 nm（橘）</td><td>高</td><td>最亮的單色染劑之一</td></tr>
+        <tr><td>APC</td><td>638 nm</td><td>660 nm（紅）</td><td>高</td><td>需紅色雷射，光譜乾淨</td></tr>
+        <tr><td>BV421</td><td>405 nm</td><td>421 nm（紫）</td><td>極高</td><td>Brilliant Violet 系列，亮度出色</td></tr>
+        <tr><td>PE-Cy7</td><td>488 / 561 nm</td><td>785 nm（近紅外）</td><td>中</td><td>串聯染劑，需注意光降解</td></tr>
+        <tr><td>PI</td><td>488 nm</td><td>617 nm（紅橘）</td><td>高</td><td>DNA/RNA 染劑，需 RNase A 處理</td></tr>
+      </table>
+    </section>
+
+    <!-- ── Section 9: DP T Cell ── -->
+    <section class="section" id="s9">
+      <div class="section-header">
+        <div class="section-icon ic-pink">🦠</div>
+        <div class="section-title">
+          <h2>09 特例：DP T Cell（雙陽性 T 細胞）</h2>
+          <p>CD4⁺CD8⁺ double positive T cells</p>
+        </div>
+      </div>
+
+      <h3>打破傳統認知</h3>
+      <p>一般認為，成熟的輔助型 T 細胞（T helper）表現 <strong>CD4</strong>，細胞毒型 T 細胞（CTL）表現 <strong>CD8</strong>，二者在外周血中互斥。然而，研究已確認有一群細胞 <strong>同時表現 CD4 和 CD8</strong>，稱為 <strong>雙陽性 T 細胞（DP T cell，Double Positive T cell）</strong>。</p>
+
+      <h3>DP T Cell 的來源與調控</h3>
+      <p>在胸腺發育過程中，T 細胞前驅體會短暫經歷 CD4⁺CD8⁺ 的過渡階段，再被選擇分化為單陽性（SP）T 細胞。控制這個分化方向的兩個關鍵轉錄因子為：</p>
+      <div class="compare">
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--blue);">ThPOK</div>
+          <p>促進 CD4 路徑發育，抑制 Runx3 活性。ThPOK 高表現 → 走向 CD4⁺ T helper。</p>
+        </div>
+        <div class="compare-col">
+          <div class="col-title" style="color: var(--orange);">Runx3</div>
+          <p>促進 CD8 路徑發育，抑制 ThPOK 活性。Runx3 高表現 → 走向 CD8⁺ CTL。</p>
+        </div>
+      </div>
+      <p>研究發現，成熟的 CD4⁺ T 細胞仍具有一定可塑性，在特殊條件下可重新上調 CD8 表現，形成外周 DP T cell。</p>
+
+      <h3>臨床意義</h3>
+      <div class="callout callout-orange">
+        <div class="callout-title">🎗️ 癌症免疫關聯</div>
+        <ul>
+          <li>DP T cell 在癌症患者（尤其是泌尿道相關癌症）中的比例顯著高於健康人。</li>
+          <li>這群細胞的功能特性接近 Th2 細胞群，傾向分泌 IL-4、IL-13 等細胞激素。</li>
+          <li>Th2 偏斜的微環境通常與腫瘤免疫逃脫有關，DP T cell 的角色值得深入研究。</li>
+        </ul>
+      </div>
+
+      <h3>流式偵測 DP T Cell 的注意事項</h3>
+      <ul>
+        <li>由於 DP T cell 比例通常低（尤其在健康人外周血中），需要<strong>足夠的 cell event 數</strong>（建議 &gt;100,000 事件）才能可靠量化。</li>
+        <li>CD4 與 CD8 的抗體要選擇光譜差異大的螢光染劑，確保二者在散射圖上清楚分離。</li>
+        <li>確認 CD4 和 CD8 的抗體都有良好的效能，避免非特異性染色造成假陽性。</li>
+      </ul>
+
+      <div class="callout callout-blue">
+        <div class="callout-title">📌 小結</div>
+        DP T cell 是一個提醒：流式細胞儀分析時，看到「不符合預期」的族群，不要急著排除——有時那正是值得深挖的生物現象。
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 24px 0; color: var(--gray-light); font-size: 0.78rem;">
+      <p>📝 本頁由小羅羅整理，內容以個人理解重新撰寫，僅供學習參考。</p>
+      <p style="margin-top: 4px;">
+        參考資料來源：
+        <a href="https://stu60116.pixnet.net/blog/categories/16000601717" target="_blank" style="color: var(--blue);">友福生技部落格（流式細胞儀系列）</a>
+      </p>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section.section');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navItems.forEach(n => n.classList.remove('active'));
+        const active = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
