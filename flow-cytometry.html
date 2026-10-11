@@ -268,6 +268,55 @@
       <h3>核心運作原理</h3>
       <p>細胞被懸浮於流體中，以單列方式通過一個細窄通道，在特定位置接受雷射照射。每顆細胞與雷射的交互作用產生兩類光訊號：</p>
 
+      <!-- Cell-Laser interaction diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-bottom:14px;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">細胞與雷射交互作用示意圖</div>
+        <svg width="100%" viewBox="0 0 440 160" style="display:block;">
+          <!-- Sheath flow (vertical) -->
+          <rect x="195" y="10" width="50" height="140" rx="25" fill="rgba(186,230,253,0.3)" stroke="#7dd3fc" stroke-width="1.5"/>
+          <text x="220" y="165" font-size="9" text-anchor="middle" fill="#0284c7">鞘液流</text>
+          <!-- Cell in center -->
+          <circle cx="220" cy="80" r="12" fill="rgba(66,153,225,0.4)" stroke="#4299e1" stroke-width="2"/>
+          <text x="220" y="84" font-size="8" text-anchor="middle" fill="#1e3a5f" font-weight="700">細胞</text>
+          <!-- Laser beam (horizontal, blue-green) -->
+          <defs>
+            <linearGradient id="laserGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#48bb78" stop-opacity="0.1"/>
+              <stop offset="45%" stop-color="#48bb78" stop-opacity="0.8"/>
+              <stop offset="55%" stop-color="#48bb78" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#48bb78" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="76" width="400" height="8" rx="4" fill="url(#laserGrad)"/>
+          <text x="5" y="73" font-size="9" fill="#276749" font-weight="700">雷射</text>
+          <text x="5" y="83" font-size="9" fill="#276749">488nm</text>
+
+          <!-- FSC (forward scatter) — right arrow -->
+          <path d="M232,80 Q290,70 360,78" stroke="#4299e1" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+          <polygon points="362,78 353,73 353,83" fill="#4299e1"/>
+          <text x="370" y="75" font-size="9" fill="#2b6cb0" font-weight="700">FSC</text>
+          <text x="370" y="86" font-size="8.5" fill="#2b6cb0">前向散射</text>
+          <text x="370" y="97" font-size="8" fill="#718096">→ 細胞大小</text>
+
+          <!-- SSC (side scatter) — top arrow -->
+          <path d="M220,68 Q210,30 218,18" stroke="#ed8936" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+          <polygon points="218,15 213,24 223,24" fill="#ed8936"/>
+          <text x="228" y="25" font-size="9" fill="#c05621" font-weight="700">SSC 側向散射</text>
+          <text x="228" y="37" font-size="8" fill="#718096">→ 顆粒度 / 複雜度</text>
+
+          <!-- Fluorescence (slightly up-right, green) -->
+          <path d="M228,74 Q290,40 370,28" stroke="#9f7aea" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+          <polygon points="372,27 362,27 366,35" fill="#9f7aea"/>
+          <text x="370" y="115" font-size="9" fill="#6b46c1" font-weight="700">螢光（FL1~FL5）</text>
+          <text x="370" y="127" font-size="8" fill="#718096">→ 蛋白表現量</text>
+
+          <!-- Fluorescence arrow pointing to detector labels -->
+          <rect x="10" y="120" width="80" height="28" rx="5" fill="rgba(66,153,225,0.1)" stroke="#4299e1" stroke-width="1"/>
+          <text x="50" y="133" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="600">PMT 偵測器</text>
+          <text x="50" y="143" font-size="8" text-anchor="middle" fill="#718096">訊號轉為數位</text>
+        </svg>
+      </div>
+
       <div class="compare">
         <div class="compare-col">
           <div class="col-title" style="color: var(--blue);">散射光（Scatter）</div>
@@ -357,6 +406,70 @@
 
       <h3>螢光發生機制（Jablonski 圖）</h3>
       <p>螢光物質的發光過程分三個階段：</p>
+
+      <!-- Jablonski + Stokes shift diagrams -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0;">
+        <!-- Jablonski -->
+        <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">Jablonski 能階圖</div>
+          <svg width="100%" viewBox="0 0 220 180" style="display:block;">
+            <!-- S0 ground state -->
+            <line x1="20" y1="155" x2="100" y2="155" stroke="#4299e1" stroke-width="2"/>
+            <text x="110" y="159" font-size="10" fill="#4299e1" font-weight="600">S₀ 基態</text>
+            <!-- S1 excited state -->
+            <line x1="20" y1="60" x2="100" y2="60" stroke="#e05252" stroke-width="2"/>
+            <text x="110" y="64" font-size="10" fill="#e05252" font-weight="600">S₁ 激發態</text>
+            <!-- S1 vibrational -->
+            <line x1="25" y1="75" x2="95" y2="75" stroke="#e05252" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <line x1="25" y1="90" x2="95" y2="90" stroke="#e05252" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+            <!-- Absorption arrow (up, blue) -->
+            <line x1="35" y1="150" x2="35" y2="65" stroke="#4299e1" stroke-width="2.5"/>
+            <polygon points="35,60 30,72 40,72" fill="#4299e1"/>
+            <text x="8" y="108" font-size="9" fill="#4299e1" font-weight="600" transform="rotate(-90,8,108)">吸收</text>
+            <!-- Internal conversion (dashed, orange, from S1 vib to S1 bottom) -->
+            <path d="M60,90 Q70,95 60,75" stroke="#ed8936" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+            <text x="42" y="112" font-size="8" fill="#ed8936">IC</text>
+            <text x="36" y="122" font-size="8" fill="#ed8936">熱散失</text>
+            <!-- Emission arrow (down, green) -->
+            <line x1="65" y1="65" x2="65" y2="148" stroke="#48bb78" stroke-width="2.5"/>
+            <polygon points="65,155 60,142 70,142" fill="#48bb78"/>
+            <text x="70" y="108" font-size="9" fill="#276749" font-weight="600" transform="rotate(90,70,108)">發射(螢光)</text>
+            <!-- Stokes shift annotation -->
+            <line x1="35" y1="170" x2="35" y2="165" stroke="#718096" stroke-width="1"/>
+            <line x1="65" y1="170" x2="65" y2="165" stroke="#718096" stroke-width="1"/>
+            <line x1="35" y1="170" x2="65" y2="170" stroke="#718096" stroke-width="1"/>
+            <text x="50" y="180" font-size="8" text-anchor="middle" fill="#718096">Stokes Shift</text>
+          </svg>
+        </div>
+        <!-- Stokes shift spectrum -->
+        <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">發射波長 &gt; 激發波長</div>
+          <svg width="100%" viewBox="0 0 220 180" style="display:block;">
+            <line x1="20" y1="140" x2="210" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="20" y1="20" x2="20" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
+            <!-- Excitation peak (left, purple/blue) -->
+            <path d="M30,138 C40,138 55,30 75,15 C95,30 108,138 118,138" fill="rgba(66,153,225,0.25)" stroke="#4299e1" stroke-width="1.5"/>
+            <text x="74" y="10" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="600">激發</text>
+            <!-- Emission peak (right, green) -->
+            <path d="M108,138 C118,138 135,45 155,28 C175,45 188,138 198,138" fill="rgba(72,187,120,0.25)" stroke="#48bb78" stroke-width="1.5"/>
+            <text x="155" y="24" font-size="9" text-anchor="middle" fill="#276749" font-weight="600">發射</text>
+            <!-- Stokes shift arrow -->
+            <line x1="75" y1="155" x2="75" y2="150" stroke="#718096" stroke-width="1"/>
+            <line x1="155" y1="155" x2="155" y2="150" stroke="#718096" stroke-width="1"/>
+            <line x1="75" y1="155" x2="155" y2="155" stroke="#718096" stroke-width="1"/>
+            <polygon points="75,155 82,151 82,159" fill="#718096"/>
+            <polygon points="155,155 148,151 148,159" fill="#718096"/>
+            <text x="115" y="168" font-size="8.5" text-anchor="middle" fill="#718096" font-weight="600">Stokes Shift</text>
+            <!-- wavelength axis -->
+            <text x="115" y="178" font-size="9" text-anchor="middle" fill="#718096">波長 (nm) →</text>
+            <text x="28" y="60" font-size="9" text-anchor="middle" fill="#718096" transform="rotate(-90,12,80)">強度</text>
+            <!-- Example values -->
+            <text x="55" y="135" font-size="8" fill="#4299e1">488nm</text>
+            <text x="140" y="135" font-size="8" fill="#48bb78">519nm</text>
+          </svg>
+        </div>
+      </div>
+
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
@@ -401,6 +514,52 @@
       <div class="callout callout-orange">
         <div class="callout-title">⚠️ 補償重點</div>
         補償矩陣需以<strong>單染控制（single stain control）</strong>為基礎計算，每次實驗都要做。補償做錯會導致族群解讀完全偏差。
+      </div>
+
+      <!-- Spectral overlap / compensation diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-top:14px;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">光譜重疊示意圖（FITC、PE、APC 三通道）</div>
+        <svg width="100%" viewBox="0 0 440 180" style="display:block;">
+          <!-- Axes -->
+          <line x1="30" y1="145" x2="420" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="30" y1="20" x2="30" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="225" y="175" font-size="10" text-anchor="middle" fill="#718096">波長 (nm)</text>
+          <text x="12" y="83" font-size="10" text-anchor="middle" fill="#718096" transform="rotate(-90,12,83)">強度</text>
+
+          <!-- FITC peak ~519nm ≈ x=120 -->
+          <path d="M60,143 C75,143 95,80 120,30 C145,80 165,143 180,143"
+                fill="rgba(72,187,120,0.3)" stroke="#48bb78" stroke-width="2"/>
+          <text x="120" y="26" font-size="10" text-anchor="middle" fill="#276749" font-weight="700">FITC</text>
+          <text x="120" y="38" font-size="9" text-anchor="middle" fill="#276749">~519nm</text>
+
+          <!-- PE peak ~578nm ≈ x=190 (overlapping FITC tail) -->
+          <path d="M150,143 C165,143 182,75 205,32 C228,75 248,143 260,143"
+                fill="rgba(237,137,54,0.3)" stroke="#ed8936" stroke-width="2"/>
+          <text x="205" y="28" font-size="10" text-anchor="middle" fill="#c05621" font-weight="700">PE</text>
+          <text x="205" y="40" font-size="9" text-anchor="middle" fill="#c05621">~578nm</text>
+
+          <!-- APC peak ~660nm ≈ x=330 -->
+          <path d="M290,143 C308,143 325,80 345,30 C365,80 385,143 400,143"
+                fill="rgba(159,122,234,0.3)" stroke="#9f7aea" stroke-width="2"/>
+          <text x="345" y="26" font-size="10" text-anchor="middle" fill="#6b46c1" font-weight="700">APC</text>
+          <text x="345" y="38" font-size="9" text-anchor="middle" fill="#6b46c1">~660nm</text>
+
+          <!-- Overlap zone FITC→PE highlight -->
+          <path d="M150,143 C165,143 175,95 185,80 C185,80 165,80 155,100 Z"
+                fill="rgba(237,137,54,0.15)" stroke="none"/>
+          <line x1="170" y1="110" x2="140" y2="95" stroke="#c05621" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="105" y="90" font-size="8.5" fill="#c05621" font-weight="600">FITC 漏入</text>
+          <text x="105" y="100" font-size="8.5" fill="#c05621">PE 通道</text>
+
+          <!-- detector windows -->
+          <rect x="90" y="150" width="60" height="8" rx="3" fill="rgba(72,187,120,0.5)"/>
+          <text x="120" y="158" font-size="8" text-anchor="middle" fill="#276749">FITC 偵測窗</text>
+          <rect x="175" y="150" width="60" height="8" rx="3" fill="rgba(237,137,54,0.5)"/>
+          <text x="205" y="158" font-size="8" text-anchor="middle" fill="#c05621">PE 偵測窗</text>
+          <rect x="315" y="150" width="60" height="8" rx="3" fill="rgba(159,122,234,0.5)"/>
+          <text x="345" y="158" font-size="8" text-anchor="middle" fill="#6b46c1">APC 偵測窗</text>
+        </svg>
+        <p style="font-size:0.8rem;color:#718096;margin:6px 0 0;">FITC 的發射尾巴延伸進入 PE 偵測窗（橘色標示），若不補償會高估 PE 訊號。</p>
       </div>
     </section>
 
@@ -711,6 +870,49 @@
       <h3>實際案例二：T 細胞亞群分析</h3>
       <p>搭配 CD4、CD8、CD45RO 等，可進一步區分初始型（naïve）與記憶型（memory）T 細胞，評估細胞免疫狀態。</p>
 
+      <!-- Gating funnel diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:14px 0;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">Sequential Gating 漏斗圖</div>
+        <svg width="100%" viewBox="0 0 340 260" style="display:block;">
+          <!-- Step 1: All Events -->
+          <rect x="60" y="10" width="220" height="36" rx="6" fill="rgba(160,174,192,0.2)" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="170" y="26" font-size="11" text-anchor="middle" fill="#4a5568" font-weight="600">全部事件（Total Events）</text>
+          <text x="170" y="38" font-size="9" text-anchor="middle" fill="#718096">100 %</text>
+          <!-- Arrow -->
+          <line x1="170" y1="46" x2="170" y2="62" stroke="#94a3b8" stroke-width="1.5"/>
+          <polygon points="170,65 164,58 176,58" fill="#94a3b8"/>
+
+          <!-- Step 2: FSC/SSC Live gate -->
+          <rect x="80" y="65" width="180" height="36" rx="6" fill="rgba(66,153,225,0.15)" stroke="#4299e1" stroke-width="1.5"/>
+          <text x="170" y="81" font-size="11" text-anchor="middle" fill="#2b6cb0" font-weight="600">Gate 1: 活細胞（FSC/SSC）</text>
+          <text x="170" y="93" font-size="9" text-anchor="middle" fill="#4299e1">排除碎片 · ~85 %</text>
+          <!-- Arrow -->
+          <line x1="170" y1="101" x2="170" y2="117" stroke="#4299e1" stroke-width="1.5"/>
+          <polygon points="170,120 164,113 176,113" fill="#4299e1"/>
+
+          <!-- Step 3: Doublet exclusion -->
+          <rect x="95" y="120" width="150" height="36" rx="6" fill="rgba(72,187,120,0.15)" stroke="#48bb78" stroke-width="1.5"/>
+          <text x="170" y="136" font-size="11" text-anchor="middle" fill="#276749" font-weight="600">Gate 2: 單細胞（FSC-A/H）</text>
+          <text x="170" y="148" font-size="9" text-anchor="middle" fill="#48bb78">排除 doublet · ~78 %</text>
+          <!-- Arrow -->
+          <line x1="170" y1="156" x2="170" y2="172" stroke="#48bb78" stroke-width="1.5"/>
+          <polygon points="170,175 164,168 176,168" fill="#48bb78"/>
+
+          <!-- Step 4: Live/Dead -->
+          <rect x="108" y="175" width="124" height="36" rx="6" fill="rgba(237,137,54,0.15)" stroke="#ed8936" stroke-width="1.5"/>
+          <text x="170" y="191" font-size="11" text-anchor="middle" fill="#c05621" font-weight="600">Gate 3: 活細胞染色</text>
+          <text x="170" y="203" font-size="9" text-anchor="middle" fill="#ed8936">PI⁻ / 7-AAD⁻ · ~70 %</text>
+          <!-- Arrow -->
+          <line x1="170" y1="211" x2="170" y2="227" stroke="#ed8936" stroke-width="1.5"/>
+          <polygon points="170,230 164,223 176,223" fill="#ed8936"/>
+
+          <!-- Step 5: Target population -->
+          <rect x="118" y="230" width="104" height="26" rx="6" fill="rgba(159,122,234,0.2)" stroke="#9f7aea" stroke-width="2"/>
+          <text x="170" y="244" font-size="11" text-anchor="middle" fill="#6b46c1" font-weight="700">目標族群分析</text>
+          <text x="170" y="256" font-size="9" text-anchor="middle" fill="#9f7aea">e.g. CD4⁺ T cells · 30~60 %</text>
+        </svg>
+      </div>
+
       <div class="callout callout-purple">
         <div class="callout-title">🎓 初學建議</div>
         設計新實驗的 gating strategy 前，建議先查閱已發表的相似研究，了解業界採用的標準 gating 邏輯，避免因 gate 設錯而誤判細胞群比例。
@@ -744,6 +946,60 @@
         <li>染色前細胞需固定（通常以 70% 乙醇 4°C 過夜），破壞細胞膜使 PI 進入。</li>
         <li>固定後細胞需充分洗去乙醇再染色，否則訊號不穩定。</li>
       </ul>
+
+      <!-- Cell cycle wheel diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center;">
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">細胞週期環形圖</div>
+          <svg width="100%" viewBox="0 0 200 200" style="display:block;">
+            <!-- G1 sector (~40%) blue -->
+            <path d="M100,100 L100,15 A85,85 0 0,1 185,100 Z" fill="rgba(66,153,225,0.35)" stroke="#4299e1" stroke-width="1.5"/>
+            <text x="152" y="60" font-size="12" fill="#2b6cb0" font-weight="700">G1</text>
+            <text x="148" y="72" font-size="9" fill="#2b6cb0">2N · ~40%</text>
+            <!-- S sector (~25%) green -->
+            <path d="M100,100 L185,100 A85,85 0 0,1 100,185 Z" fill="rgba(72,187,120,0.35)" stroke="#48bb78" stroke-width="1.5"/>
+            <text x="152" y="152" font-size="12" fill="#276749" font-weight="700">S</text>
+            <text x="144" y="164" font-size="9" fill="#276749">複製中 · ~25%</text>
+            <!-- G2/M sector (~20%) orange -->
+            <path d="M100,100 L100,185 A85,85 0 0,1 15,100 Z" fill="rgba(237,137,54,0.35)" stroke="#ed8936" stroke-width="1.5"/>
+            <text x="28" y="152" font-size="11" fill="#c05621" font-weight="700">G2/M</text>
+            <text x="22" y="163" font-size="9" fill="#c05621">4N · ~20%</text>
+            <!-- Sub-G1 sector (~5%) red -->
+            <path d="M100,100 L15,100 A85,85 0 0,1 100,15 Z" fill="rgba(229,62,62,0.25)" stroke="#e05252" stroke-width="1.5"/>
+            <text x="28" y="60" font-size="10" fill="#c53030" font-weight="700">Sub-G1</text>
+            <text x="25" y="72" font-size="9" fill="#c53030">&lt;2N · 凋亡</text>
+            <!-- Center -->
+            <circle cx="100" cy="100" r="24" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="100" y="97" font-size="9" text-anchor="middle" fill="#4a5568" font-weight="600">DNA</text>
+            <text x="100" y="108" font-size="9" text-anchor="middle" fill="#4a5568">含量</text>
+          </svg>
+        </div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">PI 染色直方圖示意</div>
+          <svg width="100%" viewBox="0 0 200 160" style="display:block;">
+            <line x1="20" y1="130" x2="190" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="20" y1="20" x2="20" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
+            <!-- Sub-G1 (very left, small red) -->
+            <path d="M24,128 C28,128 32,105 36,95 C40,105 44,128 48,128" fill="rgba(229,62,62,0.3)" stroke="#e05252" stroke-width="1.5"/>
+            <text x="36" y="92" font-size="8" text-anchor="middle" fill="#c53030">Sub-G1</text>
+            <!-- G1 peak (tall, blue) -->
+            <path d="M60,128 C68,128 76,48 84,25 C92,48 100,128 108,128" fill="rgba(66,153,225,0.3)" stroke="#4299e1" stroke-width="1.5"/>
+            <text x="84" y="22" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="700">G1 (2N)</text>
+            <!-- S phase plateau -->
+            <path d="M108,128 C112,128 115,100 118,95 C121,100 124,128 128,128" fill="rgba(72,187,120,0.2)" stroke="#48bb78" stroke-width="1"/>
+            <text x="118" y="88" font-size="8" text-anchor="middle" fill="#276749">S</text>
+            <!-- G2/M peak (shorter, ~2x G1 position) -->
+            <path d="M128,128 C134,128 142,68 150,48 C158,68 166,128 172,128" fill="rgba(237,137,54,0.3)" stroke="#ed8936" stroke-width="1.5"/>
+            <text x="150" y="45" font-size="9" text-anchor="middle" fill="#c05621" font-weight="700">G2/M (4N)</text>
+            <!-- 2x annotation -->
+            <line x1="84" y1="140" x2="84" y2="145" stroke="#718096" stroke-width="1"/>
+            <line x1="150" y1="140" x2="150" y2="145" stroke="#718096" stroke-width="1"/>
+            <line x1="84" y1="143" x2="150" y2="143" stroke="#718096" stroke-width="1"/>
+            <text x="117" y="155" font-size="8" text-anchor="middle" fill="#718096">≈ 2× 螢光強度</text>
+            <text x="105" y="178" font-size="9" text-anchor="middle" fill="#718096">PI 螢光強度 →</text>
+          </svg>
+        </div>
+      </div>
 
       <h3>化合物對細胞週期的影響範例</h3>
       <div class="compare">
@@ -783,6 +1039,56 @@
         </div>
       </div>
 
+      <!-- Apoptosis pathway diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-bottom:14px;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">凋亡路徑示意圖（Intrinsic vs Extrinsic）</div>
+        <svg width="100%" viewBox="0 0 440 200" style="display:block;">
+          <!-- Intrinsic (left) -->
+          <text x="90" y="16" font-size="11" text-anchor="middle" fill="#2b6cb0" font-weight="700">內源性（Intrinsic）</text>
+          <!-- Stimulus box -->
+          <rect x="20" y="20" width="140" height="26" rx="5" fill="rgba(66,153,225,0.2)" stroke="#4299e1" stroke-width="1.2"/>
+          <text x="90" y="37" font-size="10" text-anchor="middle" fill="#2b6cb0">DNA 損傷 / 氧化壓力</text>
+          <line x1="90" y1="46" x2="90" y2="60" stroke="#4299e1" stroke-width="1.5"/>
+          <polygon points="90,63 85,57 95,57" fill="#4299e1"/>
+          <!-- Mitochondria -->
+          <rect x="30" y="63" width="120" height="24" rx="5" fill="rgba(66,153,225,0.15)" stroke="#4299e1" stroke-width="1.2"/>
+          <text x="90" y="79" font-size="10" text-anchor="middle" fill="#2b6cb0">粒線體膜通透化</text>
+          <line x1="90" y1="87" x2="90" y2="101" stroke="#4299e1" stroke-width="1.5"/>
+          <polygon points="90,104 85,98 95,98" fill="#4299e1"/>
+          <!-- Cyt c -->
+          <rect x="40" y="104" width="100" height="22" rx="5" fill="rgba(66,153,225,0.1)" stroke="#4299e1" stroke-width="1.2"/>
+          <text x="90" y="119" font-size="10" text-anchor="middle" fill="#2b6cb0">Cytochrome c 釋出</text>
+          <line x1="90" y1="126" x2="90" y2="140" stroke="#4299e1" stroke-width="1.5"/>
+          <polygon points="90,143 85,137 95,137" fill="#4299e1"/>
+          <!-- Casp-9 -->
+          <rect x="44" y="143" width="92" height="22" rx="5" fill="rgba(66,153,225,0.2)" stroke="#4299e1" stroke-width="1.2"/>
+          <text x="90" y="158" font-size="10" text-anchor="middle" fill="#2b6cb0">Caspase-9 活化</text>
+
+          <!-- Extrinsic (right) -->
+          <text x="350" y="16" font-size="11" text-anchor="middle" fill="#c05621" font-weight="700">外源性（Extrinsic）</text>
+          <rect x="280" y="20" width="140" height="26" rx="5" fill="rgba(237,137,54,0.2)" stroke="#ed8936" stroke-width="1.2"/>
+          <text x="350" y="37" font-size="10" text-anchor="middle" fill="#c05621">TNF-α / FasL / TRAIL</text>
+          <line x1="350" y1="46" x2="350" y2="60" stroke="#ed8936" stroke-width="1.5"/>
+          <polygon points="350,63 345,57 355,57" fill="#ed8936"/>
+          <rect x="290" y="63" width="120" height="24" rx="5" fill="rgba(237,137,54,0.15)" stroke="#ed8936" stroke-width="1.2"/>
+          <text x="350" y="79" font-size="10" text-anchor="middle" fill="#c05621">死亡受體結合</text>
+          <line x1="350" y1="87" x2="350" y2="101" stroke="#ed8936" stroke-width="1.5"/>
+          <polygon points="350,104 345,98 355,98" fill="#ed8936"/>
+          <rect x="297" y="104" width="106" height="22" rx="5" fill="rgba(237,137,54,0.1)" stroke="#ed8936" stroke-width="1.2"/>
+          <text x="350" y="119" font-size="10" text-anchor="middle" fill="#c05621">DISC 複合體形成</text>
+          <line x1="350" y1="126" x2="350" y2="140" stroke="#ed8936" stroke-width="1.5"/>
+          <polygon points="350,143 345,137 355,137" fill="#ed8936"/>
+          <rect x="300" y="143" width="100" height="22" rx="5" fill="rgba(237,137,54,0.2)" stroke="#ed8936" stroke-width="1.2"/>
+          <text x="350" y="158" font-size="10" text-anchor="middle" fill="#c05621">Caspase-8 活化</text>
+
+          <!-- Converge to Caspase-3 -->
+          <line x1="136" y1="154" x2="185" y2="178" stroke="#9f7aea" stroke-width="1.5"/>
+          <line x1="304" y1="154" x2="255" y2="178" stroke="#9f7aea" stroke-width="1.5"/>
+          <rect x="175" y="178" width="90" height="22" rx="5" fill="rgba(159,122,234,0.3)" stroke="#9f7aea" stroke-width="2"/>
+          <text x="220" y="193" font-size="11" text-anchor="middle" fill="#6b46c1" font-weight="700">Caspase-3 執行凋亡</text>
+        </svg>
+      </div>
+
       <h3>凋亡路徑</h3>
       <div class="compare">
         <div class="compare-col">
@@ -809,6 +1115,47 @@
 
       <h4>② 粒線體膜電位（MMP）</h4>
       <p>使用 JC-1 或 DiOC6 染劑。JC-1 在膜電位正常時形成聚合物（紅色螢光），電位下降後以單體形式存在（綠色螢光）。紅/綠螢光比值可定量 MMP 下降程度。</p>
+
+      <!-- JC-1 diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:10px 0;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">JC-1 染劑工作原理示意</div>
+        <svg width="100%" viewBox="0 0 420 120" style="display:block;">
+          <!-- Healthy cell (left) -->
+          <ellipse cx="90" cy="60" rx="70" ry="45" fill="rgba(72,187,120,0.1)" stroke="#48bb78" stroke-width="1.5"/>
+          <text x="90" y="20" font-size="10" text-anchor="middle" fill="#276749" font-weight="700">正常細胞（高膜電位）</text>
+          <!-- Mitochondria inside healthy -->
+          <ellipse cx="75" cy="62" rx="22" ry="14" fill="rgba(72,187,120,0.3)" stroke="#276749" stroke-width="1.2"/>
+          <ellipse cx="112" cy="65" rx="18" ry="12" fill="rgba(72,187,120,0.3)" stroke="#276749" stroke-width="1.2"/>
+          <!-- JC-1 aggregates = red dots -->
+          <circle cx="72" cy="60" r="4" fill="#e05252" opacity="0.9"/>
+          <circle cx="80" cy="64" r="4" fill="#e05252" opacity="0.9"/>
+          <circle cx="109" cy="63" r="4" fill="#e05252" opacity="0.9"/>
+          <circle cx="116" cy="67" r="4" fill="#e05252" opacity="0.9"/>
+          <text x="90" y="92" font-size="9" text-anchor="middle" fill="#e05252" font-weight="600">JC-1 聚合體（紅色螢光）</text>
+          <text x="90" y="103" font-size="8.5" text-anchor="middle" fill="#718096">FL2 / PE 通道升高</text>
+
+          <!-- Arrow -->
+          <line x1="170" y1="60" x2="250" y2="60" stroke="#718096" stroke-width="1.5"/>
+          <polygon points="253,60 245,55 245,65" fill="#718096"/>
+          <text x="210" y="53" font-size="9" text-anchor="middle" fill="#c05621" font-weight="600">凋亡 / MMP ↓</text>
+
+          <!-- Apoptotic cell (right) -->
+          <ellipse cx="330" cy="60" rx="70" ry="45" fill="rgba(229,62,62,0.05)" stroke="#e05252" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="330" y="20" font-size="10" text-anchor="middle" fill="#c53030" font-weight="700">凋亡細胞（低膜電位）</text>
+          <!-- Mitochondria inside apoptotic (dashed) -->
+          <ellipse cx="315" cy="62" rx="22" ry="14" fill="rgba(229,62,62,0.1)" stroke="#e05252" stroke-width="1" stroke-dasharray="3,2"/>
+          <ellipse cx="350" cy="65" rx="18" ry="12" fill="rgba(229,62,62,0.1)" stroke="#e05252" stroke-width="1" stroke-dasharray="3,2"/>
+          <!-- JC-1 monomers = green dots (scattered) -->
+          <circle cx="300" cy="50" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <circle cx="320" cy="45" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <circle cx="340" cy="52" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <circle cx="355" cy="48" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <circle cx="310" cy="75" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <circle cx="345" cy="78" r="3.5" fill="#48bb78" opacity="0.9"/>
+          <text x="330" y="92" font-size="9" text-anchor="middle" fill="#276749" font-weight="600">JC-1 單體（綠色螢光）</text>
+          <text x="330" y="103" font-size="8.5" text-anchor="middle" fill="#718096">FL1 / FITC 通道升高</text>
+        </svg>
+      </div>
 
       <h4>③ Caspase 活化偵測</h4>
       <p>Caspase-3 為執行性 caspase，是凋亡的重要執行分子。Caspase-8 對應外源性路徑，Caspase-9 對應內源性路徑。可用螢光底物或 FLICA 試劑偵測活化態。</p>
@@ -838,6 +1185,37 @@
 
       <h3>Exosome 基本認識</h3>
       <p>Exosome 是細胞分泌的奈米級細胞外囊泡（30–150 nm），由多泡體（multivesicular body, MVB）與細胞膜融合後釋出，不同於直接從細胞膜出芽的 microvesicle（100–1000 nm）。Exosome 攜帶蛋白質、miRNA、DNA 等分子，參與細胞間訊號傳遞，在腫瘤轉移、免疫調節等領域備受關注。</p>
+
+      <!-- Extracellular vesicle size comparison -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-bottom:14px;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">細胞外囊泡大小比較圖</div>
+        <svg width="100%" viewBox="0 0 440 130" style="display:block;">
+          <!-- Exosome (30-150nm) -->
+          <circle cx="80" cy="65" r="20" fill="rgba(66,153,225,0.3)" stroke="#4299e1" stroke-width="2"/>
+          <text x="80" y="61" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="700">Exosome</text>
+          <text x="80" y="73" font-size="8.5" text-anchor="middle" fill="#2b6cb0">30–150 nm</text>
+          <text x="80" y="100" font-size="8" text-anchor="middle" fill="#4a5568">來源：MVB 融合</text>
+          <text x="80" y="111" font-size="8" text-anchor="middle" fill="#4a5568">標記：CD9/CD63/CD81</text>
+
+          <!-- Microvesicle (100-1000nm) -->
+          <circle cx="220" cy="55" r="40" fill="rgba(237,137,54,0.25)" stroke="#ed8936" stroke-width="2"/>
+          <text x="220" y="50" font-size="9" text-anchor="middle" fill="#c05621" font-weight="700">Microvesicle</text>
+          <text x="220" y="63" font-size="8.5" text-anchor="middle" fill="#c05621">100–1000 nm</text>
+          <text x="220" y="110" font-size="8" text-anchor="middle" fill="#4a5568">來源：細胞膜出芽</text>
+          <text x="220" y="121" font-size="8" text-anchor="middle" fill="#4a5568">標記：ARF6、整合素</text>
+
+          <!-- Apoptotic body (1000-5000nm) -->
+          <circle cx="380" cy="70" r="52" fill="rgba(229,62,62,0.2)" stroke="#e05252" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="380" y="62" font-size="9" text-anchor="middle" fill="#c53030" font-weight="700">Apoptotic Body</text>
+          <text x="380" y="74" font-size="8.5" text-anchor="middle" fill="#c53030">1000–5000 nm</text>
+          <text x="380" y="114" font-size="8" text-anchor="middle" fill="#4a5568">來源：凋亡細胞碎裂</text>
+          <text x="380" y="125" font-size="8" text-anchor="middle" fill="#4a5568">含：核碎片 / 胞器</text>
+
+          <!-- Scale bar -->
+          <line x1="20" y1="127" x2="420" y2="127" stroke="#cbd5e0" stroke-width="0.8"/>
+          <text x="220" y="127" font-size="8" text-anchor="middle" fill="#94a3b8">← 相對大小示意（非等比例）→</text>
+        </svg>
+      </div>
 
       <h3>常見偵測方法比較</h3>
       <table>
@@ -953,6 +1331,53 @@
         <tr><td>FoxP3（胞內）</td><td>低</td><td>APC 或 AF647</td><td>強螢光偵測低表現量胞內蛋白</td></tr>
       </table>
 
+      <!-- Panel design spectrum diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:14px 0;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">Panel 設計：光譜重疊與配對原則</div>
+        <svg width="100%" viewBox="0 0 440 160" style="display:block;">
+          <!-- Axes -->
+          <line x1="30" y1="115" x2="420" y2="115" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="30" y1="20" x2="30" y2="115" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="225" y="148" font-size="10" text-anchor="middle" fill="#718096">波長 (nm)</text>
+
+          <!-- BV421 405nm, peak ~421 purple -->
+          <path d="M45,113 C55,113 70,50 80,22 C90,50 105,113 115,113" fill="rgba(139,90,194,0.25)" stroke="#9f7aea" stroke-width="2"/>
+          <text x="80" y="18" font-size="9" text-anchor="middle" fill="#6b46c1" font-weight="700">BV421</text>
+          <text x="80" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">421nm</text>
+
+          <!-- FITC 488nm, peak ~519 green -->
+          <path d="M115,113 C128,113 142,52 154,26 C166,52 178,113 192,113" fill="rgba(72,187,120,0.25)" stroke="#48bb78" stroke-width="2"/>
+          <text x="154" y="22" font-size="9" text-anchor="middle" fill="#276749" font-weight="700">FITC</text>
+          <text x="154" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">519nm</text>
+
+          <!-- PE 488nm, peak ~578 orange — overlaps with FITC tail -->
+          <path d="M175,113 C188,113 205,48 218,24 C231,48 248,113 262,113" fill="rgba(237,137,54,0.25)" stroke="#ed8936" stroke-width="2"/>
+          <text x="218" y="20" font-size="9" text-anchor="middle" fill="#c05621" font-weight="700">PE</text>
+          <text x="218" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">578nm</text>
+
+          <!-- APC 638nm, peak ~660 red -->
+          <path d="M320,113 C332,113 345,50 358,25 C371,50 382,113 395,113" fill="rgba(229,62,62,0.25)" stroke="#e05252" stroke-width="2"/>
+          <text x="358" y="21" font-size="9" text-anchor="middle" fill="#c53030" font-weight="700">APC</text>
+          <text x="358" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">660nm</text>
+
+          <!-- Overlap zone FITC↔PE shading -->
+          <rect x="175" y="75" width="17" height="38" rx="2" fill="rgba(237,100,100,0.2)" stroke="none"/>
+          <text x="183" y="70" font-size="8" text-anchor="middle" fill="#c53030">重疊</text>
+
+          <!-- Laser lines -->
+          <line x1="90" y1="113" x2="90" y2="20" stroke="#9f7aea" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+          <text x="90" y="140" font-size="8" text-anchor="middle" fill="#9f7aea">405nm 雷射</text>
+          <line x1="155" y1="113" x2="155" y2="20" stroke="#48bb78" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+          <text x="155" y="140" font-size="8" text-anchor="middle" fill="#48bb78">488nm 雷射</text>
+          <line x1="358" y1="113" x2="358" y2="20" stroke="#e05252" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+          <text x="358" y="140" font-size="8" text-anchor="middle" fill="#e05252">638nm 雷射</text>
+
+          <!-- Tip annotation -->
+          <text x="285" y="75" font-size="9" fill="#4a5568">✅ APC 與 FITC/PE</text>
+          <text x="285" y="87" font-size="9" fill="#4a5568">無重疊，組合最佳</text>
+        </svg>
+      </div>
+
       <h3>常見螢光染劑特性比較</h3>
       <table>
         <tr><th>染劑</th><th>激發雷射</th><th>最大發射</th><th>相對強度</th><th>備註</th></tr>
@@ -991,6 +1416,47 @@
         </div>
       </div>
       <p>研究發現，成熟的 CD4⁺ T 細胞仍具有一定可塑性，在特殊條件下可重新上調 CD8 表現，形成外周 DP T cell。</p>
+
+      <!-- T cell differentiation diagram -->
+      <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:14px 0;">
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">胸腺 T 細胞分化示意圖（ThPOK vs Runx3 軸）</div>
+        <svg width="100%" viewBox="0 0 440 180" style="display:block;">
+          <!-- DN (double negative) -->
+          <rect x="175" y="10" width="90" height="28" rx="6" fill="rgba(160,174,192,0.25)" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="220" y="28" font-size="10" text-anchor="middle" fill="#4a5568" font-weight="700">DN 雙陰性</text>
+
+          <!-- Arrow down to DP -->
+          <line x1="220" y1="38" x2="220" y2="54" stroke="#94a3b8" stroke-width="1.5"/>
+          <polygon points="220,57 215,50 225,50" fill="#94a3b8"/>
+
+          <!-- DP (double positive) — central -->
+          <rect x="155" y="57" width="130" height="32" rx="6" fill="rgba(159,122,234,0.3)" stroke="#9f7aea" stroke-width="2"/>
+          <text x="220" y="72" font-size="11" text-anchor="middle" fill="#6b46c1" font-weight="700">DP 雙陽性</text>
+          <text x="220" y="83" font-size="9" text-anchor="middle" fill="#9f7aea">CD4⁺CD8⁺（胸腺過渡期）</text>
+
+          <!-- Branch left: ThPOK high → CD4 SP -->
+          <line x1="155" y1="73" x2="80" y2="110" stroke="#4299e1" stroke-width="1.8"/>
+          <polygon points="78,113 74,104 84,107" fill="#4299e1"/>
+          <text x="100" y="103" font-size="8.5" fill="#2b6cb0" font-weight="600">ThPOK↑</text>
+          <rect x="20" y="113" width="120" height="28" rx="6" fill="rgba(66,153,225,0.25)" stroke="#4299e1" stroke-width="1.8"/>
+          <text x="80" y="128" font-size="11" text-anchor="middle" fill="#2b6cb0" font-weight="700">CD4⁺ SP</text>
+          <text x="80" y="139" font-size="9" text-anchor="middle" fill="#4299e1">T Helper 輔助型</text>
+
+          <!-- Branch right: Runx3 high → CD8 SP -->
+          <line x1="285" y1="73" x2="360" y2="110" stroke="#ed8936" stroke-width="1.8"/>
+          <polygon points="362,113 356,104 366,107" fill="#ed8936"/>
+          <text x="340" y="103" font-size="8.5" fill="#c05621" font-weight="600">Runx3↑</text>
+          <rect x="300" y="113" width="120" height="28" rx="6" fill="rgba(237,137,54,0.25)" stroke="#ed8936" stroke-width="1.8"/>
+          <text x="360" y="128" font-size="11" text-anchor="middle" fill="#c05621" font-weight="700">CD8⁺ SP</text>
+          <text x="360" y="139" font-size="9" text-anchor="middle" fill="#ed8936">CTL 細胞毒型</text>
+
+          <!-- Special: Peripheral DP (both expressed) -->
+          <line x1="80" y1="141" x2="130" y2="165" stroke="#4299e1" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+          <line x1="360" y1="141" x2="310" y2="165" stroke="#ed8936" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+          <rect x="168" y="158" width="105" height="22" rx="6" fill="rgba(229,62,62,0.2)" stroke="#e05252" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="220" y="170" font-size="10" text-anchor="middle" fill="#c53030" font-weight="700">外周 DP T cell（特殊可塑性）</text>
+        </svg>
+      </div>
 
       <h3>臨床意義</h3>
       <div class="callout callout-orange">
