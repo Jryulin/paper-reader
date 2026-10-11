@@ -3375,5 +3375,39 @@
     "limitation": "綜述性文章，無原始實驗數據；類器官技術仍面臨培養成功率低、批次差異大、尺寸偏小等挑戰；現有模型缺乏統一質控標準；冷凍保存技術仍是規模化應用的瓶頸。",
     "favorited": false,
     "pdf": "pdfs/82-Wang2026.pdf"
+  },
+  {
+    "id": 83,
+    "title": "Inner ear transplantation of cochlear progenitor cells restores acute sensorineural hearing loss",
+    "title_zh": "耳蝸祖細胞內耳移植恢復急性感音神經性聽力損失",
+    "authors": "Shan Liu, Rui Li, Fei Wang, Yan Wang, Ke Liu",
+    "journal": "Neuroscience",
+    "year": 2026,
+    "doi": "10.1016/j.neuroscience.2026.02.046",
+    "pubmed_id": "",
+    "url": "https://doi.org/10.1016/j.neuroscience.2026.02.046",
+    "tags": [
+      "inner ear",
+      "progenitor cells",
+      "cell transplantation",
+      "sensorineural hearing loss",
+      "ototoxicity",
+      "kanamycin",
+      "hair cells",
+      "cochlea",
+      "organoid",
+      "regeneration"
+    ],
+    "abstract_zh": "本研究探討耳蝸祖細胞移植能否恢復卡那黴素誘發的急性感音神經性聽力損失。以腹腔注射卡那黴素與利尿劑建立急性耳毒性損傷模型，於模型建立第5天進行細胞移植，兩週後以ABR評估聽力恢復。免疫螢光染色分析移植細胞在耳蝸內的分布與存活。結果顯示：卡那黴素導致外毛細胞大量喪失並顯著提升聽力閾值；移植後耳蝸祖細胞主要分布於鼓階（basilar membrane下方），少量定植於中階；移植組聽力閾值部分恢復。本研究證實移植的耳蝸祖細胞能在耳蝸內存活並定植，實現急性耳毒性損傷後的部分聽力恢復。",
+    "q3": [
+      "移植的耳蝸祖細胞在耳蝸內主要定植於哪些區域，分布模式有何特點？",
+      "細胞移植後的部分聽力恢復是否來自移植細胞的功能整合，還是旁分泌效應？",
+      "移植時間點（損傷後第5天）的選擇對細胞存活率與療效有何影響？"
+    ],
+    "method": "急性耳毒性模型：成年小鼠腹腔注射卡那黴素（1 g/kg）+ 利尿劑（300 mg/kg）；新生小鼠耳蝸祖細胞體外擴增建立類器官；後半規管路徑移植入耳蝸；移植後2週ABR評估聽力閾值；全耳蝸鋪片 + 冷凍切片免疫螢光染色（Myosin VIIa、DAPI）分析毛細胞存活與移植細胞分布；統計：One-way ANOVA。",
+    "contribution": "提供耳蝸祖細胞移植能在成年受損耳蝸內存活定植並部分恢復聽力的直接實驗證據；建立穩定的急性耳毒性聽力損失動物模型；支持內耳細胞移植作為感音神經性聽力損失治療策略的可行性。",
+    "limitation": "聽力恢復程度有限（部分恢復），機制尚不明確（功能整合 vs 旁分泌效應）；移植細胞數量及長期存活率未充分探討；研究樣本數較少（n=5）；尚未評估移植細胞是否真正分化為功能性毛細胞。",
+    "favorited": false,
+    "pdf": "pdfs/83-Liu2026.pdf"
   }
 ]
