@@ -3411,5 +3411,49 @@
     "limitation": "（1）納入研究多為橫斷面設計，因果推斷受限；（2）各研究在鉛暴露測量方式、聽損定義上存在異質性；（3）發表偏誤可能存在。",
     "favorited": false,
     "group": "heavymetal"
+  },
+  {
+    "id": 85,
+    "title": "Single-cell RNA-sequencing of zebrafish hair cells reveals novel genes potentially involved in hearing loss",
+    "title_zh": "斑馬魚毛細胞單細胞轉錄組定序揭示聽力損失相關新基因",
+    "authors": "Qian F, Wei G, Gao Y, Wang X, Gong J, Guo C, Wang X, Zhang X, Zhao J, Wang C, Xu M, Hu Y, Yin G, Kang J, Chai R, Xie G, Liu D",
+    "journal": "Cellular and Molecular Life Sciences",
+    "year": 2022,
+    "doi": "10.1007/s00018-022-04410-2",
+    "pubmed_id": "",
+    "url": "https://doi.org/10.1007/s00018-022-04410-2",
+    "tags": [
+      "scRNA-seq",
+      "zebrafish",
+      "hair cell",
+      "hearing loss",
+      "inner ear",
+      "lateral line",
+      "single-cell",
+      "neuromast",
+      "macula",
+      "crista",
+      "transcriptomics"
+    ],
+    "abstract_zh": "本研究利用單細胞 RNA 定序（scRNA-seq）分析斑馬魚毛細胞的基因表現。以 Tg(Brn3c:mGFP) 轉基因斑馬魚幼魚（6 dpf）分離 GFP+ 毛細胞，鑑定出三種毛細胞亞型：黃斑毛細胞（MHC）、壺腹嵴毛細胞（CHC）、神經丘毛細胞（NHC）。透過全胚原位雜交驗證標誌基因表現。發現多個新穎基因特異性表現於特定毛細胞亞群，其中兩個新基因分別專一表現於 NHC 與 MHC，提供毛細胞亞型特異性基因的完整圖譜，有助於理解人類前庭及耳蝸毛細胞功能的遺傳基礎。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "斑馬魚具有三種毛細胞亞型（黃斑、壺腹嵴、神經丘），但其分子層面的系統性差異分析尚付闕如；本研究利用 scRNA-seq 揭示各亞型的轉錄組特徵及新穎相關基因。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "scRNA-seq 成功區分三種毛細胞亞型，並鑑定出各亞型的標誌基因；兩個新基因分別特異表現於 NHC 與 MHC，代表潛在的新型聽力損失相關基因。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "斑馬魚毛細胞亞型特異性基因圖譜可作為探索毛細胞再生機制的分子目標清單；NHC 的基因特性有助設計體外耳毒性篩選模型；與哺乳類聽力損失基因的同源性分析可加速候選基因驗證。"
+      }
+    ],
+    "method": "Tg(Brn3c:mGFP) 斑馬魚幼魚（6 dpf），trypsin 消化後 FACS 分選 GFP+ 細胞；10× Genomics 平台 scRNA-seq；Seurat 分析分為 21 cluster，4 個 cluster 註釋為毛細胞；全胚原位雜交（WISH）驗證標誌基因表現；比較三種毛細胞亞型之形態（纖毛長度、細胞體大小）及分子特徵。",
+    "contribution": "（1）首次系統性描述斑馬魚三種毛細胞亞型的單細胞轉錄組圖譜；（2）鑑定 MHC、CHC、NHC 各自的特異性標誌基因；（3）發現兩個新型毛細胞特異基因；（4）建立可供全球聽覺研究者參考的毛細胞 scRNA-seq 資料集。",
+    "limitation": "（1）以 6 dpf 幼魚為模型，成魚毛細胞基因表現可能不同；（2）RGC 污染需後續過濾；（3）新發現基因的功能尚待功能性實驗驗證；（4）斑馬魚無耳蝸，與哺乳類 OHC/IHC 的直接對應仍需謹慎。",
+    "favorited": false,
+    "pdf": "pdfs/85-Qian2022.pdf"
   }
 ]
