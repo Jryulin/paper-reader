@@ -3455,5 +3455,209 @@
     "limitation": "（1）以 6 dpf 幼魚為模型，成魚毛細胞基因表現可能不同；（2）RGC 污染需後續過濾；（3）新發現基因的功能尚待功能性實驗驗證；（4）斑馬魚無耳蝸，與哺乳類 OHC/IHC 的直接對應仍需謹慎。",
     "favorited": false,
     "pdf": "pdfs/85-Qian2022.pdf"
+  },
+  {
+    "id": 86,
+    "title": "Analysis of the association between blood heavy metals and tinnitus",
+    "title_zh": "血液重金屬暴露與耳鳴關聯分析",
+    "authors": "Jin X, Si S, Cui Z, Jin Y",
+    "journal": "Medicine (Baltimore)",
+    "year": 2026,
+    "doi": "10.1097/MD.0000000000047707",
+    "pubmed_id": "41790712",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41790712/",
+    "group": "heavymetal",
+    "tags": [
+      "heavy-metal",
+      "tinnitus",
+      "NHANES",
+      "blood-metals",
+      "epidemiology",
+      "hearing-loss",
+      "2026"
+    ],
+    "abstract_zh": "利用 NHANES 資料分析血液重金屬濃度與耳鳴的關聯。現有研究多聚焦重金屬與聽損關係，此篇延伸至耳鳴症狀，探討長期重金屬暴露與耳鳴風險的流行病學證據。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "重金屬與聽損的關聯已有研究，但重金屬與耳鳴的關聯尚未充分探討；本研究以 NHANES 資料量化血液重金屬濃度與耳鳴風險的關係。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "特定血液重金屬濃度升高與耳鳴風險顯著相關，擴展重金屬耳毒性的臨床表現範疇。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提示重金屬耳毒性不限於純音聽力閾值改變，耳鳴可能是早期神經耳毒性的敏感指標；與聽損研究形成互補。"
+      }
+    ],
+    "method": "橫斷面研究；NHANES 資料；血液重金屬（ICP-MS）；多變量邏輯回歸分析重金屬濃度與耳鳴關聯。",
+    "contribution": "（1）首篇以 NHANES 系統分析血液重金屬與耳鳴關聯；（2）將重金屬耳毒性指標從聽損延伸至耳鳴；（3）提供耳鳴流行病學的新環境因素證據。",
+    "limitation": "（1）橫斷面設計；（2）耳鳴以自填問卷定義；（3）血液重金屬代表近期暴露。",
+    "favorited": false
+  },
+  {
+    "id": 87,
+    "title": "Chronic Low-Level Lead Exposure Causes Auditory Impairment and Accelerates the Progression of Age-Related Hearing Loss in C57BL/6J Mice",
+    "title_zh": "慢性低劑量鉛暴露造成聽覺損傷並加速 C57BL/6J 小鼠老化性聽損進展",
+    "authors": "Bai X, Cheng LH, Zhou ZB, Zhou KL, Fu YP, Liao B, Wang MQ, Chen XB, Chen HP, Liu YH, Xu K",
+    "journal": "Aging Cell",
+    "year": 2026,
+    "doi": "10.1111/acel.70297",
+    "pubmed_id": "41215638",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41215638/",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "animal-model",
+      "age-related-hearing-loss",
+      "C57BL/6J",
+      "hair-cell",
+      "ototoxicity",
+      "high-frequency",
+      "2026"
+    ],
+    "abstract_zh": "以 C57BL/6J 小鼠進行慢性低劑量鉛暴露實驗，結果顯示鉛暴露導致早期高頻聽損，並隨時間進展加重；內耳形態學檢查發現毛細胞喪失、突觸帶數量減少及螺旋神經節神經元損傷，提示鉛暴露可能加速老化性聽損進程。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "流行病學研究顯示鉛暴露與人類聽損相關，但動物機制研究較少；本研究以小鼠模型探討慢性低劑量鉛暴露對聽力及老化性聽損進展的影響。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "慢性鉛暴露造成早期高頻聽損，並加速老化性聽損進展；毛細胞喪失、突觸帶減少、螺旋神經節退化等多重病理同時出現。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "確立鉛加速老化性聽損的動物模型證據，與流行病學資料形成機制-現象的完整鏈結；突觸帶損傷提示隱性聽損（hidden hearing loss）可能是鉛耳毒性的早期表現。"
+      }
+    ],
+    "method": "C57BL/6J 小鼠慢性低劑量鉛暴露（飲水給藥）；ABR/DPOAE 聽力測試；掃描電子顯微鏡（SEM）毛細胞形態；免疫螢光突觸帶計數；螺旋神經節神經元計數。",
+    "contribution": "（1）建立慢性低劑量鉛暴露加速老化性聽損的動物模型；（2）揭示多重耳蝸病理（毛細胞、突觸、神經元）；（3）為鉛限制標準提供動物實驗依據。",
+    "limitation": "（1）小鼠模型無法完全類推人類；（2）C57BL/6J 本身即有遺傳性老化聽損背景；（3）低劑量定義與人類實際暴露量的對應需進一步驗證。",
+    "favorited": false
+  },
+  {
+    "id": 88,
+    "title": "Heavy metal exposure and all health outcomes: An umbrella review of meta-analyses",
+    "title_zh": "重金屬暴露與所有健康結局：統合分析的傘狀回顧",
+    "authors": "Lee H, Jo Y, Jung M, Lee JH, Kim TH, Lee J, Kim DJ, Rahmati M, Smith L, Pizzol D, Son Y, Park J, Ahn SH, Yon DK, Choi DW, Kang J",
+    "journal": "Journal of Hazardous Materials",
+    "year": 2026,
+    "doi": "10.1016/j.jhazmat.2026.141141",
+    "pubmed_id": "41564770",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41564770/",
+    "group": "heavymetal",
+    "tags": [
+      "heavy-metal",
+      "umbrella-review",
+      "meta-analysis",
+      "arsenic",
+      "cadmium",
+      "lead",
+      "mercury",
+      "chromium",
+      "hearing-loss",
+      "2026"
+    ],
+    "abstract_zh": "系統評估 As、Cd、Pb、Hg、Cr 五大重金屬暴露與所有健康結局的傘狀統合分析（umbrella review of meta-analyses）。彙整現有所有 meta-analyses 的結果，評估證據強度與可信度，包含聽損相關分析。提供迄今最全面的重金屬-健康結局關聯證據圖譜。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "個別 meta-analysis 只聚焦特定重金屬或特定疾病，缺乏跨重金屬、跨健康結局的全面比較；傘狀回顧旨在統整所有現有 meta-analyses，提供最高層級的流行病學證據摘要。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛暴露在多種健康結局中顯示顯著關聯；五大重金屬各有其主要健康危害特徵；聽損是其中一個有關聯的健康結局。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "提供重金屬聽損研究的最高層級流行病學依據，可作為引言引用；傘狀回顧的結論有助於說明重金屬（特別是鉛）對聽覺系統影響的全球性公共衛生重要性。"
+      }
+    ],
+    "method": "傘狀統合分析（umbrella review）；系統性文獻搜尋（PROSPERO CRD420251169899）；納入針對 As/Cd/Pb/Hg/Cr 的現有 meta-analyses；評估每項 meta-analysis 的方法品質與證據可信度（GRADE 等）。",
+    "contribution": "（1）迄今最全面的五大重金屬-所有健康結局傘狀回顧；（2）提供重金屬健康危害的證據強度分級；（3）識別研究缺口與未來研究優先項目。",
+    "limitation": "（1）受限於納入 meta-analyses 的品質；（2）不同 meta-analyses 間的方法異質性；（3）部分健康結局的原始研究仍有限。",
+    "favorited": false
+  },
+  {
+    "id": 89,
+    "title": "Elevated lead levels as a risk factor for pediatric sensorineural hearing loss",
+    "title_zh": "血鉛升高為兒童感音神經性聽損的風險因子",
+    "authors": "Rana N, Cleveland C, Karasik D, Otteson T",
+    "journal": "International Journal of Pediatric Otorhinolaryngology",
+    "year": 2025,
+    "doi": "10.1016/j.ijporl.2025.112406",
+    "pubmed_id": "40517669",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40517669/",
+    "group": "heavymetal",
+    "tags": [
+      "lead",
+      "pediatric",
+      "children",
+      "sensorineural-hearing-loss",
+      "SNHL",
+      "epidemiology",
+      "2025"
+    ],
+    "abstract_zh": "探討兒童族群鉛暴露與感音神經性聽損（SNHL）的關聯。現有重金屬聽損研究多聚焦成人，本研究填補兒童族群的證據空缺，分析診斷為 SNHL 的兒童患者中血鉛濃度與聽損的關聯。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鉛暴露與成人聽損的關聯已有較多研究，但兒童族群的流行病學證據相對缺乏；本研究旨在確立兒科臨床族群中血鉛升高與 SNHL 的關聯。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "血鉛濃度升高是兒童感音神經性聽損的風險因子，支持早期鉛篩檢與聽力評估應整合納入兒科預防保健。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "兒童族群的鉛暴露聽損影響特別重要，因發展中的聽覺系統對耳毒性更敏感；與成人 NHANES 研究形成年齡層互補，強化鉛耳毒性的跨年齡普遍性。"
+      }
+    ],
+    "method": "回顧性研究；兒科臨床病患資料；比較診斷有/無 SNHL 患者的血鉛濃度；邏輯回歸分析血鉛與 SNHL 的關聯。",
+    "contribution": "（1）提供兒童族群鉛暴露與 SNHL 的臨床流行病學證據；（2）強調血鉛篩檢與兒科聽力評估整合的臨床意義；（3）擴展鉛耳毒性研究至發展中的聽覺系統。",
+    "limitation": "（1）回顧性設計，因果關係受限；（2）臨床樣本可能有選擇偏誤；（3）血鉛代表近期暴露；（4）混淆因子控制不如大型人群研究完整。",
+    "favorited": false
+  },
+  {
+    "id": 90,
+    "title": "Association of Thallium with Diabetes Risk among Patients with Hearing Loss: Result from NHANES 2013 to 2018",
+    "title_zh": "聽損患者中鉈暴露與糖尿病風險的關聯：NHANES 2013–2018",
+    "authors": "Li J, Lai ZG, Huang XH",
+    "journal": "Medicine (Baltimore)",
+    "year": 2024,
+    "doi": "10.1097/MD.0000000000037317",
+    "pubmed_id": "38428895",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38428895/",
+    "group": "heavymetal",
+    "tags": [
+      "thallium",
+      "diabetes",
+      "hearing-loss",
+      "NHANES",
+      "epidemiology",
+      "comorbidity",
+      "2024"
+    ],
+    "abstract_zh": "以 NHANES 2013–2018 資料，在聽損患者中評估鉈（thallium）暴露與糖尿病風險的相關性。鉈是 Shi 2022 中發現與聽損有趨勢關聯的微量金屬之一，本研究進一步探討聽損族群中鉈與糖尿病共病的複雜交互作用。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鉈暴露與聽損的關聯在 Shi 2022 中有初步發現，而糖尿病是聽損的已知風險因子；本研究探討在聽損族群中，鉈暴露是否進一步增加糖尿病風險，揭示重金屬-聽損-代謝疾病的三角關係。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "聽損患者中鉈濃度與糖尿病風險存在顯著關聯，提示鉈暴露可能透過多重機制同時影響聽覺與代謝系統。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "擴展重金屬耳毒性研究的視角：重金屬不僅直接損傷聽覺系統，也可能透過代謝途徑間接影響聽力；需在研究設計中考量糖尿病等代謝疾病作為重要混淆因子或中介因子。"
+      }
+    ],
+    "method": "橫斷面研究；NHANES 2013–2018；納入有聽損診斷的次族群；尿液鉈濃度（ICP-MS）；多變量邏輯回歸分析鉈濃度分位數與糖尿病的關聯。",
+    "contribution": "（1）首篇在聽損族群中分析鉈與糖尿病共病的流行病學研究；（2）揭示重金屬-聽損-代謝疾病的複雜交互關係；（3）延伸 Shi 2022 中鉈的初步發現。",
+    "limitation": "（1）橫斷面設計；（2）僅納入聽損次族群，外推性有限；（3）尿液鉈代表近期暴露；（4）糖尿病定義依賴自填問卷。",
+    "favorited": false
   }
 ]
