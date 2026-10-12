@@ -3255,7 +3255,9 @@
     "limitation": "動物實驗採用的鎘濃度（800 ppm）遠高於人類實際環境暴露量，外推至人體需謹慎；研究聚焦於血管內皮細胞，耳蝸其他細胞類型（如毛細胞）的機制尚未完整探討；缺乏人類臨床樣本驗證。",
     "favorited": false,
     "pdf": "pdfs/79-Zhang2026.pdf",
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 10.0,
+    "if_year": 2023
   },
   {
     "id": 81,
@@ -3288,7 +3290,9 @@
     "contribution": "提出「胞內小分子/離子風暴」概念，利用Ca²⁺與植酸協同調控NSC分化及小膠質細胞極化；實現以單一奈米載體同步解決SCI治療的雙重障礙（分化控制+免疫調節）；為SCI細胞治療提供新的奈米輔助策略。",
     "limitation": "目前僅在小鼠SCI模型驗證，尚需大動物模型驗證；Ca-PA NPs的體內生物分布、代謝及長期安全性尚未完整表徵；臨床轉化路徑尚不清晰。",
     "favorited": false,
-    "pdf": "pdfs/81-Shi2026.pdf"
+    "pdf": "pdfs/81-Shi2026.pdf",
+    "impact_factor": 14.0,
+    "if_year": 2023
   },
   {
     "id": 82,
@@ -3330,7 +3334,9 @@
     "contribution": "（1）首次在 NHANES 資料庫中系統評估 10 種尿液微量金屬與嚴重聽損的關聯；（2）確立鈷、錫為新興聽損風險因子；（3）發現錫與聽損的非線性關係；（4）女性亞群分析提供性別差異的流行病學依據。",
     "limitation": "（1）橫斷面設計無法建立因果關係；（2）尿液微量金屬代表近期暴露，無法反映累積暴露；（3）聽損以自填問卷定義（嚴重聽力困難），非純音聽力測試；（4）未能排除所有潛在混淆因子。",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 5.2,
+    "if_year": 2023
   },
   {
     "id": 83,
@@ -3371,7 +3377,9 @@
     "contribution": "（1）將機器學習（CatBoost）應用於重金屬聽損風險預測；（2）SHAP 解釋性分析提升模型透明度；（3）識別最重要的重金屬暴露預測因子。",
     "limitation": "（1）橫斷面設計；（2）機器學習模型的因果推斷能力有限；（3）樣本量（n=2,772）相對較小。",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 5.2,
+    "if_year": 2023
   },
   {
     "id": 84,
@@ -3410,7 +3418,9 @@
     "contribution": "（1）首篇針對環境鉛暴露與聽損的系統性統合分析；（2）提供跨多個研究的綜合風險估計；（3）識別研究異質性來源。",
     "limitation": "（1）納入研究多為橫斷面設計，因果推斷受限；（2）各研究在鉛暴露測量方式、聽損定義上存在異質性；（3）發表偏誤可能存在。",
     "favorited": false,
-    "group": "heavymetal"
+    "group": "heavymetal",
+    "impact_factor": 4.4,
+    "if_year": 2023
   },
   {
     "id": 85,
@@ -3454,7 +3464,9 @@
     "contribution": "（1）首次系統性描述斑馬魚三種毛細胞亞型的單細胞轉錄組圖譜；（2）鑑定 MHC、CHC、NHC 各自的特異性標誌基因；（3）發現兩個新型毛細胞特異基因；（4）建立可供全球聽覺研究者參考的毛細胞 scRNA-seq 資料集。",
     "limitation": "（1）以 6 dpf 幼魚為模型，成魚毛細胞基因表現可能不同；（2）RGC 污染需後續過濾；（3）新發現基因的功能尚待功能性實驗驗證；（4）斑馬魚無耳蝸，與哺乳類 OHC/IHC 的直接對應仍需謹慎。",
     "favorited": false,
-    "pdf": "pdfs/85-Qian2022.pdf"
+    "pdf": "pdfs/85-Qian2022.pdf",
+    "impact_factor": 6.6,
+    "if_year": 2023
   },
   {
     "id": 86,
@@ -3494,7 +3506,9 @@
     "method": "橫斷面研究；NHANES 資料；血液重金屬（ICP-MS）；多變量邏輯回歸分析重金屬濃度與耳鳴關聯。",
     "contribution": "（1）首篇以 NHANES 系統分析血液重金屬與耳鳴關聯；（2）將重金屬耳毒性指標從聽損延伸至耳鳴；（3）提供耳鳴流行病學的新環境因素證據。",
     "limitation": "（1）橫斷面設計；（2）耳鳴以自填問卷定義；（3）血液重金屬代表近期暴露。",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 1.6,
+    "if_year": 2023
   },
   {
     "id": 87,
@@ -3535,7 +3549,9 @@
     "method": "C57BL/6J 小鼠慢性低劑量鉛暴露（飲水給藥）；ABR/DPOAE 聽力測試；掃描電子顯微鏡（SEM）毛細胞形態；免疫螢光突觸帶計數；螺旋神經節神經元計數。",
     "contribution": "（1）建立慢性低劑量鉛暴露加速老化性聽損的動物模型；（2）揭示多重耳蝸病理（毛細胞、突觸、神經元）；（3）為鉛限制標準提供動物實驗依據。",
     "limitation": "（1）小鼠模型無法完全類推人類；（2）C57BL/6J 本身即有遺傳性老化聽損背景；（3）低劑量定義與人類實際暴露量的對應需進一步驗證。",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 8.1,
+    "if_year": 2023
   },
   {
     "id": 88,
@@ -3578,7 +3594,9 @@
     "method": "傘狀統合分析（umbrella review）；系統性文獻搜尋（PROSPERO CRD420251169899）；納入針對 As/Cd/Pb/Hg/Cr 的現有 meta-analyses；評估每項 meta-analysis 的方法品質與證據可信度（GRADE 等）。",
     "contribution": "（1）迄今最全面的五大重金屬-所有健康結局傘狀回顧；（2）提供重金屬健康危害的證據強度分級；（3）識別研究缺口與未來研究優先項目。",
     "limitation": "（1）受限於納入 meta-analyses 的品質；（2）不同 meta-analyses 間的方法異質性；（3）部分健康結局的原始研究仍有限。",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 13.6,
+    "if_year": 2023
   },
   {
     "id": 89,
@@ -3618,7 +3636,9 @@
     "method": "回顧性研究；兒科臨床病患資料；比較診斷有/無 SNHL 患者的血鉛濃度；邏輯回歸分析血鉛與 SNHL 的關聯。",
     "contribution": "（1）提供兒童族群鉛暴露與 SNHL 的臨床流行病學證據；（2）強調血鉛篩檢與兒科聽力評估整合的臨床意義；（3）擴展鉛耳毒性研究至發展中的聽覺系統。",
     "limitation": "（1）回顧性設計，因果關係受限；（2）臨床樣本可能有選擇偏誤；（3）血鉛代表近期暴露；（4）混淆因子控制不如大型人群研究完整。",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 2.1,
+    "if_year": 2023
   },
   {
     "id": 90,
@@ -3658,6 +3678,8 @@
     "method": "橫斷面研究；NHANES 2013–2018；納入有聽損診斷的次族群；尿液鉈濃度（ICP-MS）；多變量邏輯回歸分析鉈濃度分位數與糖尿病的關聯。",
     "contribution": "（1）首篇在聽損族群中分析鉈與糖尿病共病的流行病學研究；（2）揭示重金屬-聽損-代謝疾病的複雜交互關係；（3）延伸 Shi 2022 中鉈的初步發現。",
     "limitation": "（1）橫斷面設計；（2）僅納入聽損次族群，外推性有限；（3）尿液鉈代表近期暴露；（4）糖尿病定義依賴自填問卷。",
-    "favorited": false
+    "favorited": false,
+    "impact_factor": 1.6,
+    "if_year": 2023
   }
 ]
