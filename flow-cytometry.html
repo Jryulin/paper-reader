@@ -444,30 +444,8 @@
         </div>
         <!-- Stokes shift spectrum -->
         <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
-          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">發射波長 &gt; 激發波長</div>
-          <svg width="100%" viewBox="0 0 220 180" style="display:block;">
-            <line x1="20" y1="140" x2="210" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
-            <line x1="20" y1="20" x2="20" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
-            <!-- Excitation peak (left, purple/blue) -->
-            <path d="M30,138 C40,138 55,30 75,15 C95,30 108,138 118,138" fill="rgba(66,153,225,0.25)" stroke="#4299e1" stroke-width="1.5"/>
-            <text x="74" y="10" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="600">激發</text>
-            <!-- Emission peak (right, green) -->
-            <path d="M108,138 C118,138 135,45 155,28 C175,45 188,138 198,138" fill="rgba(72,187,120,0.25)" stroke="#48bb78" stroke-width="1.5"/>
-            <text x="155" y="24" font-size="9" text-anchor="middle" fill="#276749" font-weight="600">發射</text>
-            <!-- Stokes shift arrow -->
-            <line x1="75" y1="155" x2="75" y2="150" stroke="#718096" stroke-width="1"/>
-            <line x1="155" y1="155" x2="155" y2="150" stroke="#718096" stroke-width="1"/>
-            <line x1="75" y1="155" x2="155" y2="155" stroke="#718096" stroke-width="1"/>
-            <polygon points="75,155 82,151 82,159" fill="#718096"/>
-            <polygon points="155,155 148,151 148,159" fill="#718096"/>
-            <text x="115" y="168" font-size="8.5" text-anchor="middle" fill="#718096" font-weight="600">Stokes Shift</text>
-            <!-- wavelength axis -->
-            <text x="115" y="178" font-size="9" text-anchor="middle" fill="#718096">波長 (nm) →</text>
-            <text x="28" y="60" font-size="9" text-anchor="middle" fill="#718096" transform="rotate(-90,12,80)">強度</text>
-            <!-- Example values -->
-            <text x="55" y="135" font-size="8" fill="#4299e1">488nm</text>
-            <text x="140" y="135" font-size="8" fill="#48bb78">519nm</text>
-          </svg>
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">發射波長 &gt; 激發波長（FITC 示例）</div>
+          <canvas id="chart-stokes" height="180"></canvas>
         </div>
       </div>
 
@@ -520,46 +498,7 @@
       <!-- Spectral overlap / compensation diagram -->
       <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-top:14px;">
         <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">光譜重疊示意圖（FITC、PE、APC 三通道）</div>
-        <svg width="100%" viewBox="0 0 440 180" style="display:block;">
-          <!-- Axes -->
-          <line x1="30" y1="145" x2="420" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-          <line x1="30" y1="20" x2="30" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-          <text x="225" y="175" font-size="10" text-anchor="middle" fill="#718096">波長 (nm)</text>
-          <text x="12" y="83" font-size="10" text-anchor="middle" fill="#718096" transform="rotate(-90,12,83)">強度</text>
-
-          <!-- FITC peak ~519nm ≈ x=120 -->
-          <path d="M60,143 C75,143 95,80 120,30 C145,80 165,143 180,143"
-                fill="rgba(72,187,120,0.3)" stroke="#48bb78" stroke-width="2"/>
-          <text x="120" y="26" font-size="10" text-anchor="middle" fill="#276749" font-weight="700">FITC</text>
-          <text x="120" y="38" font-size="9" text-anchor="middle" fill="#276749">~519nm</text>
-
-          <!-- PE peak ~578nm ≈ x=190 (overlapping FITC tail) -->
-          <path d="M150,143 C165,143 182,75 205,32 C228,75 248,143 260,143"
-                fill="rgba(237,137,54,0.3)" stroke="#ed8936" stroke-width="2"/>
-          <text x="205" y="28" font-size="10" text-anchor="middle" fill="#c05621" font-weight="700">PE</text>
-          <text x="205" y="40" font-size="9" text-anchor="middle" fill="#c05621">~578nm</text>
-
-          <!-- APC peak ~660nm ≈ x=330 -->
-          <path d="M290,143 C308,143 325,80 345,30 C365,80 385,143 400,143"
-                fill="rgba(159,122,234,0.3)" stroke="#9f7aea" stroke-width="2"/>
-          <text x="345" y="26" font-size="10" text-anchor="middle" fill="#6b46c1" font-weight="700">APC</text>
-          <text x="345" y="38" font-size="9" text-anchor="middle" fill="#6b46c1">~660nm</text>
-
-          <!-- Overlap zone FITC→PE highlight -->
-          <path d="M150,143 C165,143 175,95 185,80 C185,80 165,80 155,100 Z"
-                fill="rgba(237,137,54,0.15)" stroke="none"/>
-          <line x1="170" y1="110" x2="140" y2="95" stroke="#c05621" stroke-width="1" stroke-dasharray="3,2"/>
-          <text x="105" y="90" font-size="8.5" fill="#c05621" font-weight="600">FITC 漏入</text>
-          <text x="105" y="100" font-size="8.5" fill="#c05621">PE 通道</text>
-
-          <!-- detector windows -->
-          <rect x="90" y="150" width="60" height="8" rx="3" fill="rgba(72,187,120,0.5)"/>
-          <text x="120" y="158" font-size="8" text-anchor="middle" fill="#276749">FITC 偵測窗</text>
-          <rect x="175" y="150" width="60" height="8" rx="3" fill="rgba(237,137,54,0.5)"/>
-          <text x="205" y="158" font-size="8" text-anchor="middle" fill="#c05621">PE 偵測窗</text>
-          <rect x="315" y="150" width="60" height="8" rx="3" fill="rgba(159,122,234,0.5)"/>
-          <text x="345" y="158" font-size="8" text-anchor="middle" fill="#6b46c1">APC 偵測窗</text>
-        </svg>
+        <canvas id="chart-spectral-overlap"></canvas>
         <p style="font-size:0.8rem;color:#718096;margin:6px 0 0;">FITC 的發射尾巴延伸進入 PE 偵測窗（橘色標示），若不補償會高估 PE 訊號。</p>
       </div>
     </section>
@@ -828,29 +767,8 @@
           </svg>
         </div>
         <div>
-          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">PI 染色直方圖示意</div>
-          <svg width="100%" viewBox="0 0 200 160" style="display:block;">
-            <line x1="20" y1="130" x2="190" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
-            <line x1="20" y1="20" x2="20" y2="130" stroke="#94a3b8" stroke-width="1.5"/>
-            <!-- Sub-G1 (very left, small red) -->
-            <path d="M24,128 C28,128 32,105 36,95 C40,105 44,128 48,128" fill="rgba(229,62,62,0.3)" stroke="#e05252" stroke-width="1.5"/>
-            <text x="36" y="92" font-size="8" text-anchor="middle" fill="#c53030">Sub-G1</text>
-            <!-- G1 peak (tall, blue) -->
-            <path d="M60,128 C68,128 76,48 84,25 C92,48 100,128 108,128" fill="rgba(66,153,225,0.3)" stroke="#4299e1" stroke-width="1.5"/>
-            <text x="84" y="22" font-size="9" text-anchor="middle" fill="#2b6cb0" font-weight="700">G1 (2N)</text>
-            <!-- S phase plateau -->
-            <path d="M108,128 C112,128 115,100 118,95 C121,100 124,128 128,128" fill="rgba(72,187,120,0.2)" stroke="#48bb78" stroke-width="1"/>
-            <text x="118" y="88" font-size="8" text-anchor="middle" fill="#276749">S</text>
-            <!-- G2/M peak (shorter, ~2x G1 position) -->
-            <path d="M128,128 C134,128 142,68 150,48 C158,68 166,128 172,128" fill="rgba(237,137,54,0.3)" stroke="#ed8936" stroke-width="1.5"/>
-            <text x="150" y="45" font-size="9" text-anchor="middle" fill="#c05621" font-weight="700">G2/M (4N)</text>
-            <!-- 2x annotation -->
-            <line x1="84" y1="140" x2="84" y2="145" stroke="#718096" stroke-width="1"/>
-            <line x1="150" y1="140" x2="150" y2="145" stroke="#718096" stroke-width="1"/>
-            <line x1="84" y1="143" x2="150" y2="143" stroke="#718096" stroke-width="1"/>
-            <text x="117" y="155" font-size="8" text-anchor="middle" fill="#718096">≈ 2× 螢光強度</text>
-            <text x="105" y="178" font-size="9" text-anchor="middle" fill="#718096">PI 螢光強度 →</text>
-          </svg>
+          <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px;">PI 染色直方圖（儀器輸出樣式）</div>
+          <canvas id="chart-cellcycle-s5" height="200"></canvas>
         </div>
       </div>
 
@@ -1186,49 +1104,8 @@
 
       <!-- Panel design spectrum diagram -->
       <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:14px 0;">
-        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">Panel 設計：光譜重疊與配對原則</div>
-        <svg width="100%" viewBox="0 0 440 160" style="display:block;">
-          <!-- Axes -->
-          <line x1="30" y1="115" x2="420" y2="115" stroke="#94a3b8" stroke-width="1.5"/>
-          <line x1="30" y1="20" x2="30" y2="115" stroke="#94a3b8" stroke-width="1.5"/>
-          <text x="225" y="148" font-size="10" text-anchor="middle" fill="#718096">波長 (nm)</text>
-
-          <!-- BV421 405nm, peak ~421 purple -->
-          <path d="M45,113 C55,113 70,50 80,22 C90,50 105,113 115,113" fill="rgba(139,90,194,0.25)" stroke="#9f7aea" stroke-width="2"/>
-          <text x="80" y="18" font-size="9" text-anchor="middle" fill="#6b46c1" font-weight="700">BV421</text>
-          <text x="80" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">421nm</text>
-
-          <!-- FITC 488nm, peak ~519 green -->
-          <path d="M115,113 C128,113 142,52 154,26 C166,52 178,113 192,113" fill="rgba(72,187,120,0.25)" stroke="#48bb78" stroke-width="2"/>
-          <text x="154" y="22" font-size="9" text-anchor="middle" fill="#276749" font-weight="700">FITC</text>
-          <text x="154" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">519nm</text>
-
-          <!-- PE 488nm, peak ~578 orange — overlaps with FITC tail -->
-          <path d="M175,113 C188,113 205,48 218,24 C231,48 248,113 262,113" fill="rgba(237,137,54,0.25)" stroke="#ed8936" stroke-width="2"/>
-          <text x="218" y="20" font-size="9" text-anchor="middle" fill="#c05621" font-weight="700">PE</text>
-          <text x="218" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">578nm</text>
-
-          <!-- APC 638nm, peak ~660 red -->
-          <path d="M320,113 C332,113 345,50 358,25 C371,50 382,113 395,113" fill="rgba(229,62,62,0.25)" stroke="#e05252" stroke-width="2"/>
-          <text x="358" y="21" font-size="9" text-anchor="middle" fill="#c53030" font-weight="700">APC</text>
-          <text x="358" y="128" font-size="8" text-anchor="middle" fill="#94a3b8">660nm</text>
-
-          <!-- Overlap zone FITC↔PE shading -->
-          <rect x="175" y="75" width="17" height="38" rx="2" fill="rgba(237,100,100,0.2)" stroke="none"/>
-          <text x="183" y="70" font-size="8" text-anchor="middle" fill="#c53030">重疊</text>
-
-          <!-- Laser lines -->
-          <line x1="90" y1="113" x2="90" y2="20" stroke="#9f7aea" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-          <text x="90" y="140" font-size="8" text-anchor="middle" fill="#9f7aea">405nm 雷射</text>
-          <line x1="155" y1="113" x2="155" y2="20" stroke="#48bb78" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-          <text x="155" y="140" font-size="8" text-anchor="middle" fill="#48bb78">488nm 雷射</text>
-          <line x1="358" y1="113" x2="358" y2="20" stroke="#e05252" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
-          <text x="358" y="140" font-size="8" text-anchor="middle" fill="#e05252">638nm 雷射</text>
-
-          <!-- Tip annotation -->
-          <text x="285" y="75" font-size="9" fill="#4a5568">✅ APC 與 FITC/PE</text>
-          <text x="285" y="87" font-size="9" fill="#4a5568">無重疊，組合最佳</text>
-        </svg>
+        <div style="font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:10px;">Panel 設計：各染劑發射光譜（BV421、FITC、PE、APC）</div>
+        <canvas id="chart-panel-spectrum"></canvas>
       </div>
 
       <h3>常見螢光染劑特性比較</h3>
@@ -1548,6 +1425,118 @@
   })();
 
 })();
+// ── Spectral / histogram charts ──────────────────────────────
+(function(){
+  // Gaussian helper (reuse seed-based approach)
+  function gauss(x, mu, sigma){ return Math.exp(-Math.pow(x-mu,2)/(2*sigma*sigma)); }
+  function spectrumDataset(peakNm, sigma, color, fillColor, label, nmLabels){
+    return {
+      label,
+      data: nmLabels.map(nm => Math.max(0, gauss(nm, peakNm, sigma))),
+      borderColor: color,
+      backgroundColor: fillColor,
+      fill: true,
+      tension: 0.4,
+      borderWidth: 2,
+      pointRadius: 0
+    };
+  }
+  const NM = Array.from({length:400},(_,i)=>350+i); // 350–749nm
+
+  // Stokes shift (FITC: excitation ~488nm, emission ~519nm)
+  new Chart(document.getElementById('chart-stokes'),{
+    type:'line',
+    data:{
+      labels: NM.map(n => n%50===0 ? n : ''),
+      datasets:[
+        spectrumDataset(488,18,'#4299e1','rgba(66,153,225,0.25)','激發光（488nm）',NM),
+        spectrumDataset(519,22,'#48bb78','rgba(72,187,120,0.25)','發射光（519nm）',NM)
+      ]
+    },
+    options:{
+      responsive:true,animation:{duration:0},
+      plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:9},color:'#718096'}},tooltip:{enabled:false}},
+      scales:{
+        x:{ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:8},grid:{color:'rgba(0,0,0,0.05)'},title:{display:true,text:'波長 (nm)',color:'#94a3b8',font:{size:9}}},
+        y:{min:0,max:1.15,ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:4,callback:v=>v>0?v.toFixed(1):''},grid:{color:'rgba(0,0,0,0.05)'},title:{display:true,text:'相對強度',color:'#94a3b8',font:{size:9}}}
+      }
+    }
+  });
+
+  // Spectral overlap (FITC 519, PE 578, APC 660)
+  new Chart(document.getElementById('chart-spectral-overlap'),{
+    type:'line',
+    data:{
+      labels: NM.map(n => n%50===0 ? n : ''),
+      datasets:[
+        spectrumDataset(519,22,'#48bb78','rgba(72,187,120,0.2)','FITC (519nm)',NM),
+        spectrumDataset(578,28,'#ed8936','rgba(237,137,54,0.2)','PE (578nm)',NM),
+        spectrumDataset(660,25,'#9f7aea','rgba(159,122,234,0.2)','APC (660nm)',NM)
+      ]
+    },
+    options:{
+      responsive:true,animation:{duration:0},
+      plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:9},color:'#718096'}},tooltip:{enabled:false}},
+      scales:{
+        x:{ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:8},grid:{color:'rgba(0,0,0,0.05)'},title:{display:true,text:'波長 (nm)',color:'#94a3b8',font:{size:9}}},
+        y:{min:0,max:1.15,ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:4,callback:v=>v>0?v.toFixed(1):''},grid:{color:'rgba(0,0,0,0.05)'}}
+      }
+    }
+  });
+
+  // Cell cycle histogram (s5)
+  (function(){
+    let s=500;
+    function r(){ s=(s*1664525+1013904223)&0xffffffff; return (s>>>0)/4294967296; }
+    const bins=120, pts=[];
+    for(let i=0;i<bins;i++){
+      const x=i*(1000/bins);
+      const subG1=55*Math.exp(-Math.pow(x-80,2)/(2*28*28));
+      const g1=1000*Math.exp(-Math.pow(x-260,2)/(2*36*36));
+      const s_phase=x>260&&x<520?Math.max(0,110*(1-Math.pow((x-390)/165,2)))+r()*18:0;
+      const g2m=490*Math.exp(-Math.pow(x-520,2)/(2*36*36));
+      pts.push(Math.max(0,subG1+g1+s_phase+g2m+r()*10));
+    }
+    new Chart(document.getElementById('chart-cellcycle-s5'),{
+      type:'line',
+      data:{
+        labels:Array.from({length:bins},(_,i)=>i%20===0?Math.round(i*(1000/bins)):''),
+        datasets:[{data:pts,borderColor:'#4299e1',backgroundColor:'rgba(66,153,225,0.15)',fill:true,tension:0.35,borderWidth:1.8,pointRadius:0}]
+      },
+      options:{
+        responsive:true,animation:{duration:0},
+        plugins:{legend:{display:false},tooltip:{enabled:false}},
+        scales:{
+          x:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{color:'#94a3b8',font:{size:9}},title:{display:true,text:'PI 螢光強度',color:'#94a3b8',font:{size:9}}},
+          y:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:4},title:{display:true,text:'細胞數',color:'#94a3b8',font:{size:9}}}
+        }
+      }
+    });
+  })();
+
+  // Panel design spectrum (BV421, FITC, PE, APC)
+  new Chart(document.getElementById('chart-panel-spectrum'),{
+    type:'line',
+    data:{
+      labels: NM.map(n => n%50===0 ? n : ''),
+      datasets:[
+        spectrumDataset(421,18,'#9f7aea','rgba(159,122,234,0.2)','BV421 (421nm)',NM),
+        spectrumDataset(519,22,'#48bb78','rgba(72,187,120,0.2)','FITC (519nm)',NM),
+        spectrumDataset(578,28,'#ed8936','rgba(237,137,54,0.2)','PE (578nm)',NM),
+        spectrumDataset(660,25,'#e05252','rgba(229,62,62,0.2)','APC (660nm)',NM)
+      ]
+    },
+    options:{
+      responsive:true,animation:{duration:0},
+      plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:9},color:'#718096'}},tooltip:{enabled:false}},
+      scales:{
+        x:{ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:8},grid:{color:'rgba(0,0,0,0.05)'},title:{display:true,text:'波長 (nm)',color:'#94a3b8',font:{size:9}}},
+        y:{min:0,max:1.15,ticks:{color:'#94a3b8',font:{size:9},maxTicksLimit:4,callback:v=>v>0?v.toFixed(1):''},grid:{color:'rgba(0,0,0,0.05)'}}
+      }
+    }
+  });
+})();
+
 // Active nav highlight on scroll
   const sections = document.querySelectorAll('section.section');
   const navItems = document.querySelectorAll('.nav-item');
