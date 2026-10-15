@@ -3728,5 +3728,50 @@
     "contribution": "（1）首篇系統比較五大二價重金屬（Mn/Cd/Co/Pb/Hg）耳毒性的綜合回顧；（2）整合 in vivo 與 in vitro（HEI-OC1）證據；（3）為後續重金屬耳毒性研究奠定理論基礎，被引逾 58 次。",
     "limitation": "（1）回顧性質，無新原始資料；（2）各重金屬的研究深度不均；（3）2016 年後的新研究未納入。",
     "favorited": false
+  },
+  {
+    "id": 92,
+    "title": "Unraveling the molecular landscape of lead-induced cochlear synaptopathy: a quantitative proteomics analysis",
+    "title_zh": "鉛誘導耳蝸突觸病變的分子機制：定量蛋白質體學分析",
+    "authors": "Bhatia P, Mehmood S, Doyon-Reale N, Rosati R, Stemmer PM, Jamesdaniel S",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2024,
+    "doi": "10.3389/fncel.2024.1408208",
+    "pubmed_id": "39104440",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39104440/",
+    "group": "heavymetal",
+    "impact_factor": 4.6,
+    "if_year": 2023,
+    "tags": [
+      "lead",
+      "synaptopathy",
+      "hidden-hearing-loss",
+      "ribbon-synapse",
+      "proteomics",
+      "ABR",
+      "CBA/J",
+      "cochlea",
+      "synaptic-vesicle",
+      "2024"
+    ],
+    "abstract_zh": "以 CBA/J 小鼠進行 28 天鉛暴露（飲水給藥），結果顯示鉛造成高頻聽閾升高及 ABR wave-I amplitude 下降，但外毛細胞功能正常、無毛細胞死亡。IHC ribbon synapse 數量顯著減少（以 basal turn 最明顯）。蛋白質體學分析發現 746 個突觸蛋白豐度改變，bioinformatics 分析指向 synaptic vesicle cycle pathway 為核心機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "鉛耳毒性的機制研究多聚焦毛細胞損傷，但臨床上鉛暴露的聽損表現難以用毛細胞損傷完全解釋；本研究以蛋白質體學探討鉛誘導耳蝸突觸病變的分子機制。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "鉛暴露的主要耳毒靶點是 IHC ribbon synapse（突觸病變），而非外毛細胞；ABR wave-I 下降、突觸數量減少，但 DPOAE 正常；synaptic vesicle cycle pathway 是關鍵分子機制。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鉛耳毒性屬於 hidden hearing loss（隱性聽損）機制，傳統聽力檢測（純音聽力圖）可能低估鉛暴露的聽覺危害；研究設計需納入突觸完整性（ribbon synapse 計數、ABR wave-I）作為評估指標，而不只是聽閾或毛細胞存活率。"
+      }
+    ],
+    "method": "CBA/J 小鼠鉛暴露模型（lead acetate 飲水 28 天）；ABR/DPOAE 聽力評估；免疫螢光 ribbon synapse 共定位計數；耳蝸突觸體（synaptosome）蛋白質體學（LC-MS/MS）；bioinformatics pathway 分析。",
+    "contribution": "（1）首篇以蛋白質體學系統解析鉛誘導耳蝸突觸病變的分子機制；（2）確認 OHC 非鉛耳毒性主要靶點，突觸病變才是核心；（3）揭示 synaptic vesicle cycle 為鉛耳毒性關鍵路徑；（4）提示鉛暴露可能造成臨床上被低估的隱性聽損。",
+    "limitation": "（1）動物模型，人類鉛暴露濃度的類比需進一步驗證；（2）蛋白質體學為橫斷面，無法確認因果時序；（3）未探討干預或保護策略。",
+    "favorited": false
   }
 ]
