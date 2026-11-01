@@ -3905,5 +3905,384 @@
     "limitation": "（1）僅聚焦 Wnt5a 路徑，其他可能同時受 Cd 影響的訊號路徑（如 Notch、BMP）未納入比較；（2）慢性暴露模型的劑量可能高於一般人群實際環境暴露；（3）海馬迴神經新生的功能性行為結果（記憶/學習）未完整評估。",
     "favorited": false,
     "pdf": ""
+  },
+  {
+    "id": 96,
+    "title": "Intratympanic Application of Betahistine for Menière Disease-An Animal Study on Safety and Diffusion to the Inner Ear.",
+    "title_zh": "倍他司汀鼓室內注射治療梅尼爾病：內耳安全性與擴散動物研究",
+    "authors": "Spiegel JL, Situ Y, Ungar OJ, et al.",
+    "journal": "Otology & Neurotology",
+    "year": 2026,
+    "doi": "10.1097/MAO.0000000000005004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42430787/",
+    "abstract_zh": "本動物研究評估倍他司汀（Betahistine）經鼓室內注射後的安全性及其向內耳的擴散能力，為梅尼爾病提供一種局部給藥的新選項，旨在減少全身副作用並提高內耳藥物濃度。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "口服倍他司汀生體利用率低且副作用多，本研究探討鼓室內注射是否能安全地將藥物遞送至內耳淋巴液，為梅尼爾病提供更直接的治療途徑。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "動物實驗顯示鼓室內注射倍他司汀具有良好安全性，藥物可有效擴散至內耳，外淋巴中檢測到治療濃度，未見明顯耳毒性。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "鼓室內給藥策略可應用於未來內耳毛細胞再生治療的藥物遞送，降低全身毒性風險，此模型值得參考用於評估新型再生因子的局部遞送安全性。"
+      }
+    ],
+    "method": "動物實驗模型（豚鼠或大鼠），鼓室內注射倍他司汀後取樣外淋巴液進行藥物濃度分析（HPLC），並以聽性腦幹反應（ABR）評估聽力功能，組織學檢查確認耳毒性。",
+    "contribution": "（1）首次在動物模型中確認倍他司汀鼓室內注射的安全性；（2）量化藥物在外淋巴中的濃度與擴散動力學；（3）為梅尼爾病局部治療提供前臨床依據。",
+    "limitation": "（1）動物模型與人類內耳結構存在差異；（2）缺乏長期給藥安全性數據；（3）需進一步臨床試驗驗證療效。",
+    "tags": [
+      "Menière disease",
+      "intratympanic",
+      "betahistine",
+      "inner ear",
+      "drug delivery"
+    ],
+    "pubmed_id": "42430787",
+    "favorited": false
+  },
+  {
+    "id": 97,
+    "title": "Effects of Wbp2 gene activation and the modifier Cdh23(ahl) on progressive hearing loss in Wbp2 mouse mutants.",
+    "title_zh": "Wbp2 基因活化及修飾因子 Cdh23(ahl) 對漸進性聽力損失的影響",
+    "authors": "Kumar R, Pentland DR, Ingham NJ, et al.",
+    "journal": "Hearing Research",
+    "year": 2026,
+    "doi": "10.1016/j.heares.2026.109754",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42531911/",
+    "abstract_zh": "本研究探討 WW 結合蛋白 2（Wbp2）基因活化在小鼠漸進性聽力損失中的作用，並分析遺傳修飾因子 Cdh23(ahl) 如何影響聽力喪失的進程，揭示基因互作在年齡相關性聽力損失中的複雜機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "Wbp2 突變小鼠展現漸進性聽力損失，但其機制不明。本研究欲釐清 Wbp2 基因活化與已知修飾因子 Cdh23(ahl) 的互動如何決定聽力損失表現型。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Wbp2 活化可部分緩解聽力損失，而 Cdh23(ahl) 修飾因子與 Wbp2 之間存在顯著遺傳互作，影響毛細胞存活與聽力功能的維持。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "遺傳背景（修飾基因）對毛細胞存活的影響凸顯了在再生研究中控制遺傳背景的重要性；Wbp2 可能是支持細胞存活訊號路徑中的候選靶點。"
+      }
+    ],
+    "method": "使用條件性基因活化小鼠模型，結合 ABR 聽力測試、耳蝸毛細胞計數及免疫組織化學分析，比較不同 Cdh23 背景下 Wbp2 活化的效果。",
+    "contribution": "（1）闡明 Wbp2 在耳蝸毛細胞存活中的保護作用；（2）揭示 Cdh23(ahl) 作為遺傳修飾因子的機制；（3）為年齡相關性聽力損失的基因治療提供新靶點。",
+    "limitation": "（1）小鼠模型不完全等同人類老年性聾；（2）Wbp2 在人類聽力損失中的作用仍需驗證；（3）機制尚未完全闡明。",
+    "tags": [
+      "Wbp2",
+      "Cdh23",
+      "age-related hearing loss",
+      "mouse model",
+      "hair cell",
+      "genetics"
+    ],
+    "pubmed_id": "42531911",
+    "favorited": false
+  },
+  {
+    "id": 98,
+    "title": "PRMT6 drives hearing loss by promoting asymmetric arginine dimethylation-mediated FOXG1 degradation and suppressing mitophagy.",
+    "title_zh": "PRMT6 透過促進 FOXG1 降解與抑制線粒體自噬驅動聽力損失",
+    "authors": "Wu J, Liu Z",
+    "journal": "Experimental Gerontology",
+    "year": 2026,
+    "doi": "10.1016/j.exger.2026.113278",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42586389/",
+    "abstract_zh": "本研究揭示精氨酸甲基轉移酶 PRMT6 在聽力損失中的致病機制：PRMT6 促進轉錄因子 FOXG1 的非對稱精氨酸二甲基化，導致 FOXG1 蛋白降解，同時抑制線粒體自噬，加速耳蝸毛細胞死亡，為老年性聾的表觀遺傳學機制提供新見解。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "老年性聾的表觀遺傳機制仍不清楚，本研究探討 PRMT6 介導的精氨酸甲基化如何通過 FOXG1 降解與線粒體自噬抑制來驅動毛細胞損傷。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "PRMT6 對 FOXG1 進行不對稱精氨酸二甲基化（ADMA），觸發蛋白酶體降解；同時 PRMT6 活化抑制線粒體自噬，導致氧化損傷累積，最終加速毛細胞凋亡。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "FOXG1 是已知的內耳發育轉錄因子，其在老年性聾中的降解機制提示，保護 FOXG1 穩定性或抑制 PRMT6 可能成為毛細胞保護的新策略。"
+      }
+    ],
+    "method": "細胞與動物實驗結合，使用 Co-IP、質譜分析鑑定 PRMT6-FOXG1 互作，PRMT6 過表現/敲除小鼠模型配合 ABR 測試、透射電鏡評估線粒體形態，及自噬流（LC3-II/Beclin-1）分析。",
+    "contribution": "（1）首次報告 PRMT6 在耳蝸的致聾作用；（2）揭示 ADMA-FOXG1 降解軸作為新機制；（3）連結表觀遺傳修飾與線粒體自噬功能失調；（4）提出 PRMT6 作為老年性聾的治療靶點。",
+    "limitation": "（1）體外細胞模型的 PRMT6 高表現可能過度估計效果；（2）FOXG1 在成熟耳蝸的功能尚待深入研究；（3）缺乏人類老年性聾樣本的驗證。",
+    "tags": [
+      "PRMT6",
+      "FOXG1",
+      "arginine methylation",
+      "mitophagy",
+      "age-related hearing loss",
+      "epigenetics"
+    ],
+    "pubmed_id": "42586389",
+    "favorited": false
+  },
+  {
+    "id": 99,
+    "title": "Heat shock pathway activation by TRC051384 protects spiral ganglion neurons from noise-induced hearing loss.",
+    "title_zh": "TRC051384 活化熱休克路徑保護螺旋神經節神經元免受噪音性聽力損失",
+    "authors": "Yu J, Ramirez MA, Wang YZ, et al.",
+    "journal": "JCI Insight",
+    "year": 2026,
+    "doi": "10.1172/jci.insight.203285",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42640720/",
+    "abstract_zh": "本研究發現小分子化合物 TRC051384 可活化熱休克蛋白反應路徑，對螺旋神經節神經元發揮神經保護作用，在小鼠噪音性聽力損失模型中顯著降低聽力閾值偏移，提供了一種潛在的藥理性聽力保護策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "噪音暴露造成不可逆的螺旋神經節神經元（SGN）損傷，目前缺乏有效藥物保護。本研究探討熱休克路徑活化是否能保護 SGN 免受噪音損傷。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "TRC051384 透過活化 HSP70/HSP90 等熱休克蛋白顯著減少 SGN 凋亡，在噪音暴露前後給藥均可保護聽力，ABR 閾值偏移明顯低於對照組。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "熱休克蛋白的神經保護作用表明，SGN 保護策略與毛細胞再生可能需要協同進行；TRC051384 的保護窗口也提示術後給藥可作為人工耳蝸植入輔助療法。"
+      }
+    ],
+    "method": "小鼠噪音性聽力損失模型，系統性或局部給予 TRC051384，以 ABR 和 DPOAE 評估聽力，免疫螢光與 western blot 分析 HSP 表現及 SGN 存活，突觸帶（ribbon synapse）計數評估隱性聽力損失。",
+    "contribution": "（1）首次確認 TRC051384 在耳蝸的聽力保護效果；（2）揭示熱休克路徑在 SGN 保護中的機制；（3）提出可結合現有治療（人工耳蝸）的輔助藥物策略。",
+    "limitation": "（1）目前僅有動物數據，人體安全性與療效待確認；（2）給藥時窗與劑量優化尚需研究；（3）對已受損神經元的修復效果有限。",
+    "tags": [
+      "spiral ganglion neuron",
+      "noise-induced hearing loss",
+      "heat shock protein",
+      "neuroprotection",
+      "TRC051384"
+    ],
+    "pubmed_id": "42640720",
+    "favorited": false
+  },
+  {
+    "id": 100,
+    "title": "Hearing rehabilitation in vestibular and inner ear schwannomas - Hearing aids, bone conduction implants and CI treatment.",
+    "title_zh": "前庭與內耳神經鞘瘤的聽力復健：助聽器、骨導植入與人工耳蝸治療",
+    "authors": "Plontke SK, Rahne T",
+    "journal": "Laryngo- Rhino- Otologie",
+    "year": 2026,
+    "doi": "10.1055/a-2623-3075",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42685760/",
+    "abstract_zh": "本德文綜述回顧前庭神經鞘瘤（聽神經瘤）及內耳神經鞘瘤患者的聽力復健選項，比較助聽器、骨導植入裝置（BAHA/Osia）及人工耳蝸（CI）的適應症、手術技術與治療效果，提供臨床決策指引。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "前庭神經鞘瘤治療（手術或放療）常導致單側聽力喪失，如何選擇最適合的聽力復健裝置是臨床挑戰，本文系統整理現有選項的證據。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "對側助聽器（CROS/BiCROS）、骨導裝置和 CI 各有其最佳適應族群；保留聽神經的手術搭配 CI 可在部分患者達到最佳言語辨識率；早期植入時機至關重要。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "即使在未來毛細胞再生治療成熟前，現有復健方法為患者提供了重要的功能補償；CI 的成效也部分依賴殘存螺旋神經節神經元的完整性，強調 SGN 保護的重要性。"
+      }
+    ],
+    "method": "系統性文獻回顧，依據前庭神經鞘瘤的分類（大小、生長模式）及治療方式（觀察/放療/手術），整理助聽器、骨導裝置、CI 的適應症與療效數據。",
+    "contribution": "（1）提供前庭神經鞘瘤聽力復健的臨床決策框架；（2）比較不同裝置在特定患者族群的優劣；（3）討論手術保留聽神經策略對後續 CI 療效的影響。",
+    "limitation": "（1）為德文綜述，部分患者族群代表性有限；（2）前瞻性隨機對照試驗資料仍不足；（3）長期追蹤數據稀少。",
+    "tags": [
+      "vestibular schwannoma",
+      "cochlear implant",
+      "bone conduction",
+      "hearing rehabilitation",
+      "review"
+    ],
+    "pubmed_id": "42685760",
+    "favorited": false
+  },
+  {
+    "id": 101,
+    "title": "Mitochondrial transfer protects against cisplatin-induced hearing loss by fumarate-mediated activation of mitophagy.",
+    "title_zh": "線粒體轉移透過富馬酸介導的線粒體自噬活化保護順鉑誘導的聽力損失",
+    "authors": "Wu Y, Gu Y, Wang Y, et al.",
+    "journal": "Cell Reports",
+    "year": 2026,
+    "doi": "10.1016/j.celrep.2026.118107",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42842372/",
+    "abstract_zh": "本研究揭示間充質幹細胞（MSC）線粒體轉移可保護耳蝸毛細胞免受順鉑毒性，機制涉及轉移的健康線粒體產生富馬酸，富馬酸進而活化受損細胞的線粒體自噬（PINK1/Parkin 通路），清除功能異常線粒體，從而防止毛細胞凋亡。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "順鉑化療所致耳毒性（順鉑聽力損失）造成毛細胞不可逆死亡，目前無有效預防藥物。本研究探索線粒體轉移作為一種新型細胞保護策略的可行性。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "MSC 可透過隧道奈米管（TNT）將健康線粒體轉移至受損耳蝸毛細胞；轉移的線粒體釋放富馬酸，富馬酸透過 succinylation 活化 PINK1/Parkin 線粒體自噬，清除受損線粒體，顯著提高毛細胞存活率並保護聽力。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "線粒體轉移策略可能與毛細胞再生研究結合——在再生誘導前先改善祖細胞的線粒體健康狀態，富馬酸也是一個值得關注的代謝介質，可探索其在 iPSC 分化中的應用。"
+      }
+    ],
+    "method": "體外順鉑暴露的 HEI-OC1 耳蝸細胞系與體內豚鼠模型；螢光標記線粒體追蹤轉移路徑；LC-MS/MS 代謝組學分析富馬酸；siRNA 敲低 PINK1/Parkin 驗證自噬機制；ABR 評估體內聽力保護。",
+    "contribution": "（1）首次報告線粒體轉移在耳蝸保護中的作用；（2）揭示富馬酸-PINK1/Parkin 軸作為新機制；（3）連結代謝重塑與線粒體品質控制；（4）為順鉑聽力損失提供新型細胞治療策略。",
+    "limitation": "（1）體內遞送效率與安全性仍需優化；（2）臨床前模型到人類的轉化路徑不明確；（3）線粒體轉移的長期效果未評估。",
+    "tags": [
+      "mitochondrial transfer",
+      "cisplatin ototoxicity",
+      "mitophagy",
+      "PINK1",
+      "Parkin",
+      "fumarate",
+      "hair cell protection"
+    ],
+    "pubmed_id": "42842372",
+    "favorited": false
+  },
+  {
+    "id": 102,
+    "title": "Advances in Stem Cell Therapy for Hearing Loss.",
+    "title_zh": "幹細胞治療聽力損失的最新進展",
+    "authors": "Krishnan PS, Jung D, Morris JA, Tang PC, Liu XZ",
+    "journal": "Ear and Hearing",
+    "year": 2026,
+    "doi": "10.1097/AUD.0000000000001813",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42868225/",
+    "abstract_zh": "本綜述全面梳理幹細胞治療聽力損失的最新進展，涵蓋胚胎幹細胞（ESC）、誘導多能幹細胞（iPSC）及成體幹細胞衍生的內耳細胞分化策略，並討論當前面臨的挑戰與臨床轉化前景。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "幹細胞治療聽力損失領域進展迅速但分散，本綜述旨在系統整合 ESC/iPSC/成體幹細胞三大路線的最新突破，釐清技術瓶頸與未來方向。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "iPSC 分化為毛細胞樣細胞的效率顯著提升，類器官技術推動了高通量篩選；直接重編程（transdifferentiation）顯示出繞過幹細胞階段的潛力；基因矯正結合幹細胞是遺傳性聽力損失的有希望策略。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "本綜述可作為最新分化方案的參考清單，特別是 iPSC → 耳蝸祖細胞 → 毛細胞的分化步驟優化；類器官平台可用於驗證分化效率與功能性。"
+      }
+    ],
+    "method": "敘述性文獻綜述，整合 PubMed 近年相關研究，按幹細胞來源與分化策略分類討論。",
+    "contribution": "（1）更新幹細胞治療聽力損失的知識體系；（2）比較不同幹細胞來源的效率與安全性；（3）指出直接重編程和類器官技術作為新興方向；（4）討論臨床試驗現況與監管挑戰。",
+    "limitation": "（1）仍以動物實驗為主，人體試驗數據有限；（2）分化細胞的功能成熟度和長期存活率仍是瓶頸；（3）免疫排斥問題尚待解決。",
+    "tags": [
+      "stem cell therapy",
+      "iPSC",
+      "hearing loss",
+      "hair cell regeneration",
+      "cochlear organoid",
+      "review"
+    ],
+    "pubmed_id": "42868225",
+    "favorited": false
+  },
+  {
+    "id": 103,
+    "title": "Echoes of Renewal: Rebuilding the Mammalian Inner Ear.",
+    "title_zh": "再生的迴響：重建哺乳動物內耳",
+    "authors": "Kishimoto I, Zhang L, Cheng TZ, Cheng AG",
+    "journal": "Ear and Hearing",
+    "year": 2026,
+    "doi": "10.1097/AUD.0000000000001782",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42868226/",
+    "abstract_zh": "本綜述回顧哺乳動物內耳再生的核心挑戰與最新突破，從發育生物學角度闡述毛細胞形成的分子藍圖，並討論 Wnt、Notch、Atoh1 等關鍵信號如何被重新活化以驅動再生，提出重建功能性哺乳動物內耳的整合策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "哺乳動物內耳毛細胞缺乏自發再生能力，本文從發育生物學出發，系統整理驅動再生所需的分子機制與策略組合。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "Lgr5+ 支持細胞是最具再生潛力的祖細胞群；Wnt 活化＋Notch 抑制可有效誘導支持細胞轉分化；Atoh1 過表現雖可促進毛細胞命運，但需配合成熟信號才能獲得功能性細胞；類器官模型大幅加速了靶點驗證。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "本文是目前最新的哺乳動物內耳再生策略綜述，可作為設計體內再生實驗的思路框架；特別是多信號協同（Wnt+Notch+Atoh1+成熟因子）的組合策略值得在 iPSC 分化方案中測試。"
+      }
+    ],
+    "method": "敘述性文獻綜述，整合發育生物學、基因治療及幹細胞領域的代表性研究，以信號通路和細胞命運決定為軸線進行討論。",
+    "contribution": "（1）提供哺乳動物內耳再生的整合性概念框架；（2）闡明 Lgr5+ 細胞作為靶向再生的最佳起點；（3）討論類器官技術在驗證再生策略中的角色；（4）展望多模態聯合治療的未來方向。",
+    "limitation": "（1）體內再生效率仍遠低於鳥類等非哺乳動物；（2）人類耳蝸的細胞可及性是主要瓶頸；（3）再生毛細胞的功能整合和突觸形成尚不完善。",
+    "tags": [
+      "inner ear regeneration",
+      "Lgr5",
+      "Wnt",
+      "Notch",
+      "Atoh1",
+      "hair cell",
+      "review"
+    ],
+    "pubmed_id": "42868226",
+    "favorited": false
+  },
+  {
+    "id": 104,
+    "title": "The cochlear macrophage in presbycusis: inflammaging, neuroinflammation, and targets for therapeutic modulation.",
+    "title_zh": "老年性聾中耳蝸巨噬細胞的角色：炎性老化、神經炎症與治療靶點",
+    "authors": "Al-Asad RK, Kempfle JS",
+    "journal": "Frontiers in Cellular Neuroscience",
+    "year": 2026,
+    "doi": "10.3389/fncel.2026.1930209",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42889359/",
+    "abstract_zh": "本綜述聚焦耳蝸常駐巨噬細胞（cochlear macrophage）在老年性聾中的病理作用，探討炎性老化（inflammaging）背景下巨噬細胞的表型轉變如何加速耳蝸神經炎症，並梳理以巨噬細胞為靶點的治療調控策略。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "老年性聾的機制中，慢性低度炎症日益受到重視，但耳蝸巨噬細胞在其中的具體作用尚不明確。本文系統整理炎性老化與耳蝸免疫的關聯。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "老化過程中耳蝸巨噬細胞從 M2 保護型轉向 M1 促炎型，釋放 IL-1β、TNF-α 等細胞因子損傷 SGN 與毛細胞；調控巨噬細胞極化（如 CSF1R 抑制劑或 IL-34 調控）可減緩聽力損失進程。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "在進行毛細胞再生實驗時，耳蝸免疫環境（巨噬細胞狀態）是重要的考量因素——再生前先控制炎症環境，可能提高再生細胞的存活率；這也提示免疫調控可作為再生治療的輔助策略。"
+      }
+    ],
+    "method": "文獻綜述，整合衰老生物學、耳蝸免疫學及神經炎症相關研究，重點討論巨噬細胞表型、細胞因子信號及現有治療靶點的臨床前數據。",
+    "contribution": "（1）系統整理耳蝸巨噬細胞在老年性聾中的作用；（2）提出炎性老化-耳蝸神經炎症-聽力損失的病理軸；（3）梳理 CSF1R、NLRP3 等可干預靶點；（4）為老年性聾的免疫治療開發提供理論基礎。",
+    "limitation": "（1）多數證據來自動物模型，人類耳蝸巨噬細胞的研究樣本有限；（2）巨噬細胞亞型分類在耳蝸中仍不完整；（3）靶向治療的耳蝸特異性遞送策略仍需發展。",
+    "tags": [
+      "cochlear macrophage",
+      "presbycusis",
+      "inflammaging",
+      "neuroinflammation",
+      "age-related hearing loss",
+      "immune modulation"
+    ],
+    "pubmed_id": "42889359",
+    "favorited": false
+  },
+  {
+    "id": 105,
+    "title": "Exposure-duration-associated auditory dysfunction and cochlear presynaptic ribbon alterations during simulated high-altitude hypobaric hypoxia in mice.",
+    "title_zh": "模擬高海拔低壓缺氧對小鼠聽覺功能及耳蝸突觸前帶的影響",
+    "authors": "Zhang Q, Yue G, Zhang Y, et al.",
+    "journal": "Frontiers in Neurology",
+    "year": 2026,
+    "doi": "10.3389/fneur.2026.1963563",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42959222/",
+    "abstract_zh": "本研究探討模擬高海拔低壓缺氧環境（hypobaric hypoxia）對小鼠聽覺功能的時程相關損傷，發現耳蝸突觸前帶（ribbon synapse）數量隨缺氧暴露時間增加而減少，ABR 閾值偏移呈現暴露時長依賴性，揭示高海拔缺氧導致「隱性聽力損失」的機制。",
+    "q3": [
+      {
+        "q": "這篇論文想解決什麼問題？",
+        "a": "高海拔環境下的聽力損失報告逐漸增加，但缺氧對耳蝸突觸的影響機制不明。本研究建立模擬低壓缺氧模型，系統分析聽力功能與突觸結構的時程變化。"
+      },
+      {
+        "q": "研究的核心發現是什麼？",
+        "a": "模擬 5000 m 高度低壓缺氧暴露 7–28 天導致 ABR 閾值上升、波 I 振幅下降，且耳蝸內毛細胞突觸前帶（CtBP2+/GluA2 突觸對）顯著減少，損傷程度與暴露時長正相關，形成隱性聽力損失表型。"
+      },
+      {
+        "q": "對我的研究有何啟發？",
+        "a": "缺氧對突觸帶的選擇性損傷提示，內耳血管代謝支持對突觸維持至關重要；這個模型也可應用於評估再生治療在缺氧損傷後的突觸恢復效果。"
+      }
+    ],
+    "method": "小鼠低壓艙模擬高海拔（5000 m，7/14/28 天），以 ABR 和 DPOAE 評估聽力，免疫螢光（CtBP2/GluA2 共染色）計數內毛細胞突觸前帶，電鏡觀察突觸超微結構，分析缺氧標誌物（HIF-1α）。",
+    "contribution": "（1）建立系統性高海拔缺氧聽力損失動物模型；（2）首次量化突觸前帶損失與缺氧時長的劑量反應關係；（3）揭示高海拔隱性聽力損失的突觸機制；（4）為高海拔聽力保護提供新的研究方向。",
+    "limitation": "（1）小鼠與人類高海拔適應能力不同；（2）低壓缺氧模型不完全模擬真實高海拔環境（輻射、溫度等）；（3）缺氧後恢復追蹤數據不足。",
+    "tags": [
+      "hypobaric hypoxia",
+      "high altitude",
+      "ribbon synapse",
+      "hidden hearing loss",
+      "cochlea",
+      "ABR"
+    ],
+    "pubmed_id": "42959222",
+    "favorited": false
   }
 ]
